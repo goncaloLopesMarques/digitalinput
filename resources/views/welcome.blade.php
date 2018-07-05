@@ -1,16 +1,20 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
     <head>
+        <title>Title</title>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/uikit.min.css" />
+        <script src="js/uikit.min.js"></script>
+        <script src="js/uikit-icons.min.js"></script>
 
         <title>Laravel</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
-        <!-- Styles -->
+                <!-- Styles -->
         <style>
             html, body {
                 background-color: #fff;
@@ -65,7 +69,8 @@
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
+
+         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
@@ -82,6 +87,10 @@
                     Laravel
                 </div>
 
+                <button class="uk-button uk-button-default" type="button" uk-toggle="target: .toggle">Toggle</button>
+<p class="toggle">Hello!</p>
+<p class="toggle" hidden>Bazinga!</p>
+
                 <div class="links">
                     <a href="https://laravel.com/docs">Documentation</a>
                     <a href="https://laracasts.com">Laracasts</a>
@@ -91,5 +100,7 @@
                 </div>
             </div>
         </div>
+
+
     </body>
 </html>
