@@ -12,10 +12,18 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages.home');
 });
 
+<<<<<<< HEAD
 route::get('/orcamento', 'OrcamentoController@index');
+=======
+Route::get('/teste', function () {
+    return view('index');
+});
+
+
+>>>>>>> master
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
