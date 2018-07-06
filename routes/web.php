@@ -12,8 +12,13 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages.home');
 });
+
+Route::get('/teste', function () {
+    return view('index');
+});
+
 
 
 Route::group(['prefix' => 'admin'], function () {
