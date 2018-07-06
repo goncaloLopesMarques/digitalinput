@@ -15,6 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+route::get('/orcamento', 'OrcamentoController@index');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
