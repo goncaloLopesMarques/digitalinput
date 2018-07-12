@@ -9,8 +9,13 @@ Vue.use(Vuex);
 const store = new Vuex.Store(StoreData);
 
 Vue.component('orcamento', require('./components/Orcamento.vue'));
-Vue.component('site-estatico', require('./components/SiteEstatico.vue'));
 Vue.component('site-dinamico', require('./components/SiteDinamico.vue'));
+Vue.component('site-dinamico-fase2', require('./components/SiteDinamicoFase2.vue'));
+Vue.component('site-dinamico-fase3', require('./components/SiteDinamicoFase3.vue'));
+Vue.component('site-dinamico-fase4', require('./components/SiteDinamicoFase4.vue'));
+Vue.component('terminate', require('./components/Terminate.vue'));
+Vue.component('orcamento-app', require('./components/OrcamentoApp.vue'));
+Vue.component('navigationBar', require('./components/NavigationBar.vue'));
 
 const app = new Vue({
     el: '#app',
