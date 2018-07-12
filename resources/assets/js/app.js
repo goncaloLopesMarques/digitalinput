@@ -1,22 +1,24 @@
-
-/**
- * First we will load all of this project's JavaScript dependencies which
- * includes Vue and other libraries. It is a great starting point when
- * building robust, powerful web applications using Vue and Laravel.
- */
-
 require('./bootstrap');
+import StoreData from './store';
+import Vuex from 'vuex';
 
 window.Vue = require('vue');
+Vue.config.devtools = true
 
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
+Vue.use(Vuex);
+const store = new Vuex.Store(StoreData);
 
-Vue.component('example-component', require('./components/ExampleComponent.vue'));
+Vue.component('orcamento', require('./components/Orcamento.vue'));
+Vue.component('site-dinamico', require('./components/SiteDinamico.vue'));
+Vue.component('site-dinamico-fase2', require('./components/SiteDinamicoFase2.vue'));
+Vue.component('site-dinamico-fase3', require('./components/SiteDinamicoFase3.vue'));
+Vue.component('site-dinamico-fase4', require('./components/SiteDinamicoFase4.vue'));
+Vue.component('terminate', require('./components/Terminate.vue'));
+Vue.component('orcamento-app', require('./components/OrcamentoApp.vue'));
+Vue.component('navigationBar', require('./components/NavigationBar.vue'));
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    store,
 });
+

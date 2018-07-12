@@ -10,7 +10,7 @@
          </div>
          @endif
          <h1 class="mb-4">
-            <strong>Área de Cliente</strong>
+            <strong>Agência de Marketing Digital</strong>
          </h1>
          <p class="mb-4">Tenha controlo sobre todos os seus dados</p>
          <p>

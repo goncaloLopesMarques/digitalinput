@@ -15,12 +15,18 @@ Route::get('/', function () {
     return view('pages.home');
 });
 
+route::get('/orcamento', 'OrcamentoController@index');
+
 Route::get('/teste', function () {
     return view('index');
 });
 
 
-
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+
+//enviar emails
+Route::post('/orcamento/site', 'SendMailController@enviarOrcamentoSite');
+Route::post('/orcamento/app', 'SendMailController@enviarOrcamentoApp');
+Route::post('/orcamento/info', 'SendMailController@enviarOrcamentoParaInfo');
