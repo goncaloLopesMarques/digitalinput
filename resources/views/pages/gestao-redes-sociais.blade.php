@@ -27,7 +27,7 @@
 
 @section('main')
 
-    @include('layout.home-page')
+    @include('layout.gestao-redes-sociais')
     
 @endsection
 

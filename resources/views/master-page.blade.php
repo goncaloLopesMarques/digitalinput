@@ -1,9 +1,7 @@
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
     <head>
-
         @yield('head')
-
     </head>
 
     <body>
@@ -11,15 +9,11 @@
 
         <!--Main Navigation-->
         <header>
-
             @yield('nav-bar')
+        </header>   
 
-        </header>
-
-        <main class="mt-5 py-5">
-            {{-- <div class="pt-5" style="margin-top:65px;"> --}}
+        <main>
             @yield('main')
-            {{-- </div> --}}
         </main>
 
 
