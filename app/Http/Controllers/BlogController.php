@@ -10,20 +10,21 @@ class BlogController extends Controller
 {
     public function search()
   {
+    $classes = "blog-search";
     $search = request('q');
     $posts = Post::search($search)->paginate(25);
     $mostRecentPosts = $this->mostRecentPosts();
-    // dd($posts);
-    return view('pages.blog',compact('posts','mostRecentPosts'));
+   // dd($posts);
+    return view('pages.blog',compact('posts','mostRecentPosts', 'classes'));
   }
 
   public function show(){
 
-
+    $classes = "blog";
     $posts = Post::search('')->paginate(25);
     $mostRecentPosts = $this->mostRecentPosts();
     //dd($posts);
-    return view('pages.blog',compact('posts','mostRecentPosts'));
+    return view('pages.blog',compact('posts','mostRecentPosts', 'classes'));
   }
 
   public function allPosts(){
