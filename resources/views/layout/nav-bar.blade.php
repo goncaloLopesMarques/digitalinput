@@ -3,9 +3,9 @@
             <div class="container">
 
                 <!-- Brand -->
-                <a class="navbar-brand waves-effect" href="https://mdbootstrap.com/material-design-for-bootstrap/" target="_blank">
+                <!-- <a class="navbar-brand waves-effect" href="https://mdbootstrap.com/material-design-for-bootstrap/" target="_blank">
                     <strong class="blue-text">MDB</strong>
-                </a>
+                </a> -->
 
                 <!-- Collapse -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,20 +18,25 @@
                     <!-- Left -->
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <a class="nav-link waves-effect" href="#">Home
+                            <a class="nav-link waves-effect" href="/">Home
                                 <span class="sr-only">(current)</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link waves-effect" href="https://mdbootstrap.com/material-design-for-bootstrap/" target="_blank">About MDB</a>
+                            <a class="nav-link waves-effect" href="#" target="_self">Serviços</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link waves-effect" href="https://mdbootstrap.com/getting-started/" target="_blank">Free download</a>
+                            <a class="nav-link waves-effect" href="/blog" target="_self">Blog</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link waves-effect" href="https://mdbootstrap.com/bootstrap-tutorial/" target="_blank">Free tutorials</a>
-                        </li>
+                        
                     </ul>
+
+                    <!-- Center -->
+                    <div class="logo">
+                        <a href="/">
+                            <img src="/images/Digitalinput-LOGO.png" alt="Digitalinput Logo">
+                        </a>
+                    </div>
 
                     <!-- Right -->
                     <ul class="navbar-nav nav-flex-icons">

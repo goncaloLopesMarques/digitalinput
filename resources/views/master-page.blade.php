@@ -4,7 +4,7 @@
         @yield('head')
     </head>
 
-    <body>
+    <body class="{{ $classes }}">
            
 
         <!--Main Navigation-->

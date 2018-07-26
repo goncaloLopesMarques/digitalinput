@@ -12,50 +12,65 @@ class PagesController extends BaseController
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
     function index(){
-        return view('pages.home');
+        $classes = "home";
+        return view('pages.home', compact('classes'));
     }
 
     function redesSociais(){
-        return view('pages.gestao-redes-sociais');
+        $classes = "redes";
+        return view('pages.gestao-redes-sociais', compact('classes'));
     }
     function gestaoMarketing(){
-        return view('pages.gestao-marketing');
+        $classes = "gestao";
+        return view('pages.gestao-marketing', compact('classes'));
     }
     function criacaoSites(){
-        return view('pages.criacao-sites');
+        $classes = "sites";
+        return view('pages.criacao-sites', compact('classes'));
     }
     function optimizacaoSites(){
-        return view('pages.optimizacao-sites');
+        $classes = "optimizacao";
+        return view('pages.optimizacao-sites', compact('classes'));
     }
     function criarLojaOnline(){
-        return view('pages.criar-loja-online');
+        $classes = "ecommerce";
+        return view('pages.criar-loja-online', compact('classes'));
     }
     function empresaWebDesign(){
-        return view('pages.empresas-web-design');
+        $classes = "webdesign";
+        return view('pages.empresas-web-design', compact('classes'));
     }
     function empresaDesign(){
-        return view('pages.empresas-design');
+        $classes = "design";
+        return view('pages.empresas-design', compact('classes'));
     }
     function publicidadeFacebook(){
-        return view('pages.publicidade-facebook');
+        $classes = "facebook";
+        return view('pages.publicidade-facebook', compact('classes'));
     }
     function agenciaAdwords(){
-        return view('pages.agencia-adwords');
+        $classes = "adwords";
+        return view('pages.agencia-adwords', compact('classes'));
     }
     function manutencaoWebsites(){
-        return view('pages.manutencao-websites');
+        $classes = "manutencao";
+        return view('pages.manutencao-websites', compact('classes'));
     }
     function agenciaEmailMarketing(){
-        return view('pages.agencia-email-marketing');
+        $classes = "email-marketing";
+        return view('pages.agencia-email-marketing', compact('classes'));
     }
     function consultoriaMarketing(){
-        return view('pages.consultoria-marketing-digital');
+        $classes = "consultoria";
+        return view('pages.consultoria-marketing-digital', compact('classes'));
     }
     function blog(){
-        return view('pages.blog');
+        $classes = "blog";
+        return view('pages.blog', compact('classes'));
     }
     function portfolio(){
-        return view('pages.portfolio');
+        $classes = "portfolio";
+        return view('pages.portfolio', compact('classes'));
     }
     
 

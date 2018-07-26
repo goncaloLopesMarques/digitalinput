@@ -3,7 +3,7 @@
    <!--Section: Jumbotron-->
    <section class="card wow fadeIn" id="intro" style="visibility: visible; animation-name: fadeIn;">
       <!-- Content -->
-      <div class="card-body text-white text-center py-5 px-5 my-5" style="background-color: #111;">
+      <div class="card-body text-white text-center py-5 px-5 my-5" style="background-image: url('/images/cool-background.jpg');">
          @if(session('semDados'))
          <div class="col-md-12 alert alert-danger" data-dismiss="alert" aria-label="close">
             {{session('semDados')}}
