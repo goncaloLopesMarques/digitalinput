@@ -39,7 +39,42 @@
           </a>
 			<hr>
 			</div>
-		@endforeach
+    @endforeach
+    <!--Pagination -->
+<nav aria-label="pagination example">
+    <ul class="pagination pagination-circle pg-blue mb-0">
+
+        <!--First-->
+        <li class="page-item disabled"><a class="page-link">First</a></li>
+
+        <!--Arrow left-->
+        <li class="page-item disabled">
+            <a class="page-link" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+                <span class="sr-only">Previous</span>
+            </a>
+        </li>
+
+        <!--Numbers-->
+        <li class="page-item active"><a class="page-link">1</a></li>
+        <li class="page-item"><a class="page-link">2</a></li>
+        <li class="page-item"><a class="page-link">3</a></li>
+        <li class="page-item"><a class="page-link">4</a></li>
+        <li class="page-item"><a class="page-link">5</a></li>
+
+        <!--Arrow right-->
+        <li class="page-item">
+            <a class="page-link" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+                <span class="sr-only">Next</span>
+            </a>
+        </li>
+
+        <!--Last-->
+        <li class="page-item"><a class="page-link">Last</a></li>
+
+    </ul>
+</nav>
 </div>
 <div class="col-md-3 blogHeaders recent">
 <div class="card">
@@ -51,11 +86,11 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-12"><div class="col-md-9"><a href="#" class="btn btn-primary" type="submit">Pesquisar</a></div></div>
+        <div class="col-md-12"><div class="col-md-9"><button class="btn btn-primary"  type="submit">Pesquisar</button></div></div>
         </form>
         <div class="row">
         <div class="col-md-5">Search by:</div>
-        <div class="col-md-7"> <img src="images/algolia.png" style="max-height: 100%;max-width: 100%;"> </div>
+        <div class="col-md-7"> <img src="/images/algolia.png" style="max-height: 100%;max-width: 100%;"> </div>
         </div>
     </div>
 </div>
@@ -96,6 +131,7 @@
 
 
 </form>
+
 <!-- Default form subscription -->
 		</div>
     <div class="col-md-2">
@@ -146,9 +182,10 @@
    $(document).ready(function(){  
        
        var dataArray = <?php echo json_encode($posts); ?>;
+       console.log(dataArray)
 
-     for(var i=0 ; i< dataArray.length ; i++) {
-       $('<div class="carousel-item"><img class="d-block w-100" src="storage/'+dataArray[i]["image"]+'"><div class="carousel-caption d-none d-md-block"><a href="/blog/'+dataArray[i]["slug"]+'">'+dataArray[i]["title"]+'</a><p>'+dataArray[i]["excerpt"]+'</p></div></div>').appendTo('.carousel-inner');
+     for(var i=0 ; i< dataArray["data"].length ; i++) {
+       $('<div class="carousel-item"><img class="d-block w-100" src="/storage/'+dataArray["data"][i]["image"]+'"><div class="carousel-caption d-none d-md-block"><a href="/blog/'+dataArray["data"][i]["slug"]+'">'+dataArray["data"][i]["title"]+'</a><p>'+dataArray["data"][i]["excerpt"]+'</p></div></div>').appendTo('.carousel-inner');
        $('<li data-target="#carousel-example-generic" data-slide-to="'+i+'"></li>').appendTo('.carousel-indicators')
    
      }
