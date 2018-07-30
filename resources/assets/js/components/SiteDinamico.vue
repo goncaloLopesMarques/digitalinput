@@ -19,7 +19,7 @@
        <div class="col-sm">
          <button @click="tooglePages3" for="pages3" v-bind:class="buttonClassPages3"><img src="images/levels.png" /> >8 Paginas</button>
        </div> 
-    </div> 
+     </div> 
     </div> 
 </template>
 <script>

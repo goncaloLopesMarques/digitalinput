@@ -3,7 +3,7 @@
    <ol class="carousel-indicators"></ol>
    <div class="carousel-inner darken-overlay">
    </div>
-</div>
+
 <a class="carousel-control-prev" href="#carousel-example-generic" role="button" data-slide="prev">
 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
 <span class="sr-only">Previous</span>
@@ -31,10 +31,14 @@
     <div class="col-md-6"></div>
     </div>
 </div>
-
+</div>
 <div class="row" id="posts">
    </div>
 <style>
+  .blogGrid{
+    height: 400px;
+    background-size: cover;
+   }
   .darken-overlay{
    width: 100%;
    height: 100%;
@@ -88,55 +92,55 @@
         //ciclo for para preencher a grid com posts
         for(var i=0 ; i< dataArray["data"].length ; i++){
             if(i==0){
-                $("#posts").append('<div class="col-md-5" id="col5linha1" style="background-image: url('+dataArray["data"][i]["image"]+');">');
+                $("#posts").append('<div class="col-md-5 blogGrid" id="col5linha1" style="background-image: url('+dataArray["data"][i]["image"]+');">');
                 $("#col5linha1").append('<a href="/blog/'+dataArray["data"][i]["slug"]+'">');
                 $("#col5linha1").append('<span class="postTitle"></span>&nbsp;'+dataArray["data"][i]["title"]+'</span></a>');
                 $("#col5linha1").append('<span class="postAuthor"> Criado por '+dataArray["data"][i]["author"]+' </span>');
                 $("#col5linha1").append('<p><a href="/blog/'+dataArray["data"][i]["slug"]+'"><span class="postSubtitle">'+dataArray["data"][i]["excerpt"]+'</span><p><span class="postKeepReading">Continuar a ler >></span></a></div>');  
             }else if(i==1){
-                $("#posts").append('<div class="col-md-3"id="col3linha1" style="background-image: url('+dataArray["data"][i]["image"]+');">');
+                $("#posts").append('<div class="col-md-3 blogGrid"id="col3linha1" style="background-image: url('+dataArray["data"][i]["image"]+');">');
                 $("#col3linha1").append('<a href="/blog/'+dataArray["data"][i]["slug"]+'">');
                 $("#col3linha1").append('<span class="postTitle"></span>&nbsp;'+dataArray["data"][i]["title"]+'</span></a>');
                 $("#col3linha1").append('<span class="postAuthor"> Criado por '+dataArray["data"][i]["author"]+' </span>');
                 $("#col3linha1").append('<p><a href="/blog/'+dataArray["data"][i]["slug"]+'"><span class="postSubtitle">'+dataArray["data"][i]["excerpt"]+'</span><p><span class="postKeepReading">Continuar a ler >></span></a></div>');
             }else if(i==2){
-                $("#posts").append('<div class="col-md-4" id="col4linha1" style="background-image: url('+dataArray["data"][i]["image"]+');">');
+                $("#posts").append('<div class="col-md-4 blogGrid" id="col4linha1" style="background-image: url('+dataArray["data"][i]["image"]+');">');
                 $("#col4linha1").append('<a href="/blog/'+dataArray["data"][i]["slug"]+'">');
                 $("#col4linha1").append('<span class="postTitle"></span>&nbsp;'+dataArray["data"][i]["title"]+'</span></a>');
                 $("#col4linha1").append('<span class="postAuthor"> Criado por '+dataArray["data"][i]["author"]+' </span>');
                 $("#col4linha1").append('<p><a href="/blog/'+dataArray["data"][i]["slug"]+'"><span class="postSubtitle">'+dataArray["data"][i]["excerpt"]+'</span><p><span class="postKeepReading">Continuar a ler >></span></a></div>');
             }else if(i==3){
-                $("#posts").append('<div class="col-md-4" id="col4linha2" style="background-image: url('+dataArray["data"][i]["image"]+');">');
+                $("#posts").append('<div class="col-md-4 blogGrid" id="col4linha2" style="background-image: url('+dataArray["data"][i]["image"]+');">');
                 $("#col4linha2").append('<a href="/blog/'+dataArray["data"][i]["slug"]+'">');
                 $("#col4linha2").append('<span class="postTitle"></span>&nbsp;'+dataArray["data"][i]["title"]+'</span></a>');
                 $("#col4linha2").append('<span class="postAuthor"> Criado por '+dataArray["data"][i]["author"]+' </span>');
                 $("#col4linha2").append('<p><a href="/blog/'+dataArray["data"][i]["slug"]+'"><span class="postSubtitle">'+dataArray["data"][i]["excerpt"]+'</span><p><span class="postKeepReading">Continuar a ler >></span></a></div>');
             }else if(i==4){
-                $("#posts").append('<div class="col-md-2" id="col2linha2" style="background-image: url('+dataArray["data"][i]["image"]+');">');
+                $("#posts").append('<div class="col-md-3 blogGrid" id="col2linha2" style="background-image: url('+dataArray["data"][i]["image"]+');">');
                 $("#col2linha2").append('<a href="/blog/'+dataArray["data"][i]["slug"]+'">');
                 $("#col2linha2").append('<span class="postTitle"></span>&nbsp;'+dataArray["data"][i]["title"]+'</span></a>');
                 $("#col2linha2").append('<span class="postAuthor"> Criado por '+dataArray["data"][i]["author"]+' </span>');
                 $("#col2linha2").append('<p><a href="/blog/'+dataArray["data"][i]["slug"]+'"><span class="postSubtitle">'+dataArray["data"][i]["excerpt"]+'</span><p><span class="postKeepReading">Continuar a ler >></span></a></div>');
             }else if(i==5){
-                $("#posts").append('<div class="col-md-6" id="col6linha2" style="background-image: url('+dataArray["data"][i]["image"]+');">');
+                $("#posts").append('<div class="col-md-5 blogGrid" id="col6linha2" style="background-image: url('+dataArray["data"][i]["image"]+');">');
                 $("#col6linha2").append('<a href="/blog/'+dataArray["data"][i]["slug"]+'">');
                 $("#col6linha2").append('<span class="postTitle"></span>&nbsp;'+dataArray["data"][i]["title"]+'</span></a>');
                 $("#col6linha2").append('<span class="postAuthor"> Criado por '+dataArray["data"][i]["author"]+' </span>');
                 $("#col6linha2").append('<p><a href="/blog/'+dataArray["data"][i]["slug"]+'"><span class="postSubtitle">'+dataArray["data"][i]["excerpt"]+'</span><p><span class="postKeepReading">Continuar a ler >></span></a></div>');
             }else if(i==6){
-                $("#posts").append('<div class="col-md-5" id="col5linha3" style="background-image: url('+dataArray["data"][i]["image"]+');">');
+                $("#posts").append('<div class="col-md-5 blogGrid" id="col5linha3" style="background-image: url('+dataArray["data"][i]["image"]+');">');
                 $("#col5linha3").append('<a href="/blog/'+dataArray["data"][i]["slug"]+'">');
                 $("#col5linha3").append('<span class="postTitle"></span>&nbsp;'+dataArray["data"][i]["title"]+'</span></a>');
                 $("#col5linha3").append('<span class="postAuthor"> Criado por '+dataArray["data"][i]["author"]+' </span>');
                 $("#col5linha3").append('<p><a href="/blog/'+dataArray["data"][i]["slug"]+'"><span class="postSubtitle">'+dataArray["data"][i]["excerpt"]+'</span><p><span class="postKeepReading">Continuar a ler >></span></a></div>');  
             }else if(i==7){
-                $("#posts").append('<div class="col-md-3"id="col3linha3" style="background-image: url('+dataArray["data"][i]["image"]+');">');
+                $("#posts").append('<div class="col-md-3 blogGrid" id="col3linha3" style="background-image: url('+dataArray["data"][i]["image"]+');">');
                 $("#col3linha3").append('<a href="/blog/'+dataArray["data"][i]["slug"]+'">');
                 $("#col3linha3").append('<span class="postTitle"></span>&nbsp;'+dataArray["data"][i]["title"]+'</span></a>');
                 $("#col3linha3").append('<span class="postAuthor"> Criado por '+dataArray["data"][i]["author"]+' </span>');
                 $("#col3linha3").append('<p><a href="/blog/'+dataArray["data"][i]["slug"]+'"><span class="postSubtitle">'+dataArray["data"][i]["excerpt"]+'</span><p><span class="postKeepReading">Continuar a ler >></span></a></div>');
             }else if(i==8){
-                $("#posts").append('<div class="col-md-4" id="col4linha3" style="background-image: url('+dataArray["data"][i]["image"]+');">');
+                $("#posts").append('<div class="col-md-4 blogGrid" id="col4linha3" style="background-image: url('+dataArray["data"][i]["image"]+');">');
                 $("#col4linha3").append('<a href="/blog/'+dataArray["data"][i]["slug"]+'">');
                 $("#col4linha3").append('<span class="postTitle"></span>&nbsp;'+dataArray["data"][i]["title"]+'</span></a>');
                 $("#col4linha3").append('<span class="postAuthor"> Criado por '+dataArray["data"][i]["author"]+' </span>');

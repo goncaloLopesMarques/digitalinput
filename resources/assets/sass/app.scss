@@ -1,7 +1,7 @@
 
 // Fonts
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
-
+@import url("https://fonts.googleapis.com/css?family=PT+Sans:700|Pacifico|Changa+One");
 // Variables
 @import "variables";
 
@@ -17,11 +17,57 @@
 $complete: #2ECC71;
 $active: #3498DB;
 $mute: #DFE3E4;
+$bg1: "../images/business.jpg";
+
+
 .buttonEmpty{
   filter: brightness(100%);
+  
 }
 .buttonPressed{
   filter: brightness(60%);
+}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+  margin:0;
+  padding:0;
+  width: 100%;
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
+}
+.center {
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+  color: white;
+  font-weight: 400;
+  text-transform: uppercase;
+  z-index: 10;
+  opacity: .9;
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+}
+.bgimg{
+  background:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),url($bg1);
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+  .bgimg{
+      background-attachment: scroll;
+  }
+}
+.w3-wide {
+  letter-spacing: 10px;
+}
+.w3-hover-opacity {
+  cursor: pointer;
 }
 .progress {
   background-color: unset;

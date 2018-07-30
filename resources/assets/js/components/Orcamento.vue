@@ -1,8 +1,17 @@
 <template>
+<div>
+ <div class="bgimg w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+   <span class="center">Orçamento Digital</span>
+   
+  </div>
+ </div>
 <div class="container">
-   <navigationBar/>
-    <div v-if="this.$store.getters.fase1Show" class="row" style="padding-bottom: 50px!important;">
-  <div class="col-sm-4">
+      <div class="row"><h2> Faça já o seu</h2></div>
+      <div class="row"><navigationBar/></div>
+
+ <div v-if="this.$store.getters.fase1Show" class="row" style="padding-bottom: 50px!important;">
+  <div class="col-md-4">
     <div class="card">
       <div class="card-body">
         <h5 class="card-title">Site Simples</h5>
@@ -10,8 +19,8 @@
         <button @click="toogleEstatico" class="btn btn-primary">Faça o seu orçamento</button>
       </div>
     </div>
-  </div>
-  <div class="col-sm-4">
+ </div>
+  <div class="col-md-4">
     <div class="card">
       <div class="card-body">
         <h5 class="card-title">Site Dinamico</h5>
@@ -20,7 +29,7 @@
       </div>
     </div>
   </div>
-  <div class="col-sm-4">
+  <div class="col-md-4">
     <div class="card">
       <div class="card-body">
         <h5 class="card-title">Aplicação Web</h5>
@@ -29,25 +38,30 @@
       </div>
     </div>
   </div>
-</div>
-<template v-if="this.$store.getters.siteDinamicoFase1Show">
+ </div>
+
+
+    
+   
+
+  <template v-if="this.$store.getters.siteDinamicoFase1Show">
      <site-dinamico/>
-</template>
-<template v-if="this.$store.getters.siteDinamicoFase2Show">
+  </template>
+  <template v-if="this.$store.getters.siteDinamicoFase2Show">
      <site-dinamico-fase2/>
-</template>
-<template v-if="this.$store.getters.siteDinamicoFase3Show">
+  </template>
+  <template v-if="this.$store.getters.siteDinamicoFase3Show">
      <site-dinamico-fase3/>
-</template>
-<template v-if="this.$store.getters.siteDinamicoFase4Show">
+  </template>
+  <template v-if="this.$store.getters.siteDinamicoFase4Show">
      <site-dinamico-fase4/>
-</template>
-<template v-if="appShow">
+  </template>
+  <template v-if="appShow">
      <orcamento-app/>
-</template>
-<template v-if=" this.$store.getters.fase5">
-<terminate/>
-</template>
+  </template>
+  <template v-if=" this.$store.getters.fase5">
+  <terminate/>
+  </template>
   <div v-if="this.fase >=2" style="margin-bottom: 50px;">
     <button @click="voltar" type="button" class="btn btn-outline-dark">{{ buttonBack }}</button>
   </div>
@@ -56,7 +70,7 @@
   </div>
 
 
-
+ </div>
 </div>
 </template>
 

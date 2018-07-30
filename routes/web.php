@@ -28,7 +28,7 @@ Route::get('blog/{slug}', function($slug){
 });
 //--------FIM DAS ROTAS DOS POSTS
 route::get('/portfolio', 'PagesController@portfolio');
-route::get('/orcamento', 'OrcamentoController@index');
+route::get('/orcamento', 'PagesController@orcamento');
 
 //enviar emails
 Route::post('/orcamento/site', 'SendMailController@enviarOrcamentoSite');
