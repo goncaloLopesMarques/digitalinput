@@ -1,9 +1,9 @@
 
-<div class="container">
+
    <!--Section: Jumbotron-->
    <section class="card wow fadeIn" id="intro" style="visibility: visible; animation-name: fadeIn;">
       <!-- Content -->
-      <div class="card-body text-white text-center py-5 px-5 my-5" style="background-image: url('/images/cool-background.jpg');">
+      <div class="card-body text-white home-slider px-5" style="background-image: url('/images/Programmer-Developer-Wallpaper.jpg');">
          @if(session('semDados'))
          <div class="col-md-12 alert alert-danger" data-dismiss="alert" aria-label="close">
             {{session('semDados')}}
@@ -22,7 +22,7 @@
          </p>
 
 
-         <div class="row">
+         <!-- <div class="row">
             <div class="text-center col-md-8 offset-2">
                <a target="_self" href="{{ url('/login') }}" class="col-md-6 btn btn-primary waves-effect waves-light">Login</a>
                <a href="{{ url('/pesquisar') }}" class="col-md-6 btn btn-primary waves-effect waves-light">É nosso cliente?</a>
@@ -34,7 +34,7 @@
                
                <a href="#direitos" class="col-md-6 btn btn-primary waves-effect waves-light">OS seus direitos</a>
             </div>
-         <div>
+         <div> -->
 
 
 
@@ -44,6 +44,7 @@
       <!-- Content -->
    </section>
    <!--Section: Jumbotron-->
+   <div class="container">
    <!--Section: Cards-->
    <section id="direitos" class="pt-5">
       <!-- Heading & Description -->

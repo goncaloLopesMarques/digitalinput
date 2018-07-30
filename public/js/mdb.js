@@ -14823,9 +14823,22 @@ var OFFSET_TOP = 50;
 $(window).scroll(function () {
   if ($('.navbar').length) {
     if ($('.navbar').offset().top > OFFSET_TOP) {
+      $('.logo a img').attr('src', '/images/espiralPNG.png');  
+      $('.logo a img').addClass("fa-spin");
       $('.scrolling-navbar').addClass("top-nav-collapse");
+      if ($('body.home').length){
+        $('.scrolling-navbar').addClass("darkned");
+        $('ul.navbar-nav li a').addClass("text-white");
+      }
+      
     } else {
+      $('.logo a img').attr('src', '/images/Digitalinput-LOGO.png');
+      $('.logo a img').removeClass("fa-spin");
       $('.scrolling-navbar').removeClass("top-nav-collapse");
+      if ($('body.home').length){
+        $('.scrolling-navbar').removeClass("darkned");
+        $('ul.navbar-nav li a').removeClass("text-white");
+      }
     }
   }
 });

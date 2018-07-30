@@ -9,3 +9,30 @@
 	text-align: center;
 	margin: 0 auto;
 }
+
+.home-slider{
+	padding-top: 25vh;
+	padding-bottom: 60vh;
+}
+
+.darkned{
+	background-color: rgba(5,5,5,.7);
+}
+
+.navbar{
+	webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.text-blue{
+	color: #0069aa !important;
+}
+
+.home .navbar.navbar-light .navbar-nav .nav-item .nav-link{
+	color: #8c9c22;
+}
+
+.home .navbar.navbar-light .navbar-nav .nav-item.active > .nav-link:hover,
+.home .navbar.navbar-light .navbar-nav .nav-item .nav-link:hover {
+    color: #fff;
+}

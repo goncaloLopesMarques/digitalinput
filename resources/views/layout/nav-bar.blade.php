@@ -16,7 +16,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
                     <!-- Left -->
-                    <ul class="navbar-nav mr-auto">
+                    <ul class="navbar-nav">
                         <li class="nav-item active">
                             <a class="nav-link waves-effect" href="/">Home
                                 <span class="sr-only">(current)</span>
