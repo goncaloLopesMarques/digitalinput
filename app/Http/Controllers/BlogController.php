@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Post;
 use App\Category;
+use App\User;
+use Carbon\Carbon;
 
 class BlogController extends Controller
 {
@@ -21,6 +23,13 @@ class BlogController extends Controller
     } 
     // dd($posts);
     return view('pages.blog',compact('posts','mostRecentPosts', 'classes'));
+  }
+  public function post($slug){
+    $post = Post::where('slug', '=', $slug)->firstOrFail();
+    $data =Carbon::parse($post->created_at)->format('d/m/Y');
+    $category = Category::Where('id','=',$post->category_id)->firstOrFail();
+    $avatar = User::Where('name','=',$post->author)->firstOrFail();
+    return view('layout.post', compact('post','category','avatar','data'));
   }
 
   public function show(){

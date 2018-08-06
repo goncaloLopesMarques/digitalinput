@@ -10417,14 +10417,174 @@ a.text-dark:focus {
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
+.fill:hover,
+.fill:focus {
+  -webkit-box-shadow: inset 0 0 0 2em var(--hover);
+          box-shadow: inset 0 0 0 2em var(--hover);
+}
+
+.pulse:hover,
+.pulse:focus {
+  -webkit-animation: pulse 1s;
+          animation: pulse 1s;
+  -webkit-box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+          box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 var(--hover);
+            box-shadow: 0 0 0 0 var(--hover);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 var(--hover);
+            box-shadow: 0 0 0 0 var(--hover);
+  }
+}
+
+.close:hover,
+.close:focus {
+  -webkit-box-shadow: inset -3.5em 0 0 0 var(--hover), inset 3.5em 0 0 0 var(--hover);
+          box-shadow: inset -3.5em 0 0 0 var(--hover), inset 3.5em 0 0 0 var(--hover);
+}
+
+.raise:hover,
+.raise:focus {
+  -webkit-box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+          box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  -webkit-transform: translateY(-0.25em);
+          transform: translateY(-0.25em);
+}
+
+.up:hover,
+.up:focus {
+  -webkit-box-shadow: inset 0 -3.25em 0 0 var(--hover);
+          box-shadow: inset 0 -3.25em 0 0 var(--hover);
+}
+
+.slide:hover,
+.slide:focus {
+  -webkit-box-shadow: inset 6.5em 0 0 0 var(--hover);
+          box-shadow: inset 6.5em 0 0 0 var(--hover);
+}
+
+.offset {
+  -webkit-box-shadow: 0.3em 0.3em 0 0 var(--color), inset 0.3em 0.3em 0 0 var(--color);
+          box-shadow: 0.3em 0.3em 0 0 var(--color), inset 0.3em 0.3em 0 0 var(--color);
+}
+
+.offset:hover,
+.offset:focus {
+  -webkit-box-shadow: 0 0 0 0 var(--hover), inset 6em 3.5em 0 0 var(--hover);
+          box-shadow: 0 0 0 0 var(--hover), inset 6em 3.5em 0 0 var(--hover);
+}
+
+.fill {
+  --color: #2e3951;
+  --hover: #252e41;
+}
+
+.pulse {
+  --color: #ef6eae;
+  --hover: #252e41;
+}
+
+.close {
+  --color: #ff7f82;
+  --hover: #252e41;
+}
+
+.raise {
+  --color: #ffa260;
+  --hover: #252e41;
+}
+
+.up {
+  --color: #e4cb58;
+  --hover: #252e41;
+}
+
+.slide {
+  --color: #8fc866;
+  --hover: #252e41;
+}
+
+.offset {
+  --color: #19bc8b;
+  --hover: #252e41;
+}
+
+button {
+  color: var(--color);
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
+button:hover {
+  border-color: var(--hover);
+  color: white;
+}
+
+button {
+  background-color: unset;
+  border: 2px solid;
+  font: inherit;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 1em 2em;
+}
+
+.buttonRow {
+  padding-top: 80px;
+}
+
+.buttonShop {
+  border: unset !important;
+  min-width: 100% !important;
+  background-repeat: no-repeat !important;
+  min-height: 100% !important;
+  background-size: 100% !important;
+  background-position: center !important;
+  border: unset;
+  outline: none;
+}
+
+.buttonShop:hover,
+.buttonShop:active,
+.buttonShop:focus {
+  cursor: pointer;
+  border: unset;
+  -webkit-filter: brightness(35%);
+          filter: brightness(35%);
+  outline: none;
+}
+
+code {
+  color: #e4cb58;
+  font: inherit;
+}
+
+.imgCard {
+  width: 100%;
+  height: auto;
+}
+
+.introducao {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
 .buttonEmpty {
-  -webkit-filter: brightness(100%);
-          filter: brightness(100%);
+  -webkit-filter: brightness(100%) !important;
+          filter: brightness(100%) !important;
 }
 
 .buttonPressed {
-  -webkit-filter: brightness(60%);
-          filter: brightness(60%);
+  -webkit-filter: brightness(35%);
+          filter: brightness(35%);
 }
 
 body,
@@ -10463,8 +10623,8 @@ html {
 }
 
 .bgimg {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(/images/business.jpg?dc3c0e7d715574ca85ed449e8ba082c2);
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/images/business.jpg?dc3c0e7d715574ca85ed449e8ba082c2);
+  background: -webkit-gradient(linear, left top, left bottom, from(black), to(rgba(0, 0, 0, 0.6))), url(/images/business.jpg?dc3c0e7d715574ca85ed449e8ba082c2);
+  background: linear-gradient(black, rgba(0, 0, 0, 0.6)), url(/images/business.jpg?dc3c0e7d715574ca85ed449e8ba082c2);
   min-height: 100vh;
   background-attachment: fixed;
   background-position: center;

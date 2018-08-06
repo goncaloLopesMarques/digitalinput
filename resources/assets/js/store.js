@@ -535,7 +535,7 @@ export default {
             state.SiteDinamico.Fase4.MarketingDigital.Twitter.selecionado = false;
             state.SiteDinamico.Fase4.MarketingDigital.Pinterest.selecionado = false;
             state.SiteDinamico.Fase4.MarketingDigital.LinkedIn.selecionado = false;
-            state.SiteDinamico.Fase4.MarketingDigital.AdWords = false;
+            state.SiteDinamico.Fase4.MarketingDigital.AdWords.selecionado = false;
             //limpa tudo o que foi selecionado Na fase 5
             state.SiteDinamico.Fase5.show = false;
         },

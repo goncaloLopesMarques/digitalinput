@@ -2,16 +2,18 @@
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
    <ol class="carousel-indicators"></ol>
    <div class="carousel-inner darken-overlay">
-   </div>
+  
 
-<a class="carousel-control-prev" href="#carousel-example-generic" role="button" data-slide="prev">
-<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-<span class="sr-only">Previous</span>
-</a>
-<a class="carousel-control-next" href="#carousel-example-generic" role="button" data-slide="next">
-<span class="carousel-control-next-icon" aria-hidden="true"></span>
-<span class="sr-only">Next</span>
-</a>
+ <a class="carousel-control-prev" href="#carousel-example-generic" role="button" data-slide="prev">
+  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  <span class="sr-only">Previous</span>
+ </a>
+ <a class="carousel-control-next" href="#carousel-example-generic" role="button" data-slide="next">
+   <span class="carousel-control-next-icon" aria-hidden="true"></span>
+   <span class="sr-only">Next</span>
+ </a>
+</div>
+</div>
 <!-- CAROUSEL -->
 
 <div class="row">
@@ -89,9 +91,9 @@
        var dataArray = <?php echo json_encode($posts); ?>;
        var recentArray = <?php echo json_encode($mostRecentPosts); ?>;
        console.log(recentArray)
-        //ciclo for para preencher a grid com posts
+        //ciclo for para preencher a grid com posts  background:linear-gradient( rgba(0, 0, 0,96), rgba(0, 0, 0,0.6 ) ),url('+dataArray["data"][i]["image"]+');
         for(var i=0 ; i< dataArray["data"].length ; i++){
-            if(i==0){
+            if(i==0){                                                                        
                 $("#posts").append('<div class="col-md-5 blogGrid" id="col5linha1" style="background-image: url('+dataArray["data"][i]["image"]+');">');
                 $("#col5linha1").append('<a href="/blog/'+dataArray["data"][i]["slug"]+'">');
                 $("#col5linha1").append('<span class="postTitle"></span>&nbsp;'+dataArray["data"][i]["title"]+'</span></a>');
