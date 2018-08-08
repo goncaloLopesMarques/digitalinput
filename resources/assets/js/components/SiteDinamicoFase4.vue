@@ -4,45 +4,47 @@
         <p> Deseja Apoio ao Marketing Digital?
       <div v-if="showButtons"  class="row" style ="text-align: center;min-height:200px;">
           <div class="col-md-4"> </div>
-      <div class="col-md-2">
-        <button @click="yes" for="yes" v-bind:class="buttonClassYes" style="background:url(images/yes.png);"></button>
+      <div @click="yes" class="col-md-2 selecionavel">
+        <button for="yes" v-bind:class="buttonClassYes" style="background:url(images/yes.png);"></button>
         <h5 class="card-title imgCard">Sim</h5>
       </div>
-      <div class="col-md-2">
-        <button @click="no" for="no" v-bind:class="buttonClassNo" style="background:url(images/cancel.png);"></button>
+      <div @click="no" class="col-md-2 selecionavel">
+        <button for="no" v-bind:class="buttonClassNo" style="background:url(images/cancel.png);"></button>
         <h5 class="card-title imgCard">Não</h5>
       </div>
        <div class="col-md-4"> </div>
       </div>
     <div v-if="showSocialMedia" class="row" style ="text-align: center; min-height:200px;">
    
-        <div  class="col-md-2">
-        <button @click="toogleFace" for="face" v-bind:class="buttonClassFace" style="background:url(images/facebook.png);"></button>
-          <h5 class="card-title imgCard">FaceBook</h5>
+        <div @click="toogleFace" class="col-md-2 selecionavel">
+        <button for="face" v-bind:class="buttonClassFace" style="background:url(images/facebook.png);"></button>
+         <h5 class="card-title imgCard">FaceBook</h5>
         </div>
-         <div class="col-md-2">
-        <button @click="toogleInstagram" for="insta" v-bind:class="buttonClassInstagram" style="background:url(images/instagram.png);"></button>
+         <div @click="toogleInstagram" class="col-md-2 selecionavel">
+        <button for="insta" v-bind:class="buttonClassInstagram" style="background:url(images/instagram.png);"></button>
   <h5 class="card-title imgCard">Instagram</h5>
         </div>
-         <div class="col-md-2">
-        <button @click="toogleTwitter" for="twitter" v-bind:class="buttonClassTwitter" style="background:url(images/twitter.png);"></button>
+         <div @click="toogleTwitter" class="col-md-2 selecionavel">
+        <button for="twitter" v-bind:class="buttonClassTwitter" style="background:url(images/twitter.png);"></button>
           <h5 class="card-title imgCard">Twitter</h5>
         </div>
-         <div class="col-md-2">
-        <button @click="toogleLinkedin" for="linked" v-bind:class="buttonClassLinkedin" style="background:url(images/linkedin.png);"></button>
+         <div @click="toogleLinkedin" class="col-md-2 selecionavel">
+        <button for="linked" v-bind:class="buttonClassLinkedin" style="background:url(images/linkedin.png);"></button>
           <h5 class="card-title imgCard">LinkedIn</h5>
         </div>
-         <div class="col-md-2">
-        <button @click="tooglePinterest" for="pint" v-bind:class="buttonClassPinterest" style="background:url(images/pinterest.png);"></button>
+         <div @click="tooglePinterest" class="col-md-2 selecionavel">
+        <button for="pint" v-bind:class="buttonClassPinterest" style="background:url(images/pinterest.png);"></button>
           <h5 class="card-title imgCard">Pinterest</h5>
         </div>
-         <div class="col-md-2">
-        <button @click="toogleAdwords" for="adwords" v-bind:class="buttonClassAdwords" style="background:url(images/words.png);"></button>
+         <div @click="toogleAdwords" class="col-md-2 selecionavel">
+        <button for="adwords" v-bind:class="buttonClassAdwords" style="background:url(images/words.png);"></button>
           <h5 class="card-title imgCard">AdWords</h5>
         </div>
      </div>
       <div class="row" v-if="buttonEnd">
-     <button @click="end" type="button" class="btn btn-outline-dark">Terminar</button>
+        <div class="col-md-5"></div>
+        <div class="col-md-2"><button @click="end" type="button" class="fill">Terminar</button></div>
+          <div class="col-md-5"></div>
      </div>
 
      </template>

@@ -1,38 +1,69 @@
 <template>
-      <div v-if="this.$store.getters.siteDinamicoFase1Show" class="row" style ="text-align: center; min-height:200px;">
-         <div v-if="!this.$store.getters.isEstatico" class="col-md-2">
-            
-               <button @click="toogleShop" for="dominio" v-bind:class="buttonClassShop" style="background:url(images/shop.png);">            
+<div class="container">
+      <div v-if="this.$store.getters.siteDinamicoFase1Show && !this.$store.getters.isEstatico" class="row" style ="text-align: center; min-height:200px;">
+         <div @click="toogleShop" class="col-md-2 selecionavel">
+               <button  for="dominio" v-bind:class="buttonClassShop" style="background:url(images/shop.png);">            
                </button>   
-               <h5 class="card-title" style="color:black;">Loja Online</h5>       
+                <h5 class="card-title" style="color:black;">Loja Online</h5>  
          </div>
-         <div class="col-md-2">
+         <div @click="toogleDominio" class="col-md-2 selecionavel">
            
-               <button @click="toogleDominio" for="dominio" v-bind:class="buttonClassDominio" style="background:url(images/www.png);">                
+               <button  for="dominio" v-bind:class="buttonClassDominio" style="background:url(images/www.png);">                
                </button>
                 <h5 class="card-title" style="color:black;">Dominio</h5>  
          </div>
-         <div class="col-md-2">
-               <button @click="toogleAlojamento" for="alojamento" v-bind:class="buttonClassAlojamento" style="background:url(images/imac.png);">     
+         <div @click="toogleAlojamento" class="col-md-2 selecionavel">
+               <button for="alojamento" v-bind:class="buttonClassAlojamento" style="background:url(images/imac.png);">     
                </button>
                <h5 class="card-title" style="color:black;">Alojamento</h5>  
          </div>
-         <div class="col-md-2">
-               <button @click="tooglePages1" for="pages1" v-bind:class="buttonClassPages1" style="background:url(images/pages.png);">
+         <div @click="tooglePages1" class="col-md-2 selecionavel">
+               <button for="pages1" v-bind:class="buttonClassPages1" style="background:url(images/pages.png);">
                </button>
                 <h5 class="card-title" style="color:black;">2-4 Paginas</h5>
          </div>
-         <div class="col-md-2">
-               <button @click="tooglePages2" for="pages2" v-bind:class="buttonClassPages2" style="background:url(images/pages.png);">
+         <div @click="tooglePages2" class="col-md-2 selecionavel">
+               <button for="pages2" v-bind:class="buttonClassPages2" style="background:url(images/pages.png);">
                </button>
                 <h5 class="card-title" style="color:black;">4-8 Paginas</h5>
          </div>
-         <div class="col-md-2">
-               <button @click="tooglePages3" for="pages3" v-bind:class="buttonClassPages3" style="background:url(images/pages.png);">
+         <div @click="tooglePages3" class="col-md-2 selecionavel">
+               <button for="pages3" v-bind:class="buttonClassPages3" style="background:url(images/pages.png);">
                </button>
                 <h5 class="card-title" style="color:black;">>8 Paginas</h5>
          </div>
       </div>
+      <div v-if="this.$store.getters.siteDinamicoFase1Show && this.$store.getters.isEstatico" class="row" style ="text-align: center; min-height:200px;">
+          <div class="col-md-1"></div>
+     <div @click="toogleDominio" class="col-md-2 selecionavel">
+           
+               <button  for="dominio" v-bind:class="buttonClassDominio" style="background:url(images/www.png);">                
+               </button>
+                <h5 class="card-title" style="color:black;">Dominio</h5>  
+         </div>
+         <div @click="toogleAlojamento" class="col-md-2 selecionavel">
+               <button for="alojamento" v-bind:class="buttonClassAlojamento" style="background:url(images/imac.png);">     
+               </button>
+               <h5 class="card-title" style="color:black;">Alojamento</h5>  
+         </div>
+         <div @click="tooglePages1" class="col-md-2 selecionavel">
+               <button for="pages1" v-bind:class="buttonClassPages1" style="background:url(images/pages.png);">
+               </button>
+                <h5 class="card-title" style="color:black;">2-4 Paginas</h5>
+         </div>
+         <div @click="tooglePages2" class="col-md-2 selecionavel">
+               <button for="pages2" v-bind:class="buttonClassPages2" style="background:url(images/pages.png);">
+               </button>
+                <h5 class="card-title" style="color:black;">4-8 Paginas</h5>
+         </div>
+         <div @click="tooglePages3" class="col-md-2 selecionavel">
+               <button for="pages3" v-bind:class="buttonClassPages3" style="background:url(images/pages.png);">
+               </button>
+                <h5 class="card-title" style="color:black;">>8 Paginas</h5>
+         </div>
+         <div class="col-md-1"></div>
+    </div>
+        </div>
 </template>
 <script>
    const Swal = require('sweetalert2')

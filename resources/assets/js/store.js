@@ -135,19 +135,19 @@ export default {
         },
         NavigationBar:{
             button1:{
-                cssClass:'is-active'
+                cssClass:'md-step active'
             },
             button2:{
-                cssClass:''
+                cssClass:'md-step'
             },
             button3:{
-                cssClass:''
+                cssClass:'md-step'
             },
             button4:{
-                cssClass:''
+                cssClass:'md-step'
             },
             button5:{
-                cssClass:''
+                cssClass:'md-step'
             },
         },
         //variaveis de controlo e navegação da aplicação
@@ -278,8 +278,8 @@ export default {
     mutations: {
         selecionaEstatico(state) {
             state.fase ++;
-            state.NavigationBar.button1.cssClass = 'is-complete';
-            state.NavigationBar.button2.cssClass = 'is-active';
+            state.NavigationBar.button1.cssClass = 'md-step active done';
+            state.NavigationBar.button2.cssClass = 'md-step active';
             state.SiteDinamico.produtosSelecionados.push(state.fase1.siteEstatico.descricao);
             state.SiteDinamico.produtosSelecionados.push(state.SiteDinamico.Fase1.Pages1.descricao);
             state.isEstatico = true;
@@ -290,8 +290,8 @@ export default {
         },
         selecionaDinamico(state) {
             state.fase ++;
-            state.NavigationBar.button1.cssClass = 'is-complete';
-            state.NavigationBar.button2.cssClass = 'is-active';
+            state.NavigationBar.button1.cssClass = 'md-step active done';
+            state.NavigationBar.button2.cssClass = 'md-step active';
             state.SiteDinamico.produtosSelecionados.push(state.fase1.siteDinamico.descricao);
             state.SiteDinamico.produtosSelecionados.push(state.SiteDinamico.Fase1.Pages1.descricao);
             state.SiteDinamico.Fase1.show = true;
@@ -301,11 +301,11 @@ export default {
         },
         selecionaApp(state) {
             state.fase ++;
-            state.NavigationBar.button1.cssClass = 'is-complete';
-            state.NavigationBar.button2.cssClass = 'is-complete';
-            state.NavigationBar.button3.cssClass = 'is-complete';
-            state.NavigationBar.button4.cssClass = 'is-complete';
-            state.NavigationBar.button5.cssClass = 'is-complete';
+            state.NavigationBar.button1.cssClass = 'md-step active done';
+            state.NavigationBar.button2.cssClass = 'md-step active done';
+            state.NavigationBar.button3.cssClass = 'md-step active done';
+            state.NavigationBar.button4.cssClass = 'md-step active done';
+            state.NavigationBar.button5.cssClass = 'md-step active done';
             state.fase1.show = false;
         },
         selecionaDominio(state) {

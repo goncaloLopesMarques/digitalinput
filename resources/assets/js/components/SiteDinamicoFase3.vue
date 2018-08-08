@@ -2,13 +2,13 @@
     <div class="container">
       <div v-if="this.$store.getters.siteDinamicoFase3Show" class="row" style ="text-align: center;min-height:200px;">
       <div class="col-md-4">  </div>
-      <div class="col-md-2">
-                 <button @click="toogleSeo" for="seo" v-bind:class="buttonClassSeo" style="background:url(images/seo.png);">
+      <div @click="toogleSeo" class="col-md-2 selecionavel">
+                 <button for="seo" v-bind:class="buttonClassSeo" style="background:url(images/seo.png);">
                  </button>
                   <h5 class="card-title imgCard">SEOs</h5>
       </div>
-      <div class="col-md-2">
-         <button @click="toogleKeys" for="keys" v-bind:class="buttonClassKeys" style="background:url(images/keys.png);">
+      <div @click="toogleKeys" class="col-md-2 selecionavel">
+         <button for="keys" v-bind:class="buttonClassKeys" style="background:url(images/keys.png);">
              </button>
               <h5 class="card-title imgCard">KeyWords</h5>
        </div>

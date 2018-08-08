@@ -22,33 +22,45 @@
                <navigationBar/>
             </div>
             <div v-if="this.$store.getters.fase1Show" class="row" style="padding-bottom: 50px!important;">
-               <div class="col-md-4">
-                  <div class="card">
-                     <div class="card-body">
-                        <h5 class="card-title">Site Simples</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-                        <button @click="toogleEstatico" class="btn btn-primary">Faça o seu orçamento</button>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-4">
-                  <div class="card">
-                     <div class="card-body">
-                        <h5 class="card-title">Site Dinamico</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-                        <button @click="toogleDinamico" class="btn btn-primary">Faça o seu orçamento</button>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-4">
-                  <div class="card">
-                     <div class="card-body">
-                        <h5 class="card-title">Aplicação Web</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-                        <button @click="toogleApp" class="btn btn-primary">Peça o seu orçamento</button>
-                     </div>
-                  </div>
-               </div>
+              <div class="col-md-4">
+             <div class="cardBox">
+               <div class="card">
+                 <div class="front">
+                   <img class="imgCard2" src="images/singlePage.png">
+                 <h3>Site Simples</h3>
+              </div>
+          <div class="back">
+          <a @click="toogleEstatico">Faça o seu orçamento</a>
+         </div>
+         </div>
+      </div>
+      </div>
+<div class="col-md-4">
+  <div class="cardBox">
+    <div class="card">
+      <div class="front">
+         <img class="imgCard2" src="images/multiPage.png">
+          <h3>Site Dinâmico</h3>
+      </div>
+      <div class="back">
+        <a @click="toogleDinamico">Faça o seu orçamento</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="col-md-4">
+  <div class="cardBox">
+    <div class="card">
+      <div class="front">
+        <img class="imgCard2" src="images/app.png">
+        <h3>Aplicação</h3>
+      </div>
+      <div class="back">
+        <a @click="toogleApp">Peça o seu orçamento</a>
+      </div>
+    </div>
+  </div>
+  </div>
             </div>
             <template v-if="this.$store.getters.siteDinamicoFase1Show">
                <site-dinamico/>
@@ -70,7 +82,8 @@
             </template>
    </section>
     <section class="buttons">
-      <div class="row buttonRow">
+
+      <div v-if=" this.fase < 5" class="row">
       <div class="col-md-3"></div>
       <div class="col-md-3" v-if="this.fase >=2" style="margin-bottom: 50px;">
       <button @click="voltar" type="button" class="fill">{{ buttonBack }}</button>
@@ -80,6 +93,15 @@
       </div>
       <div class="col-md-3"></div>
       </div>
+      <div v-if=" this.fase >= 5" class="row">
+     <div class="col-md-5"></div>
+      <div class="col-md-2" v-if="this.fase >=2" style="margin-bottom: 50px;">
+      <button @click="voltar" type="button" class="fill">{{ buttonBack }}</button>
+      </div>
+
+      <div class="col-md-5"></div>
+      </div>
+
       </section>
       </div>
       </div>

@@ -1,36 +1,62 @@
 <template>
    <div class="container">
-    <div v-if="this.$store.getters.siteDinamicoFase2Show" class="row" style ="text-align: center;min-height:200px;">
-     <div class="col-md-1"></div>
-     <div class="col-md-2">
-         <button @click="toogleRedesSociais" for="redesSociais" v-bind:class="buttonClassRedes" style="background:url(images/social.png);">            
-            </button> 
-            <h5 class="card-title" style="color:black;">Redes Sociais</h5>    
-         </div>
-      <div v-if="!this.$store.getters.isEstatico" class="col-md-2">
-            <button @click="toogleBlog" for="redesSociais" v-bind:class="buttonClassBlog" style="background:url(images/blog.png);">            
+    <div v-if="this.$store.getters.siteDinamicoFase2Show && !this.$store.getters.lojaSelecionada && this.$store.getters.isEstatico" class="row" style ="text-align: center;min-height:200px;">
+          <div class="col-md-5"></div>
+        <div @click="toogleRedesSociais" class="col-md-2 selecionavel">
+         <button  for="redesSociais" v-bind:class="buttonClassRedes" style="background:url(images/social.png);">            
+         </button> 
+         <h5 class="card-title" style="color:black;">Redes Sociais</h5>    
+      </div> 
+      <div class="col-md-5"></div> 
+    </div>  
+     <div v-if="!this.$store.getters.isEstatico && !this.$store.getters.lojaSelecionada" class="row" style ="text-align: center;min-height:200px;">
+  <div class="col-md-4"></div>
+   <div @click="toogleRedesSociais" class="col-md-2 selecionavel">
+         <button  for="redesSociais" v-bind:class="buttonClassRedes" style="background:url(images/social.png);">            
+         </button> 
+         <h5 class="card-title" style="color:black;">Redes Sociais</h5>    
+      </div> 
+
+    <div @click="toogleBlog" class="col-md-2 selecionavel">
+            <button for="redesSociais" v-bind:class="buttonClassBlog" style="background:url(images/blog.png);">            
             </button> 
             <h5 class="card-title imgCard">Blog/noticias</h5>
          </div>
-         <div v-if="this.$store.getters.lojaSelecionada" class="col-md-2">
-                <button @click="toogleProdutos1" for="blog" v-bind:class="buttonClassProdutos1" style="background:url(images/store.png);">
+         <div class="col-md-4"></div>
+          </div>
+          <div v-if="!this.$store.getters.isEstatico && this.$store.getters.lojaSelecionada" class="row" style ="text-align: center;min-height:200px;">
+<div class="col-md-1"></div>
+   <div @click="toogleRedesSociais" class="col-md-2 selecionavel">
+         <button  for="redesSociais" v-bind:class="buttonClassRedes" style="background:url(images/social.png);">            
+         </button> 
+         <h5 class="card-title" style="color:black;">Redes Sociais</h5>    
+      </div> 
+
+    <div @click="toogleBlog" class="col-md-2 selecionavel">
+            <button for="redesSociais" v-bind:class="buttonClassBlog" style="background:url(images/blog.png);">            
+            </button> 
+            <h5 class="card-title imgCard">Blog/noticias</h5>
+         </div>
+         <div @click="toogleProdutos1" class="col-md-2 selecionavel">
+                <button for="blog" v-bind:class="buttonClassProdutos1" style="background:url(images/store.png);">
                 </button> 
                 <h5 class="card-title imgCard">0-50 Produtos</h5>
          </div>
-         <div v-if="this.$store.getters.lojaSelecionada" class="col-md-2">
-                  <button @click="toogleProdutos2" for="blog" v-bind:class="buttonClassProdutos2" style="background:url(images/store.png);">
+         <div  @click="toogleProdutos2" class="col-md-2 selecionavel">
+                  <button for="blog" v-bind:class="buttonClassProdutos2" style="background:url(images/store.png);">
                   </button>
                  <h5 class="card-title imgCard">50-100 Produtos</h5> 
          </div>
-         <div v-if="this.$store.getters.lojaSelecionada" class="col-md-2">
-            <button @click="toogleProdutos3" for="blog" v-bind:class="buttonClassProdutos3" style="background:url(images/store.png);">
+         <div @click="toogleProdutos3" class="col-md-2 selecionavel">
+            <button for="blog" v-bind:class="buttonClassProdutos3" style="background:url(images/store.png);">
                 </button> 
                 <h5 class="card-title imgCard">>100 Produtos</h5>
 
          </div>
-      </div>
-      <div class="col-md-1"></div>
+         <div class="col-md-1"></div>
+          </div>  
    </div>
+
 </template>
 <script>
    name: 'SiteDinamicoFase2'

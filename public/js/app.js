@@ -39669,19 +39669,19 @@ module.exports = function spread(callback) {
         },
         NavigationBar: {
             button1: {
-                cssClass: 'is-active'
+                cssClass: 'md-step active'
             },
             button2: {
-                cssClass: ''
+                cssClass: 'md-step'
             },
             button3: {
-                cssClass: ''
+                cssClass: 'md-step'
             },
             button4: {
-                cssClass: ''
+                cssClass: 'md-step'
             },
             button5: {
-                cssClass: ''
+                cssClass: 'md-step'
             }
         },
         //variaveis de controlo e navegação da aplicação
@@ -39813,8 +39813,8 @@ module.exports = function spread(callback) {
     mutations: {
         selecionaEstatico: function selecionaEstatico(state) {
             state.fase++;
-            state.NavigationBar.button1.cssClass = 'is-complete';
-            state.NavigationBar.button2.cssClass = 'is-active';
+            state.NavigationBar.button1.cssClass = 'md-step active done';
+            state.NavigationBar.button2.cssClass = 'md-step active';
             state.SiteDinamico.produtosSelecionados.push(state.fase1.siteEstatico.descricao);
             state.SiteDinamico.produtosSelecionados.push(state.SiteDinamico.Fase1.Pages1.descricao);
             state.isEstatico = true;
@@ -39825,8 +39825,8 @@ module.exports = function spread(callback) {
         },
         selecionaDinamico: function selecionaDinamico(state) {
             state.fase++;
-            state.NavigationBar.button1.cssClass = 'is-complete';
-            state.NavigationBar.button2.cssClass = 'is-active';
+            state.NavigationBar.button1.cssClass = 'md-step active done';
+            state.NavigationBar.button2.cssClass = 'md-step active';
             state.SiteDinamico.produtosSelecionados.push(state.fase1.siteDinamico.descricao);
             state.SiteDinamico.produtosSelecionados.push(state.SiteDinamico.Fase1.Pages1.descricao);
             state.SiteDinamico.Fase1.show = true;
@@ -39836,11 +39836,11 @@ module.exports = function spread(callback) {
         },
         selecionaApp: function selecionaApp(state) {
             state.fase++;
-            state.NavigationBar.button1.cssClass = 'is-complete';
-            state.NavigationBar.button2.cssClass = 'is-complete';
-            state.NavigationBar.button3.cssClass = 'is-complete';
-            state.NavigationBar.button4.cssClass = 'is-complete';
-            state.NavigationBar.button5.cssClass = 'is-complete';
+            state.NavigationBar.button1.cssClass = 'md-step active done';
+            state.NavigationBar.button2.cssClass = 'md-step active done';
+            state.NavigationBar.button3.cssClass = 'md-step active done';
+            state.NavigationBar.button4.cssClass = 'md-step active done';
+            state.NavigationBar.button5.cssClass = 'md-step active done';
             state.fase1.show = false;
         },
         selecionaDominio: function selecionaDominio(state) {
@@ -52863,6 +52863,28 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 name: 'Orcamento';
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -52953,76 +52975,43 @@ var render = function() {
                 },
                 [
                   _c("div", { staticClass: "col-md-4" }, [
-                    _c("div", { staticClass: "card" }, [
-                      _c("div", { staticClass: "card-body" }, [
-                        _c("h5", { staticClass: "card-title" }, [
-                          _vm._v("Site Simples")
-                        ]),
+                    _c("div", { staticClass: "cardBox" }, [
+                      _c("div", { staticClass: "card" }, [
+                        _vm._m(2),
                         _vm._v(" "),
-                        _c("p", { staticClass: "card-text" }, [
-                          _vm._v(
-                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c(
-                          "button",
-                          {
-                            staticClass: "btn btn-primary",
-                            on: { click: _vm.toogleEstatico }
-                          },
-                          [_vm._v("Faça o seu orçamento")]
-                        )
+                        _c("div", { staticClass: "back" }, [
+                          _c("a", { on: { click: _vm.toogleEstatico } }, [
+                            _vm._v("Faça o seu orçamento")
+                          ])
+                        ])
                       ])
                     ])
                   ]),
                   _vm._v(" "),
                   _c("div", { staticClass: "col-md-4" }, [
-                    _c("div", { staticClass: "card" }, [
-                      _c("div", { staticClass: "card-body" }, [
-                        _c("h5", { staticClass: "card-title" }, [
-                          _vm._v("Site Dinamico")
-                        ]),
+                    _c("div", { staticClass: "cardBox" }, [
+                      _c("div", { staticClass: "card" }, [
+                        _vm._m(3),
                         _vm._v(" "),
-                        _c("p", { staticClass: "card-text" }, [
-                          _vm._v(
-                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c(
-                          "button",
-                          {
-                            staticClass: "btn btn-primary",
-                            on: { click: _vm.toogleDinamico }
-                          },
-                          [_vm._v("Faça o seu orçamento")]
-                        )
+                        _c("div", { staticClass: "back" }, [
+                          _c("a", { on: { click: _vm.toogleDinamico } }, [
+                            _vm._v("Faça o seu orçamento")
+                          ])
+                        ])
                       ])
                     ])
                   ]),
                   _vm._v(" "),
                   _c("div", { staticClass: "col-md-4" }, [
-                    _c("div", { staticClass: "card" }, [
-                      _c("div", { staticClass: "card-body" }, [
-                        _c("h5", { staticClass: "card-title" }, [
-                          _vm._v("Aplicação Web")
-                        ]),
+                    _c("div", { staticClass: "cardBox" }, [
+                      _c("div", { staticClass: "card" }, [
+                        _vm._m(4),
                         _vm._v(" "),
-                        _c("p", { staticClass: "card-text" }, [
-                          _vm._v(
-                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c(
-                          "button",
-                          {
-                            staticClass: "btn btn-primary",
-                            on: { click: _vm.toogleApp }
-                          },
-                          [_vm._v("Peça o seu orçamento")]
-                        )
+                        _c("div", { staticClass: "back" }, [
+                          _c("a", { on: { click: _vm.toogleApp } }, [
+                            _vm._v("Peça o seu orçamento")
+                          ])
+                        ])
                       ])
                     ])
                   ])
@@ -53054,53 +53043,84 @@ var render = function() {
       ),
       _vm._v(" "),
       _c("section", { staticClass: "buttons" }, [
-        _c("div", { staticClass: "row buttonRow" }, [
-          _c("div", { staticClass: "col-md-3" }),
-          _vm._v(" "),
-          this.fase >= 2
-            ? _c(
-                "div",
-                {
-                  staticClass: "col-md-3",
-                  staticStyle: { "margin-bottom": "50px" }
-                },
-                [
-                  _c(
-                    "button",
+        this.fase < 5
+          ? _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-3" }),
+              _vm._v(" "),
+              this.fase >= 2
+                ? _c(
+                    "div",
                     {
-                      staticClass: "fill",
-                      attrs: { type: "button" },
-                      on: { click: _vm.voltar }
+                      staticClass: "col-md-3",
+                      staticStyle: { "margin-bottom": "50px" }
                     },
-                    [_vm._v(_vm._s(_vm.buttonBack))]
+                    [
+                      _c(
+                        "button",
+                        {
+                          staticClass: "fill",
+                          attrs: { type: "button" },
+                          on: { click: _vm.voltar }
+                        },
+                        [_vm._v(_vm._s(_vm.buttonBack))]
+                      )
+                    ]
                   )
-                ]
-              )
-            : _vm._e(),
-          _vm._v(" "),
-          this.fase >= 2 && this.fase < 5 && !_vm.appShow
-            ? _c(
-                "div",
-                {
-                  staticClass: "col-md-3",
-                  staticStyle: { "margin-bottom": "50px" }
-                },
-                [
-                  _c(
-                    "button",
+                : _vm._e(),
+              _vm._v(" "),
+              this.fase >= 2 && this.fase < 5 && !_vm.appShow
+                ? _c(
+                    "div",
                     {
-                      staticClass: "fill",
-                      attrs: { type: "button" },
-                      on: { click: _vm.seguinte }
+                      staticClass: "col-md-3",
+                      staticStyle: { "margin-bottom": "50px" }
                     },
-                    [_vm._v("Seguinte")]
+                    [
+                      _c(
+                        "button",
+                        {
+                          staticClass: "fill",
+                          attrs: { type: "button" },
+                          on: { click: _vm.seguinte }
+                        },
+                        [_vm._v("Seguinte")]
+                      )
+                    ]
                   )
-                ]
-              )
-            : _vm._e(),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-3" })
-        ])
+                : _vm._e(),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-3" })
+            ])
+          : _vm._e(),
+        _vm._v(" "),
+        this.fase >= 5
+          ? _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-5" }),
+              _vm._v(" "),
+              this.fase >= 2
+                ? _c(
+                    "div",
+                    {
+                      staticClass: "col-md-2",
+                      staticStyle: { "margin-bottom": "50px" }
+                    },
+                    [
+                      _c(
+                        "button",
+                        {
+                          staticClass: "fill",
+                          attrs: { type: "button" },
+                          on: { click: _vm.voltar }
+                        },
+                        [_vm._v(_vm._s(_vm.buttonBack))]
+                      )
+                    ]
+                  )
+                : _vm._e(),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-5" })
+            ])
+          : _vm._e()
       ])
     ])
   ])
@@ -53138,10 +53158,46 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("div", { staticClass: "col-md-6" }, [
           _vm._v(
-            "\n            Este simulador permite-lhe fazer um orçamento grátis.\n            Para fazer o seu orçamento basta escolher o tipo de site que pretende e seguir as instruções detalhadas que lhe serão fornecidas durante a simulação\n            Qualquer orçamento não é defenitivo podendo ser alterado consoante as suas necessidades.\n         "
+            "\n               Este simulador permite-lhe fazer um orçamento grátis.\n               Para fazer o seu orçamento basta escolher o tipo de site que pretende e seguir as instruções detalhadas que lhe serão fornecidas durante a simulação\n               Qualquer orçamento não é defenitivo podendo ser alterado consoante as suas necessidades.\n            "
           )
         ])
       ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "front" }, [
+      _c("img", {
+        staticClass: "imgCard2",
+        attrs: { src: "images/singlePage.png" }
+      }),
+      _vm._v(" "),
+      _c("h3", [_vm._v("Site Simples")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "front" }, [
+      _c("img", {
+        staticClass: "imgCard2",
+        attrs: { src: "images/multiPage.png" }
+      }),
+      _vm._v(" "),
+      _c("h3", [_vm._v("Site Dinâmico")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "front" }, [
+      _c("img", { staticClass: "imgCard2", attrs: { src: "images/app.png" } }),
+      _vm._v(" "),
+      _c("h3", [_vm._v("Aplicação")])
     ])
   }
 ]
@@ -53207,6 +53263,37 @@ module.exports = Component.exports
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -53355,21 +53442,26 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return this.$store.getters.siteDinamicoFase1Show
-    ? _c(
-        "div",
-        {
-          staticClass: "row",
-          staticStyle: { "text-align": "center", "min-height": "200px" }
-        },
-        [
-          !this.$store.getters.isEstatico
-            ? _c("div", { staticClass: "col-md-2" }, [
+  return _c("div", { staticClass: "container" }, [
+    this.$store.getters.siteDinamicoFase1Show && !this.$store.getters.isEstatico
+      ? _c(
+          "div",
+          {
+            staticClass: "row",
+            staticStyle: { "text-align": "center", "min-height": "200px" }
+          },
+          [
+            _c(
+              "div",
+              {
+                staticClass: "col-md-2 selecionavel",
+                on: { click: _vm.toogleShop }
+              },
+              [
                 _c("button", {
                   class: _vm.buttonClassShop,
                   staticStyle: { background: "url(images/shop.png)" },
-                  attrs: { for: "dominio" },
-                  on: { click: _vm.toogleShop }
+                  attrs: { for: "dominio" }
                 }),
                 _vm._v(" "),
                 _c(
@@ -53380,86 +53472,267 @@ var render = function() {
                   },
                   [_vm._v("Loja Online")]
                 )
-              ])
-            : _vm._e(),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-2" }, [
-            _c("button", {
-              class: _vm.buttonClassDominio,
-              staticStyle: { background: "url(images/www.png)" },
-              attrs: { for: "dominio" },
-              on: { click: _vm.toogleDominio }
-            }),
+              ]
+            ),
             _vm._v(" "),
             _c(
-              "h5",
-              { staticClass: "card-title", staticStyle: { color: "black" } },
-              [_vm._v("Dominio")]
-            )
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-2" }, [
-            _c("button", {
-              class: _vm.buttonClassAlojamento,
-              staticStyle: { background: "url(images/imac.png)" },
-              attrs: { for: "alojamento" },
-              on: { click: _vm.toogleAlojamento }
-            }),
+              "div",
+              {
+                staticClass: "col-md-2 selecionavel",
+                on: { click: _vm.toogleDominio }
+              },
+              [
+                _c("button", {
+                  class: _vm.buttonClassDominio,
+                  staticStyle: { background: "url(images/www.png)" },
+                  attrs: { for: "dominio" }
+                }),
+                _vm._v(" "),
+                _c(
+                  "h5",
+                  {
+                    staticClass: "card-title",
+                    staticStyle: { color: "black" }
+                  },
+                  [_vm._v("Dominio")]
+                )
+              ]
+            ),
             _vm._v(" "),
             _c(
-              "h5",
-              { staticClass: "card-title", staticStyle: { color: "black" } },
-              [_vm._v("Alojamento")]
-            )
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-2" }, [
-            _c("button", {
-              class: _vm.buttonClassPages1,
-              staticStyle: { background: "url(images/pages.png)" },
-              attrs: { for: "pages1" },
-              on: { click: _vm.tooglePages1 }
-            }),
+              "div",
+              {
+                staticClass: "col-md-2 selecionavel",
+                on: { click: _vm.toogleAlojamento }
+              },
+              [
+                _c("button", {
+                  class: _vm.buttonClassAlojamento,
+                  staticStyle: { background: "url(images/imac.png)" },
+                  attrs: { for: "alojamento" }
+                }),
+                _vm._v(" "),
+                _c(
+                  "h5",
+                  {
+                    staticClass: "card-title",
+                    staticStyle: { color: "black" }
+                  },
+                  [_vm._v("Alojamento")]
+                )
+              ]
+            ),
             _vm._v(" "),
             _c(
-              "h5",
-              { staticClass: "card-title", staticStyle: { color: "black" } },
-              [_vm._v("2-4 Paginas")]
-            )
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-2" }, [
-            _c("button", {
-              class: _vm.buttonClassPages2,
-              staticStyle: { background: "url(images/pages.png)" },
-              attrs: { for: "pages2" },
-              on: { click: _vm.tooglePages2 }
-            }),
+              "div",
+              {
+                staticClass: "col-md-2 selecionavel",
+                on: { click: _vm.tooglePages1 }
+              },
+              [
+                _c("button", {
+                  class: _vm.buttonClassPages1,
+                  staticStyle: { background: "url(images/pages.png)" },
+                  attrs: { for: "pages1" }
+                }),
+                _vm._v(" "),
+                _c(
+                  "h5",
+                  {
+                    staticClass: "card-title",
+                    staticStyle: { color: "black" }
+                  },
+                  [_vm._v("2-4 Paginas")]
+                )
+              ]
+            ),
             _vm._v(" "),
             _c(
-              "h5",
-              { staticClass: "card-title", staticStyle: { color: "black" } },
-              [_vm._v("4-8 Paginas")]
-            )
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-2" }, [
-            _c("button", {
-              class: _vm.buttonClassPages3,
-              staticStyle: { background: "url(images/pages.png)" },
-              attrs: { for: "pages3" },
-              on: { click: _vm.tooglePages3 }
-            }),
+              "div",
+              {
+                staticClass: "col-md-2 selecionavel",
+                on: { click: _vm.tooglePages2 }
+              },
+              [
+                _c("button", {
+                  class: _vm.buttonClassPages2,
+                  staticStyle: { background: "url(images/pages.png)" },
+                  attrs: { for: "pages2" }
+                }),
+                _vm._v(" "),
+                _c(
+                  "h5",
+                  {
+                    staticClass: "card-title",
+                    staticStyle: { color: "black" }
+                  },
+                  [_vm._v("4-8 Paginas")]
+                )
+              ]
+            ),
             _vm._v(" "),
             _c(
-              "h5",
-              { staticClass: "card-title", staticStyle: { color: "black" } },
-              [_vm._v(">8 Paginas")]
+              "div",
+              {
+                staticClass: "col-md-2 selecionavel",
+                on: { click: _vm.tooglePages3 }
+              },
+              [
+                _c("button", {
+                  class: _vm.buttonClassPages3,
+                  staticStyle: { background: "url(images/pages.png)" },
+                  attrs: { for: "pages3" }
+                }),
+                _vm._v(" "),
+                _c(
+                  "h5",
+                  {
+                    staticClass: "card-title",
+                    staticStyle: { color: "black" }
+                  },
+                  [_vm._v(">8 Paginas")]
+                )
+              ]
             )
-          ])
-        ]
-      )
-    : _vm._e()
+          ]
+        )
+      : _vm._e(),
+    _vm._v(" "),
+    this.$store.getters.siteDinamicoFase1Show && this.$store.getters.isEstatico
+      ? _c(
+          "div",
+          {
+            staticClass: "row",
+            staticStyle: { "text-align": "center", "min-height": "200px" }
+          },
+          [
+            _c("div", { staticClass: "col-md-1" }),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "col-md-2 selecionavel",
+                on: { click: _vm.toogleDominio }
+              },
+              [
+                _c("button", {
+                  class: _vm.buttonClassDominio,
+                  staticStyle: { background: "url(images/www.png)" },
+                  attrs: { for: "dominio" }
+                }),
+                _vm._v(" "),
+                _c(
+                  "h5",
+                  {
+                    staticClass: "card-title",
+                    staticStyle: { color: "black" }
+                  },
+                  [_vm._v("Dominio")]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "col-md-2 selecionavel",
+                on: { click: _vm.toogleAlojamento }
+              },
+              [
+                _c("button", {
+                  class: _vm.buttonClassAlojamento,
+                  staticStyle: { background: "url(images/imac.png)" },
+                  attrs: { for: "alojamento" }
+                }),
+                _vm._v(" "),
+                _c(
+                  "h5",
+                  {
+                    staticClass: "card-title",
+                    staticStyle: { color: "black" }
+                  },
+                  [_vm._v("Alojamento")]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "col-md-2 selecionavel",
+                on: { click: _vm.tooglePages1 }
+              },
+              [
+                _c("button", {
+                  class: _vm.buttonClassPages1,
+                  staticStyle: { background: "url(images/pages.png)" },
+                  attrs: { for: "pages1" }
+                }),
+                _vm._v(" "),
+                _c(
+                  "h5",
+                  {
+                    staticClass: "card-title",
+                    staticStyle: { color: "black" }
+                  },
+                  [_vm._v("2-4 Paginas")]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "col-md-2 selecionavel",
+                on: { click: _vm.tooglePages2 }
+              },
+              [
+                _c("button", {
+                  class: _vm.buttonClassPages2,
+                  staticStyle: { background: "url(images/pages.png)" },
+                  attrs: { for: "pages2" }
+                }),
+                _vm._v(" "),
+                _c(
+                  "h5",
+                  {
+                    staticClass: "card-title",
+                    staticStyle: { color: "black" }
+                  },
+                  [_vm._v("4-8 Paginas")]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "col-md-2 selecionavel",
+                on: { click: _vm.tooglePages3 }
+              },
+              [
+                _c("button", {
+                  class: _vm.buttonClassPages3,
+                  staticStyle: { background: "url(images/pages.png)" },
+                  attrs: { for: "pages3" }
+                }),
+                _vm._v(" "),
+                _c(
+                  "h5",
+                  {
+                    staticClass: "card-title",
+                    staticStyle: { color: "black" }
+                  },
+                  [_vm._v(">8 Paginas")]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-1" })
+          ]
+        )
+      : _vm._e()
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -53524,6 +53797,32 @@ module.exports = Component.exports
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -53654,7 +53953,106 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container" }, [
-    this.$store.getters.siteDinamicoFase2Show
+    this.$store.getters.siteDinamicoFase2Show &&
+    !this.$store.getters.lojaSelecionada &&
+    this.$store.getters.isEstatico
+      ? _c(
+          "div",
+          {
+            staticClass: "row",
+            staticStyle: { "text-align": "center", "min-height": "200px" }
+          },
+          [
+            _c("div", { staticClass: "col-md-5" }),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "col-md-2 selecionavel",
+                on: { click: _vm.toogleRedesSociais }
+              },
+              [
+                _c("button", {
+                  class: _vm.buttonClassRedes,
+                  staticStyle: { background: "url(images/social.png)" },
+                  attrs: { for: "redesSociais" }
+                }),
+                _vm._v(" "),
+                _c(
+                  "h5",
+                  {
+                    staticClass: "card-title",
+                    staticStyle: { color: "black" }
+                  },
+                  [_vm._v("Redes Sociais")]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-5" })
+          ]
+        )
+      : _vm._e(),
+    _vm._v(" "),
+    !this.$store.getters.isEstatico && !this.$store.getters.lojaSelecionada
+      ? _c(
+          "div",
+          {
+            staticClass: "row",
+            staticStyle: { "text-align": "center", "min-height": "200px" }
+          },
+          [
+            _c("div", { staticClass: "col-md-4" }),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "col-md-2 selecionavel",
+                on: { click: _vm.toogleRedesSociais }
+              },
+              [
+                _c("button", {
+                  class: _vm.buttonClassRedes,
+                  staticStyle: { background: "url(images/social.png)" },
+                  attrs: { for: "redesSociais" }
+                }),
+                _vm._v(" "),
+                _c(
+                  "h5",
+                  {
+                    staticClass: "card-title",
+                    staticStyle: { color: "black" }
+                  },
+                  [_vm._v("Redes Sociais")]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "col-md-2 selecionavel",
+                on: { click: _vm.toogleBlog }
+              },
+              [
+                _c("button", {
+                  class: _vm.buttonClassBlog,
+                  staticStyle: { background: "url(images/blog.png)" },
+                  attrs: { for: "redesSociais" }
+                }),
+                _vm._v(" "),
+                _c("h5", { staticClass: "card-title imgCard" }, [
+                  _vm._v("Blog/noticias")
+                ])
+              ]
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-4" })
+          ]
+        )
+      : _vm._e(),
+    _vm._v(" "),
+    !this.$store.getters.isEstatico && this.$store.getters.lojaSelecionada
       ? _c(
           "div",
           {
@@ -53664,85 +54062,110 @@ var render = function() {
           [
             _c("div", { staticClass: "col-md-1" }),
             _vm._v(" "),
-            _c("div", { staticClass: "col-md-2" }, [
-              _c("button", {
-                class: _vm.buttonClassRedes,
-                staticStyle: { background: "url(images/social.png)" },
-                attrs: { for: "redesSociais" },
+            _c(
+              "div",
+              {
+                staticClass: "col-md-2 selecionavel",
                 on: { click: _vm.toogleRedesSociais }
-              }),
-              _vm._v(" "),
-              _c(
-                "h5",
-                { staticClass: "card-title", staticStyle: { color: "black" } },
-                [_vm._v("Redes Sociais")]
-              )
-            ]),
+              },
+              [
+                _c("button", {
+                  class: _vm.buttonClassRedes,
+                  staticStyle: { background: "url(images/social.png)" },
+                  attrs: { for: "redesSociais" }
+                }),
+                _vm._v(" "),
+                _c(
+                  "h5",
+                  {
+                    staticClass: "card-title",
+                    staticStyle: { color: "black" }
+                  },
+                  [_vm._v("Redes Sociais")]
+                )
+              ]
+            ),
             _vm._v(" "),
-            !this.$store.getters.isEstatico
-              ? _c("div", { staticClass: "col-md-2" }, [
-                  _c("button", {
-                    class: _vm.buttonClassBlog,
-                    staticStyle: { background: "url(images/blog.png)" },
-                    attrs: { for: "redesSociais" },
-                    on: { click: _vm.toogleBlog }
-                  }),
-                  _vm._v(" "),
-                  _c("h5", { staticClass: "card-title imgCard" }, [
-                    _vm._v("Blog/noticias")
-                  ])
+            _c(
+              "div",
+              {
+                staticClass: "col-md-2 selecionavel",
+                on: { click: _vm.toogleBlog }
+              },
+              [
+                _c("button", {
+                  class: _vm.buttonClassBlog,
+                  staticStyle: { background: "url(images/blog.png)" },
+                  attrs: { for: "redesSociais" }
+                }),
+                _vm._v(" "),
+                _c("h5", { staticClass: "card-title imgCard" }, [
+                  _vm._v("Blog/noticias")
                 ])
-              : _vm._e(),
+              ]
+            ),
             _vm._v(" "),
-            this.$store.getters.lojaSelecionada
-              ? _c("div", { staticClass: "col-md-2" }, [
-                  _c("button", {
-                    class: _vm.buttonClassProdutos1,
-                    staticStyle: { background: "url(images/store.png)" },
-                    attrs: { for: "blog" },
-                    on: { click: _vm.toogleProdutos1 }
-                  }),
-                  _vm._v(" "),
-                  _c("h5", { staticClass: "card-title imgCard" }, [
-                    _vm._v("0-50 Produtos")
-                  ])
+            _c(
+              "div",
+              {
+                staticClass: "col-md-2 selecionavel",
+                on: { click: _vm.toogleProdutos1 }
+              },
+              [
+                _c("button", {
+                  class: _vm.buttonClassProdutos1,
+                  staticStyle: { background: "url(images/store.png)" },
+                  attrs: { for: "blog" }
+                }),
+                _vm._v(" "),
+                _c("h5", { staticClass: "card-title imgCard" }, [
+                  _vm._v("0-50 Produtos")
                 ])
-              : _vm._e(),
+              ]
+            ),
             _vm._v(" "),
-            this.$store.getters.lojaSelecionada
-              ? _c("div", { staticClass: "col-md-2" }, [
-                  _c("button", {
-                    class: _vm.buttonClassProdutos2,
-                    staticStyle: { background: "url(images/store.png)" },
-                    attrs: { for: "blog" },
-                    on: { click: _vm.toogleProdutos2 }
-                  }),
-                  _vm._v(" "),
-                  _c("h5", { staticClass: "card-title imgCard" }, [
-                    _vm._v("50-100 Produtos")
-                  ])
+            _c(
+              "div",
+              {
+                staticClass: "col-md-2 selecionavel",
+                on: { click: _vm.toogleProdutos2 }
+              },
+              [
+                _c("button", {
+                  class: _vm.buttonClassProdutos2,
+                  staticStyle: { background: "url(images/store.png)" },
+                  attrs: { for: "blog" }
+                }),
+                _vm._v(" "),
+                _c("h5", { staticClass: "card-title imgCard" }, [
+                  _vm._v("50-100 Produtos")
                 ])
-              : _vm._e(),
+              ]
+            ),
             _vm._v(" "),
-            this.$store.getters.lojaSelecionada
-              ? _c("div", { staticClass: "col-md-2" }, [
-                  _c("button", {
-                    class: _vm.buttonClassProdutos3,
-                    staticStyle: { background: "url(images/store.png)" },
-                    attrs: { for: "blog" },
-                    on: { click: _vm.toogleProdutos3 }
-                  }),
-                  _vm._v(" "),
-                  _c("h5", { staticClass: "card-title imgCard" }, [
-                    _vm._v(">100 Produtos")
-                  ])
+            _c(
+              "div",
+              {
+                staticClass: "col-md-2 selecionavel",
+                on: { click: _vm.toogleProdutos3 }
+              },
+              [
+                _c("button", {
+                  class: _vm.buttonClassProdutos3,
+                  staticStyle: { background: "url(images/store.png)" },
+                  attrs: { for: "blog" }
+                }),
+                _vm._v(" "),
+                _c("h5", { staticClass: "card-title imgCard" }, [
+                  _vm._v(">100 Produtos")
                 ])
-              : _vm._e()
+              ]
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-1" })
           ]
         )
-      : _vm._e(),
-    _vm._v(" "),
-    _c("div", { staticClass: "col-md-1" })
+      : _vm._e()
   ])
 }
 var staticRenderFns = []
@@ -53891,29 +54314,43 @@ var render = function() {
           [
             _c("div", { staticClass: "col-md-4" }),
             _vm._v(" "),
-            _c("div", { staticClass: "col-md-2" }, [
-              _c("button", {
-                class: _vm.buttonClassSeo,
-                staticStyle: { background: "url(images/seo.png)" },
-                attrs: { for: "seo" },
+            _c(
+              "div",
+              {
+                staticClass: "col-md-2 selecionavel",
                 on: { click: _vm.toogleSeo }
-              }),
-              _vm._v(" "),
-              _c("h5", { staticClass: "card-title imgCard" }, [_vm._v("SEOs")])
-            ]),
+              },
+              [
+                _c("button", {
+                  class: _vm.buttonClassSeo,
+                  staticStyle: { background: "url(images/seo.png)" },
+                  attrs: { for: "seo" }
+                }),
+                _vm._v(" "),
+                _c("h5", { staticClass: "card-title imgCard" }, [
+                  _vm._v("SEOs")
+                ])
+              ]
+            ),
             _vm._v(" "),
-            _c("div", { staticClass: "col-md-2" }, [
-              _c("button", {
-                class: _vm.buttonClassKeys,
-                staticStyle: { background: "url(images/keys.png)" },
-                attrs: { for: "keys" },
+            _c(
+              "div",
+              {
+                staticClass: "col-md-2 selecionavel",
                 on: { click: _vm.toogleKeys }
-              }),
-              _vm._v(" "),
-              _c("h5", { staticClass: "card-title imgCard" }, [
-                _vm._v("KeyWords")
-              ])
-            ])
+              },
+              [
+                _c("button", {
+                  class: _vm.buttonClassKeys,
+                  staticStyle: { background: "url(images/keys.png)" },
+                  attrs: { for: "keys" }
+                }),
+                _vm._v(" "),
+                _c("h5", { staticClass: "card-title imgCard" }, [
+                  _vm._v("KeyWords")
+                ])
+              ]
+            )
           ]
         )
       : _vm._e(),
@@ -53984,6 +54421,8 @@ module.exports = Component.exports
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
 //
 //
 //
@@ -54201,31 +54640,43 @@ var render = function() {
                   [
                     _c("div", { staticClass: "col-md-4" }),
                     _vm._v(" "),
-                    _c("div", { staticClass: "col-md-2" }, [
-                      _c("button", {
-                        class: _vm.buttonClassYes,
-                        staticStyle: { background: "url(images/yes.png)" },
-                        attrs: { for: "yes" },
+                    _c(
+                      "div",
+                      {
+                        staticClass: "col-md-2 selecionavel",
                         on: { click: _vm.yes }
-                      }),
-                      _vm._v(" "),
-                      _c("h5", { staticClass: "card-title imgCard" }, [
-                        _vm._v("Sim")
-                      ])
-                    ]),
+                      },
+                      [
+                        _c("button", {
+                          class: _vm.buttonClassYes,
+                          staticStyle: { background: "url(images/yes.png)" },
+                          attrs: { for: "yes" }
+                        }),
+                        _vm._v(" "),
+                        _c("h5", { staticClass: "card-title imgCard" }, [
+                          _vm._v("Sim")
+                        ])
+                      ]
+                    ),
                     _vm._v(" "),
-                    _c("div", { staticClass: "col-md-2" }, [
-                      _c("button", {
-                        class: _vm.buttonClassNo,
-                        staticStyle: { background: "url(images/cancel.png)" },
-                        attrs: { for: "no" },
+                    _c(
+                      "div",
+                      {
+                        staticClass: "col-md-2 selecionavel",
                         on: { click: _vm.no }
-                      }),
-                      _vm._v(" "),
-                      _c("h5", { staticClass: "card-title imgCard" }, [
-                        _vm._v("Não")
-                      ])
-                    ]),
+                      },
+                      [
+                        _c("button", {
+                          class: _vm.buttonClassNo,
+                          staticStyle: { background: "url(images/cancel.png)" },
+                          attrs: { for: "no" }
+                        }),
+                        _vm._v(" "),
+                        _c("h5", { staticClass: "card-title imgCard" }, [
+                          _vm._v("Não")
+                        ])
+                      ]
+                    ),
                     _vm._v(" "),
                     _c("div", { staticClass: "col-md-4" })
                   ]
@@ -54243,102 +54694,150 @@ var render = function() {
                     }
                   },
                   [
-                    _c("div", { staticClass: "col-md-2" }, [
-                      _c("button", {
-                        class: _vm.buttonClassFace,
-                        staticStyle: { background: "url(images/facebook.png)" },
-                        attrs: { for: "face" },
+                    _c(
+                      "div",
+                      {
+                        staticClass: "col-md-2 selecionavel",
                         on: { click: _vm.toogleFace }
-                      }),
-                      _vm._v(" "),
-                      _c("h5", { staticClass: "card-title imgCard" }, [
-                        _vm._v("FaceBook")
-                      ])
-                    ]),
+                      },
+                      [
+                        _c("button", {
+                          class: _vm.buttonClassFace,
+                          staticStyle: {
+                            background: "url(images/facebook.png)"
+                          },
+                          attrs: { for: "face" }
+                        }),
+                        _vm._v(" "),
+                        _c("h5", { staticClass: "card-title imgCard" }, [
+                          _vm._v("FaceBook")
+                        ])
+                      ]
+                    ),
                     _vm._v(" "),
-                    _c("div", { staticClass: "col-md-2" }, [
-                      _c("button", {
-                        class: _vm.buttonClassInstagram,
-                        staticStyle: {
-                          background: "url(images/instagram.png)"
-                        },
-                        attrs: { for: "insta" },
+                    _c(
+                      "div",
+                      {
+                        staticClass: "col-md-2 selecionavel",
                         on: { click: _vm.toogleInstagram }
-                      }),
-                      _vm._v(" "),
-                      _c("h5", { staticClass: "card-title imgCard" }, [
-                        _vm._v("Instagram")
-                      ])
-                    ]),
+                      },
+                      [
+                        _c("button", {
+                          class: _vm.buttonClassInstagram,
+                          staticStyle: {
+                            background: "url(images/instagram.png)"
+                          },
+                          attrs: { for: "insta" }
+                        }),
+                        _vm._v(" "),
+                        _c("h5", { staticClass: "card-title imgCard" }, [
+                          _vm._v("Instagram")
+                        ])
+                      ]
+                    ),
                     _vm._v(" "),
-                    _c("div", { staticClass: "col-md-2" }, [
-                      _c("button", {
-                        class: _vm.buttonClassTwitter,
-                        staticStyle: { background: "url(images/twitter.png)" },
-                        attrs: { for: "twitter" },
+                    _c(
+                      "div",
+                      {
+                        staticClass: "col-md-2 selecionavel",
                         on: { click: _vm.toogleTwitter }
-                      }),
-                      _vm._v(" "),
-                      _c("h5", { staticClass: "card-title imgCard" }, [
-                        _vm._v("Twitter")
-                      ])
-                    ]),
+                      },
+                      [
+                        _c("button", {
+                          class: _vm.buttonClassTwitter,
+                          staticStyle: {
+                            background: "url(images/twitter.png)"
+                          },
+                          attrs: { for: "twitter" }
+                        }),
+                        _vm._v(" "),
+                        _c("h5", { staticClass: "card-title imgCard" }, [
+                          _vm._v("Twitter")
+                        ])
+                      ]
+                    ),
                     _vm._v(" "),
-                    _c("div", { staticClass: "col-md-2" }, [
-                      _c("button", {
-                        class: _vm.buttonClassLinkedin,
-                        staticStyle: { background: "url(images/linkedin.png)" },
-                        attrs: { for: "linked" },
+                    _c(
+                      "div",
+                      {
+                        staticClass: "col-md-2 selecionavel",
                         on: { click: _vm.toogleLinkedin }
-                      }),
-                      _vm._v(" "),
-                      _c("h5", { staticClass: "card-title imgCard" }, [
-                        _vm._v("LinkedIn")
-                      ])
-                    ]),
+                      },
+                      [
+                        _c("button", {
+                          class: _vm.buttonClassLinkedin,
+                          staticStyle: {
+                            background: "url(images/linkedin.png)"
+                          },
+                          attrs: { for: "linked" }
+                        }),
+                        _vm._v(" "),
+                        _c("h5", { staticClass: "card-title imgCard" }, [
+                          _vm._v("LinkedIn")
+                        ])
+                      ]
+                    ),
                     _vm._v(" "),
-                    _c("div", { staticClass: "col-md-2" }, [
-                      _c("button", {
-                        class: _vm.buttonClassPinterest,
-                        staticStyle: {
-                          background: "url(images/pinterest.png)"
-                        },
-                        attrs: { for: "pint" },
+                    _c(
+                      "div",
+                      {
+                        staticClass: "col-md-2 selecionavel",
                         on: { click: _vm.tooglePinterest }
-                      }),
-                      _vm._v(" "),
-                      _c("h5", { staticClass: "card-title imgCard" }, [
-                        _vm._v("Pinterest")
-                      ])
-                    ]),
+                      },
+                      [
+                        _c("button", {
+                          class: _vm.buttonClassPinterest,
+                          staticStyle: {
+                            background: "url(images/pinterest.png)"
+                          },
+                          attrs: { for: "pint" }
+                        }),
+                        _vm._v(" "),
+                        _c("h5", { staticClass: "card-title imgCard" }, [
+                          _vm._v("Pinterest")
+                        ])
+                      ]
+                    ),
                     _vm._v(" "),
-                    _c("div", { staticClass: "col-md-2" }, [
-                      _c("button", {
-                        class: _vm.buttonClassAdwords,
-                        staticStyle: { background: "url(images/words.png)" },
-                        attrs: { for: "adwords" },
+                    _c(
+                      "div",
+                      {
+                        staticClass: "col-md-2 selecionavel",
                         on: { click: _vm.toogleAdwords }
-                      }),
-                      _vm._v(" "),
-                      _c("h5", { staticClass: "card-title imgCard" }, [
-                        _vm._v("AdWords")
-                      ])
-                    ])
+                      },
+                      [
+                        _c("button", {
+                          class: _vm.buttonClassAdwords,
+                          staticStyle: { background: "url(images/words.png)" },
+                          attrs: { for: "adwords" }
+                        }),
+                        _vm._v(" "),
+                        _c("h5", { staticClass: "card-title imgCard" }, [
+                          _vm._v("AdWords")
+                        ])
+                      ]
+                    )
                   ]
                 )
               : _vm._e(),
             _vm._v(" "),
             _vm.buttonEnd
               ? _c("div", { staticClass: "row" }, [
-                  _c(
-                    "button",
-                    {
-                      staticClass: "btn btn-outline-dark",
-                      attrs: { type: "button" },
-                      on: { click: _vm.end }
-                    },
-                    [_vm._v("Terminar")]
-                  )
+                  _c("div", { staticClass: "col-md-5" }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-2" }, [
+                    _c(
+                      "button",
+                      {
+                        staticClass: "fill",
+                        attrs: { type: "button" },
+                        on: { click: _vm.end }
+                      },
+                      [_vm._v("Terminar")]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-5" })
                 ])
               : _vm._e()
           ]
@@ -54642,7 +55141,7 @@ var render = function() {
       _c(
         "button",
         {
-          staticClass: "btn btn-primary",
+          staticClass: "fill",
           on: {
             click: function($event) {
               $event.preventDefault()
@@ -54720,6 +55219,7 @@ module.exports = Component.exports
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
+//
 //
 //
 //
@@ -54960,7 +55460,7 @@ var render = function() {
       _c(
         "button",
         {
-          staticClass: "btn btn-primary",
+          staticClass: "fill",
           on: {
             click: function($event) {
               $event.preventDefault()
@@ -55056,6 +55556,21 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 name: 'Orcamento';
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -55087,29 +55602,100 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("ol", { staticClass: "progress progress--medium" }, [
-    _c("li", { class: _vm.button1, attrs: { "data-step": "1" } }, [
-      _vm._v("\n    Inicio\n  ")
+  return _c("div", { staticClass: "md-stepper-horizontal orange" }, [
+    _c("div", { class: _vm.button1 }, [
+      _vm._m(0),
+      _vm._v(" "),
+      _c("div", { staticClass: "md-step-title" }, [_vm._v("Tipo de Site")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "md-step-bar-left" }),
+      _vm._v(" "),
+      _c("div", { staticClass: "md-step-bar-right" })
     ]),
     _vm._v(" "),
-    _c("li", { class: _vm.button2, attrs: { "data-step": "2" } }, [
-      _vm._v("\n   Fase 1\n  ")
+    _c("div", { class: _vm.button2 }, [
+      _vm._m(1),
+      _vm._v(" "),
+      _c("div", { staticClass: "md-step-title" }, [_vm._v("Opções 1")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "md-step-bar-left" }),
+      _vm._v(" "),
+      _c("div", { staticClass: "md-step-bar-right" })
     ]),
     _vm._v(" "),
-    _c("li", { class: _vm.button3, attrs: { "data-step": "3" } }, [
-      _vm._v("\n    Fase 2\n  ")
+    _c("div", { class: _vm.button3 }, [
+      _vm._m(2),
+      _vm._v(" "),
+      _c("div", { staticClass: "md-step-title" }, [_vm._v("Opções 2")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "md-step-bar-left" }),
+      _vm._v(" "),
+      _c("div", { staticClass: "md-step-bar-right" })
     ]),
     _vm._v(" "),
-    _c("li", { class: _vm.button4, attrs: { "data-step": "4" } }, [
-      _vm._v("\n   Fase 3\n  ")
+    _c("div", { class: _vm.button4 }, [
+      _vm._m(3),
+      _vm._v(" "),
+      _c("div", { staticClass: "md-step-title" }, [_vm._v("Palavras chave")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "md-step-bar-left" }),
+      _vm._v(" "),
+      _c("div", { staticClass: "md-step-bar-right" })
     ]),
     _vm._v(" "),
-    _c("li", { class: _vm.button5, attrs: { "data-step": "5" } }, [
-      _vm._v("\n   Fim\n  ")
+    _c("div", { class: _vm.button5 }, [
+      _vm._m(4),
+      _vm._v(" "),
+      _c("div", { staticClass: "md-step-title" }, [_vm._v("Redes Sociais")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "md-step-bar-left" }),
+      _vm._v(" "),
+      _c("div", { staticClass: "md-step-bar-right" })
     ])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "md-step-circle" }, [
+      _c("span", [_vm._v("1")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "md-step-circle" }, [
+      _c("span", [_vm._v("2")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "md-step-circle" }, [
+      _c("span", [_vm._v("3")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "md-step-circle" }, [
+      _c("span", [_vm._v("4")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "md-step-circle" }, [
+      _c("span", [_vm._v("5")])
+    ])
+  }
+]
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
