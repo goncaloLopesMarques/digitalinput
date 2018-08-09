@@ -11,7 +11,46 @@ export default {
                 preco: 950,
                 selecionado: false,
             },
+            marketingDigital:{
+                descricao: 'Apoio ao Marketing Digital',
+                preco: 0,
+                selecionado: false,
+            },
             show: true,
+        },
+        MarketingDigital:{
+            Fase1:{
+                Gestao:{
+                    descricao: 'Gestão de redes sociais',
+                    preco: 0,
+                    selecionado: false,
+                },
+                show: false,
+            },
+            Fase2:{
+                Publicidade:{
+                    descricao: 'Gestão de publicidade on-line',
+                    preco: 0,
+                    selecionado: false,
+                },
+                GoogleBusiness:{
+                    descricao: 'Gestão de Google my Business',
+                    preco: 0,
+                    selecionado: false,
+                },
+                GoogleAds:{
+                    descricao: 'Configuração de Google Ads',
+                    preco: 0,
+                    selecionado: false,  
+                },
+                FacebookAds:{
+                    descricao: 'Configuração de Facebook Ads',
+                    preco: 0,
+                    selecionado: false,  
+                },
+                show: false,
+            },
+         produtosSelecionados: [],
         },
         SiteDinamico:{
             Fase1:{
@@ -156,8 +195,34 @@ export default {
         isEstatico: false,
         isLoja: false,
         buttonBack: 'Inicio',
+        redesSociais:false,
     },
     getters: {
+        redesSociais(state){    
+            return state.redesSociais;
+        },
+        //getters do marketing digital
+        gestao(state){
+            return state.MarketingDigital.Fase1.Gestao.selecionado;
+        },
+        publicidade(state){
+            return state.MarketingDigital.Fase2.Publicidade.selecionado;
+        },
+        googleMyBusiness(state){
+            return state.MarketingDigital.Fase2.GoogleBusiness.selecionado;
+        },
+        googleAds(state){
+            return state.MarketingDigital.Fase2.GoogleAds.selecionado;
+        },
+        FacebookAds(state){
+            return state.MarketingDigital.Fase2.FacebookAds.selecionado;
+        },
+        MarketingDigitalFase1(state){
+            return state.MarketingDigital.Fase1.show;
+        },
+        MarketingDigitalFase2(state){
+            return state.MarketingDigital.Fase2.show;
+        },
         //variaveis de controlo e navegação da aplicação
         buttonBack(state){
             return state.buttonBack;
@@ -274,6 +339,7 @@ export default {
         produtos3(state){
             return state.SiteDinamico.Fase2.produtos3.selecionado;
         },
+
     },
     mutations: {
         selecionaEstatico(state) {
@@ -307,6 +373,32 @@ export default {
             state.NavigationBar.button4.cssClass = 'md-step active done';
             state.NavigationBar.button5.cssClass = 'md-step active done';
             state.fase1.show = false;
+        },
+        selecionaMarketingDigital(state) {
+            state.fase ++;
+            //ver a barra de navegação!!!!
+            state.NavigationBar.button1.cssClass = 'md-step active done';
+            state.NavigationBar.button2.cssClass = 'md-step active';
+            state.MarketingDigital.produtosSelecionados.push(state.fase1.marketingDigital.descricao);
+            state.MarketingDigital.Fase1.show = true;
+            state.fase1.show = false;
+      
+            state.precoFinal= state.precoFinal + state.fase1.marketingDigital.preco;
+        },
+        selecionaPublicidade(state){
+            state.MarketingDigital.produtosSelecionados.push(state.MarketingDigital.Fase2.Publicidade.descricao);
+            state.MarketingDigital.Fase2.Publicidade.selecionado = true;
+            state.precoFinal= state.precoFinal + state.MarketingDigital.Fase2.Publicidade.preco;
+        },
+        selecionaGestao(state){
+            state.MarketingDigital.produtosSelecionados.push(state.MarketingDigital.Fase1.Gestao.descricao);
+            state.MarketingDigital.Fase1.Gestao.selecionado = true;
+            state.precoFinal= state.precoFinal + state.MarketingDigital.Fase1.Gestao.preco;
+        },
+        selecionaGoogleBusiness(state){
+            state.MarketingDigital.produtosSelecionados.push(state.MarketingDigital.Fase2.GoogleBusiness.descricao);
+            state.MarketingDigital.Fase2.GoogleBusiness.selecionado = true;
+            state.precoFinal= state.precoFinal + state.MarketingDigital.Fase2.GoogleBusiness.preco;
         },
         selecionaDominio(state) {
             state.SiteDinamico.produtosSelecionados.push(state.SiteDinamico.Fase1.Dominio.descricao);
@@ -394,6 +486,33 @@ export default {
                 }
             }
             state.SiteDinamico.Fase1.lojaOnline.selecionado = false;
+        },
+        desselecionaPublicidade(state){
+            for(var i = state.MarketingDigital.produtosSelecionados.length - 1; i >= 0; i--) {
+                if(state.MarketingDigital.produtosSelecionados[i] == state.MarketingDigital.Fase2.Publicidade.descricao) {
+                    state.MarketingDigital.produtosSelecionados.splice(i, 1);
+                }
+            }
+            state.MarketingDigital.Fase2.Publicidade.selecionado = false;
+            state.precoFinal = state.precoFinal - state.MarketingDigital.Fase2.Publicidade.preco;
+        },
+        desselecionaGestao(state){
+            for(var i = state.MarketingDigital.produtosSelecionados.length - 1; i >= 0; i--) {
+                if(state.MarketingDigital.produtosSelecionados[i] == state.MarketingDigital.Fase1.Gestao.descricao) {
+                    state.MarketingDigital.produtosSelecionados.splice(i, 1);
+                }
+            }
+            state.MarketingDigital.Fase1.Gestao.selecionado = false;
+            state.precoFinal = state.precoFinal - state.MarketingDigital.Fase1.Gestao.preco;
+        },
+        desselecionaGoogleBusiness(state){
+            for(var i = state.MarketingDigital.produtosSelecionados.length - 1; i >= 0; i--) {
+                if(state.MarketingDigital.produtosSelecionados[i] == state.MarketingDigital.Fase2.GoogleBusiness.descricao) {
+                    state.MarketingDigital.produtosSelecionados.splice(i, 1);
+                }
+            }
+            state.MarketingDigital.Fase2.GoogleBusiness.selecionado = false;
+            state.precoFinal = state.precoFinal - state.MarketingDigital.Fase2.GoogleBusiness.preco;
         },
         desselecionaAlojamento(state){
             for(var i = state.SiteDinamico.produtosSelecionados.length - 1; i >= 0; i--) {
@@ -505,14 +624,16 @@ export default {
             state.fase --;
             state.precoFinal = 0;
             state.SiteDinamico.Fase1.show = false;
+            state.MarketingDigital.Fase1.show = false;
             state.fase1.show = true;
             state.SiteDinamico.produtosSelecionados = [];
+            state.MarketingDigital.produtosSelecionados=[];
             state.isEstatico = false;
-            state.NavigationBar.button1.cssClass = 'is-active';
-            state.NavigationBar.button2.cssClass = '';
-            state.NavigationBar.button3.cssClass = '';
-            state.NavigationBar.button4.cssClass = '';
-            state.NavigationBar.button5.cssClass = '';
+            state.NavigationBar.button1.cssClass = 'md-step active';
+            state.NavigationBar.button2.cssClass = 'md-step';
+            state.NavigationBar.button3.cssClass = 'md-step';
+            state.NavigationBar.button4.cssClass = 'md-step';
+            state.NavigationBar.button5.cssClass = 'md-step';
             //limpa tudo o que foi selecionado Na fase 1
             state.SiteDinamico.Fase1.Alojamento.selecionado= false;
             state.SiteDinamico.Fase1.lojaOnline.selecionado= false;
@@ -538,6 +659,10 @@ export default {
             state.SiteDinamico.Fase4.MarketingDigital.AdWords.selecionado = false;
             //limpa tudo o que foi selecionado Na fase 5
             state.SiteDinamico.Fase5.show = false;
+            //limpa tudo o que for selecionado no apoio a marketing digital
+            state.MarketingDigital.Fase2.Publicidade.selecionado = false;
+            state.MarketingDigital.Fase1.Gestao.selecionado = false;
+            state.MarketingDigital.Fase2.GoogleBusiness.selecionado = false;
         },
         selectFase2(state){
             state.fase ++;
@@ -546,6 +671,14 @@ export default {
             state.NavigationBar.button2.cssClass = 'is-complete';
             state.NavigationBar.button3.cssClass = 'is-active';
             state.SiteDinamico.Fase2.show = true;
+        },
+        selectMarketingFase2(state){
+            state.fase ++;
+            state.buttonBack = 'Voltar';
+            state.MarketingDigital.Fase1.show = false;
+            state.NavigationBar.button2.cssClass = 'md-step active done';
+            state.NavigationBar.button3.cssClass = 'md-step active';
+            state.MarketingDigital.Fase2.show = true;
         },
         selectFase3(state){
             state.fase ++;
@@ -566,6 +699,14 @@ export default {
             state.SiteDinamico.Fase4.show = false;
             state.NavigationBar.button5.cssClass = 'is-complete';
             state.SiteDinamico.Fase5.show = true;
+        },
+        deselectMarketingDigitalFase2(state){
+            state.fase --;
+            state.buttonBack = 'Inicio';
+            state.MarketingDigital.Fase1.show = true;
+            state.NavigationBar.button2.cssClass = 'md-step active';
+            state.NavigationBar.button3.cssClass = 'md-step';
+            state.MarketingDigital.Fase2.show = false;
         },
         deselectFase2(state){
             state.fase --;
@@ -897,6 +1038,18 @@ export default {
         selecionaApp(context){
             context.commit('selecionaApp');
         },
+        selecionaMarketingDigital(context){
+            context.commit('selecionaMarketingDigital');
+        },
+        selecionaPublicidade(context){
+            context.commit('selecionaPublicidade');
+        },
+        selecionaGestao(context){
+            context.commit('selecionaGestao');
+        },
+        selecionaGoogleBusiness(context){
+            context.commit('selecionaGoogleBusiness');
+        },
         selecionaDominio(context){
             context.commit('selecionaDominio');
         },
@@ -951,6 +1104,15 @@ export default {
         desselecionaBlog(context){
             context.commit('desselecionaBlog')
         },
+        desselecionaPublicidade(context){
+            context.commit('desselecionaPublicidade');
+        },
+        desselecionaGestao(context){
+            context.commit('desselecionaGestao');
+        },
+        desselecionaGoogleBusiness(context){
+            context.commit('desselecionaGoogleBusiness');
+        },
         desselecionaSeo(context){
             context.commit('desselecionaSeo')
         },
@@ -974,6 +1136,12 @@ export default {
         },
         desselecionaAdwords(context){
             context.commit('desselecionaAdwords')
+        },
+        selectMarketingFase2(context){
+            context.commit('selectMarketingFase2');
+        },
+        deselectMarketingDigitalFase2(context){
+            context.commit('deselectMarketingDigitalFase2');
         },
         selectFase2(context){
             context.commit('selectFase2');

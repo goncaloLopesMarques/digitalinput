@@ -1,21 +1,8 @@
 <template>
     <div class="container">
-            <template v-if="siteDinamicoFase4">
-        <p> Deseja Apoio ao Marketing Digital?
-      <div v-if="showButtons"  class="row" style ="text-align: center;min-height:200px;">
-          <div class="col-md-4"> </div>
-      <div @click="yes" class="col-md-2 selecionavel">
-        <button for="yes" v-bind:class="buttonClassYes" style="background:url(images/yes.png);"></button>
-        <h5 class="card-title imgCard">Sim</h5>
-      </div>
-      <div @click="no" class="col-md-2 selecionavel">
-        <button for="no" v-bind:class="buttonClassNo" style="background:url(images/cancel.png);"></button>
-        <h5 class="card-title imgCard">Não</h5>
-      </div>
-       <div class="col-md-4"> </div>
-      </div>
-    <div v-if="showSocialMedia" class="row" style ="text-align: center; min-height:200px;">
-   
+
+        <p> Selecione o numero de redes socias ás quais pretende apoio!
+    <div class="row" style ="text-align: center; min-height:200px;">
         <div @click="toogleFace" class="col-md-2 selecionavel">
         <button for="face" v-bind:class="buttonClassFace" style="background:url(images/facebook.png);"></button>
          <h5 class="card-title imgCard">FaceBook</h5>
@@ -43,11 +30,9 @@
      </div>
       <div class="row" v-if="buttonEnd">
         <div class="col-md-5"></div>
-        <div class="col-md-2"><button @click="end" type="button" class="fill">Terminar</button></div>
+        <div class="col-md-2"><button @click="end" v-if="!this.$store.getters.gestao" type="button" class="fill">Terminar</button></div>
           <div class="col-md-5"></div>
      </div>
-
-     </template>
 </div>
 </template>
 <script>

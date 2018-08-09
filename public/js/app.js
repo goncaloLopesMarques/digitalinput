@@ -17472,7 +17472,7 @@ module.exports = Cancel;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(15);
-module.exports = __webpack_require__(67);
+module.exports = __webpack_require__(73);
 
 
 /***/ }),
@@ -17504,6 +17504,8 @@ Vue.component('site-dinamico-fase4', __webpack_require__(55));
 Vue.component('terminate', __webpack_require__(58));
 Vue.component('orcamento-app', __webpack_require__(61));
 Vue.component('navigationBar', __webpack_require__(64));
+Vue.component('marketing-digital-fase1', __webpack_require__(67));
+Vue.component('marketing-digital-fase2', __webpack_require__(70));
 
 var app = new Vue({
     el: '#app',
@@ -39545,7 +39547,46 @@ module.exports = function spread(callback) {
                 preco: 950,
                 selecionado: false
             },
+            marketingDigital: {
+                descricao: 'Apoio ao Marketing Digital',
+                preco: 0,
+                selecionado: false
+            },
             show: true
+        },
+        MarketingDigital: {
+            Fase1: {
+                Gestao: {
+                    descricao: 'Gestão de redes sociais',
+                    preco: 0,
+                    selecionado: false
+                },
+                show: false
+            },
+            Fase2: {
+                Publicidade: {
+                    descricao: 'Gestão de publicidade on-line',
+                    preco: 0,
+                    selecionado: false
+                },
+                GoogleBusiness: {
+                    descricao: 'Gestão de Google my Business',
+                    preco: 0,
+                    selecionado: false
+                },
+                GoogleAds: {
+                    descricao: 'Configuração de Google Ads',
+                    preco: 0,
+                    selecionado: false
+                },
+                FacebookAds: {
+                    descricao: 'Configuração de Facebook Ads',
+                    preco: 0,
+                    selecionado: false
+                },
+                show: false
+            },
+            produtosSelecionados: []
         },
         SiteDinamico: {
             Fase1: {
@@ -39689,9 +39730,37 @@ module.exports = function spread(callback) {
         precoFinal: 0,
         isEstatico: false,
         isLoja: false,
-        buttonBack: 'Inicio'
+        buttonBack: 'Inicio',
+        redesSociais: false
     },
     getters: {
+        redesSociais: function redesSociais(state) {
+            return state.redesSociais;
+        },
+
+        //getters do marketing digital
+        gestao: function gestao(state) {
+            return state.MarketingDigital.Fase1.Gestao.selecionado;
+        },
+        publicidade: function publicidade(state) {
+            return state.MarketingDigital.Fase2.Publicidade.selecionado;
+        },
+        googleMyBusiness: function googleMyBusiness(state) {
+            return state.MarketingDigital.Fase2.GoogleBusiness.selecionado;
+        },
+        googleAds: function googleAds(state) {
+            return state.MarketingDigital.Fase2.GoogleAds.selecionado;
+        },
+        FacebookAds: function FacebookAds(state) {
+            return state.MarketingDigital.Fase2.FacebookAds.selecionado;
+        },
+        MarketingDigitalFase1: function MarketingDigitalFase1(state) {
+            return state.MarketingDigital.Fase1.show;
+        },
+        MarketingDigitalFase2: function MarketingDigitalFase2(state) {
+            return state.MarketingDigital.Fase2.show;
+        },
+
         //variaveis de controlo e navegação da aplicação
         buttonBack: function buttonBack(state) {
             return state.buttonBack;
@@ -39843,6 +39912,32 @@ module.exports = function spread(callback) {
             state.NavigationBar.button5.cssClass = 'md-step active done';
             state.fase1.show = false;
         },
+        selecionaMarketingDigital: function selecionaMarketingDigital(state) {
+            state.fase++;
+            //ver a barra de navegação!!!!
+            state.NavigationBar.button1.cssClass = 'md-step active done';
+            state.NavigationBar.button2.cssClass = 'md-step active';
+            state.MarketingDigital.produtosSelecionados.push(state.fase1.marketingDigital.descricao);
+            state.MarketingDigital.Fase1.show = true;
+            state.fase1.show = false;
+
+            state.precoFinal = state.precoFinal + state.fase1.marketingDigital.preco;
+        },
+        selecionaPublicidade: function selecionaPublicidade(state) {
+            state.MarketingDigital.produtosSelecionados.push(state.MarketingDigital.Fase2.Publicidade.descricao);
+            state.MarketingDigital.Fase2.Publicidade.selecionado = true;
+            state.precoFinal = state.precoFinal + state.MarketingDigital.Fase2.Publicidade.preco;
+        },
+        selecionaGestao: function selecionaGestao(state) {
+            state.MarketingDigital.produtosSelecionados.push(state.MarketingDigital.Fase1.Gestao.descricao);
+            state.MarketingDigital.Fase1.Gestao.selecionado = true;
+            state.precoFinal = state.precoFinal + state.MarketingDigital.Fase1.Gestao.preco;
+        },
+        selecionaGoogleBusiness: function selecionaGoogleBusiness(state) {
+            state.MarketingDigital.produtosSelecionados.push(state.MarketingDigital.Fase2.GoogleBusiness.descricao);
+            state.MarketingDigital.Fase2.GoogleBusiness.selecionado = true;
+            state.precoFinal = state.precoFinal + state.MarketingDigital.Fase2.GoogleBusiness.preco;
+        },
         selecionaDominio: function selecionaDominio(state) {
             state.SiteDinamico.produtosSelecionados.push(state.SiteDinamico.Fase1.Dominio.descricao);
             state.SiteDinamico.Fase1.Dominio.selecionado = true;
@@ -39929,6 +40024,33 @@ module.exports = function spread(callback) {
                 }
             }
             state.SiteDinamico.Fase1.lojaOnline.selecionado = false;
+        },
+        desselecionaPublicidade: function desselecionaPublicidade(state) {
+            for (var i = state.MarketingDigital.produtosSelecionados.length - 1; i >= 0; i--) {
+                if (state.MarketingDigital.produtosSelecionados[i] == state.MarketingDigital.Fase2.Publicidade.descricao) {
+                    state.MarketingDigital.produtosSelecionados.splice(i, 1);
+                }
+            }
+            state.MarketingDigital.Fase2.Publicidade.selecionado = false;
+            state.precoFinal = state.precoFinal - state.MarketingDigital.Fase2.Publicidade.preco;
+        },
+        desselecionaGestao: function desselecionaGestao(state) {
+            for (var i = state.MarketingDigital.produtosSelecionados.length - 1; i >= 0; i--) {
+                if (state.MarketingDigital.produtosSelecionados[i] == state.MarketingDigital.Fase1.Gestao.descricao) {
+                    state.MarketingDigital.produtosSelecionados.splice(i, 1);
+                }
+            }
+            state.MarketingDigital.Fase1.Gestao.selecionado = false;
+            state.precoFinal = state.precoFinal - state.MarketingDigital.Fase1.Gestao.preco;
+        },
+        desselecionaGoogleBusiness: function desselecionaGoogleBusiness(state) {
+            for (var i = state.MarketingDigital.produtosSelecionados.length - 1; i >= 0; i--) {
+                if (state.MarketingDigital.produtosSelecionados[i] == state.MarketingDigital.Fase2.GoogleBusiness.descricao) {
+                    state.MarketingDigital.produtosSelecionados.splice(i, 1);
+                }
+            }
+            state.MarketingDigital.Fase2.GoogleBusiness.selecionado = false;
+            state.precoFinal = state.precoFinal - state.MarketingDigital.Fase2.GoogleBusiness.preco;
         },
         desselecionaAlojamento: function desselecionaAlojamento(state) {
             for (var i = state.SiteDinamico.produtosSelecionados.length - 1; i >= 0; i--) {
@@ -40039,14 +40161,16 @@ module.exports = function spread(callback) {
             state.fase--;
             state.precoFinal = 0;
             state.SiteDinamico.Fase1.show = false;
+            state.MarketingDigital.Fase1.show = false;
             state.fase1.show = true;
             state.SiteDinamico.produtosSelecionados = [];
+            state.MarketingDigital.produtosSelecionados = [];
             state.isEstatico = false;
-            state.NavigationBar.button1.cssClass = 'is-active';
-            state.NavigationBar.button2.cssClass = '';
-            state.NavigationBar.button3.cssClass = '';
-            state.NavigationBar.button4.cssClass = '';
-            state.NavigationBar.button5.cssClass = '';
+            state.NavigationBar.button1.cssClass = 'md-step active';
+            state.NavigationBar.button2.cssClass = 'md-step';
+            state.NavigationBar.button3.cssClass = 'md-step';
+            state.NavigationBar.button4.cssClass = 'md-step';
+            state.NavigationBar.button5.cssClass = 'md-step';
             //limpa tudo o que foi selecionado Na fase 1
             state.SiteDinamico.Fase1.Alojamento.selecionado = false;
             state.SiteDinamico.Fase1.lojaOnline.selecionado = false;
@@ -40072,6 +40196,10 @@ module.exports = function spread(callback) {
             state.SiteDinamico.Fase4.MarketingDigital.AdWords.selecionado = false;
             //limpa tudo o que foi selecionado Na fase 5
             state.SiteDinamico.Fase5.show = false;
+            //limpa tudo o que for selecionado no apoio a marketing digital
+            state.MarketingDigital.Fase2.Publicidade.selecionado = false;
+            state.MarketingDigital.Fase1.Gestao.selecionado = false;
+            state.MarketingDigital.Fase2.GoogleBusiness.selecionado = false;
         },
         selectFase2: function selectFase2(state) {
             state.fase++;
@@ -40080,6 +40208,14 @@ module.exports = function spread(callback) {
             state.NavigationBar.button2.cssClass = 'is-complete';
             state.NavigationBar.button3.cssClass = 'is-active';
             state.SiteDinamico.Fase2.show = true;
+        },
+        selectMarketingFase2: function selectMarketingFase2(state) {
+            state.fase++;
+            state.buttonBack = 'Voltar';
+            state.MarketingDigital.Fase1.show = false;
+            state.NavigationBar.button2.cssClass = 'md-step active done';
+            state.NavigationBar.button3.cssClass = 'md-step active';
+            state.MarketingDigital.Fase2.show = true;
         },
         selectFase3: function selectFase3(state) {
             state.fase++;
@@ -40100,6 +40236,14 @@ module.exports = function spread(callback) {
             state.SiteDinamico.Fase4.show = false;
             state.NavigationBar.button5.cssClass = 'is-complete';
             state.SiteDinamico.Fase5.show = true;
+        },
+        deselectMarketingDigitalFase2: function deselectMarketingDigitalFase2(state) {
+            state.fase--;
+            state.buttonBack = 'Inicio';
+            state.MarketingDigital.Fase1.show = true;
+            state.NavigationBar.button2.cssClass = 'md-step active';
+            state.NavigationBar.button3.cssClass = 'md-step';
+            state.MarketingDigital.Fase2.show = false;
         },
         deselectFase2: function deselectFase2(state) {
             state.fase--;
@@ -40415,6 +40559,18 @@ module.exports = function spread(callback) {
         selecionaApp: function selecionaApp(context) {
             context.commit('selecionaApp');
         },
+        selecionaMarketingDigital: function selecionaMarketingDigital(context) {
+            context.commit('selecionaMarketingDigital');
+        },
+        selecionaPublicidade: function selecionaPublicidade(context) {
+            context.commit('selecionaPublicidade');
+        },
+        selecionaGestao: function selecionaGestao(context) {
+            context.commit('selecionaGestao');
+        },
+        selecionaGoogleBusiness: function selecionaGoogleBusiness(context) {
+            context.commit('selecionaGoogleBusiness');
+        },
         selecionaDominio: function selecionaDominio(context) {
             context.commit('selecionaDominio');
         },
@@ -40469,6 +40625,15 @@ module.exports = function spread(callback) {
         desselecionaBlog: function desselecionaBlog(context) {
             context.commit('desselecionaBlog');
         },
+        desselecionaPublicidade: function desselecionaPublicidade(context) {
+            context.commit('desselecionaPublicidade');
+        },
+        desselecionaGestao: function desselecionaGestao(context) {
+            context.commit('desselecionaGestao');
+        },
+        desselecionaGoogleBusiness: function desselecionaGoogleBusiness(context) {
+            context.commit('desselecionaGoogleBusiness');
+        },
         desselecionaSeo: function desselecionaSeo(context) {
             context.commit('desselecionaSeo');
         },
@@ -40492,6 +40657,12 @@ module.exports = function spread(callback) {
         },
         desselecionaAdwords: function desselecionaAdwords(context) {
             context.commit('desselecionaAdwords');
+        },
+        selectMarketingFase2: function selectMarketingFase2(context) {
+            context.commit('selectMarketingFase2');
+        },
+        deselectMarketingDigitalFase2: function deselectMarketingDigitalFase2(context) {
+            context.commit('deselectMarketingDigitalFase2');
         },
         selectFase2: function selectFase2(context) {
             context.commit('selectFase2');
@@ -52885,6 +53056,25 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 name: 'Orcamento';
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -52905,10 +53095,15 @@ name: 'Orcamento';
   methods: {
     seguinte: function seguinte() {
       if (this.fase == 2) {
-        this.$store.dispatch('selectFase2');
+        if (this.$store.getters.MarketingDigitalFase1) {
+          this.$store.dispatch('selectMarketingFase2');
+        } else {
+          this.$store.dispatch('selectFase2');
+        }
       } else if (this.fase == 3) {
-
-        this.$store.dispatch('selectFase3');
+        if (this.$store.getters.MarketingDigitalFase2) {} else {
+          this.$store.dispatch('selectFase3');
+        }
       } else if (this.fase == 4) {
         this.$store.dispatch('selectFase4');
       }
@@ -52920,7 +53115,11 @@ name: 'Orcamento';
         }
         this.$store.dispatch('restartApp');
       } else if (this.fase == 3) {
-        this.$store.dispatch('deselectFase2');
+        if (this.$store.getters.MarketingDigitalFase2) {
+          this.$store.dispatch('deselectMarketingDigitalFase2');
+        } else {
+          this.$store.dispatch('deselectFase2');
+        }
       } else if (this.fase == 4) {
         this.$store.dispatch('deselectFase3');
       } else if (this.fase == 5) {
@@ -52942,6 +53141,11 @@ name: 'Orcamento';
     toogleApp: function toogleApp() {
       this.appShow = true;
       this.$store.dispatch('selecionaApp');
+    },
+    toogleMarketing: function toogleMarketing() {
+      if (this.$store.getters.fase1Show) {
+        this.$store.dispatch('selecionaMarketingDigital');
+      }
     }
   }
 });
@@ -52974,7 +53178,7 @@ var render = function() {
                   staticStyle: { "padding-bottom": "50px!important" }
                 },
                 [
-                  _c("div", { staticClass: "col-md-4" }, [
+                  _c("div", { staticClass: "col-md-3" }, [
                     _c("div", { staticClass: "cardBox" }, [
                       _c("div", { staticClass: "card" }, [
                         _vm._m(2),
@@ -52988,7 +53192,7 @@ var render = function() {
                     ])
                   ]),
                   _vm._v(" "),
-                  _c("div", { staticClass: "col-md-4" }, [
+                  _c("div", { staticClass: "col-md-3" }, [
                     _c("div", { staticClass: "cardBox" }, [
                       _c("div", { staticClass: "card" }, [
                         _vm._m(3),
@@ -53002,13 +53206,27 @@ var render = function() {
                     ])
                   ]),
                   _vm._v(" "),
-                  _c("div", { staticClass: "col-md-4" }, [
+                  _c("div", { staticClass: "col-md-3" }, [
                     _c("div", { staticClass: "cardBox" }, [
                       _c("div", { staticClass: "card" }, [
                         _vm._m(4),
                         _vm._v(" "),
                         _c("div", { staticClass: "back" }, [
                           _c("a", { on: { click: _vm.toogleApp } }, [
+                            _vm._v("Peça o seu orçamento")
+                          ])
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-3" }, [
+                    _c("div", { staticClass: "cardBox" }, [
+                      _c("div", { staticClass: "card" }, [
+                        _vm._m(5),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "back" }, [
+                          _c("a", { on: { click: _vm.toogleMarketing } }, [
                             _vm._v("Peça o seu orçamento")
                           ])
                         ])
@@ -53037,7 +53255,15 @@ var render = function() {
           _vm._v(" "),
           _vm.appShow ? [_c("orcamento-app")] : _vm._e(),
           _vm._v(" "),
-          this.$store.getters.fase5 ? [_c("terminate")] : _vm._e()
+          this.$store.getters.fase5 ? [_c("terminate")] : _vm._e(),
+          _vm._v(" "),
+          this.$store.getters.MarketingDigitalFase1
+            ? [_c("marketing-digital-fase1")]
+            : _vm._e(),
+          _vm._v(" "),
+          this.$store.getters.MarketingDigitalFase2
+            ? [_c("marketing-digital-fase2")]
+            : _vm._e()
         ],
         2
       ),
@@ -53198,6 +53424,19 @@ var staticRenderFns = [
       _c("img", { staticClass: "imgCard2", attrs: { src: "images/app.png" } }),
       _vm._v(" "),
       _c("h3", [_vm._v("Aplicação")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "front" }, [
+      _c("img", {
+        staticClass: "imgCard2",
+        attrs: { src: "images/marketing.png" }
+      }),
+      _vm._v(" "),
+      _c("h3", [_vm._v("Apoio ao Marketing Digital")])
     ])
   }
 ]
@@ -54458,21 +54697,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 var Swal = __webpack_require__(3);
 name: 'SiteDinamicoFase2';
@@ -54620,231 +54844,153 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "container" },
-    [
-      _vm.siteDinamicoFase4
-        ? [
-            _c("p", [_vm._v(" Deseja Apoio ao Marketing Digital?\n      ")]),
-            _vm.showButtons
-              ? _c(
-                  "div",
-                  {
-                    staticClass: "row",
-                    staticStyle: {
-                      "text-align": "center",
-                      "min-height": "200px"
-                    }
-                  },
-                  [
-                    _c("div", { staticClass: "col-md-4" }),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass: "col-md-2 selecionavel",
-                        on: { click: _vm.yes }
-                      },
-                      [
-                        _c("button", {
-                          class: _vm.buttonClassYes,
-                          staticStyle: { background: "url(images/yes.png)" },
-                          attrs: { for: "yes" }
-                        }),
-                        _vm._v(" "),
-                        _c("h5", { staticClass: "card-title imgCard" }, [
-                          _vm._v("Sim")
-                        ])
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass: "col-md-2 selecionavel",
-                        on: { click: _vm.no }
-                      },
-                      [
-                        _c("button", {
-                          class: _vm.buttonClassNo,
-                          staticStyle: { background: "url(images/cancel.png)" },
-                          attrs: { for: "no" }
-                        }),
-                        _vm._v(" "),
-                        _c("h5", { staticClass: "card-title imgCard" }, [
-                          _vm._v("Não")
-                        ])
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "col-md-4" })
-                  ]
-                )
-              : _vm._e(),
+  return _c("div", { staticClass: "container" }, [
+    _c("p", [
+      _vm._v(
+        " Selecione o numero de redes socias ás quais pretende apoio!\n    "
+      )
+    ]),
+    _c(
+      "div",
+      {
+        staticClass: "row",
+        staticStyle: { "text-align": "center", "min-height": "200px" }
+      },
+      [
+        _c(
+          "div",
+          {
+            staticClass: "col-md-2 selecionavel",
+            on: { click: _vm.toogleFace }
+          },
+          [
+            _c("button", {
+              class: _vm.buttonClassFace,
+              staticStyle: { background: "url(images/facebook.png)" },
+              attrs: { for: "face" }
+            }),
             _vm._v(" "),
-            _vm.showSocialMedia
-              ? _c(
-                  "div",
-                  {
-                    staticClass: "row",
-                    staticStyle: {
-                      "text-align": "center",
-                      "min-height": "200px"
-                    }
-                  },
-                  [
-                    _c(
-                      "div",
-                      {
-                        staticClass: "col-md-2 selecionavel",
-                        on: { click: _vm.toogleFace }
-                      },
-                      [
-                        _c("button", {
-                          class: _vm.buttonClassFace,
-                          staticStyle: {
-                            background: "url(images/facebook.png)"
-                          },
-                          attrs: { for: "face" }
-                        }),
-                        _vm._v(" "),
-                        _c("h5", { staticClass: "card-title imgCard" }, [
-                          _vm._v("FaceBook")
-                        ])
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass: "col-md-2 selecionavel",
-                        on: { click: _vm.toogleInstagram }
-                      },
-                      [
-                        _c("button", {
-                          class: _vm.buttonClassInstagram,
-                          staticStyle: {
-                            background: "url(images/instagram.png)"
-                          },
-                          attrs: { for: "insta" }
-                        }),
-                        _vm._v(" "),
-                        _c("h5", { staticClass: "card-title imgCard" }, [
-                          _vm._v("Instagram")
-                        ])
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass: "col-md-2 selecionavel",
-                        on: { click: _vm.toogleTwitter }
-                      },
-                      [
-                        _c("button", {
-                          class: _vm.buttonClassTwitter,
-                          staticStyle: {
-                            background: "url(images/twitter.png)"
-                          },
-                          attrs: { for: "twitter" }
-                        }),
-                        _vm._v(" "),
-                        _c("h5", { staticClass: "card-title imgCard" }, [
-                          _vm._v("Twitter")
-                        ])
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass: "col-md-2 selecionavel",
-                        on: { click: _vm.toogleLinkedin }
-                      },
-                      [
-                        _c("button", {
-                          class: _vm.buttonClassLinkedin,
-                          staticStyle: {
-                            background: "url(images/linkedin.png)"
-                          },
-                          attrs: { for: "linked" }
-                        }),
-                        _vm._v(" "),
-                        _c("h5", { staticClass: "card-title imgCard" }, [
-                          _vm._v("LinkedIn")
-                        ])
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass: "col-md-2 selecionavel",
-                        on: { click: _vm.tooglePinterest }
-                      },
-                      [
-                        _c("button", {
-                          class: _vm.buttonClassPinterest,
-                          staticStyle: {
-                            background: "url(images/pinterest.png)"
-                          },
-                          attrs: { for: "pint" }
-                        }),
-                        _vm._v(" "),
-                        _c("h5", { staticClass: "card-title imgCard" }, [
-                          _vm._v("Pinterest")
-                        ])
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass: "col-md-2 selecionavel",
-                        on: { click: _vm.toogleAdwords }
-                      },
-                      [
-                        _c("button", {
-                          class: _vm.buttonClassAdwords,
-                          staticStyle: { background: "url(images/words.png)" },
-                          attrs: { for: "adwords" }
-                        }),
-                        _vm._v(" "),
-                        _c("h5", { staticClass: "card-title imgCard" }, [
-                          _vm._v("AdWords")
-                        ])
-                      ]
-                    )
-                  ]
-                )
-              : _vm._e(),
-            _vm._v(" "),
-            _vm.buttonEnd
-              ? _c("div", { staticClass: "row" }, [
-                  _c("div", { staticClass: "col-md-5" }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col-md-2" }, [
-                    _c(
-                      "button",
-                      {
-                        staticClass: "fill",
-                        attrs: { type: "button" },
-                        on: { click: _vm.end }
-                      },
-                      [_vm._v("Terminar")]
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col-md-5" })
-                ])
-              : _vm._e()
+            _c("h5", { staticClass: "card-title imgCard" }, [
+              _vm._v("FaceBook")
+            ])
           ]
-        : _vm._e()
-    ],
-    2
-  )
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass: "col-md-2 selecionavel",
+            on: { click: _vm.toogleInstagram }
+          },
+          [
+            _c("button", {
+              class: _vm.buttonClassInstagram,
+              staticStyle: { background: "url(images/instagram.png)" },
+              attrs: { for: "insta" }
+            }),
+            _vm._v(" "),
+            _c("h5", { staticClass: "card-title imgCard" }, [
+              _vm._v("Instagram")
+            ])
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass: "col-md-2 selecionavel",
+            on: { click: _vm.toogleTwitter }
+          },
+          [
+            _c("button", {
+              class: _vm.buttonClassTwitter,
+              staticStyle: { background: "url(images/twitter.png)" },
+              attrs: { for: "twitter" }
+            }),
+            _vm._v(" "),
+            _c("h5", { staticClass: "card-title imgCard" }, [_vm._v("Twitter")])
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass: "col-md-2 selecionavel",
+            on: { click: _vm.toogleLinkedin }
+          },
+          [
+            _c("button", {
+              class: _vm.buttonClassLinkedin,
+              staticStyle: { background: "url(images/linkedin.png)" },
+              attrs: { for: "linked" }
+            }),
+            _vm._v(" "),
+            _c("h5", { staticClass: "card-title imgCard" }, [
+              _vm._v("LinkedIn")
+            ])
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass: "col-md-2 selecionavel",
+            on: { click: _vm.tooglePinterest }
+          },
+          [
+            _c("button", {
+              class: _vm.buttonClassPinterest,
+              staticStyle: { background: "url(images/pinterest.png)" },
+              attrs: { for: "pint" }
+            }),
+            _vm._v(" "),
+            _c("h5", { staticClass: "card-title imgCard" }, [
+              _vm._v("Pinterest")
+            ])
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass: "col-md-2 selecionavel",
+            on: { click: _vm.toogleAdwords }
+          },
+          [
+            _c("button", {
+              class: _vm.buttonClassAdwords,
+              staticStyle: { background: "url(images/words.png)" },
+              attrs: { for: "adwords" }
+            }),
+            _vm._v(" "),
+            _c("h5", { staticClass: "card-title imgCard" }, [_vm._v("AdWords")])
+          ]
+        )
+      ]
+    ),
+    _vm._v(" "),
+    _vm.buttonEnd
+      ? _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-md-5" }),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-2" }, [
+            !this.$store.getters.gestao
+              ? _c(
+                  "button",
+                  {
+                    staticClass: "fill",
+                    attrs: { type: "button" },
+                    on: { click: _vm.end }
+                  },
+                  [_vm._v("Terminar")]
+                )
+              : _vm._e()
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-5" })
+        ])
+      : _vm._e()
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -55707,6 +55853,457 @@ if (false) {
 
 /***/ }),
 /* 67 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = __webpack_require__(68)
+/* template */
+var __vue_template__ = __webpack_require__(69)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources\\assets\\js\\components\\MDFase1.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-8a3a42b4", Component.options)
+  } else {
+    hotAPI.reload("data-v-8a3a42b4", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 68 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+name: 'MarketingDigitalFase1';
+/* harmony default export */ __webpack_exports__["default"] = ({
+    data: function data() {
+        return {
+            //variaveis para s classes css dos botoes quando sao carregados
+            buttonGestao: 'buttonEmpty buttonShop'
+        };
+    },
+    mounted: function mounted() {
+        if (this.$store.getters.gestao) {
+            this.buttonGestao = 'buttonPressed buttonShop';
+        } else {
+            this.buttonGestao = 'buttonEmpty buttonShop';
+        }
+    },
+
+    methods: {
+        toogleGestao: function toogleGestao() {
+            if (!this.$store.getters.gestao) {
+                this.buttonGestao = 'buttonPressed buttonShop';
+                this.$store.dispatch('selecionaGestao');
+            } else {
+                this.buttonGestao = 'buttonEmpty buttonShop';
+                this.$store.dispatch('desselecionaGestao');
+                this.$store.dispatch('desselecionaFacebook');
+                this.$store.dispatch('desselecionaInstagram');
+                this.$store.dispatch('desselecionaTwitter');
+                this.$store.dispatch('desselecionaLinkedin');
+                this.$store.dispatch('desselecionaPinterest');
+                this.$store.dispatch('desselecionaAdwords');
+            }
+        }
+    }
+});
+
+/***/ }),
+/* 69 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "container" },
+    [
+      this.$store.getters.MarketingDigitalFase1
+        ? _c(
+            "div",
+            {
+              staticClass: "row",
+              staticStyle: { "text-align": "center", "min-height": "200px" }
+            },
+            [
+              _c("div", { staticClass: "col-md-5" }),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "col-md-2 selecionavel",
+                  on: { click: _vm.toogleGestao }
+                },
+                [
+                  _c("button", {
+                    class: _vm.buttonGestao,
+                    staticStyle: { background: "url(images/social.png)" },
+                    attrs: { for: "redesSociais" }
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "h5",
+                    {
+                      staticClass: "card-title",
+                      staticStyle: { color: "black" }
+                    },
+                    [_vm._v("Gestão de Redes Sociais")]
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-5" })
+            ]
+          )
+        : _vm._e(),
+      _vm._v(" "),
+      this.$store.getters.gestao ? [_c("site-dinamico-fase4")] : _vm._e()
+    ],
+    2
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-8a3a42b4", module.exports)
+  }
+}
+
+/***/ }),
+/* 70 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = __webpack_require__(71)
+/* template */
+var __vue_template__ = __webpack_require__(72)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources\\assets\\js\\components\\MDFase2.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-8a1e13b2", Component.options)
+  } else {
+    hotAPI.reload("data-v-8a1e13b2", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 71 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+name: 'MarketingDigitalFase2';
+/* harmony default export */ __webpack_exports__["default"] = ({
+    data: function data() {
+        return {
+            //variaveis para s classes css dos botoes quando sao carregados
+            buttonPublicidade: 'buttonEmpty buttonShop',
+            buttonGoogleBusiness: 'buttonEmpty buttonShop',
+            buttonFacebookAds: 'buttonEmpty buttonShop',
+            buttonGoogleAds: 'buttonEmpty buttonShop',
+            bool: false
+        };
+    },
+    mounted: function mounted() {
+        if (this.$store.getters.publicidade) {
+            this.buttonPublicidade = 'buttonPressed buttonShop';
+        } else {
+            this.buttonPublicidade = 'buttonEmpty buttonShop';
+        }
+        if (this.$store.getters.googleMyBusiness) {
+            this.buttonGoogleBusiness = 'buttonPressed buttonShop';
+        } else {
+            this.buttonGoogleBusiness = 'buttonEmpty buttonShop';
+        }
+    },
+
+    methods: {
+        tooglePublicidade: function tooglePublicidade() {
+            if (!this.$store.getters.publicidade) {
+                this.bool = true;
+                this.buttonPublicidade = 'buttonPressed buttonShop';
+                this.$store.dispatch('selecionaPublicidade');
+            } else {
+                this.bool = false;
+                this.buttonPublicidade = 'buttonEmpty buttonShop';
+                this.$store.dispatch('desselecionaPublicidade');
+            }
+        },
+        toogleGoogleBusiness: function toogleGoogleBusiness() {
+            if (!this.$store.getters.googleMyBusiness) {
+                this.buttonGoogleBusiness = 'buttonPressed buttonShop';
+                this.$store.dispatch('selecionaGoogleBusiness');
+            } else {
+                this.buttonGoogleBusiness = 'buttonEmpty buttonShop';
+                this.$store.dispatch('desselecionaGoogleBusiness');
+            }
+        },
+        toogleGoogleAds: function toogleGoogleAds() {},
+        toogleFacebookAds: function toogleFacebookAds() {}
+    }
+});
+
+/***/ }),
+/* 72 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "conatiner" }, [
+    _c(
+      "div",
+      {
+        staticClass: "row",
+        staticStyle: { "text-align": "center", "min-height": "200px" }
+      },
+      [
+        _c("div", { staticClass: "col-md-4" }),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass: "col-md-2 selecionavel",
+            on: { click: _vm.tooglePublicidade }
+          },
+          [
+            _c("button", {
+              class: _vm.buttonPublicidade,
+              staticStyle: { background: "url(images/publicity.png)" },
+              attrs: { for: "Publicidade" }
+            }),
+            _vm._v(" "),
+            _c(
+              "h5",
+              { staticClass: "card-title", staticStyle: { color: "black" } },
+              [_vm._v("Publicidade On-Line")]
+            )
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass: "col-md-2 selecionavel",
+            on: { click: _vm.toogleGoogleBusiness }
+          },
+          [
+            _c("button", {
+              class: _vm.buttonGoogleBusiness,
+              staticStyle: { background: "url(images/business.png)" },
+              attrs: { for: "GoogleBusiness" }
+            }),
+            _vm._v(" "),
+            _c(
+              "h5",
+              { staticClass: "card-title", staticStyle: { color: "black" } },
+              [_vm._v("Google Business")]
+            )
+          ]
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-md-4" })
+      ]
+    ),
+    _vm._v(" "),
+    this.bool
+      ? _c(
+          "div",
+          {
+            staticClass: "row",
+            staticStyle: { "text-align": "center", "min-height": "200px" }
+          },
+          [
+            _c("div", { staticClass: "col-md-2" }),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "col-md-2 selecionavel",
+                on: { click: _vm.toogleGoogleAds }
+              },
+              [
+                _c("button", {
+                  class: _vm.buttonGoogleAds,
+                  staticStyle: { background: "url(images/googleads.png)" },
+                  attrs: { for: "GoogleAds" }
+                }),
+                _vm._v(" "),
+                _c(
+                  "h5",
+                  {
+                    staticClass: "card-title",
+                    staticStyle: { color: "black" }
+                  },
+                  [_vm._v("Google Ads")]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "col-md-2 selecionavel",
+                on: { click: _vm.toogleFacebookAds }
+              },
+              [
+                _c("button", {
+                  class: _vm.buttonFacebookAds,
+                  staticStyle: { background: "url(images/faceAds.png)" },
+                  attrs: { for: "FacebookAds" }
+                }),
+                _vm._v(" "),
+                _c(
+                  "h5",
+                  {
+                    staticClass: "card-title",
+                    staticStyle: { color: "black" }
+                  },
+                  [_vm._v("Facebook Ads")]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-6" })
+          ]
+        )
+      : _vm._e()
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-8a1e13b2", module.exports)
+  }
+}
+
+/***/ }),
+/* 73 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

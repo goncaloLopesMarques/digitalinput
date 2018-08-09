@@ -22,7 +22,7 @@
                <navigationBar/>
             </div>
             <div v-if="this.$store.getters.fase1Show" class="row" style="padding-bottom: 50px!important;">
-              <div class="col-md-4">
+              <div class="col-md-3">
              <div class="cardBox">
                <div class="card">
                  <div class="front">
@@ -35,7 +35,7 @@
          </div>
       </div>
       </div>
-<div class="col-md-4">
+<div class="col-md-3">
   <div class="cardBox">
     <div class="card">
       <div class="front">
@@ -48,7 +48,7 @@
     </div>
   </div>
 </div>
-<div class="col-md-4">
+<div class="col-md-3">
   <div class="cardBox">
     <div class="card">
       <div class="front">
@@ -57,6 +57,19 @@
       </div>
       <div class="back">
         <a @click="toogleApp">Peça o seu orçamento</a>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="col-md-3">
+  <div class="cardBox">
+    <div class="card">
+      <div class="front">
+        <img class="imgCard2" src="images/marketing.png">
+        <h3>Apoio ao Marketing Digital</h3>
+      </div>
+      <div class="back">
+        <a @click="toogleMarketing">Peça o seu orçamento</a>
       </div>
     </div>
   </div>
@@ -80,6 +93,12 @@
             <template v-if=" this.$store.getters.fase5">
                <terminate/>
             </template>
+            <template v-if=" this.$store.getters.MarketingDigitalFase1">
+               <marketing-digital-fase1/>
+         </template>
+             <template v-if="this.$store.getters.MarketingDigitalFase2">
+    <marketing-digital-fase2/>
+   </template>
    </section>
     <section class="buttons">
 
@@ -128,10 +147,17 @@
            methods: {
                seguinte(){
                    if(this.fase ==2){
+                     if(this.$store.getters.MarketingDigitalFase1){
+                       this.$store.dispatch('selectMarketingFase2');
+                     }else{
                      this.$store.dispatch('selectFase2');
+                     }
                    }else if(this.fase == 3){
-   
+                     if(this.$store.getters.MarketingDigitalFase2){
+
+                     }else{
                      this.$store.dispatch('selectFase3');
+                     }
                    }else if(this.fase == 4){
                      this.$store.dispatch('selectFase4');
                    }
@@ -143,7 +169,11 @@
                      }
                      this.$store.dispatch('restartApp');
                    }else if(this.fase ==3){
+                     if(this.$store.getters.MarketingDigitalFase2){ 
+                      this.$store.dispatch('deselectMarketingDigitalFase2');
+                     }else{
                      this.$store.dispatch('deselectFase2');
+                     }
                    }else if(this.fase == 4){
                      this.$store.dispatch('deselectFase3');
                    }else if(this.fase == 5){
@@ -167,6 +197,11 @@
                toogleApp(){
                  this.appShow = true;
                  this.$store.dispatch('selecionaApp');
+               },
+               toogleMarketing(){
+                  if(this.$store.getters.fase1Show){
+                   this.$store.dispatch('selecionaMarketingDigital');
+                   }
                },
            }
        }
