@@ -1,102 +1,113 @@
-
 /* Header Section */
 
+@media screen and (min-width: 992px) {
+  .logo {
+    text-align: center;
+    margin: 0 auto;
+  }
 
+  .home-slider {
+    padding-top: 25vh;
+    padding-bottom: 60vh;
+  }
 
-@media screen and (min-width: 992px){
+  .darkned {
+    background-color: rgba(5, 5, 5, 0.7);
+  }
 
-.logo{
-	text-align: center;
-	margin: 0 auto;
-}
+  .navbar {
+    webkit-box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
 
-.home-slider{
-	padding-top: 25vh;
-	padding-bottom: 60vh;
-}
+  .text-blue {
+    color: #0069aa !important;
+  }
 
-.darkned{
-	background-color: rgba(5,5,5,.7);
-}
+  .home .navbar-nav .nav-link,
+  .home .navbar-light .navbar-nav .active > .nav-link {
+    color: #8c9c22;
+  }
 
-.navbar{
-	webkit-box-shadow: none;
-	box-shadow: none;
-}
-
-.text-blue{
-	color: #0069aa !important;
-}
-
-.home .navbar-nav .nav-link,
-.home .navbar-light .navbar-nav .active > .nav-link{
-	color: #8c9c22;
-}
-
-.home .navbar.navbar-light .navbar-nav .nav-item.active > .nav-link:hover,
-.home .navbar .navbar-nav .nav-item .nav-link:hover,
-.home .navbar-light .navbar-nav .show > .nav-link,
-.home .navbar.navbar-light .navbar-toggler,
-.home .navbar-light .navbar-nav .nav-link:hover, 
-.home .navbar-light .navbar-nav .nav-link:focus {
+  .home .navbar.navbar-light .navbar-nav .nav-item.active > .nav-link:hover,
+  .home .navbar .navbar-nav .nav-item .nav-link:hover,
+  .home .navbar-light .navbar-nav .show > .nav-link,
+  .home .navbar.navbar-light .navbar-toggler,
+  .home .navbar-light .navbar-nav .nav-link:hover,
+  .home .navbar-light .navbar-nav .nav-link:focus {
     color: #fff;
-}
+  }
 
-.navbar .dropdown-menu a{
-	font-size: 0.8rem;
-}
+  .navbar .dropdown-menu a {
+    font-size: 0.8rem;
+  }
 
-.dropdown-menu {
-	min-width: 20rem;
-	background-color: rgba(255,255,255,.9);
-}
+  .dropdown-menu {
+    min-width: 20rem;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
 
-.dropdown-menu li.nav-item a.nav-link{
-	color: #000;
-	font-weight: bold;
-}
+  .dropdown-menu li.nav-item a.nav-link {
+    color: #000;
+    font-weight: bold;
+  }
 
-.navbar .navbar-nav .dropdown-menu li.nav-item a.nav-link:hover{
-	color: #8c9c22;
-}
+  .navbar .navbar-nav .dropdown-menu li.nav-item a.nav-link:hover {
+    color: #8c9c22;
+  }
 
-.home .main-title{
-	margin-left: -40em;
-	transition: margin 3s ease;
-	-webkit-transition: margin 3s ease;
-	transition-delay: .5s;
-}
+  .home .main-title {
+    margin-left: -40em;
+    transition: margin 3s ease;
+    -webkit-transition: margin 3s ease;
+    -webkit-transition-delay: .5s;
+            transition-delay: .5s;
+  }
 
-/* PORTFOLIO  */
+  /* PORTFOLIO  */
 
-.portfolio-headers{
-	margin: 8rem 0;
-}
+  .portfolio-headers {
+    margin: 8rem 0;
+  }
 
-.parallax {
+  .parallax {
     height: 100%;
     background-attachment: fixed;
     background-repeat: no-repeat;
+  }
 }
 
+#portfolio-background {
+  background-image: url("/images/Port_2_Background.jpg");
+  padding-top: 25vh;
+  padding-bottom: 60vh;
+  background-size: cover;
+  background-position: center center;
+  margin-bottom: 0;
 }
 
-#portfolio-background{
-	background-image: url("/images/Port_2_Background.jpg");
-	padding-top: 25vh;
-	padding-bottom: 60vh;
-	background-size: cover;
-	background-position: center center;
+.portfolio h1 {
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
 }
 
-.portfolio h1{
-	text-transform: uppercase;
-	text-align: center;
-	color: #fff;
+.portfolio-content {
+  margin-top: -10%;
+}
+
+.portfolio-content .row {
+  display: block;
+}
+
+.port-filter-bar {
+  margin-bottom: 2%;
 }
 
 .portfolioFilter {
   padding: 15px 0;
+  text-align: center;
 }
 
 .portfolioFilter a {
@@ -114,14 +125,17 @@
   border: 1px solid #1e1e1e;
   color: #f9f9f9;
 }
-.portfolioContainer{
+
+.portfolioContainer {
   border: 1px solid #eee;
   border-radius: 3px;
 }
+
 .portfolio img {
   margin: 5px;
-  max-width:100%;
+  max-width: 100%;
 }
+
 .portfolio a:focus {
   outline: none;
 }
@@ -139,18 +153,19 @@
 .isotope .isotope-item {
   /* change duration value to whatever you like */
   -webkit-transition-duration: 0.8s;
-  -moz-transition-duration: 0.8s;
   transition-duration: 0.8s;
 }
 
 .isotope {
   -webkit-transition-property: height, width;
-  -moz-transition-property: height, width;
   transition-property: height, width;
 }
 
 .isotope .isotope-item {
   -webkit-transition-property: -webkit-transform, opacity;
-  -moz-transition-property: -moz-transform, opacity;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
   transition-property: transform, opacity;
+  transition-property: transform, opacity, -webkit-transform;
 }
+
