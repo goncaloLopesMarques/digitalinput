@@ -6185,7 +6185,7 @@ a.waves-effect, a.waves-light {
       padding: 10px;
       font-size: 0.9375rem;
       font-weight: 300;
-      color: #000 !important; }
+      color: #000; }
     @media (max-width: 600px) {
       .navbar .dropdown-menu form {
         width: 17rem; } }
@@ -6201,7 +6201,6 @@ a.waves-effect, a.waves-light {
     cursor: pointer; }
   .navbar.navbar-light .breadcrumb .nav-item .nav-link,
   .navbar.navbar-light .navbar-nav .nav-item .nav-link {
-    color: #000;
     -webkit-transition: 0.35s;
     -o-transition: 0.35s;
     transition: 0.35s; }

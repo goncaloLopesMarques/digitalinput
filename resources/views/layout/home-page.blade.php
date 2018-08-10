@@ -4,22 +4,24 @@
    <section class="card wow fadeIn" id="intro" style="visibility: visible; animation-name: fadeIn;">
       <!-- Content -->
       <div class="card-body text-white home-slider px-5" style="background-image: url('/images/Programmer-Developer-Wallpaper.jpg');">
-         @if(session('semDados'))
+         <!-- @if(session('semDados'))
          <div class="col-md-12 alert alert-danger" data-dismiss="alert" aria-label="close">
             {{session('semDados')}}
          </div>
-         @endif
-         <h1 class="mb-4">
-            <strong>Agência de Marketing Digital</strong>
-         </h1>
-         <p class="mb-4">Tenha controlo sobre todos os seus dados</p>
-         <p>
+         @endif -->
+         <div class="main-title">
+            <h1 class="mb-4">
+               <strong>Agência de Marketing Digital</strong>
+            </h1>
+            <p class="mb-4">Tenha controlo sobre todos os seus dados</p>
+         </div>
+         <!-- <p>
             @if(session('response'))
          <div class="col-md-12 alert alert-success" data-dismiss="alert" aria-label="close">
             {{session('response')}}
          </div>
          @endif
-         </p>
+         </p> -->
 
 
          <!-- <div class="row">

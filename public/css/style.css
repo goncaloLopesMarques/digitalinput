@@ -1,9 +1,9 @@
 
-
-
-
-
 /* Header Section */
+
+
+
+@media screen and (min-width: 992px){
 
 .logo{
 	text-align: center;
@@ -28,11 +28,129 @@
 	color: #0069aa !important;
 }
 
-.home .navbar.navbar-light .navbar-nav .nav-item .nav-link{
+.home .navbar-nav .nav-link,
+.home .navbar-light .navbar-nav .active > .nav-link{
 	color: #8c9c22;
 }
 
 .home .navbar.navbar-light .navbar-nav .nav-item.active > .nav-link:hover,
-.home .navbar.navbar-light .navbar-nav .nav-item .nav-link:hover {
+.home .navbar .navbar-nav .nav-item .nav-link:hover,
+.home .navbar-light .navbar-nav .show > .nav-link,
+.home .navbar.navbar-light .navbar-toggler,
+.home .navbar-light .navbar-nav .nav-link:hover, 
+.home .navbar-light .navbar-nav .nav-link:focus {
     color: #fff;
+}
+
+.navbar .dropdown-menu a{
+	font-size: 0.8rem;
+}
+
+.dropdown-menu {
+	min-width: 20rem;
+	background-color: rgba(255,255,255,.9);
+}
+
+.dropdown-menu li.nav-item a.nav-link{
+	color: #000;
+	font-weight: bold;
+}
+
+.navbar .navbar-nav .dropdown-menu li.nav-item a.nav-link:hover{
+	color: #8c9c22;
+}
+
+.home .main-title{
+	margin-left: -40em;
+	transition: margin 3s ease;
+	-webkit-transition: margin 3s ease;
+	transition-delay: .5s;
+}
+
+/* PORTFOLIO  */
+
+.portfolio-headers{
+	margin: 8rem 0;
+}
+
+.parallax {
+    height: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+}
+
+#portfolio-background{
+	background-image: url("/images/Port_2_Background.jpg");
+	padding-top: 25vh;
+	padding-bottom: 60vh;
+	background-size: cover;
+	background-position: center center;
+}
+
+.portfolio h1{
+	text-transform: uppercase;
+	text-align: center;
+	color: #fff;
+}
+
+.portfolioFilter {
+  padding: 15px 0;
+}
+
+.portfolioFilter a {
+  margin-right: 6px;
+  color: #666;
+  text-decoration: none;
+  border: 1px solid #ccc;
+  padding: 4px 15px;
+  border-radius: 50px;
+  display: inline-block;
+}
+
+.portfolioFilter a.current {
+  background: #1e1e1e;
+  border: 1px solid #1e1e1e;
+  color: #f9f9f9;
+}
+.portfolioContainer{
+  border: 1px solid #eee;
+  border-radius: 3px;
+}
+.portfolio img {
+  margin: 5px;
+  max-width:100%;
+}
+.portfolio a:focus {
+  outline: none;
+}
+
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+.isotope,
+.isotope .isotope-item {
+  /* change duration value to whatever you like */
+  -webkit-transition-duration: 0.8s;
+  -moz-transition-duration: 0.8s;
+  transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+  -moz-transition-property: height, width;
+  transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+  -moz-transition-property: -moz-transform, opacity;
+  transition-property: transform, opacity;
 }

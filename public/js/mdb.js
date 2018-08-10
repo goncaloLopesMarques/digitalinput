@@ -14828,7 +14828,7 @@ $(window).scroll(function () {
       $('.scrolling-navbar').addClass("top-nav-collapse");
       if ($('body.home').length){
         $('.scrolling-navbar').addClass("darkned");
-        $('ul.navbar-nav li a').addClass("text-white");
+        $('ul.navbar-nav > li > a').addClass("text-white");
       }
       
     } else {
@@ -14837,7 +14837,7 @@ $(window).scroll(function () {
       $('.scrolling-navbar').removeClass("top-nav-collapse");
       if ($('body.home').length){
         $('.scrolling-navbar').removeClass("darkned");
-        $('ul.navbar-nav li a').removeClass("text-white");
+        $('ul.navbar-nav > li > a').removeClass("text-white");
       }
     }
   }
