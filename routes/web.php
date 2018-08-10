@@ -8,7 +8,7 @@ Route::group(['prefix' => 'admin'], function () {
 route::get('/', 'PagesController@index');
 route::get('/gestao-redes-sociais-preços', 'PagesController@redesSociais');
 route::get('/gestao-marketing-conteudo', 'PagesController@gestaoMarketing');
-route::get('/criacao-sites-sempresas-profissionais', 'PagesController@criacaoSites');
+route::get('/criacao-sites-empresas-profissionais', 'PagesController@criacaoSites');
 route::get('/optimizacao-sites-tecnicas-seo-portugal', 'PagesController@optimizacaoSites');
 route::get('/criar-loja-online-site-vendas', 'PagesController@criarLojaOnline');
 route::get('/empresas-design-grafico-identidade-visual', 'PagesController@empresaDesign');

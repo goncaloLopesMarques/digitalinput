@@ -1,6 +1,10 @@
 jQuery(document).ready(function(){
 
-	$('nav').removeClass("white");
+	if (window.matchMedia("(min-width: 992px)").matches){
+		$('nav').removeClass("white");	
+		$(".main-title").css("margin-left", "0");
+	}
+	
 
 
 
