@@ -39534,6 +39534,10 @@ module.exports = function spread(callback) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+var _getters;
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 /* harmony default export */ __webpack_exports__["a"] = ({
     state: {
         fase1: {
@@ -39632,7 +39636,10 @@ module.exports = function spread(callback) {
                 RedesSociais: {
                     descricao: "Configuração e inserção das redes Sociais",
                     preco: 50,
-                    selecionado: false
+                    selecionado: false,
+                    bool: 'row notShow',
+                    bool2: 'row notShow',
+                    bool3: 'row notShow'
                 },
                 produtos1: {
                     descricao: 'de 0-50 productos',
@@ -39731,9 +39738,25 @@ module.exports = function spread(callback) {
         isEstatico: false,
         isLoja: false,
         buttonBack: 'Inicio',
+        buttonNext: 'Seguinte',
         redesSociais: false
     },
-    getters: {
+    getters: (_getters = {
+        bool: function bool(state) {
+            return state.SiteDinamico.Fase2.RedesSociais.bool;
+        },
+        bool2: function bool2(state) {
+            return state.SiteDinamico.Fase2.RedesSociais.bool2;
+        },
+        bool3: function bool3(state) {
+            return state.SiteDinamico.Fase2.RedesSociais.bool3;
+        },
+        googleAds: function googleAds(state) {
+            return state.MarketingDigital.Fase2.GoogleAds.selecionado;
+        },
+        facebookAds: function facebookAds(state) {
+            return state.MarketingDigital.Fase2.FacebookAds.selecionado;
+        },
         redesSociais: function redesSociais(state) {
             return state.redesSociais;
         },
@@ -39747,138 +39770,96 @@ module.exports = function spread(callback) {
         },
         googleMyBusiness: function googleMyBusiness(state) {
             return state.MarketingDigital.Fase2.GoogleBusiness.selecionado;
-        },
-        googleAds: function googleAds(state) {
-            return state.MarketingDigital.Fase2.GoogleAds.selecionado;
-        },
-        FacebookAds: function FacebookAds(state) {
-            return state.MarketingDigital.Fase2.FacebookAds.selecionado;
-        },
-        MarketingDigitalFase1: function MarketingDigitalFase1(state) {
-            return state.MarketingDigital.Fase1.show;
-        },
-        MarketingDigitalFase2: function MarketingDigitalFase2(state) {
-            return state.MarketingDigital.Fase2.show;
-        },
-
-        //variaveis de controlo e navegação da aplicação
-        buttonBack: function buttonBack(state) {
-            return state.buttonBack;
-        },
-        button1: function button1(state) {
-            return state.NavigationBar.button1.cssClass;
-        },
-        button2: function button2(state) {
-            return state.NavigationBar.button2.cssClass;
-        },
-        button3: function button3(state) {
-            return state.NavigationBar.button3.cssClass;
-        },
-        button4: function button4(state) {
-            return state.NavigationBar.button4.cssClass;
-        },
-        button5: function button5(state) {
-            return state.NavigationBar.button5.cssClass;
-        },
-
-        //--- fim dos getters de navegaçao
-        fase4Selection: function fase4Selection(state) {
-            return state.SiteDinamico.Fase4.selection;
-        },
-        fase5: function fase5(state) {
-            return state.SiteDinamico.Fase5.show;
-        },
-        fase: function fase(state) {
-            return state.fase;
-        },
-        isEstatico: function isEstatico(state) {
-            return state.isEstatico;
-        },
-        isLoja: function isLoja(state) {
-            return state.isLoja;
-        },
-        produtosSelecionados: function produtosSelecionados(state) {
-            return state.SiteDinamico.produtosSelecionados;
-        },
-        pages1Selecionado: function pages1Selecionado(state) {
-            return state.SiteDinamico.Fase1.Pages1.selecionado;
-        },
-        pages2Selecionado: function pages2Selecionado(state) {
-            return state.SiteDinamico.Fase1.Pages2.selecionado;
-        },
-        pages3Selecionado: function pages3Selecionado(state) {
-            return state.SiteDinamico.Fase1.Pages3.selecionado;
-        },
-        precoFinal: function precoFinal(state) {
-            return state.precoFinal;
-        },
-        precoDinamico: function precoDinamico(state) {
-            return state.fase1.siteDinamico.preco;
-        },
-        fase1Show: function fase1Show(state) {
-            return state.fase1.show;
-        },
-        siteDinamicoFase1Show: function siteDinamicoFase1Show(state) {
-            return state.SiteDinamico.Fase1.show;
-        },
-        siteDinamicoFase2Show: function siteDinamicoFase2Show(state) {
-            return state.SiteDinamico.Fase2.show;
-        },
-        siteDinamicoFase3Show: function siteDinamicoFase3Show(state) {
-            return state.SiteDinamico.Fase3.show;
-        },
-        siteDinamicoFase4Show: function siteDinamicoFase4Show(state) {
-            return state.SiteDinamico.Fase4.show;
-        },
-        dominioSelecionado: function dominioSelecionado(state) {
-            return state.SiteDinamico.Fase1.Dominio.selecionado;
-        },
-        lojaSelecionada: function lojaSelecionada(state) {
-            return state.SiteDinamico.Fase1.lojaOnline.selecionado;
-        },
-        alojamentoSelecionado: function alojamentoSelecionado(state) {
-            return state.SiteDinamico.Fase1.Alojamento.selecionado;
-        },
-        redesSelecionado: function redesSelecionado(state) {
-            return state.SiteDinamico.Fase2.RedesSociais.selecionado;
-        },
-        blogSelecionado: function blogSelecionado(state) {
-            return state.SiteDinamico.Fase2.Blog.selecionado;
-        },
-        seoSelecionado: function seoSelecionado(state) {
-            return state.SiteDinamico.Fase3.Seo.selecionado;
-        },
-        keyWordsSelecionado: function keyWordsSelecionado(state) {
-            return state.SiteDinamico.Fase3.KeyWords.selecionado;
-        },
-        facebookSelecionado: function facebookSelecionado(state) {
-            return state.SiteDinamico.Fase4.MarketingDigital.FaceBook.selecionado;
-        },
-        twitterSelecionado: function twitterSelecionado(state) {
-            return state.SiteDinamico.Fase4.MarketingDigital.Twitter.selecionado;
-        },
-        instagramSelecionado: function instagramSelecionado(state) {
-            return state.SiteDinamico.Fase4.MarketingDigital.Instagram.selecionado;
-        },
-        linkedinSelecionado: function linkedinSelecionado(state) {
-            return state.SiteDinamico.Fase4.MarketingDigital.LinkedIn.selecionado;
-        },
-        pinterestSelecionado: function pinterestSelecionado(state) {
-            return state.SiteDinamico.Fase4.MarketingDigital.Pinterest.selecionado;
-        },
-        adwordsSelecionado: function adwordsSelecionado(state) {
-            return state.SiteDinamico.Fase4.MarketingDigital.AdWords.selecionado;
-        },
-        produtos1: function produtos1(state) {
-            return state.SiteDinamico.Fase2.produtos1.selecionado;
-        },
-        produtos2: function produtos2(state) {
-            return state.SiteDinamico.Fase2.produtos2.selecionado;
-        },
-        produtos3: function produtos3(state) {
-            return state.SiteDinamico.Fase2.produtos3.selecionado;
         }
-    },
+    }, _defineProperty(_getters, 'googleAds', function googleAds(state) {
+        return state.MarketingDigital.Fase2.GoogleAds.selecionado;
+    }), _defineProperty(_getters, 'FacebookAds', function FacebookAds(state) {
+        return state.MarketingDigital.Fase2.FacebookAds.selecionado;
+    }), _defineProperty(_getters, 'MarketingDigitalFase1', function MarketingDigitalFase1(state) {
+        return state.MarketingDigital.Fase1.show;
+    }), _defineProperty(_getters, 'MarketingDigitalFase2', function MarketingDigitalFase2(state) {
+        return state.MarketingDigital.Fase2.show;
+    }), _defineProperty(_getters, 'buttonBack', function buttonBack(state) {
+        return state.buttonBack;
+    }), _defineProperty(_getters, 'buttonNext', function buttonNext(state) {
+        return state.buttonNext;
+    }), _defineProperty(_getters, 'button1', function button1(state) {
+        return state.NavigationBar.button1.cssClass;
+    }), _defineProperty(_getters, 'button2', function button2(state) {
+        return state.NavigationBar.button2.cssClass;
+    }), _defineProperty(_getters, 'button3', function button3(state) {
+        return state.NavigationBar.button3.cssClass;
+    }), _defineProperty(_getters, 'button4', function button4(state) {
+        return state.NavigationBar.button4.cssClass;
+    }), _defineProperty(_getters, 'button5', function button5(state) {
+        return state.NavigationBar.button5.cssClass;
+    }), _defineProperty(_getters, 'fase4Selection', function fase4Selection(state) {
+        return state.SiteDinamico.Fase4.selection;
+    }), _defineProperty(_getters, 'fase5', function fase5(state) {
+        return state.SiteDinamico.Fase5.show;
+    }), _defineProperty(_getters, 'fase', function fase(state) {
+        return state.fase;
+    }), _defineProperty(_getters, 'isEstatico', function isEstatico(state) {
+        return state.isEstatico;
+    }), _defineProperty(_getters, 'isLoja', function isLoja(state) {
+        return state.isLoja;
+    }), _defineProperty(_getters, 'produtosSelecionados', function produtosSelecionados(state) {
+        return state.SiteDinamico.produtosSelecionados;
+    }), _defineProperty(_getters, 'produtosSelecionadosMarketing', function produtosSelecionadosMarketing(state) {
+        return state.MarketingDigital.produtosSelecionados;
+    }), _defineProperty(_getters, 'pages1Selecionado', function pages1Selecionado(state) {
+        return state.SiteDinamico.Fase1.Pages1.selecionado;
+    }), _defineProperty(_getters, 'pages2Selecionado', function pages2Selecionado(state) {
+        return state.SiteDinamico.Fase1.Pages2.selecionado;
+    }), _defineProperty(_getters, 'pages3Selecionado', function pages3Selecionado(state) {
+        return state.SiteDinamico.Fase1.Pages3.selecionado;
+    }), _defineProperty(_getters, 'precoFinal', function precoFinal(state) {
+        return state.precoFinal;
+    }), _defineProperty(_getters, 'precoDinamico', function precoDinamico(state) {
+        return state.fase1.siteDinamico.preco;
+    }), _defineProperty(_getters, 'fase1Show', function fase1Show(state) {
+        return state.fase1.show;
+    }), _defineProperty(_getters, 'siteDinamicoFase1Show', function siteDinamicoFase1Show(state) {
+        return state.SiteDinamico.Fase1.show;
+    }), _defineProperty(_getters, 'siteDinamicoFase2Show', function siteDinamicoFase2Show(state) {
+        return state.SiteDinamico.Fase2.show;
+    }), _defineProperty(_getters, 'siteDinamicoFase3Show', function siteDinamicoFase3Show(state) {
+        return state.SiteDinamico.Fase3.show;
+    }), _defineProperty(_getters, 'siteDinamicoFase4Show', function siteDinamicoFase4Show(state) {
+        return state.SiteDinamico.Fase4.show;
+    }), _defineProperty(_getters, 'dominioSelecionado', function dominioSelecionado(state) {
+        return state.SiteDinamico.Fase1.Dominio.selecionado;
+    }), _defineProperty(_getters, 'lojaSelecionada', function lojaSelecionada(state) {
+        return state.SiteDinamico.Fase1.lojaOnline.selecionado;
+    }), _defineProperty(_getters, 'alojamentoSelecionado', function alojamentoSelecionado(state) {
+        return state.SiteDinamico.Fase1.Alojamento.selecionado;
+    }), _defineProperty(_getters, 'redesSelecionado', function redesSelecionado(state) {
+        return state.SiteDinamico.Fase2.RedesSociais.selecionado;
+    }), _defineProperty(_getters, 'blogSelecionado', function blogSelecionado(state) {
+        return state.SiteDinamico.Fase2.Blog.selecionado;
+    }), _defineProperty(_getters, 'seoSelecionado', function seoSelecionado(state) {
+        return state.SiteDinamico.Fase3.Seo.selecionado;
+    }), _defineProperty(_getters, 'keyWordsSelecionado', function keyWordsSelecionado(state) {
+        return state.SiteDinamico.Fase3.KeyWords.selecionado;
+    }), _defineProperty(_getters, 'facebookSelecionado', function facebookSelecionado(state) {
+        return state.SiteDinamico.Fase4.MarketingDigital.FaceBook.selecionado;
+    }), _defineProperty(_getters, 'twitterSelecionado', function twitterSelecionado(state) {
+        return state.SiteDinamico.Fase4.MarketingDigital.Twitter.selecionado;
+    }), _defineProperty(_getters, 'instagramSelecionado', function instagramSelecionado(state) {
+        return state.SiteDinamico.Fase4.MarketingDigital.Instagram.selecionado;
+    }), _defineProperty(_getters, 'linkedinSelecionado', function linkedinSelecionado(state) {
+        return state.SiteDinamico.Fase4.MarketingDigital.LinkedIn.selecionado;
+    }), _defineProperty(_getters, 'pinterestSelecionado', function pinterestSelecionado(state) {
+        return state.SiteDinamico.Fase4.MarketingDigital.Pinterest.selecionado;
+    }), _defineProperty(_getters, 'adwordsSelecionado', function adwordsSelecionado(state) {
+        return state.SiteDinamico.Fase4.MarketingDigital.AdWords.selecionado;
+    }), _defineProperty(_getters, 'produtos1', function produtos1(state) {
+        return state.SiteDinamico.Fase2.produtos1.selecionado;
+    }), _defineProperty(_getters, 'produtos2', function produtos2(state) {
+        return state.SiteDinamico.Fase2.produtos2.selecionado;
+    }), _defineProperty(_getters, 'produtos3', function produtos3(state) {
+        return state.SiteDinamico.Fase2.produtos3.selecionado;
+    }), _getters),
     mutations: {
         selecionaEstatico: function selecionaEstatico(state) {
             state.fase++;
@@ -39927,6 +39908,15 @@ module.exports = function spread(callback) {
             state.MarketingDigital.produtosSelecionados.push(state.MarketingDigital.Fase2.Publicidade.descricao);
             state.MarketingDigital.Fase2.Publicidade.selecionado = true;
             state.precoFinal = state.precoFinal + state.MarketingDigital.Fase2.Publicidade.preco;
+            if (state.isEstatico) {
+                state.SiteDinamico.Fase2.RedesSociais.bool = "row show";
+            }
+            if (!state.isEstatico && !state.SiteDinamico.Fase1.lojaOnline.selecionado) {
+                state.SiteDinamico.Fase2.RedesSociais.bool2 = "row show";
+            }
+            if (!state.isEstatico && state.SiteDinamico.Fase1.lojaOnline.selecionado) {
+                state.SiteDinamico.Fase2.RedesSociais.bool3 = "row show";
+            }
         },
         selecionaGestao: function selecionaGestao(state) {
             state.MarketingDigital.produtosSelecionados.push(state.MarketingDigital.Fase1.Gestao.descricao);
@@ -40008,6 +39998,17 @@ module.exports = function spread(callback) {
             state.precoFinal = state.precoFinal + state.SiteDinamico.Fase4.MarketingDigital.AdWords.preco;
             state.SiteDinamico.Fase4.selection[5] = 1;
         },
+        selecionaGoogleAds: function selecionaGoogleAds(state) {
+            state.MarketingDigital.produtosSelecionados.push(state.MarketingDigital.Fase2.GoogleAds.descricao);
+            state.MarketingDigital.Fase2.GoogleAds.selecionado = true;
+            state.precoFinal = state.precoFinal + state.MarketingDigital.Fase2.GoogleAds.preco;
+        },
+        selecionaFacebookAds: function selecionaFacebookAds(state) {
+            state.MarketingDigital.produtosSelecionados.push(state.MarketingDigital.Fase2.FacebookAds.descricao);
+            state.MarketingDigital.Fase2.FacebookAds.selecionado = true;
+            state.precoFinal = state.precoFinal + state.MarketingDigital.Fase2.FacebookAds.preco;
+            state.SiteDinamico.Fase4.selection[5] = 1;
+        },
         desselecionaDominio: function desselecionaDominio(state) {
             for (var i = state.SiteDinamico.produtosSelecionados.length - 1; i >= 0; i--) {
                 if (state.SiteDinamico.produtosSelecionados[i] == state.SiteDinamico.Fase1.Dominio.descricao) {
@@ -40033,6 +40034,34 @@ module.exports = function spread(callback) {
             }
             state.MarketingDigital.Fase2.Publicidade.selecionado = false;
             state.precoFinal = state.precoFinal - state.MarketingDigital.Fase2.Publicidade.preco;
+            if (state.isEstatico) {
+                state.SiteDinamico.Fase2.RedesSociais.bool = "row notShow";
+            }
+            if (state.isEstatico && !state.SiteDinamico.Fase1.lojaOnline.selecionado) {
+                state.SiteDinamico.Fase2.RedesSociais.bool2 = "row notShow";
+            }
+            if (!state.isEstatico && state.SiteDinamico.Fase1.lojaOnline.selecionado) {
+                console.log("OLA");
+                state.SiteDinamico.Fase2.RedesSociais.bool3 = "row notShow";
+            }
+        },
+        desselecionaGoogleAds: function desselecionaGoogleAds(state) {
+            for (var i = state.MarketingDigital.produtosSelecionados.length - 1; i >= 0; i--) {
+                if (state.MarketingDigital.produtosSelecionados[i] == state.MarketingDigital.Fase2.GoogleAds.descricao) {
+                    state.MarketingDigital.produtosSelecionados.splice(i, 1);
+                }
+            }
+            state.MarketingDigital.Fase2.GoogleAds.selecionado = false;
+            state.precoFinal = state.precoFinal - state.MarketingDigital.Fase2.GoogleAds.preco;
+        },
+        desselecionaFacebookAds: function desselecionaFacebookAds(state) {
+            for (var i = state.MarketingDigital.produtosSelecionados.length - 1; i >= 0; i--) {
+                if (state.MarketingDigital.produtosSelecionados[i] == state.MarketingDigital.Fase2.FacebookAds.descricao) {
+                    state.MarketingDigital.produtosSelecionados.splice(i, 1);
+                }
+            }
+            state.MarketingDigital.Fase2.FacebookAds.selecionado = false;
+            state.precoFinal = state.precoFinal - state.MarketingDigital.Fase2.FacebookAds.preco;
         },
         desselecionaGestao: function desselecionaGestao(state) {
             for (var i = state.MarketingDigital.produtosSelecionados.length - 1; i >= 0; i--) {
@@ -40158,7 +40187,8 @@ module.exports = function spread(callback) {
             state.SiteDinamico.Fase4.selection[5] = 0;
         },
         restartApp: function restartApp(state) {
-            state.fase--;
+            state.buttonNext = 'Seguinte';
+            state.fase = 1;
             state.precoFinal = 0;
             state.SiteDinamico.Fase1.show = false;
             state.MarketingDigital.Fase1.show = false;
@@ -40181,6 +40211,9 @@ module.exports = function spread(callback) {
             //limpa tudo o que foi selecionado Na fase 2
             state.SiteDinamico.Fase2.Blog.selecionado = false;
             state.SiteDinamico.Fase2.RedesSociais.selecionado = false;
+            state.SiteDinamico.Fase2.RedesSociais.bool = "row notShow";
+            state.SiteDinamico.Fase2.RedesSociais.bool2 = "row notShow";
+            state.SiteDinamico.Fase2.RedesSociais.bool3 = "row notShow";
             state.SiteDinamico.Fase2.produtos1.selecionado = true;
             state.SiteDinamico.Fase2.produtos2.selecionado = false;
             state.SiteDinamico.Fase2.produtos3.selecionado = false;
@@ -40188,6 +40221,7 @@ module.exports = function spread(callback) {
             state.SiteDinamico.Fase3.Seo.selecionado = false;
             state.SiteDinamico.Fase3.KeyWords.selecionado = false;
             //limpa tudo o que foi selecionado Na fase 4
+            state.SiteDinamico.Fase4.MarketingDigital.selection = [0, 0, 0, 0, 0, 0];
             state.SiteDinamico.Fase4.MarketingDigital.FaceBook.selecionado = false;
             state.SiteDinamico.Fase4.MarketingDigital.Instagram.selecionado = false;
             state.SiteDinamico.Fase4.MarketingDigital.Twitter.selecionado = false;
@@ -40205,13 +40239,14 @@ module.exports = function spread(callback) {
             state.fase++;
             state.buttonBack = 'Voltar';
             state.SiteDinamico.Fase1.show = false;
-            state.NavigationBar.button2.cssClass = 'is-complete';
-            state.NavigationBar.button3.cssClass = 'is-active';
+            state.NavigationBar.button2.cssClass = 'md-step active done';
+            state.NavigationBar.button3.cssClass = 'md-step active';
             state.SiteDinamico.Fase2.show = true;
         },
         selectMarketingFase2: function selectMarketingFase2(state) {
             state.fase++;
             state.buttonBack = 'Voltar';
+            state.buttonNext = 'Terminar';
             state.MarketingDigital.Fase1.show = false;
             state.NavigationBar.button2.cssClass = 'md-step active done';
             state.NavigationBar.button3.cssClass = 'md-step active';
@@ -40220,21 +40255,29 @@ module.exports = function spread(callback) {
         selectFase3: function selectFase3(state) {
             state.fase++;
             state.SiteDinamico.Fase2.show = false;
-            state.NavigationBar.button3.cssClass = 'is-complete';
-            state.NavigationBar.button4.cssClass = 'is-active';
+            state.NavigationBar.button3.cssClass = 'md-step active done';
+            state.NavigationBar.button4.cssClass = 'md-step active';
             state.SiteDinamico.Fase3.show = true;
         },
         selectFase4: function selectFase4(state) {
             state.fase++;
             state.SiteDinamico.Fase3.show = false;
-            state.NavigationBar.button4.cssClass = 'is-complete';
-            state.NavigationBar.button5.cssClass = 'is-active';
+            state.NavigationBar.button4.cssClass = 'md-step active done';
+            state.NavigationBar.button5.cssClass = 'md-step active';
             state.SiteDinamico.Fase4.show = true;
         },
         selectFase5: function selectFase5(state) {
             state.fase++;
             state.SiteDinamico.Fase4.show = false;
-            state.NavigationBar.button5.cssClass = 'is-complete';
+            state.NavigationBar.button5.cssClass = 'md-step active done';
+            state.SiteDinamico.Fase5.show = true;
+        },
+        terminateMarketing: function terminateMarketing(state) {
+            state.fase++;
+            state.MarketingDigital.Fase2.show = false;
+            state.NavigationBar.button3.cssClass = 'md-step active done';
+            state.NavigationBar.button4.cssClass = 'md-step active done';
+            state.NavigationBar.button5.cssClass = 'md-step active done';
             state.SiteDinamico.Fase5.show = true;
         },
         deselectMarketingDigitalFase2: function deselectMarketingDigitalFase2(state) {
@@ -40249,29 +40292,29 @@ module.exports = function spread(callback) {
             state.fase--;
             state.buttonBack = 'Inicio';
             state.SiteDinamico.Fase1.show = true;
-            state.NavigationBar.button2.cssClass = 'is-active';
-            state.NavigationBar.button3.cssClass = '';
+            state.NavigationBar.button2.cssClass = 'md-step active';
+            state.NavigationBar.button3.cssClass = 'md-step';
             state.SiteDinamico.Fase2.show = false;
         },
         deselectFase3: function deselectFase3(state) {
             state.fase--;
             state.SiteDinamico.Fase3.show = false;
-            state.NavigationBar.button3.cssClass = 'is-active';
-            state.NavigationBar.button4.cssClass = '';
+            state.NavigationBar.button3.cssClass = 'md-step active';
+            state.NavigationBar.button4.cssClass = 'md-step';
             state.SiteDinamico.Fase2.show = true;
         },
         deselectFase4: function deselectFase4(state) {
             state.fase--;
             state.SiteDinamico.Fase4.show = false;
-            state.NavigationBar.button4.cssClass = 'is-active';
-            state.NavigationBar.button5.cssClass = '';
+            state.NavigationBar.button4.cssClass = 'md-step active';
+            state.NavigationBar.button5.cssClass = 'md-step';
             state.SiteDinamico.Fase3.show = true;
         },
         deselectFase5: function deselectFase5(state) {
             state.fase--;
             state.SiteDinamico.Fase4.show = true;
             state.SiteDinamico.Fase5.show = false;
-            state.NavigationBar.button5.cssClass = 'is-active';
+            state.NavigationBar.button5.cssClass = 'md-step active';
         },
         selecionaSelectionPages1: function selecionaSelectionPages1(state) {
             if (state.SiteDinamico.Fase1.selection[0] == 1) {} else {
@@ -40610,6 +40653,18 @@ module.exports = function spread(callback) {
         selecionaAdwords: function selecionaAdwords(context) {
             context.commit('selecionaAdwords');
         },
+        selecionaGoogleAds: function selecionaGoogleAds(context) {
+            context.commit('selecionaGoogleAds');
+        },
+        selecionaFacebookAds: function selecionaFacebookAds(context) {
+            context.commit('selecionaFacebookAds');
+        },
+        desselecionaGoogleAds: function desselecionaGoogleAds(context) {
+            context.commit('desselecionaGoogleAds');
+        },
+        desselecionaFacebookAds: function desselecionaFacebookAds(context) {
+            context.commit('desselecionaFacebookAds');
+        },
         desselecionaDominio: function desselecionaDominio(context) {
             context.commit('desselecionaDominio');
         },
@@ -40627,6 +40682,9 @@ module.exports = function spread(callback) {
         },
         desselecionaPublicidade: function desselecionaPublicidade(context) {
             context.commit('desselecionaPublicidade');
+        },
+        terminateMarketing: function terminateMarketing(context) {
+            context.commit('terminateMarketing');
         },
         desselecionaGestao: function desselecionaGestao(context) {
             context.commit('desselecionaGestao');
@@ -53075,12 +53133,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 name: 'Orcamento';
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-
       appShow: false
     };
   },
@@ -53090,6 +53148,9 @@ name: 'Orcamento';
     },
     buttonBack: function buttonBack() {
       return this.$store.getters.buttonBack;
+    },
+    buttonNext: function buttonNext() {
+      return this.$store.getters.buttonNext;
     }
   },
   methods: {
@@ -53101,7 +53162,9 @@ name: 'Orcamento';
           this.$store.dispatch('selectFase2');
         }
       } else if (this.fase == 3) {
-        if (this.$store.getters.MarketingDigitalFase2) {} else {
+        if (this.$store.getters.MarketingDigitalFase2) {
+          this.$store.dispatch('terminateMarketing');
+        } else {
           this.$store.dispatch('selectFase3');
         }
       } else if (this.fase == 4) {
@@ -53309,7 +53372,7 @@ var render = function() {
                           attrs: { type: "button" },
                           on: { click: _vm.seguinte }
                         },
-                        [_vm._v("Seguinte")]
+                        [_vm._v(_vm._s(_vm.buttonNext))]
                       )
                     ]
                   )
@@ -53378,13 +53441,14 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("section", { staticClass: "introducao" }, [
-      _c("div", { staticClass: "col-md-12" }, [
-        _c("h2", [_vm._v(" Faça já o seu")]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-md-6" }, [
+    return _c("section", { staticClass: " container introducao" }, [
+      _c("div", { staticClass: "media" }, [
+        _c("div", { staticClass: "media-body" }, [
+          _c("h5", { staticClass: "mt-0 font-weight-bold" }, [
+            _vm._v("Faça já o seu")
+          ]),
           _vm._v(
-            "\n               Este simulador permite-lhe fazer um orçamento grátis.\n               Para fazer o seu orçamento basta escolher o tipo de site que pretende e seguir as instruções detalhadas que lhe serão fornecidas durante a simulação\n               Qualquer orçamento não é defenitivo podendo ser alterado consoante as suas necessidades.\n            "
+            "\n               Este simulador permite-lhe fazer um orçamento grátis.\n               Para fazer o seu orçamento basta escolher o tipo de site que pretende e seguir as instruções detalhadas que lhe serão fornecidas durante a simulação\n               Qualquer orçamento não é defenitivo podendo ser alterado consoante as suas necessidades.\n    "
           )
         ])
       ])
@@ -54096,24 +54160,120 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 name: 'SiteDinamicoFase2';
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
         return {
             //variaveis para s classes css dos botoes quando sao carregados
-            buttonClassRedes: 'buttonEmpty buttonShop',
+            buttonClassPublicity: 'buttonEmpty buttonShop',
             buttonClassBlog: 'buttonEmpty buttonShop',
+            buttonGoogleBusiness: 'buttonEmpty buttonShop',
+            buttonGoogleAds: 'buttonEmpty buttonShop',
+            buttonFacebookAds: 'buttonEmpty buttonShop',
             buttonClassProdutos1: 'buttonEmpty buttonShop',
             buttonClassProdutos2: 'buttonEmpty buttonShop',
-            buttonClassProdutos3: 'buttonEmpty buttonShop'
+            buttonClassProdutos3: 'buttonEmpty buttonShop',
+            bool: 'row notShow',
+            bool2: 'row notShow',
+            bool3: 'row notShow'
         };
     },
     mounted: function mounted() {
-        if (this.$store.getters.redesSelecionado) {
-            this.buttonClassRedes = 'buttonPressed buttonShop';
+        if (this.$store.getters.bool == 'row show') {
+            this.bool = 'row show';
         } else {
-            this.buttonClassRedes = 'buttonEmpty buttonShop';
+            this.bool = 'row notShow';
+        }
+        if (this.$store.getters.bool2 == 'row show') {
+            this.bool2 = 'row show';
+        } else {
+            this.bool2 = 'row notShow';
+        }
+        if (this.$store.getters.bool3 == 'row show') {
+            this.bool3 = 'row show';
+        } else {
+            this.bool3 = 'row notShow';
+        }
+
+        if (this.$store.getters.googleAds) {
+            this.buttonGoogleAds = 'buttonPressed buttonShop';
+        } else {
+            this.buttonGoogleAds = 'buttonEmpty buttonShop';
+        }
+        if (this.$store.getters.facebookAds) {
+            this.buttonFacebookAds = 'buttonPressed buttonShop';
+        } else {
+            this.buttonFacebookAds = 'buttonEmpty buttonShop';
+        }
+        if (this.$store.getters.googleMyBusiness) {
+            this.buttonGoogleBusiness = 'buttonPressed buttonShop';
+        } else {
+            this.buttonGoogleBusiness = 'buttonEmpty buttonShop';
+        }
+        if (this.$store.getters.publicidade) {
+            this.buttonClassPublicity = 'buttonPressed buttonShop';
+        } else {
+            this.buttonClassPublicity = 'buttonEmpty buttonShop';
         }
         if (this.$store.getters.blogSelecionado) {
             this.buttonClassBlog = 'buttonPressed buttonShop';
@@ -54138,13 +54298,27 @@ name: 'SiteDinamicoFase2';
     },
 
     methods: {
-        toogleRedesSociais: function toogleRedesSociais() {
-            if (!this.$store.getters.redesSelecionado) {
-                this.buttonClassRedes = 'buttonPressed buttonShop';
-                this.$store.dispatch('selecionaRedes');
+        tooglePublicity: function tooglePublicity() {
+            if (!this.$store.getters.publicidade) {
+                this.buttonClassPublicity = 'buttonPressed buttonShop';
+                this.$store.dispatch('selecionaPublicidade');
+                if (this.$store.getters.isEstatico) {
+                    this.bool = 'row show';
+                } else if (!this.$store.getters.isEstatico && !this.$store.getters.lojaSelecionada) {
+                    this.bool2 = 'row show';
+                } else if (!this.$store.getters.isEstatico && this.$store.getters.lojaSelecionada) {
+                    this.bool3 = 'row show';
+                }
             } else {
-                this.buttonClassRedes = 'buttonEmpty buttonShop';
-                this.$store.dispatch('desselecionaRedes');
+                this.buttonClassPublicity = 'buttonEmpty buttonShop';
+                this.$store.dispatch('desselecionaPublicidade');
+                if (this.$store.getters.isEstatico) {
+                    this.bool = 'row notShow';
+                } else if (!this.$store.getters.isEstatico && !this.$store.getters.lojaSelecionada) {
+                    this.bool2 = 'row notShow';
+                } else if (!this.$store.getters.isEstatico && this.$store.getters.lojaSelecionada) {
+                    this.bool3 = 'row notShow';
+                }
             }
         },
         toogleBlog: function toogleBlog() {
@@ -54179,6 +54353,33 @@ name: 'SiteDinamicoFase2';
                 this.buttonClassProdutos2 = 'buttonEmpty buttonShop';
                 this.buttonClassProdutos1 = 'buttonEmpty buttonShop';
             }
+        },
+        toogleGoogleBusiness: function toogleGoogleBusiness() {
+            if (!this.$store.getters.googleMyBusiness) {
+                this.buttonGoogleBusiness = 'buttonPressed buttonShop';
+                this.$store.dispatch('selecionaGoogleBusiness');
+            } else {
+                this.buttonGoogleBusiness = 'buttonEmpty buttonShop';
+                this.$store.dispatch('desselecionaGoogleBusiness');
+            }
+        },
+        toogleGoogleAds: function toogleGoogleAds() {
+            if (!this.$store.getters.googleAds) {
+                this.buttonGoogleAds = 'buttonPressed buttonShop';
+                this.$store.dispatch('selecionaGoogleAds');
+            } else {
+                this.buttonGoogleAds = 'buttonEmpty buttonShop';
+                this.$store.dispatch('desselecionaGoogleAds');
+            }
+        },
+        toogleFacebookAds: function toogleFacebookAds() {
+            if (!this.$store.getters.facebookAds) {
+                this.buttonFacebookAds = 'buttonPressed buttonShop';
+                this.$store.dispatch('selecionaFacebookAds');
+            } else {
+                this.buttonFacebookAds = 'buttonEmpty buttonShop';
+                this.$store.dispatch('desselecionaFacebookAds');
+            }
         }
     }
 });
@@ -54208,13 +54409,13 @@ var render = function() {
               "div",
               {
                 staticClass: "col-md-2 selecionavel",
-                on: { click: _vm.toogleRedesSociais }
+                on: { click: _vm.tooglePublicity }
               },
               [
                 _c("button", {
-                  class: _vm.buttonClassRedes,
-                  staticStyle: { background: "url(images/social.png)" },
-                  attrs: { for: "redesSociais" }
+                  class: _vm.buttonClassPublicity,
+                  staticStyle: { background: "url(images/publicity.png)" },
+                  attrs: { for: "publicity" }
                 }),
                 _vm._v(" "),
                 _c(
@@ -54223,7 +54424,7 @@ var render = function() {
                     staticClass: "card-title",
                     staticStyle: { color: "black" }
                   },
-                  [_vm._v("Redes Sociais")]
+                  [_vm._v("Publicidade On-Line")]
                 )
               ]
             ),
@@ -54232,6 +54433,73 @@ var render = function() {
           ]
         )
       : _vm._e(),
+    _vm._v(" "),
+    _c("div", { class: _vm.bool }, [
+      _c("div", { staticClass: "col-md-1" }),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "col-md-2 selecionavel",
+          on: { click: _vm.toogleGoogleBusiness }
+        },
+        [
+          _c("button", {
+            class: _vm.buttonGoogleBusiness,
+            staticStyle: { background: "url(images/business.png)" },
+            attrs: { for: "GoogleBusiness" }
+          }),
+          _vm._v(" "),
+          _c(
+            "h5",
+            { staticClass: "card-title", staticStyle: { color: "black" } },
+            [_vm._v("Google Business")]
+          )
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "col-md-2 selecionavel",
+          on: { click: _vm.toogleGoogleAds }
+        },
+        [
+          _c("button", {
+            class: _vm.buttonGoogleAds,
+            staticStyle: { background: "url(images/googleads.png)" },
+            attrs: { for: "GoogleAds" }
+          }),
+          _vm._v(" "),
+          _c(
+            "h5",
+            { staticClass: "card-title", staticStyle: { color: "black" } },
+            [_vm._v("Google Ads")]
+          )
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "col-md-2 selecionavel",
+          on: { click: _vm.toogleFacebookAds }
+        },
+        [
+          _c("button", {
+            class: _vm.buttonFacebookAds,
+            staticStyle: { background: "url(images/faceAds.png)" },
+            attrs: { for: "FacebookAds" }
+          }),
+          _vm._v(" "),
+          _c(
+            "h5",
+            { staticClass: "card-title", staticStyle: { color: "black" } },
+            [_vm._v("Facebook Ads")]
+          )
+        ]
+      )
+    ]),
     _vm._v(" "),
     !this.$store.getters.isEstatico && !this.$store.getters.lojaSelecionada
       ? _c(
@@ -54247,13 +54515,13 @@ var render = function() {
               "div",
               {
                 staticClass: "col-md-2 selecionavel",
-                on: { click: _vm.toogleRedesSociais }
+                on: { click: _vm.tooglePublicity }
               },
               [
                 _c("button", {
-                  class: _vm.buttonClassRedes,
-                  staticStyle: { background: "url(images/social.png)" },
-                  attrs: { for: "redesSociais" }
+                  class: _vm.buttonClassPublicity,
+                  staticStyle: { background: "url(images/publicity.png)" },
+                  attrs: { for: "publicity" }
                 }),
                 _vm._v(" "),
                 _c(
@@ -54262,7 +54530,7 @@ var render = function() {
                     staticClass: "card-title",
                     staticStyle: { color: "black" }
                   },
-                  [_vm._v("Redes Sociais")]
+                  [_vm._v("Publicidade On-Line")]
                 )
               ]
             ),
@@ -54277,7 +54545,7 @@ var render = function() {
                 _c("button", {
                   class: _vm.buttonClassBlog,
                   staticStyle: { background: "url(images/blog.png)" },
-                  attrs: { for: "redesSociais" }
+                  attrs: { for: "blog" }
                 }),
                 _vm._v(" "),
                 _c("h5", { staticClass: "card-title imgCard" }, [
@@ -54290,6 +54558,78 @@ var render = function() {
           ]
         )
       : _vm._e(),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        class: _vm.bool2,
+        staticStyle: { "text-align": "center", "min-height": "200px" }
+      },
+      [
+        _c(
+          "div",
+          {
+            staticClass: "col-md-2 selecionavel",
+            on: { click: _vm.toogleGoogleBusiness }
+          },
+          [
+            _c("button", {
+              class: _vm.buttonGoogleBusiness,
+              staticStyle: { background: "url(images/business.png)" },
+              attrs: { for: "GoogleBusiness" }
+            }),
+            _vm._v(" "),
+            _c(
+              "h5",
+              { staticClass: "card-title", staticStyle: { color: "black" } },
+              [_vm._v("Google Business")]
+            )
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass: "col-md-2 selecionavel",
+            on: { click: _vm.toogleGoogleAds }
+          },
+          [
+            _c("button", {
+              class: _vm.buttonGoogleAds,
+              staticStyle: { background: "url(images/googleads.png)" },
+              attrs: { for: "GoogleAds" }
+            }),
+            _vm._v(" "),
+            _c(
+              "h5",
+              { staticClass: "card-title", staticStyle: { color: "black" } },
+              [_vm._v("Google Ads")]
+            )
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass: "col-md-2 selecionavel",
+            on: { click: _vm.toogleFacebookAds }
+          },
+          [
+            _c("button", {
+              class: _vm.buttonFacebookAds,
+              staticStyle: { background: "url(images/faceAds.png)" },
+              attrs: { for: "FacebookAds" }
+            }),
+            _vm._v(" "),
+            _c(
+              "h5",
+              { staticClass: "card-title", staticStyle: { color: "black" } },
+              [_vm._v("Facebook Ads")]
+            )
+          ]
+        )
+      ]
+    ),
     _vm._v(" "),
     !this.$store.getters.isEstatico && this.$store.getters.lojaSelecionada
       ? _c(
@@ -54305,13 +54645,13 @@ var render = function() {
               "div",
               {
                 staticClass: "col-md-2 selecionavel",
-                on: { click: _vm.toogleRedesSociais }
+                on: { click: _vm.tooglePublicity }
               },
               [
                 _c("button", {
-                  class: _vm.buttonClassRedes,
-                  staticStyle: { background: "url(images/social.png)" },
-                  attrs: { for: "redesSociais" }
+                  class: _vm.buttonClassPublicity,
+                  staticStyle: { background: "url(images/publicity.png)" },
+                  attrs: { for: "Publicity" }
                 }),
                 _vm._v(" "),
                 _c(
@@ -54320,7 +54660,7 @@ var render = function() {
                     staticClass: "card-title",
                     staticStyle: { color: "black" }
                   },
-                  [_vm._v("Redes Sociais")]
+                  [_vm._v("Publicidade On-Line")]
                 )
               ]
             ),
@@ -54335,7 +54675,7 @@ var render = function() {
                 _c("button", {
                   class: _vm.buttonClassBlog,
                   staticStyle: { background: "url(images/blog.png)" },
-                  attrs: { for: "redesSociais" }
+                  attrs: { for: "Publicity" }
                 }),
                 _vm._v(" "),
                 _c("h5", { staticClass: "card-title imgCard" }, [
@@ -54404,7 +54744,79 @@ var render = function() {
             _c("div", { staticClass: "col-md-1" })
           ]
         )
-      : _vm._e()
+      : _vm._e(),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        class: _vm.bool3,
+        staticStyle: { "text-align": "center", "min-height": "200px" }
+      },
+      [
+        _c(
+          "div",
+          {
+            staticClass: "col-md-2 selecionavel",
+            on: { click: _vm.toogleGoogleBusiness }
+          },
+          [
+            _c("button", {
+              class: _vm.buttonGoogleBusiness,
+              staticStyle: { background: "url(images/business.png)" },
+              attrs: { for: "GoogleBusiness" }
+            }),
+            _vm._v(" "),
+            _c(
+              "h5",
+              { staticClass: "card-title", staticStyle: { color: "black" } },
+              [_vm._v("Google Business")]
+            )
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass: "col-md-2 selecionavel",
+            on: { click: _vm.toogleGoogleAds }
+          },
+          [
+            _c("button", {
+              class: _vm.buttonGoogleAds,
+              staticStyle: { background: "url(images/googleads.png)" },
+              attrs: { for: "GoogleAds" }
+            }),
+            _vm._v(" "),
+            _c(
+              "h5",
+              { staticClass: "card-title", staticStyle: { color: "black" } },
+              [_vm._v("Google Ads")]
+            )
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass: "col-md-2 selecionavel",
+            on: { click: _vm.toogleFacebookAds }
+          },
+          [
+            _c("button", {
+              class: _vm.buttonFacebookAds,
+              staticStyle: { background: "url(images/faceAds.png)" },
+              attrs: { for: "FacebookAds" }
+            }),
+            _vm._v(" "),
+            _c(
+              "h5",
+              { staticClass: "card-title", staticStyle: { color: "black" } },
+              [_vm._v("Facebook Ads")]
+            )
+          ]
+        )
+      ]
+    )
   ])
 }
 var staticRenderFns = []
@@ -54770,14 +55182,18 @@ name: 'SiteDinamicoFase2';
             // esta é uma função auxiliar para ver se algum elemento no array é igual a 1
             // se nenhum elemento for igua a 1 devolve FALSE
             // se pelo menos um elemento for igual a 1 devolve TRUE
-            var even = function even(element) {
-                if (element == 1) return element;
-            };
-            if (!this.$store.getters.fase4Selection.some(even)) {
-                Swal('Oops...', 'Tem de selecionar pelo menos uma opcção!', 'error');
-            } else {
+            /*
+            var even = function(element) {
+              if(element == 1)
+             return element;
+            }; 
+            if(!this.$store.getters.fase4Selection.some(even)){
+                Swal('Oops...', 'Tem de selecionar pelo menos uma opcção!', 'error')
+            }else{
                 this.$store.dispatch('selectFase5');
-            }
+                }
+                */
+            this.$store.dispatch('selectFase5');
         },
         toogleFace: function toogleFace() {
             if (!this.$store.getters.facebookSelecionado) {
@@ -54857,6 +55273,8 @@ var render = function() {
         staticStyle: { "text-align": "center", "min-height": "200px" }
       },
       [
+        _c("div", { staticClass: "col-md-2" }),
+        _vm._v(" "),
         _c(
           "div",
           {
@@ -54899,23 +55317,6 @@ var render = function() {
           "div",
           {
             staticClass: "col-md-2 selecionavel",
-            on: { click: _vm.toogleTwitter }
-          },
-          [
-            _c("button", {
-              class: _vm.buttonClassTwitter,
-              staticStyle: { background: "url(images/twitter.png)" },
-              attrs: { for: "twitter" }
-            }),
-            _vm._v(" "),
-            _c("h5", { staticClass: "card-title imgCard" }, [_vm._v("Twitter")])
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass: "col-md-2 selecionavel",
             on: { click: _vm.toogleLinkedin }
           },
           [
@@ -54950,46 +55351,29 @@ var render = function() {
           ]
         ),
         _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass: "col-md-2 selecionavel",
-            on: { click: _vm.toogleAdwords }
-          },
-          [
-            _c("button", {
-              class: _vm.buttonClassAdwords,
-              staticStyle: { background: "url(images/words.png)" },
-              attrs: { for: "adwords" }
-            }),
-            _vm._v(" "),
-            _c("h5", { staticClass: "card-title imgCard" }, [_vm._v("AdWords")])
-          ]
-        )
+        _c("div", { staticClass: "col-md-2" })
       ]
     ),
     _vm._v(" "),
-    _vm.buttonEnd
-      ? _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-md-5" }),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-2" }, [
-            !this.$store.getters.gestao
-              ? _c(
-                  "button",
-                  {
-                    staticClass: "fill",
-                    attrs: { type: "button" },
-                    on: { click: _vm.end }
-                  },
-                  [_vm._v("Terminar")]
-                )
-              : _vm._e()
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-5" })
-        ])
-      : _vm._e()
+    _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-md-5" }),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-md-2" }, [
+        !this.$store.getters.gestao
+          ? _c(
+              "button",
+              {
+                staticClass: "fill",
+                attrs: { type: "button" },
+                on: { click: _vm.end }
+              },
+              [_vm._v("Terminar")]
+            )
+          : _vm._e()
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-md-5" })
+    ])
   ])
 }
 var staticRenderFns = []
@@ -55083,6 +55467,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 var Swal = __webpack_require__(3);
@@ -55093,21 +55485,28 @@ name: 'Terminate';
 
             dataToOrcamento: {
                 empresa: '',
+                especificacoes: '',
                 business: '',
                 nome: '',
                 email: '',
                 items: this.$store.getters.produtosSelecionados,
-                preco: this.$store.getters.precoFinal
+                preco: this.$store.getters.precoFinal,
+                itemsMarketing: this.$store.getters.produtosSelecionadosMarketing
             }
         };
     },
     mounted: function mounted() {},
 
     methods: {
+        restart: function restart() {
+            this.$store.dispatch('restartApp');
+            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('orcamento');
+        },
         sendMail: function sendMail() {
             var _this = this;
 
             __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post('orcamento/site', this.dataToOrcamento).then(function (response) {
+                // quando chega aqui o email JÁ foi enviado
                 _this.$store.dispatch('restartApp');
                 Swal({
                     title: 'Parabens',
@@ -55147,6 +55546,16 @@ var render = function() {
       _vm._v(" "),
       _c(
         "ul",
+        { attrs: { id: "example-2" } },
+        _vm._l(_vm.dataToOrcamento.itemsMarketing, function(item2) {
+          return _c("li", [
+            _vm._v("\n           " + _vm._s(item2) + "\n         ")
+          ])
+        })
+      ),
+      _vm._v(" "),
+      _c(
+        "ul",
         { attrs: { id: "example-1" } },
         _vm._l(_vm.dataToOrcamento.items, function(item) {
           return _c("li", [
@@ -55167,6 +55576,41 @@ var render = function() {
         "div",
         { staticClass: "form-group", staticStyle: { "text-align": "left" } },
         [
+          _c("label", { attrs: { for: "empresa" } }, [
+            _vm._v("Descreva aqui tudo o que ache pertinente")
+          ]),
+          _vm._v(" "),
+          _c("textarea", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.dataToOrcamento.especificacoes,
+                expression: "dataToOrcamento.especificacoes"
+              }
+            ],
+            staticClass: "form-control",
+            attrs: {
+              rows: "4",
+              cols: "50",
+              id: "inputEspecificacoes",
+              placeholder: "Mais info..."
+            },
+            domProps: { value: _vm.dataToOrcamento.especificacoes },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.$set(
+                  _vm.dataToOrcamento,
+                  "especificacoes",
+                  $event.target.value
+                )
+              }
+            }
+          }),
+          _vm._v(" "),
           _c("label", { attrs: { for: "empresa" } }, [
             _vm._v("Area de Negócio")
           ]),
@@ -55297,7 +55741,17 @@ var render = function() {
         },
         [_vm._v("Enviar")]
       )
-    ])
+    ]),
+    _vm._v(" "),
+    _c(
+      "button",
+      {
+        staticClass: "fill",
+        attrs: { type: "button" },
+        on: { click: _vm.restart }
+      },
+      [_vm._v("Repetir Orçamento")]
+    )
   ])
 }
 var staticRenderFns = []
@@ -56159,8 +56613,24 @@ name: 'MarketingDigitalFase2';
                 this.$store.dispatch('desselecionaGoogleBusiness');
             }
         },
-        toogleGoogleAds: function toogleGoogleAds() {},
-        toogleFacebookAds: function toogleFacebookAds() {}
+        toogleGoogleAds: function toogleGoogleAds() {
+            if (!this.$store.getters.googleAds) {
+                this.buttonGoogleAds = 'buttonPressed buttonShop';
+                this.$store.dispatch('selecionaGoogleAds');
+            } else {
+                this.buttonGoogleAds = 'buttonEmpty buttonShop';
+                this.$store.dispatch('desselecionaGoogleAds');
+            }
+        },
+        toogleFacebookAds: function toogleFacebookAds() {
+            if (!this.$store.getters.facebookAds) {
+                this.buttonFacebookAds = 'buttonPressed buttonShop';
+                this.$store.dispatch('selecionaFacebookAds');
+            } else {
+                this.buttonFacebookAds = 'buttonEmpty buttonShop';
+                this.$store.dispatch('desselecionaFacebookAds');
+            }
+        }
     }
 });
 

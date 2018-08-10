@@ -10528,6 +10528,18 @@ button:hover {
   color: white;
 }
 
+.show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  min-height: 200px;
+}
+
+.notShow {
+  display: none;
+}
+
 button {
   background-color: unset;
   border: 2px solid;
@@ -10552,6 +10564,7 @@ html {
 }
 
 .md-stepper-horizontal {
+  padding-bottom: 50px;
   background-color: transparent !important;
   display: table;
   width: 100%;

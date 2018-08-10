@@ -5,15 +5,16 @@
             <span class="center">Orçamento Digital</span>
          </div>
       </div>
-      <section class="introducao">
-         <div class="col-md-12">
-            <h2> Faça já o seu</h2>
-            <div class="col-md-6">
+      <section class=" container introducao">
+        <div class="media">
+
+    <div class="media-body">
+        <h5 class="mt-0 font-weight-bold">Faça já o seu</h5>
                Este simulador permite-lhe fazer um orçamento grátis.
                Para fazer o seu orçamento basta escolher o tipo de site que pretende e seguir as instruções detalhadas que lhe serão fornecidas durante a simulação
                Qualquer orçamento não é defenitivo podendo ser alterado consoante as suas necessidades.
-            </div>
-         </div>
+    </div>
+     </div>
       </section>
   
          <div class="container">
@@ -96,9 +97,9 @@
             <template v-if=" this.$store.getters.MarketingDigitalFase1">
                <marketing-digital-fase1/>
          </template>
-             <template v-if="this.$store.getters.MarketingDigitalFase2">
-    <marketing-digital-fase2/>
-   </template>
+            <template v-if="this.$store.getters.MarketingDigitalFase2">
+              <marketing-digital-fase2/>
+           </template>
    </section>
     <section class="buttons">
 
@@ -108,7 +109,7 @@
       <button @click="voltar" type="button" class="fill">{{ buttonBack }}</button>
       </div>
       <div class="col-md-3" v-if="this.fase >=2 && this.fase < 5 && !appShow" style="margin-bottom: 50px;">
-      <button @click="seguinte" type="button" class="fill">Seguinte</button>
+      <button @click="seguinte" type="button" class="fill">{{ buttonNext }}</button>
       </div>
       <div class="col-md-3"></div>
       </div>
@@ -130,8 +131,7 @@
        export default {
            data: function(){
                return{ 
-   
-                   appShow: false,
+                appShow: false,
                }
            },
            computed: {
@@ -141,7 +141,9 @@
              buttonBack() { 
                return this.$store.getters.buttonBack
              },
-   
+            buttonNext(){
+              return this.$store.getters.buttonNext
+            },
             
            },
            methods: {
@@ -154,7 +156,7 @@
                      }
                    }else if(this.fase == 3){
                      if(this.$store.getters.MarketingDigitalFase2){
-
+                       this.$store.dispatch('terminateMarketing');
                      }else{
                      this.$store.dispatch('selectFase3');
                      }
