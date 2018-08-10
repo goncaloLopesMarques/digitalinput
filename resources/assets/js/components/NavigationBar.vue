@@ -1,21 +1,36 @@
 <template>
- <ol class="progress progress--medium">
-  <li v-bind:class="button1" data-step="1">
-    Inicio
-  </li>
-  <li  v-bind:class="button2" data-step="2">
-   Fase 1
-  </li>
-   <li  v-bind:class="button3" data-step="3">
-    Fase 2
-  </li>
-   <li  v-bind:class="button4" data-step="4">
-   Fase 3
-  </li>
-  <li   v-bind:class="button5" data-step="5">
-   Fim
-  </li>
-</ol>
+ <div class="md-stepper-horizontal orange">
+    <div v-bind:class="button1">
+      <div class="md-step-circle"><span>1</span></div>
+      <div class="md-step-title">Tipo de Site</div>
+      <div class="md-step-bar-left"></div>
+      <div class="md-step-bar-right"></div>
+    </div>
+    <div v-bind:class="button2">
+      <div class="md-step-circle"><span>2</span></div>
+      <div class="md-step-title">Opções 1</div>
+      <div class="md-step-bar-left"></div>
+      <div class="md-step-bar-right"></div>
+    </div>
+    <div v-bind:class="button3">
+      <div class="md-step-circle"><span>3</span></div>
+      <div class="md-step-title">Opções 2</div>
+      <div class="md-step-bar-left"></div>
+      <div class="md-step-bar-right"></div>
+    </div>
+    <div v-bind:class="button4">
+      <div class="md-step-circle"><span>4</span></div>
+      <div class="md-step-title">Palavras chave</div>
+      <div class="md-step-bar-left"></div>
+      <div class="md-step-bar-right"></div>
+    </div>
+    <div v-bind:class="button5">
+      <div class="md-step-circle"><span>5</span></div>
+      <div class="md-step-title">Redes Sociais</div>
+      <div class="md-step-bar-left"></div>
+      <div class="md-step-bar-right"></div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -41,6 +56,6 @@ name: 'Orcamento'
         methods: {
             
                
-            },
+        },
     }
 </script>

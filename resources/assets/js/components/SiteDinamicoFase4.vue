@@ -1,44 +1,38 @@
 <template>
     <div class="container">
-            <template v-if="siteDinamicoFase4">
-        <p> Deseja Apoio ao Marketing Digital?
-      <div class="row" style ="text-align: center;">
-      <div v-if="showButtons" class="col-sm">
-        <button @click="yes" for="yes"><img src="images/checked.png" /></button>
-      </div>
-      <div v-if="showButtons" class="col-sm">
-        <button @click="no" for="no"><img src="images/close.png" /></button>
-      </div>
-    <div class="row" style ="text-align: center; padding-bottom: 50px;">
-   
-        <div v-if="showSocialMedia" class="col-md-2">
-        <button @click="toogleFace" for="face" v-bind:class="buttonClassFace"><img src="images/facebook.png" /></button>
-        </div>
-         <div v-if="showSocialMedia" class="col-md-2">
-        <button @click="toogleInstagram" for="insta" v-bind:class="buttonClassInstagram"><img src="images/instagram.png" /></button>
-        </div>
-         <div v-if="showSocialMedia" class="col-md-2">
-        <button @click="toogleTwitter" for="twitter" v-bind:class="buttonClassTwitter"><img src="images/twitter.png" /></button>
-        </div>
-         <div v-if="showSocialMedia" class="col-md-2">
-        <button @click="toogleLinkedin" for="linked" v-bind:class="buttonClassLinkedin"><img src="images/linkedin.png" /></button>
-        </div>
-         <div v-if="showSocialMedia" class="col-md-2">
-        <button @click="tooglePinterest" for="pint" v-bind:class="buttonClassPinterest"><img src="images/pinterest.png" /></button>
-        </div>
-         <div v-if="showSocialMedia" class="col-md-2">
-        <button @click="toogleAdwords" for="adwords" v-bind:class="buttonClassAdwords"><img src="images/words.png" /></button>
-        </div>
-     </div>
-    </div> 
-         <div class ="row" style = "all: inherit;"> 
-    <div v-if="buttonEnd">
-     <button @click="end" type="button" class="btn btn-outline-dark">Terminar</button>
-     </div>
 
+        <p> Selecione o numero de redes socias ás quais pretende apoio!
+    <div class="row" style ="text-align: center; min-height:200px;">
+        <div @click="toogleFace" class="col-md-2 selecionavel">
+        <button for="face" v-bind:class="buttonClassFace" style="background:url(images/facebook.png);"></button>
+         <h5 class="card-title imgCard">FaceBook</h5>
+        </div>
+         <div @click="toogleInstagram" class="col-md-2 selecionavel">
+        <button for="insta" v-bind:class="buttonClassInstagram" style="background:url(images/instagram.png);"></button>
+  <h5 class="card-title imgCard">Instagram</h5>
+        </div>
+         <div @click="toogleTwitter" class="col-md-2 selecionavel">
+        <button for="twitter" v-bind:class="buttonClassTwitter" style="background:url(images/twitter.png);"></button>
+          <h5 class="card-title imgCard">Twitter</h5>
+        </div>
+         <div @click="toogleLinkedin" class="col-md-2 selecionavel">
+        <button for="linked" v-bind:class="buttonClassLinkedin" style="background:url(images/linkedin.png);"></button>
+          <h5 class="card-title imgCard">LinkedIn</h5>
+        </div>
+         <div @click="tooglePinterest" class="col-md-2 selecionavel">
+        <button for="pint" v-bind:class="buttonClassPinterest" style="background:url(images/pinterest.png);"></button>
+          <h5 class="card-title imgCard">Pinterest</h5>
+        </div>
+         <div @click="toogleAdwords" class="col-md-2 selecionavel">
+        <button for="adwords" v-bind:class="buttonClassAdwords" style="background:url(images/words.png);"></button>
+          <h5 class="card-title imgCard">AdWords</h5>
+        </div>
      </div>
-     </template>
-
+      <div class="row" v-if="buttonEnd">
+        <div class="col-md-5"></div>
+        <div class="col-md-2"><button @click="end" v-if="!this.$store.getters.gestao" type="button" class="fill">Terminar</button></div>
+          <div class="col-md-5"></div>
+     </div>
 </div>
 </template>
 <script>
@@ -48,12 +42,14 @@ name: 'SiteDinamicoFase2'
         data: function(){
             return{
                 //variaveis para s classes css dos botoes quando sao carregados
-                buttonClassFace: 'buttonEmpty',
-                buttonClassInstagram: 'buttonEmpty',
-                buttonClassTwitter: 'buttonEmpty',
-                buttonClassLinkedin: 'buttonEmpty',
-                buttonClassPinterest: 'buttonEmpty',
-                buttonClassAdwords: 'buttonEmpty',
+                buttonClassYes: 'buttonEmpty buttonShop',
+                buttonClassNo: 'buttonEmpty buttonShop',
+                buttonClassFace: 'buttonEmpty buttonShop',
+                buttonClassInstagram: 'buttonEmpty buttonShop',
+                buttonClassTwitter: 'buttonEmpty buttonShop',
+                buttonClassLinkedin: 'buttonEmpty buttonShop',
+                buttonClassPinterest: 'buttonEmpty buttonShop',
+                buttonClassAdwords: 'buttonEmpty buttonShop',
                 siteDinamicoFase4: true,
                 buttonEnd : false,
                 showButtons: true,
@@ -62,34 +58,34 @@ name: 'SiteDinamicoFase2'
         },
         mounted() {
             if(this.$store.getters.facebookSelecionado){
-              this.buttonClassFace = 'buttonPressed';
+              this.buttonClassFace = 'buttonPressed buttonShop';
             }else{
-                this.buttonClassFace = 'buttonEmpty'
+                this.buttonClassFace = 'buttonEmpty buttonShop'
             }
             if(this.$store.getters.twitterSelecionado){
-                 this.buttonClassInstagram = 'buttonPressed';
+                 this.buttonClassInstagram = 'buttonPressed buttonShop';
             }else{
-                this.buttonClassInstagram = 'buttonEmpty';
+                this.buttonClassInstagram = 'buttonEmpty buttonShop';
             }
             if(this.$store.getters.instagramSelecionado){
-                 this.buttonClassTwitter = 'buttonPressed';
+                 this.buttonClassTwitter = 'buttonPressed buttonShop';
             }else{
-                this.buttonClassTwitter = 'buttonEmpty';
+                this.buttonClassTwitter = 'buttonEmpty buttonShop';
             }
             if(this.$store.getters.linkedinSelecionado){
-                 this.buttonClassLinkedin= 'buttonPressed';
+                 this.buttonClassLinkedin= 'buttonPressed buttonShop';
             }else{
-                this.buttonClassLinkedin= 'buttonEmpty';
+                this.buttonClassLinkedin= 'buttonEmpty buttonShop';
             }
             if(this.$store.getters.pinterestSelecionado){
-                 this.buttonClassPinterest = 'buttonPressed';
+                 this.buttonClassPinterest = 'buttonPressed buttonShop';
             }else{
-                this.buttonClassPinterest = 'buttonEmpty';
+                this.buttonClassPinterest = 'buttonEmpty buttonShop';
             }
             if(this.$store.getters.adwordsSelecionado){
-                 this.buttonClassAdwords = 'buttonPressed';
+                 this.buttonClassAdwords = 'buttonPressed buttonShop';
             }else{
-                this.buttonClassAdwords = 'buttonEmpty';
+                this.buttonClassAdwords = 'buttonEmpty buttonShop';
             }
         },
         methods: {
@@ -123,55 +119,55 @@ name: 'SiteDinamicoFase2'
             },
             toogleFace(){
                 if(!this.$store.getters.facebookSelecionado){
-                   this.buttonClassFace = 'buttonPressed';
+                   this.buttonClassFace = 'buttonPressed buttonShop';
                    this.$store.dispatch('selecionaFacebook');
                 }else{
-                    this.buttonClassFace = 'buttonEmpty';
+                    this.buttonClassFace = 'buttonEmpty buttonShop';
                     this.$store.dispatch('desselecionaFacebook'); 
                 }
             },
             toogleInstagram(){
                 if(!this.$store.getters.instagramSelecionado){
-                   this.buttonClassInstagram = 'buttonPressed';
+                   this.buttonClassInstagram = 'buttonPressed buttonShop';
                    this.$store.dispatch('selecionaInstagram');  
                 }else{
-                    this.buttonClassInstagram = 'buttonEmpty';
+                    this.buttonClassInstagram = 'buttonEmpty buttonShop';
                     this.$store.dispatch('desselecionaInstagram'); 
                 }
             },
              toogleTwitter(){
                 if(!this.$store.getters.twitterSelecionado){
-                   this.buttonClassTwitter = 'buttonPressed';
+                   this.buttonClassTwitter = 'buttonPressed buttonShop';
                    this.$store.dispatch('selecionaTwitter');  
                 }else{
-                    this.buttonClassTwitter = 'buttonEmpty';
+                    this.buttonClassTwitter = 'buttonEmpty buttonShop';
                     this.$store.dispatch('desselecionaTwitter'); 
                 }
             },
              toogleLinkedin(){
                 if(!this.$store.getters.linkedinSelecionado){
-                   this.buttonClassLinkedin = 'buttonPressed';
+                   this.buttonClassLinkedin = 'buttonPressed buttonShop';
                    this.$store.dispatch('selecionaLinkedin');   
                 }else{
-                    this.buttonClassLinkedin = 'buttonEmpty';
+                    this.buttonClassLinkedin = 'buttonEmpty buttonShop';
                     this.$store.dispatch('desselecionaLinkedin'); 
                 }
             },
              tooglePinterest(){
                 if(!this.$store.getters.pinterestSelecionado){
-                   this.buttonClassPinterest = 'buttonPressed';
+                   this.buttonClassPinterest = 'buttonPressed buttonShop';
                    this.$store.dispatch('selecionaPinterest'); 
                 }else{
-                    this.buttonClassPinterest = 'buttonEmpty';
+                    this.buttonClassPinterest = 'buttonEmpty buttonShop';
                     this.$store.dispatch('desselecionaPinterest');
                 }
             },
              toogleAdwords(){
                 if(!this.$store.getters.adwordsSelecionado){
-                   this.buttonClassAdwords = 'buttonPressed';
+                   this.buttonClassAdwords = 'buttonPressed buttonShop';
                    this.$store.dispatch('selecionaAdwords');  
                 }else{
-                    this.buttonClassAdwords = 'buttonEmpty';
+                    this.buttonClassAdwords = 'buttonEmpty buttonShop';
                     this.$store.dispatch('desselecionaAdwords'); 
                 }
             },

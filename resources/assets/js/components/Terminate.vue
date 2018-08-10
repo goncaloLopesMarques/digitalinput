@@ -20,7 +20,7 @@
         <label for="email">Email</label>
         <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="O seu email" v-model ="dataToOrcamento.email">
       </div>
-      <button @click.prevent="sendMail" class="btn btn-primary">Enviar</button>
+      <button @click.prevent="sendMail" class="fill">Enviar</button>
     </form>
 </div>
 </template>

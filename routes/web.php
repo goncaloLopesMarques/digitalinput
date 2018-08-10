@@ -22,13 +22,11 @@ route::get('/consultoria-marketing-digital-empresas', 'PagesController@consultor
 //ROTAS PARA FAZER O DISPLAY DOS POSTS
 Route::get('/blog/search', 'BlogController@search');
 Route::get('/blog', 'BlogController@show');
-Route::get('blog/{slug}', function($slug){
-    $post = App\Post::where('slug', '=', $slug)->firstOrFail();
-	return view('layout.post', compact('post'));
-});
+Route::get('blog/{slug}', 'BlogController@post');
+
 //--------FIM DAS ROTAS DOS POSTS
 route::get('/portfolio', 'PagesController@portfolio');
-route::get('/orcamento', 'OrcamentoController@index');
+route::get('/orcamento', 'PagesController@orcamento');
 
 //enviar emails
 Route::post('/orcamento/site', 'SendMailController@enviarOrcamentoSite');

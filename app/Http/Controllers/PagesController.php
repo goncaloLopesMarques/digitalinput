@@ -72,6 +72,10 @@ class PagesController extends BaseController
         $classes = "portfolio";
         return view('pages.portfolio', compact('classes'));
     }
+    function orcamento(){
+        $classes = "orcamento";
+        return view('pages.orcamento', compact('classes'));
+    }
     
 
 }
