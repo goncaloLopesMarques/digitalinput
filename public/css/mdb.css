@@ -8979,6 +8979,10 @@ a.waves-light {
           box-shadow: none;
 }
 
+.card .card-body {
+  padding: 0px;
+}
+
 .card .card-body h1,
 .card .card-body h2,
 .card .card-body h3,
@@ -10633,7 +10637,7 @@ div.my.card {
 
 div.my.card-body {
   /*margin:0px;*/
-  /*padding:0px;*/
+  padding: 0px !important;
   /*padding: 1rem;*/
 }
 
