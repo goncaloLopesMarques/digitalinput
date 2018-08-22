@@ -1,1 +1,356 @@
 // Your custom styles
+
+// as minhas classes
+
+
+/* texto branco em fundo claro*/
+.my-text-shadow{
+	text-shadow: 0 0 3px rgba(0,0,0,0.5);
+}
+
+
+.my-vertical-align{
+	display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hide{
+	display:none
+}
+
+
+.card{
+	// border:3px solid white!important;
+}
+
+
+
+
+
+
+section.intro
+{
+
+	height: calc(100vh);
+
+}
+
+
+
+// HOME 
+
+
+
+
+
+// HOME CARDS
+div.my.card{
+
+  /*border-radius: 0px!important;*/
+  background-color: unset;
+  padding:0px;
+  height: 100%;
+  /*border: 1px solid #0d0c07;*/
+  /*margin: 1rem!important;*/
+
+
+}
+
+div.my.card-body{
+
+	/*margin:0px;*/
+	/*padding:0px;*/
+	/*padding: 1rem;*/
+
+
+	h3{
+
+		border-radius: $md-card-border-radius;
+	}
+	
+}
+
+
+div.my.card-body:hover{
+	/*
+	webkit-box-shadow: inset 0px 0px 50px 0px rgba(0, 0, 0, 0.3), 0 0 20px 0px rgba(0, 0, 0, 0.3) inset;
+    box-shadow: inset 0px 0px 50px 0px rgba(0, 0, 0, 0.3), 0 0 20px 0px rgba(0, 0, 0, 0.3) inset;
+    */
+
+    webkit-box-shadow: inset 1px 1px 0px 0px rgba(0, 0, 0, 0.2), 0 0 25px 0px rgba(0, 0, 0, 0.2) inset;
+    box-shadow:inset 1px 1px 0px 0px rgba(0, 0, 0, 0.2), 0 0 25px rgba(0, 0, 0, 0.2) inset;
+
+    cursor:pointer;
+    p{
+    	color:#0d0c07;
+    }
+}
+
+
+div.my.card-body > h3, div.my.card-body > p{
+	
+
+	padding-top: 1.25rem;
+	padding-bottom: 1.25rem;
+
+	padding-left:0.5rem;
+	padding-right:0.5rem;
+
+	margin:0px
+	
+}
+
+
+
+
+nav.navbar.fixed-top{
+	
+	background-color:white;
+}
+
+
+
+
+
+// menu
+// nav bar depois de scrool
+
+@media (min-width: 992px){
+
+
+//  .top-nav-collapse   ( sticky navbar )
+
+	.logo{
+		-webkit-box-shadow: inset 1px 1px 0px 0px rgba(0, 0, 0,0.2), 0 0 25px rgba(0, 0, 0, 0.2) inset;
+    	-moz-box-shadow: inset 1px 1px 0px 0px rgba(0, 0, 0, 0.2), 0 0 25px rgba(0, 0, 0, 0.2) inset;
+    	box-shadow: inset 1px 1px 0px 0px rgba(0, 0, 0, 0.2), 0 0 25px rgba(0, 0, 0, 0.2) inset;
+
+	}
+	.logo:hover{
+		-webkit-box-shadow: unset;
+    	-moz-box-shadow: unset;
+    	box-shadow: unset;
+
+	}
+
+	
+	div#navbarSupportedContent{
+	    /*height: 42px;*/
+	}
+
+	.navbar {
+	    padding: 0px;
+	}
+
+	.navbar-collapse {
+	align-items: unset;
+	}
+
+	nav.navbar.fixed-top.top-nav-collapse{
+	    /*padding: 0px;*/
+	    background-color:#1a1f2c;
+    	
+	}
+
+	nav > div#navbarSupportedContent > ul.navbar-nav,
+	{
+		text-align: center;
+		width:50%;
+		/*height:53px;*/
+	}
+
+	nav > div > ul.navbar-nav > li{
+		
+
+		width:100%;
+		/*background-color: powderblue;*/
+	}
+
+
+	/* top */
+	nav.navbar.fixed-top > div > ul.navbar-nav > li > a{
+		background-color:none;
+		padding-top: 20px;
+    	padding-bottom: 20px;
+    	overflow: inherit;
+    	font-weight: 900;
+
+    	-webkit-box-shadow: inset 1px 1px 0px 0px rgba(0, 0, 0,0.2), 0 0 25px rgba(0, 0, 0, 0.2) inset;
+    	-moz-box-shadow: inset 1px 1px 0px 0px rgba(0, 0, 0, 0.2), 0 0 25px rgba(0, 0, 0, 0.2) inset;
+    	box-shadow: inset 1px 1px 0px 0px rgba(0, 0, 0, 0.2), 0 0 25px rgba(0, 0, 0, 0.2) inset;
+
+
+	    
+	}
+
+	nav.navbar.fixed-top > div > div{
+		background-color:white;
+	}
+
+
+	/* sticky */
+	nav.navbar.fixed-top.top-nav-collapse > div > ul.navbar-nav > li > a{
+		background-color:#0d0c07;
+		border: 1px solid #111;
+		height: 42px;
+		display: flex;
+  		align-items: center;
+  		justify-content: center;
+  		font-weight: 300;
+
+  		box-shadow: unset;
+	    
+	}
+
+	nav.navbar.fixed-top > div > ul.navbar-nav > li > a:hover{
+		
+    	-webkit-box-shadow: inset 1px 1px 0px 0px rgba(255, 255, 255, 0.2), 0 0 25px rgba(255, 255, 255, 0.2) inset;
+    	-moz-box-shadow: inset 1px 1px 0px 0px rgba(255, 255, 255, 0.2), 0 0 25px rgba(255, 255, 255, 0.2) inset;
+    	box-shadow: inset 1px 1px 0px 0px rgba(255, 255, 255, 0.2), 0 0 25px rgba(255, 255, 255, 0.2) inset;
+	    
+	}
+
+
+
+	nav.navbar.fixed-top.top-nav-collapse > div > div{
+		background-color:#0d0c07;
+	}
+
+
+
+
+
+	nav > div > ul.navbar-nav > li > a{
+		background-color:white;
+	    width: 100%;
+	   /* height: 51px;*/
+	    width: 100%;
+	    
+	}
+
+
+
+	nav.navbar.fixed-top > div > ul.navbar-nav > li.nav-item.active > a{
+
+
+        background: -webkit-linear-gradient(50deg,#42a5f5,#273654)!important;
+    	background: -o-linear-gradient(50deg,#42a5f5,#273654)!important;
+   	 	background: linear-gradient(40deg,#42a5f5,#273654)!important;
+   	 	font-weight: 900;
+   	 	color:white
+	}
+
+
+	li.nav-item > a.nav-link{
+/*
+		display: flex!important;
+  		align-items: center!important;
+  		justify-content: center!important*/
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+// .grad::after {
+// 	background: radial-gradient( circle at top, #513057, #191f2c );
+// }
+
+
+
+/* gradients */
+
+.radial-purple-gradient{
+	background: radial-gradient(circle at center top, rgb(81, 48, 87), rgb(25, 31, 44));
+}
+
+.blue-gradient {
+    background: -webkit-linear-gradient(50deg,#45cafc,#303f9f);
+    background: -o-linear-gradient(50deg,#45cafc,#303f9f);
+    background: linear-gradient(40deg,#45cafc,#303f9f);
+}
+
+.blue-purple-gradient{
+	background: -webkit-linear-gradient(40deg,#42a5f5, #273654);
+    background: -o-linear-gradient(40deg,#42a5f5, #273654);
+	background: linear-gradient(40deg, #42a5f5, #273654) ;
+}
+
+.juicy-peach-gradient {
+background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+}
+.young-passion-gradient {
+background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+}
+.lady-lips-gradient {
+background-image: linear-gradient(to top, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+}
+.sunny-morning-gradient {
+background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+}
+.rainy-ashville-gradient {
+background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);}
+.frozen-dreams-gradient {
+background-image: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);
+        }
+.warm-flame-gradient {
+background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+}
+.night-fade-gradient {
+background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+}
+.spring-warmth-gradient {
+background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
+}
+.winter-neva-gradient {
+background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+.dusty-grass-gradient {
+background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+}
+.tempting-azure-gradient {
+background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+}
+.heavy-rain-gradient {
+            background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+        }
+        .amy-crisp-gradient {
+            background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+        }
+        .mean-fruit-gradient {
+            background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
+        }
+        .deep-blue-gradient {
+            background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+        }
+        .ripe-malinka-gradient {
+            background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+        }
+        .cloudy-knoxville-gradient {
+            background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+        }
+        .morpheus-den-gradient {
+            background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+        }
+        .rare-wind-gradient {
+            background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+        }
+        .near-moon-gradient {
+            background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+        }
+
+
+
+
+
+
+

@@ -1,6 +1,6 @@
 // Variables
 // Fonts
-//$roboto-font-path:            "../font/roboto/" !default;
+$roboto-font-path:            "../font/roboto/" !default;
 
 $font-size-large:             1.5rem !default;
 $font-bold:                   500 !default;
@@ -147,8 +147,8 @@ $intro-video-transition:      1s !default;
 // Cards
 $md-card-border-radius:          .25rem !default;
 $md-card-link-transition:        .2s ease-in-out !default;
-$md-card-font-size:              .9rem !default;
-$md-card-text-color:             #747373 !default;
+$md-card-font-size:              1rem !default;
+$md-card-text-color:             #20324a !default; /*#747373*/
 
 // Images
 $image-path: "../../img/" !default;
@@ -301,8 +301,8 @@ $navbar-dark-disabled-color:           rgba(255, 255, 255, 0.5) !default;
 
 $navbar-scrolling-transition:          background .5s ease-in-out, padding .5s ease-in-out !default;
 $navbar-scrolling-transition-duration: 1s !default;
-$navbar-scrolling-padding:             12px !default;
-$navbar-top-collapse-padding:          5px !default;
+$navbar-scrolling-padding:             0px !default;
+$navbar-top-collapse-padding:          0px !default;
 $navbar-nav-transition:                .35s !default;
 $navbar-dropdown-font-size:            0.9375rem !default;
 $navbar-dropdown-menu-padding:         10px !default;
