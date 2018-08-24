@@ -14,3 +14,13 @@
         <link href="/css/mdb.css" rel="stylesheet">
         <!-- Your custom styles (optional) -->
         <link href="/css/style.css" rel="stylesheet">
+
+{{-- funçao para esperar que o jquery seja carregado  --}}
+<script>
+function defer(method) {
+    if (window.jQuery)
+        method();
+    else
+        setTimeout(function() { defer(method) }, 50);
+}
+</script>

@@ -49,6 +49,50 @@
 
     @include('layout.scripts-css')
     <script type="text/javascript" src="/js/home.js"></script>
+    <script>
+
+      defer(function () {
+    
+
+        $(document).ready(function(){  
+           
+     
+           var recentArray = <?php echo json_encode($mostRecentPosts); ?>;
+           console.log(recentArray);
+
+            //ciclo for para preencher a grid com posts  background:linear-gradient( rgba(0, 0, 0,96), rgba(0, 0, 0,0.6 ) ),url('+dataArray["data"][i]["image"]+');
+
+            for(var i=0 ; i< recentArray.length ; i++){
+
+                x=0;
+                
+                if(i< 3)
+                    
+                    x=1;
+
+                else if (i<6)
+                    
+                    x=2;
+
+                else if (i<9)
+                    
+                    x=3;
+
+
+
+             
+
+                $("#posts-" + x).append('<div class="col-lg-4 col-sm-12 p-0 blogGrid">   <div class="flex-center waves-effect waves-light view overlay zoom">   <img src="'+recentArray[i]["image"]+'" class="img-fluid" alt="zoom"><div class="flex-center titulo-blog-container">   <p class="p-1 text-center my-text-shadow-strong">'+recentArray[i]["title"]+'</p>   </div>   <div class="my-mask-over mask rgba-black-stronger flex-center waves-effect waves-light"><p class="white-text text-center">'+recentArray[i]["excerpt"]+'</p></div></div></div>');
+         
+            }       
+       
+         
+        });
+
+
+    });
+     
+    </script>
     
 @endsection
 

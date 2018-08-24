@@ -61,7 +61,7 @@ class BlogController extends Controller
     //ISTO È PARA IR BUSCAR SÒ OS 3 PRIMEIROS, aqui podemos escolher quantos posts queremos mostrar
     $mostRecentPosts = array_slice($mostRecentPosts, 0, 3);
     // ACABA AQUI A ORDENAÇÂO
-  
+    
     return $mostRecentPosts;
   }
 }

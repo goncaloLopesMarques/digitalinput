@@ -7,13 +7,39 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
+use App\Post;
+
 class PagesController extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
     function index(){
+
         $classes = "home";
         return view('pages.home', compact('classes'));
+    }
+
+
+    public function allPosts(){
+    return Post::all();
+  }
+
+    public function mostRecentPosts(){
+
+        $classes = "home";
+        $mostRecentPosts = json_decode($this->allPosts(),true);
+        $arrayAux = array();
+        foreach ($mostRecentPosts as $key => $row)
+        {
+          $mostRecentPosts[$key]["image"] = \Voyager::image($mostRecentPosts[$key]["image"]);
+          $arrayAux[$key] = $row['created_at'];
+        }
+        array_multisort($arrayAux, SORT_DESC, $mostRecentPosts);
+        //ISTO È PARA IR BUSCAR SÒ OS 3 PRIMEIROS, aqui podemos escolher quantos posts queremos mostrar
+        $mostRecentPosts = array_slice($mostRecentPosts, 0, 9);
+        // ACABA AQUI A ORDENAÇÂO
+        
+        return view('pages.home', compact('classes', 'mostRecentPosts'));
     }
 
     function redesSociais(){
