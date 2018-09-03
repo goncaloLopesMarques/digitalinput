@@ -24,6 +24,7 @@ class SendMailController extends Controller
         $data=[
             'email' => $request->input('email'),
             'nome' => $request->input('nome'),
+            'especificacoes' => $request->input('especificacoes'),
             'empresa' => $request->input('empresa'),
             'funcionalidades' => $request->input('items'),
             'preco' => $request->input('preco'),
@@ -40,6 +41,7 @@ class SendMailController extends Controller
         $data=[
             'email' => $request->input('email'),
             'nome' => $request->input('nome'),
+            'especificacoes' => $request->input('especificacoes'),
             'empresa' => $request->input('empresa'),
             'funcionalidades' => $request->input('items'),
             'preco' => $request->input('preco'),

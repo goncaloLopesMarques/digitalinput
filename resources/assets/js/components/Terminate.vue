@@ -2,6 +2,11 @@
     <div class="container">
         <div style="text-align: left;">
             <h2> Voce escolheu os seguintes items: </h2>
+                    <ul id="example-2">
+         <li v-for="item2 in dataToOrcamento.itemsMarketing">
+           {{ item2 }}
+         </li>
+        </ul>
         <ul id="example-1">
          <li v-for="item in dataToOrcamento.items">
            {{ item }}
@@ -11,6 +16,8 @@
         </div>
     <form>
       <div class="form-group" style="text-align: left;">
+        <label for="empresa">Descreva aqui tudo o que ache pertinente</label>
+        <textarea rows="4" cols="50" class="form-control" id="inputEspecificacoes"  placeholder="Mais info..." v-model ="dataToOrcamento.especificacoes"> </textarea>
         <label for="empresa">Area de Negócio</label>
         <input type="text" class="form-control" id="inputNegocio"  placeholder="Qual o tipo do seu negocio" v-model ="dataToOrcamento.business">
         <label for="empresa">Empresa</label>
@@ -22,6 +29,7 @@
       </div>
       <button @click.prevent="sendMail" class="fill">Enviar</button>
     </form>
+     <button @click="restart" type="button" class="fill">Repetir Orçamento</button>
 </div>
 </template>
 <script>
@@ -34,23 +42,28 @@ name: 'Terminate'
                 
                 dataToOrcamento:{
                     empresa:'',
+                    especificacoes:'',
                     business:'',
                     nome:'',
                     email:'',
                     items: this.$store.getters.produtosSelecionados,
                     preco: this.$store.getters.precoFinal,
+                    itemsMarketing: this.$store.getters.produtosSelecionadosMarketing,
                 }
             }
         },
         mounted() {
           
         },
-        methods: {      
-                
-
+        methods: {     
+            restart(){
+               this.$store.dispatch('restartApp');
+               axios.get('orcamento');
+            },
               sendMail(){
                 axios.post('orcamento/site',this.dataToOrcamento)
                 .then(response=>{
+                    // quando chega aqui o email JÁ foi enviado
                     this.$store.dispatch('restartApp')
                     Swal({
                         title: 'Parabens',

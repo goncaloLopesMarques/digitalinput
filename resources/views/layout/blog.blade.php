@@ -37,10 +37,7 @@
 <div class="row" id="posts">
    </div>
 <style>
-  .blogGrid{
-    height: 400px;
-    background-size: cover;
-   }
+
   .darken-overlay{
    width: 100%;
    height: 100%;
@@ -84,71 +81,25 @@
    font-size: 25px;
    }
 </style>
-<script src="{{asset('js/jquery-3.3.1.min.js')}}"></script>
+
+
 <script>
-   $(document).ready(function(){  
+
+defer(function () {
+    
+
+    $(document).ready(function(){  
        
        var dataArray = <?php echo json_encode($posts); ?>;
        var recentArray = <?php echo json_encode($mostRecentPosts); ?>;
-       console.log(recentArray)
+       console.log(recentArray);
+
         //ciclo for para preencher a grid com posts  background:linear-gradient( rgba(0, 0, 0,96), rgba(0, 0, 0,0.6 ) ),url('+dataArray["data"][i]["image"]+');
         for(var i=0 ; i< dataArray["data"].length ; i++){
-            if(i==0){                                                                        
-                $("#posts").append('<div class="col-md-5 blogGrid" id="col5linha1" style="background-image: url('+dataArray["data"][i]["image"]+');">');
-                $("#col5linha1").append('<a href="/blog/'+dataArray["data"][i]["slug"]+'">');
-                $("#col5linha1").append('<span class="postTitle"></span>&nbsp;'+dataArray["data"][i]["title"]+'</span></a>');
-                $("#col5linha1").append('<span class="postAuthor"> Criado por '+dataArray["data"][i]["author"]+' </span>');
-                $("#col5linha1").append('<p><a href="/blog/'+dataArray["data"][i]["slug"]+'"><span class="postSubtitle">'+dataArray["data"][i]["excerpt"]+'</span><p><span class="postKeepReading">Continuar a ler >></span></a></div>');  
-            }else if(i==1){
-                $("#posts").append('<div class="col-md-3 blogGrid"id="col3linha1" style="background-image: url('+dataArray["data"][i]["image"]+');">');
-                $("#col3linha1").append('<a href="/blog/'+dataArray["data"][i]["slug"]+'">');
-                $("#col3linha1").append('<span class="postTitle"></span>&nbsp;'+dataArray["data"][i]["title"]+'</span></a>');
-                $("#col3linha1").append('<span class="postAuthor"> Criado por '+dataArray["data"][i]["author"]+' </span>');
-                $("#col3linha1").append('<p><a href="/blog/'+dataArray["data"][i]["slug"]+'"><span class="postSubtitle">'+dataArray["data"][i]["excerpt"]+'</span><p><span class="postKeepReading">Continuar a ler >></span></a></div>');
-            }else if(i==2){
-                $("#posts").append('<div class="col-md-4 blogGrid" id="col4linha1" style="background-image: url('+dataArray["data"][i]["image"]+');">');
-                $("#col4linha1").append('<a href="/blog/'+dataArray["data"][i]["slug"]+'">');
-                $("#col4linha1").append('<span class="postTitle"></span>&nbsp;'+dataArray["data"][i]["title"]+'</span></a>');
-                $("#col4linha1").append('<span class="postAuthor"> Criado por '+dataArray["data"][i]["author"]+' </span>');
-                $("#col4linha1").append('<p><a href="/blog/'+dataArray["data"][i]["slug"]+'"><span class="postSubtitle">'+dataArray["data"][i]["excerpt"]+'</span><p><span class="postKeepReading">Continuar a ler >></span></a></div>');
-            }else if(i==3){
-                $("#posts").append('<div class="col-md-4 blogGrid" id="col4linha2" style="background-image: url('+dataArray["data"][i]["image"]+');">');
-                $("#col4linha2").append('<a href="/blog/'+dataArray["data"][i]["slug"]+'">');
-                $("#col4linha2").append('<span class="postTitle"></span>&nbsp;'+dataArray["data"][i]["title"]+'</span></a>');
-                $("#col4linha2").append('<span class="postAuthor"> Criado por '+dataArray["data"][i]["author"]+' </span>');
-                $("#col4linha2").append('<p><a href="/blog/'+dataArray["data"][i]["slug"]+'"><span class="postSubtitle">'+dataArray["data"][i]["excerpt"]+'</span><p><span class="postKeepReading">Continuar a ler >></span></a></div>');
-            }else if(i==4){
-                $("#posts").append('<div class="col-md-3 blogGrid" id="col2linha2" style="background-image: url('+dataArray["data"][i]["image"]+');">');
-                $("#col2linha2").append('<a href="/blog/'+dataArray["data"][i]["slug"]+'">');
-                $("#col2linha2").append('<span class="postTitle"></span>&nbsp;'+dataArray["data"][i]["title"]+'</span></a>');
-                $("#col2linha2").append('<span class="postAuthor"> Criado por '+dataArray["data"][i]["author"]+' </span>');
-                $("#col2linha2").append('<p><a href="/blog/'+dataArray["data"][i]["slug"]+'"><span class="postSubtitle">'+dataArray["data"][i]["excerpt"]+'</span><p><span class="postKeepReading">Continuar a ler >></span></a></div>');
-            }else if(i==5){
-                $("#posts").append('<div class="col-md-5 blogGrid" id="col6linha2" style="background-image: url('+dataArray["data"][i]["image"]+');">');
-                $("#col6linha2").append('<a href="/blog/'+dataArray["data"][i]["slug"]+'">');
-                $("#col6linha2").append('<span class="postTitle"></span>&nbsp;'+dataArray["data"][i]["title"]+'</span></a>');
-                $("#col6linha2").append('<span class="postAuthor"> Criado por '+dataArray["data"][i]["author"]+' </span>');
-                $("#col6linha2").append('<p><a href="/blog/'+dataArray["data"][i]["slug"]+'"><span class="postSubtitle">'+dataArray["data"][i]["excerpt"]+'</span><p><span class="postKeepReading">Continuar a ler >></span></a></div>');
-            }else if(i==6){
-                $("#posts").append('<div class="col-md-5 blogGrid" id="col5linha3" style="background-image: url('+dataArray["data"][i]["image"]+');">');
-                $("#col5linha3").append('<a href="/blog/'+dataArray["data"][i]["slug"]+'">');
-                $("#col5linha3").append('<span class="postTitle"></span>&nbsp;'+dataArray["data"][i]["title"]+'</span></a>');
-                $("#col5linha3").append('<span class="postAuthor"> Criado por '+dataArray["data"][i]["author"]+' </span>');
-                $("#col5linha3").append('<p><a href="/blog/'+dataArray["data"][i]["slug"]+'"><span class="postSubtitle">'+dataArray["data"][i]["excerpt"]+'</span><p><span class="postKeepReading">Continuar a ler >></span></a></div>');  
-            }else if(i==7){
-                $("#posts").append('<div class="col-md-3 blogGrid" id="col3linha3" style="background-image: url('+dataArray["data"][i]["image"]+');">');
-                $("#col3linha3").append('<a href="/blog/'+dataArray["data"][i]["slug"]+'">');
-                $("#col3linha3").append('<span class="postTitle"></span>&nbsp;'+dataArray["data"][i]["title"]+'</span></a>');
-                $("#col3linha3").append('<span class="postAuthor"> Criado por '+dataArray["data"][i]["author"]+' </span>');
-                $("#col3linha3").append('<p><a href="/blog/'+dataArray["data"][i]["slug"]+'"><span class="postSubtitle">'+dataArray["data"][i]["excerpt"]+'</span><p><span class="postKeepReading">Continuar a ler >></span></a></div>');
-            }else if(i==8){
-                $("#posts").append('<div class="col-md-4 blogGrid" id="col4linha3" style="background-image: url('+dataArray["data"][i]["image"]+');">');
-                $("#col4linha3").append('<a href="/blog/'+dataArray["data"][i]["slug"]+'">');
-                $("#col4linha3").append('<span class="postTitle"></span>&nbsp;'+dataArray["data"][i]["title"]+'</span></a>');
-                $("#col4linha3").append('<span class="postAuthor"> Criado por '+dataArray["data"][i]["author"]+' </span>');
-                $("#col4linha3").append('<p><a href="/blog/'+dataArray["data"][i]["slug"]+'"><span class="postSubtitle">'+dataArray["data"][i]["excerpt"]+'</span><p><span class="postKeepReading">Continuar a ler >></span></a></div>');
-            }
-       }
+            
+                $("#posts").append('<div class="my-col-xxl-3 col-lg-4 col-md-6 col-xs-12 p-0 blogGrid">   <div class="flex-center waves-effect waves-light view overlay zoom">   <img src="'+dataArray["data"][i]["image"]+'" class="img-fluid" alt="zoom"><div class="flex-center titulo-blog-container">   <p class="p-1 text-center my-text-shadow-strong">'+dataArray["data"][i]["title"]+'</p>   </div>   <div class="my-mask-over mask rgba-black-stronger flex-center waves-effect waves-light"><p class="white-text text-center">'+dataArray["data"][i]["excerpt"]+'</p></div></div></div>');
+        }
+
         //ciclo for para preencher o slider
      for(var i=0 ; i< recentArray.length ; i++) { 
        $('<div class="carousel-item"><img class="d-block w-100" src="'+recentArray[i]["image"]+'"><div class="carousel-caption d-none d-md-block"><a href="/blog/'+recentArray[i]["slug"]+'">'+recentArray[i]["title"]+'</a><p>'+recentArray[i]["excerpt"]+'</p></div></div>').appendTo('.carousel-inner');
@@ -163,20 +114,24 @@
        $item.height($wHeight);
        $item.addClass('full-screen');
    
-   $('.carousel img').each(function() {
-     var $src = $(this).attr('src');
-     var $color = $(this).attr('data-color');
-     $(this).parent().css({
-       'background-image' : 'url(' + $src + ')',
-       'background-color' : $color
+     $('.carousel img').each(function() {
+       var $src = $(this).attr('src');
+       var $color = $(this).attr('data-color');
+       $(this).parent().css({
+         'background-image' : 'url(' + $src + ')',
+         'background-color' : $color
+       });
+       $(this).remove();
      });
-     $(this).remove();
-   });
    
-   $(window).on('resize', function (){
-     $wHeight = $(window).height();
-     $item.height($wHeight);
+     $(window).on('resize', function (){
+       $wHeight = $(window).height();
+       $item.height($wHeight);
+     });
+
    });
-   });
-   
+
+
+});
+ 
 </script>

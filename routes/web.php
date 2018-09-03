@@ -4,8 +4,14 @@
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+
 //rotas para as views
-route::get('/', 'PagesController@index');
+// route::get('/', 'PagesController@index');
+
+route::get('/', 'PagesController@mostRecentPosts');
+
+
+
 route::get('/gestao-redes-sociais-preços', 'PagesController@redesSociais');
 route::get('/gestao-marketing-conteudo', 'PagesController@gestaoMarketing');
 route::get('/criacao-sites-empresas-profissionais', 'PagesController@criacaoSites');

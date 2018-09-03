@@ -3,6 +3,7 @@
 
         <p> Selecione o numero de redes socias ás quais pretende apoio!
     <div class="row" style ="text-align: center; min-height:200px;">
+        <div class="col-md-2"></div>
         <div @click="toogleFace" class="col-md-2 selecionavel">
         <button for="face" v-bind:class="buttonClassFace" style="background:url(images/facebook.png);"></button>
          <h5 class="card-title imgCard">FaceBook</h5>
@@ -10,10 +11,6 @@
          <div @click="toogleInstagram" class="col-md-2 selecionavel">
         <button for="insta" v-bind:class="buttonClassInstagram" style="background:url(images/instagram.png);"></button>
   <h5 class="card-title imgCard">Instagram</h5>
-        </div>
-         <div @click="toogleTwitter" class="col-md-2 selecionavel">
-        <button for="twitter" v-bind:class="buttonClassTwitter" style="background:url(images/twitter.png);"></button>
-          <h5 class="card-title imgCard">Twitter</h5>
         </div>
          <div @click="toogleLinkedin" class="col-md-2 selecionavel">
         <button for="linked" v-bind:class="buttonClassLinkedin" style="background:url(images/linkedin.png);"></button>
@@ -23,12 +20,15 @@
         <button for="pint" v-bind:class="buttonClassPinterest" style="background:url(images/pinterest.png);"></button>
           <h5 class="card-title imgCard">Pinterest</h5>
         </div>
+        <div class="col-md-2"></div>
+        <!--
          <div @click="toogleAdwords" class="col-md-2 selecionavel">
         <button for="adwords" v-bind:class="buttonClassAdwords" style="background:url(images/words.png);"></button>
           <h5 class="card-title imgCard">AdWords</h5>
         </div>
+        -->
      </div>
-      <div class="row" v-if="buttonEnd">
+      <div class="row">
         <div class="col-md-5"></div>
         <div class="col-md-2"><button @click="end" v-if="!this.$store.getters.gestao" type="button" class="fill">Terminar</button></div>
           <div class="col-md-5"></div>
@@ -107,6 +107,7 @@ name: 'SiteDinamicoFase2'
                 // esta é uma função auxiliar para ver se algum elemento no array é igual a 1
                 // se nenhum elemento for igua a 1 devolve FALSE
                 // se pelo menos um elemento for igual a 1 devolve TRUE
+                /*
                 var even = function(element) {
                   if(element == 1)
                  return element;
@@ -115,7 +116,9 @@ name: 'SiteDinamicoFase2'
                     Swal('Oops...', 'Tem de selecionar pelo menos uma opcção!', 'error')
                 }else{
                     this.$store.dispatch('selectFase5');
-                }
+                    }
+                    */
+                this.$store.dispatch('selectFase5'); 
             },
             toogleFace(){
                 if(!this.$store.getters.facebookSelecionado){

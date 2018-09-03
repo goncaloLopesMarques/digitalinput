@@ -1,5 +1,9 @@
 <!-- SCRIPTS -->
     <!-- JQuery -->
+
+
+
+
     <script type="text/javascript" src="/js/jquery-3.3.1.min.js"></script>
     <!-- Bootstrap tooltips -->
     <script type="text/javascript" src="/js/popper.min.js"></script>
@@ -12,6 +16,9 @@
         // Animations initialization
         new WOW().init();  
     </script>
+  
+
+    
 
 
     <script>

@@ -77,10 +77,22 @@
                 }
                },
                toogleGoogleAds(){
-
+                   if(!this.$store.getters.googleAds){
+                   this.buttonGoogleAds = 'buttonPressed buttonShop';
+                   this.$store.dispatch('selecionaGoogleAds');   
+                }else{
+                    this.buttonGoogleAds = 'buttonEmpty buttonShop';
+                    this.$store.dispatch('desselecionaGoogleAds');
+                }
                },
                toogleFacebookAds(){
-
+                   if(!this.$store.getters.facebookAds){
+                   this.buttonFacebookAds = 'buttonPressed buttonShop';
+                   this.$store.dispatch('selecionaFacebookAds');   
+                }else{
+                    this.buttonFacebookAds = 'buttonEmpty buttonShop';
+                    this.$store.dispatch('desselecionaFacebookAds');
+                }
                },
            }
        }

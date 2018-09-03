@@ -1,5 +1,7 @@
 @component('mail::message')
 
+especificacoes:
+{{ $orcamentoSite["especificacoes"] }}
 
 Nome:
 {{ $orcamentoSite["nome"] }}

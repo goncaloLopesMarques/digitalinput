@@ -109,6 +109,11 @@
   @include make-outline-button($btn_name, $color_value);
 }
 
+.btn-rounded {
+    -webkit-border-radius: 10em;
+    border-radius: 10em;
+}
+
 // button,
 // html [type="file"] {
 //   -webkit-appearance: button; 

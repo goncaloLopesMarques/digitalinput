@@ -103,7 +103,13 @@ button {
 
   }
 }
-
+.show{
+ display:flex;
+ text-align: center;min-height:200px;
+}
+.notShow{
+display:none;
+}
 //=== Pen styling, ignore
 
 // Basic button styles
@@ -131,6 +137,7 @@ html {
 }
 
 .md-stepper-horizontal {
+  padding-bottom: 50px;
   background-color: transparent!important;
 	display:table;
 	width:100%;
