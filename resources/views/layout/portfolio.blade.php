@@ -1,6 +1,4 @@
-
-
-	<section class="portfolio-headers parallax" id="portfolio-background">
+<section class="portfolio-headers parallax" id="portfolio-background">
 
 		<h1>Portfólio</h1>
 
