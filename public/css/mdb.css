@@ -10494,6 +10494,10 @@ footer.page-footer a {
           box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
+.list-group .list-group-item {
+  background-color: transparent;
+}
+
 .list-group .list-group-item:first-child {
   border-top-left-radius: 0.125rem;
   border-top-right-radius: 0.125rem;
@@ -10890,6 +10894,13 @@ div.blogGrid:hover div.titulo-blog-container {
   opacity: 0;
   -webkit-transition: opacity 1000ms, visibility 1000ms;
   transition: opacity 1000ms, visibility 1000ms;
+}
+
+.page-footer .list-group .list-group-item:last-child {
+  border: 2px solid #1c2331;
+  background-color: white;
+  color: #1c2331;
+  font-weight: bold;
 }
 
 .radial-purple-gradient {

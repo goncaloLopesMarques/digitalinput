@@ -54,6 +54,7 @@
          
           <!--Panel-->
     
+                               <!-- 3colunas - 2colunas - 1coluna -->
           <div class="servicos-home col-lg-4 col-md-6 col-xs-12">
             <div class="my card col-md-12 cloudy-knoxville-gradient">
               <div class="my card-body">
