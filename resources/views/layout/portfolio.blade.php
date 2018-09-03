@@ -1,15 +1,13 @@
-
-
-	<section class="portfolio-headers parallax" id="portfolio-background">
+<section class="portfolio-headers parallax" id="portfolio-background">
 
 		<h1>Portfólio</h1>
 
 	</section>
 
-	<div class="container">
+	<div class="container portfolio-content">
 
 		<div class="row">
-			<div class="col-lg-12">
+			<div class="col-lg-12 port-filter-bar">
 				<div class="portfolioFilter clearfix">
 					<a href="#" data-filter="*" class="current">All Categories</a>
 					<a href="#" data-filter=".webTemplates">Web Templates</a>
