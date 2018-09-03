@@ -262,7 +262,7 @@ nav.navbar.fixed-top{
 	nav.navbar.fixed-top.top-nav-collapse > div > ul.navbar-nav > li > a{
 		background-color:#0d0c07;
 		border: 1px solid #111;
-		height: 42px;
+		height: 45px;
 		display: flex;
   		align-items: center;
   		justify-content: center;
@@ -584,7 +584,7 @@ background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
 /* PORTFOLIO  */
 
 .portfolio-headers{
-	margin: 8rem 0;
+	margin: 4rem 0 0;
 }
 
 .parallax {
@@ -601,7 +601,6 @@ background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
 	padding-bottom: 60vh;
 	background-size: cover;
 	background-position: center center;
-  margin-bottom: 0;
 }
 
 .portfolio h1{
@@ -646,7 +645,7 @@ background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
   border: 1px solid #eee;
   border-radius: 3px;
 }
-.portfolio img {
+.portfolio .portfolioContainer img {
   margin: 5px;
   max-width: 500px;
 }

@@ -126,7 +126,7 @@
                     <!-- Center -->
                     <div class="logo my-vertical-align" >
                         <a href="/">
-                            <img src="/images/Digitalinput-LOGO.png" alt="Digitalinput Logo" style="height: 42px;padding-left: 5px;padding-right: 5px;">
+                            <img src="/images/Digitalinput-LOGO.png" alt="Digitalinput Logo" style="height: 45px;padding-left: 5px;padding-right: 5px;">
                         </a>
                     </div>
 
