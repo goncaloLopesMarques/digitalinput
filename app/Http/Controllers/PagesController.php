@@ -8,6 +8,8 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
 use App\Post;
+use App\Portfolio_category;
+use App\Projeto;
 
 class PagesController extends BaseController
 {
@@ -96,7 +98,9 @@ class PagesController extends BaseController
     }
     function portfolio(){
         $classes = "portfolio";
-        return view('pages.portfolio', compact('classes'));
+        $categories = Portfolio_category::get()->all();
+        $projetos = Projeto::get()->all();
+        return view('pages.portfolio', compact('classes', 'categories', 'projetos'));
     }
     function orcamento(){
         $classes = "orcamento";
