@@ -11147,7 +11147,7 @@ div.blogGrid:hover div.titulo-blog-container {
 
 .portfolio img {
   margin: 5px;
-  max-width: 100%;
+  max-width: 500px;
 }
 
 .portfolio a:focus {
