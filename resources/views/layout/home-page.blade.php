@@ -266,7 +266,7 @@
     <!--/.Indicators-->
 
     <!--Slides-->
-    <div class="my carousel-inner" role="listbox" style="padding-left:30px!important;padding-right:30px!important;">
+    <div class="my carousel-inner" role="listbox" style="">
 
         <!--First slide-->
         <div class="my carousel-item active row" id="posts-1">
