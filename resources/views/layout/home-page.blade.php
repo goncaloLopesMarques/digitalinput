@@ -28,6 +28,7 @@
       </div>
 
       <div class="card-footer position-absolute w-100 d-none d-sm-block" style="bottom:0px">
+         <div class="container">
                   
                   <small class="row text-center">
 
@@ -37,19 +38,19 @@
                      <a href="" class="col-xs-12 col-sm-6 col-md-3" style="margin: 0 auto">Simulador</a>
 
                   </small>
+         </div>
       </div>
-
-
 
 
       <!-- Content -->
    </section>
 
    <!-- SERVIÇOS -->
-   <section>
+   <section class="mx-auto px-0">
 
      
-      <div class="row">
+      
+         <div class="row">
 
          
           <!--Panel-->
@@ -98,7 +99,7 @@
                   <p class="card-text">identidade visual corporativa. logotipo; design grafico; criar logo; designer grafico; criar logotipos; empresas de design; identidade visual; agencia design; empresas de design grafico</p>
               </div>
               <div class="card-footer">
-                  <small class="text-muted">Criar logotipo | Design Gráfico | Identidade Visual</small>
+                  <small class="text-muted">Criar logótipo | Design Gráfico | Identidade Visual</small>
               </div>
             </div>
          </div>
@@ -219,8 +220,8 @@
    
           <!--/.Panel-->
 
-
-   </div>
+       </div>
+  
 
    </section>
 
@@ -269,26 +270,29 @@
     <div class="my carousel-inner" role="listbox" style="">
 
         <!--First slide-->
-        <div class="my carousel-item active row" id="posts-1">
+        <div class="container-fluid slide-container-homepage">
+           <div class="my carousel-item active row" id="posts-1">
 
-          
 
+           </div>
         </div>
         <!--/.First slide-->
 
         <!--Second slide-->
-        <div class="my carousel-item row" id="posts-2">
+        <div class="container-fluid slide-container-homepage">
+           <div class="my carousel-item row" id="posts-2">
+               
 
-            
-
+           </div>
         </div>
         <!--/.Second slide-->
 
         <!--Third slide-->
-        <div class="my carousel-item row" id="posts-3">
+        <div class="container-fluid slide-container-homepage">
+           <div class="my carousel-item row" id="posts-3">
 
-            
 
+           </div>
         </div>
         <!--/.Third slide-->
 
@@ -312,15 +316,15 @@
 <!--/.Carousel Wrapper-->
 
 
-<div class="flex-center">
-<button type="button" class="btn btn-elegant">Ver Portfólio</button>
-</div>
+   <div class="flex-center">
+      <button type="button" class="btn btn-elegant">Ver Portfólio</button>
+   </div>
 
 
 
 
       
-   </section>
+</section>
 
 
 

@@ -4,23 +4,23 @@
     {{-- <hr class="my-4"> --}}
 
                   
-    <div class="row m-0 text-left elegant-color-dark">
+    <div class="row m-0 text-left elegant-color">
        
                             <!-- 4colunas - 2colunas - 1coluna -->
         <div class="color-block col-lg-3 col-md-6 col-xs-12">
 
-            <div class="list-group py-3">
+            <div class="list-group-flush py-3">
 
 
                 
-                <a href="#" class="color-block-dark unique-color-dark list-group-item list-group-item-action transparent waves-effect">
+                <a href="#" class="list-group-item list-group-item-black">
                     <img src="/images/Digitalinput-LOGO.png" alt="Digitalinput Logo" style="height: 42px;padding-left: 5px;padding-right: 5px;">
                 </a>
 
-                <a href="#" class="color-block-dark unique-color-dark list-group-item list-group-item-action transparent waves-effect">Agência de Marketing Digital</a>
-                <a href="#" class="color-block-dark unique-color-dark list-group-item list-group-item-action transparent waves-effect">Webdesign | Publicidade | Design</a>
-                <a href="#" class="color-block-dark unique-color-dark list-group-item list-group-item-action transparent waves-effect">Algum texto de apresentação</a>
-                <a href="#" class="color-block-dark unique-color-dark list-group-item list-group-item-action transparent waves-effect">...</a>
+                <a href="#" class="list-group-item list-group-item-black waves-effect">Agência de Marketing Digital</a>
+                <a href="#" class="list-group-item list-group-item-black waves-effect">Webdesign | Publicidade | Design</a>
+                <a href="#" class="list-group-item list-group-item-black waves-effect">Algum texto de apresentação</a>
+                <a href="#" class="list-group-item list-group-item-black waves-effect">...</a>
                 <a href="#" class="color-block-dark list-group-item list-group-item-action transparent waves-effect z-depth-1-half hoverable">Ver Portfólio</a>
 
             </div>
@@ -29,16 +29,16 @@
 
         <div class="color-block col-lg-3 col-md-6 col-xs-12">
 
-            <div class="list-group py-3">
+            <div class="list-group-flush py-3">
 
-                <a href="#" class="color-block-dark unique-color-dark list-group-item list-group-item-action transparent waves-effect"> 
+                <a href="#" class="list-group-item list-group-item-black"> 
                     <h3 class="h2-responsive font-weight-bold">Serviços</h3>
                 </a>
 
-                <a href="#" class="color-block-dark unique-color-dark list-group-item list-group-item-action transparent waves-effect">Consultoria Marketing Digital</a>
-                <a href="#" class="color-block-dark unique-color-dark list-group-item list-group-item-action transparent waves-effect">Criação de websites | Lojas Online</a>
-                <a href="#" class="color-block-dark unique-color-dark list-group-item list-group-item-action transparent waves-effect">Publicidade Online</a>
-                <a href="#" class="color-block-dark unique-color-dark list-group-item list-group-item-action transparent waves-effect">Design Gráfico</a>
+                <a href="#" class="list-group-item list-group-item-black waves-effect">Consultoria Marketing Digital</a>
+                <a href="#" class="list-group-item list-group-item-black waves-effect">Criação de websites | Lojas Online</a>
+                <a href="#" class="list-group-item list-group-item-black waves-effect">Publicidade Online</a>
+                <a href="#" class="list-group-item list-group-item-black waves-effect">Design Gráfico</a>
 
                 <a href="#" class="color-block-dark list-group-item list-group-item-action transparent waves-effect z-depth-1-half hoverable">Pedir Orçamento</a>
 
@@ -48,16 +48,16 @@
 
         <div class="color-block col-lg-3 col-md-6 col-xs-12">
 
-              <div class="list-group py-3">
+              <div class="list-group-flush py-3">
 
-                <a href="#" class="color-block-dark unique-color-dark list-group-item list-group-item-action transparent waves-effect"> 
+                <a href="#" class="list-group-item list-group-item-black"> 
                     <h3 class="h2-responsive font-weight-bold">Título</h3>
                 </a>
 
-                <a href="#" class="color-block-dark unique-color-dark list-group-item list-group-item-action transparent waves-effect">...</a>
-                <a href="#" class="color-block-dark unique-color-dark list-group-item list-group-item-action transparent waves-effect">...</a>
-                <a href="#" class="color-block-dark unique-color-dark list-group-item list-group-item-action transparent waves-effect">...</a>
-                <a href="#" class="color-block-dark unique-color-dark list-group-item list-group-item-action transparent waves-effect">...</a>
+                <a href="#" class="list-group-item list-group-item-black waves-effect">...</a>
+                <a href="#" class="list-group-item list-group-item-black waves-effect">...</a>
+                <a href="#" class="list-group-item list-group-item-black waves-effect">...</a>
+                <a href="#" class="list-group-item list-group-item-black waves-effect">...</a>
 
                 <a href="#" class="color-block-dark list-group-item list-group-item-action transparent waves-effect z-depth-1-half hoverable">...</a>
 
@@ -67,18 +67,20 @@
 
         <div class="color-block col-lg-3 col-md-6 col-xs-12">
 
-            <div class="list-group py-3">
+            <div class="list-group-flush py-3">
 
-                <a href="#" class="elegant-color unique-color-dark list-group-item list-group-item-action transparent waves-effect"> 
+                <a href="#" class="list-group-item list-group-item-black"> 
                     <h3 class="h2-responsive font-weight-bold">Contactos</h3>
                 </a>
 
-                <a href="#" class="unique-color-dark list-group-item list-group-item-action transparent waves-effect"><i class="far fa-envelope fa-lg" aria-hidden="true"></i> Consultoria Marketing Digital</a>
-                <a href="#" class="unique-color-dark list-group-item list-group-item-action transparent waves-effect">Criação de websites | Lojas Online</a>
-                <a href="#" class=" unique-color-dark list-group-item list-group-item-action transparent waves-effect">Publicidade Online</a>
-                <a href="#" class="unique-color-dark list-group-item list-group-item-action transparent waves-effect">Design Gráfico</a>
+                <a href="#" class="list-group-item list-group-item-black waves-effect">
+                    <i class="far fa-envelope fa-lg" aria-hidden="true"></i> Consultoria Marketing Digital
+                </a>
+                <a href="#" class="list-group-item list-group-item-black waves-effect">Criação de websites | Lojas Online</a>
+                <a href="#" class="list-group-item list-group-item-black waves-effect">Publicidade Online</a>
+                <a href="#" class="list-group-item list-group-item-black waves-effect">Design Gráfico</a>
 
-                <a href="#" class="list-group-item list-group-item-action transparent waves-effect z-depth-1-half hoverable">Pedir Orçamento</a>
+                <a href="#" class="list-group-item list-group-item-action waves-effect z-depth-1-half hoverable">Pedir Orçamento</a>
 
             </div>
 
