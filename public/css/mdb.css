@@ -11092,6 +11092,87 @@ div.blogGrid:hover div.titulo-blog-container {
 
 /* Header Section */
 
+@media screen and (min-width: 992px) {
+  .logo {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .home-slider {
+    padding-top: 25vh;
+    padding-bottom: 60vh;
+  }
+
+  .darkned {
+    background-color: rgba(5, 5, 5, 0.7);
+  }
+
+  .navbar {
+    webkit-box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+
+  .text-blue {
+    color: #0069aa !important;
+  }
+
+  .home .navbar-nav .nav-link,
+  .home .navbar-light .navbar-nav .active > .nav-link {
+    color: #8c9c22;
+  }
+
+  /*.home .navbar.navbar-light .navbar-nav .nav-item.active > .nav-link:hover,*/
+
+  /*.home .navbar .navbar-nav .nav-item .nav-link:hover,*/
+
+  .home .navbar-light .navbar-nav .show > .nav-link,
+  .home .navbar.navbar-light .navbar-toggler,
+  .home .navbar-light .navbar-nav .nav-link:focus {
+    color: #fff;
+  }
+
+  .navbar .dropdown-menu a {
+    font-size: 0.8rem;
+  }
+
+  .dropdown-menu {
+    min-width: 20rem;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+
+  .dropdown-menu li.nav-item a.nav-link {
+    color: #000;
+    font-weight: bold;
+  }
+
+  /*
+.navbar .navbar-nav .dropdown-menu li.nav-item a.nav-link:hover{
+	color: #8c9c22;
+}
+*/
+
+  .home .main-title {
+    margin-left: -40em;
+    transition: margin 3s ease;
+    -webkit-transition: margin 3s ease;
+    -webkit-transition-delay: .5s;
+            transition-delay: .5s;
+  }
+
+  /* PORTFOLIO  */
+
+  .portfolio-headers {
+    margin: 4rem 0 0;
+  }
+
+  .parallax {
+    height: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+}
+
 #portfolio-background {
   background-image: url("/images/Port_2_Background.jpg");
 }
