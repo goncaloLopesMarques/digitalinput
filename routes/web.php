@@ -24,6 +24,7 @@ route::get('/agencia-adwords-publicidade-anunciar-google', 'PagesController@agen
 route::get('/manutencao-websites', 'PagesController@manutencaoWebsites');
 route::get('/agencia-email-marketing', 'PagesController@agenciaEmailMarketing');
 route::get('/consultoria-marketing-digital-empresas', 'PagesController@consultoriaMarketing');
+route::get('/contactos', 'PagesController@contactos');
 
 //ROTAS PARA FAZER O DISPLAY DOS POSTS
 Route::get('/blog/search', 'BlogController@search');

@@ -95,6 +95,11 @@ class PagesController extends BaseController
         $classes = "orcamento";
         return view('pages.orcamento', compact('classes'));
     }
+
+    function contactos(){
+        $classes = "contactos";
+        return view('pages.contactos', compact('classes'));
+    }
     
 
 }
