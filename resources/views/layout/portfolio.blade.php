@@ -28,7 +28,7 @@
 						$cat_names .= str_replace(' ', '', $cat->name)." ";
 					}
 					 echo "<div class='".$cat_names."'>
-					<img src='".$project->thumbnail."' alt='image'>
+					<a href='/portfolio/".$project->slug."'><img src='".$project->thumbnail."' alt='image'></a>
 				</div>"; ?>
 
 				@endforeach

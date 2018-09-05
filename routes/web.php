@@ -31,8 +31,11 @@ Route::get('/blog', 'BlogController@show');
 Route::get('blog/{slug}', 'BlogController@post');
 
 //--------FIM DAS ROTAS DOS POSTS
-route::get('/portfolio', 'PagesController@portfolio');
 route::get('/orcamento', 'PagesController@orcamento');
+
+//-------PORTFOLIO ROUTES----------
+route::get('/portfolio', 'PortfolioController@portfolio');
+route::get('/portfolio/{slug}', 'PortfolioController@project');
 
 //enviar emails
 Route::post('/orcamento/site', 'SendMailController@enviarOrcamentoSite');
