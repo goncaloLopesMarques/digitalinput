@@ -8,7 +8,7 @@ Route::group(['prefix' => 'admin'], function () {
 //rotas para as views
 // route::get('/', 'PagesController@index');
 
-route::get('/', 'PagesController@mostRecentPosts');
+route::get('/', 'PagesController@index');
 
 
 

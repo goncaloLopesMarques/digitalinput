@@ -8,6 +8,7 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
 use App\Post;
+use App\Projeto;
 
 
 class PagesController extends BaseController
@@ -17,8 +18,28 @@ class PagesController extends BaseController
     function index(){
 
         $classes = "home";
-        return view('pages.home', compact('classes'));
+        $recentwork = $this->mostRecentProjects();
+        return view('pages.home', compact('classes', 'recentwork'));
     }
+
+
+    public function mostRecentProjects(){
+
+        $mostRecentPosts = json_decode(Projeto::all(), true);
+        $arrayAux = array();
+        foreach ($mostRecentPosts as $key => $row)
+        {
+          $arrayAux[$key] = $row['created_at'];
+        }
+        array_multisort($arrayAux, SORT_DESC, $mostRecentPosts);
+        //ISTO È PARA IR BUSCAR SÒ OS 3 PRIMEIROS, aqui podemos escolher quantos projetos queremos mostrar
+        $mostRecentPosts = array_slice($mostRecentPosts, 0, 9);
+        // ACABA AQUI A ORDENAÇÂO
+        
+        return $mostRecentPosts;
+    }
+
+
 
 
     public function allPosts(){

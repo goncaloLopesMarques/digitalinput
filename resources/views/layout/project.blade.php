@@ -1,40 +1,49 @@
 
 
-<div class="container-fluid project-container">
+<div class="container-fluid project-container" style="background-image: url('/images/PortfolioCovers/Supxperiencestore/sea-3652697_1920.jpg')">
 
-	<div class="project-title">
+	<section class="project-headers">
 
-		<h1>{{$project->name}}</h1>
+		<div class="project-title">
 
-	</div>
+			<h1>{{ $project->name }}</h1>
 
-	<div class="row project-row">
+		</div>
 
-		<div class="col-md-4">
+		<div class="row project-row">
 
-			<div class="project-thumbnail">
+			<div class="col-md-4">
 
-				<img src="{{ $project->thumbnail }}" alt="">
+				<div class="project-thumbnail">
+
+					<img src="{{ $project->thumbnail }}" alt="">
+
+				</div>
+
+			</div>
+
+			<div class="col-md-8">
+
+				<div class="project-description">
+
+					{{ $project->description }}
+
+				</div>
 
 			</div>
 
 		</div>
 
-		<div class="col-md-8">
-
-			<div class="project-description">
-
-				{{ $project->description }}
-
-			</div>
-
-		</div>
-
-	</div>
-
-	
 
 
 
+	</section>
+
+	<section class="project-body">
+		
+
+
+
+	</section>
 
 </div>

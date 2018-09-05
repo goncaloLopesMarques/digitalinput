@@ -57,7 +57,7 @@
         $(document).ready(function(){  
            
      
-           var recentArray = <?php echo json_encode($mostRecentPosts); ?>;
+           var recentArray = <?php echo json_encode($recentwork); ?>;
            console.log(recentArray);
 
             //ciclo for para preencher a grid com posts  background:linear-gradient( rgba(0, 0, 0,96), rgba(0, 0, 0,0.6 ) ),url('+dataArray["data"][i]["image"]+');
@@ -82,7 +82,7 @@
 
              
 
-                $("#posts-" + x).append('<div class="col-lg-4 col-sm-12 p-0 blogGrid">   <div class="flex-center waves-effect waves-light view overlay zoom">   <img src="'+recentArray[i]["image"]+'" alt="zoom"><div class="flex-center titulo-blog-container">   <p class="p-1 text-center my-text-shadow-strong">'+recentArray[i]["title"]+'</p>   </div>   <div class="my-mask-over mask rgba-black-stronger flex-center waves-effect waves-light"><p class="white-text text-center">'+recentArray[i]["excerpt"]+'</p></div></div></div>');
+                $("#posts-" + x).append('<div class="col-lg-4 col-sm-12 p-0 blogGrid">   <div class="flex-center waves-effect waves-light view overlay zoom">   <img src="'+recentArray[i]["thumbnail"]+'" alt="zoom"><div class="flex-center titulo-blog-container">   <p class="p-1 text-center my-text-shadow-strong">'+recentArray[i]["name"]+'</p>   </div>   <div class="my-mask-over mask rgba-black-stronger flex-center waves-effect waves-light"><p class="white-text text-center">'+recentArray[i]["description"]+'</p></div></div></div>');
          
             }       
        

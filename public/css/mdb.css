@@ -11213,7 +11213,7 @@ div.blogGrid:hover div.titulo-blog-container {
 
 .portfolio .portfolioContainer img {
   margin: 5px;
-  max-width: 450px;
+  max-width: 250px;
 }
 
 .portfolio a:focus {
@@ -11251,11 +11251,42 @@ div.blogGrid:hover div.titulo-blog-container {
 
 /* Project Page */
 
+.project-headers {
+  padding-bottom: 2em;
+}
+
 .portfolio-project .project-thumbnail img {
   max-width: 100%;
 }
 
+.project-title h1 {
+  text-align: center;
+  margin: 0 auto 2em;
+  padding-top: 1em;
+}
+
+.project-thumbnail {
+  border: 5px solid #c6d644;
+}
+
+/* MAIN FIX FOR HEADER */
+
+main {
+  margin: 38px 0 0;
+}
+
+/* PORFOLIO PAGE */
+
+.portfolio-headers {
+  padding-top: 25vh;
+  padding-bottom: 60vh;
+  background-size: cover;
+  background-position: center center;
+}
+
 @media screen and (min-width: 992px) {
+  /* MAIN FIX FOR HEADER */
+
   main {
     margin: 64px 0 0;
   }
@@ -11308,17 +11339,15 @@ div.blogGrid:hover div.titulo-blog-container {
 
   /* PORTFOLIO  */
 
-  .portfolio-headers {
-    padding-top: 25vh;
-    padding-bottom: 60vh;
-    background-size: cover;
-    background-position: center center;
-  }
-
   .parallax {
     height: 100%;
     background-attachment: fixed;
     background-repeat: no-repeat;
+  }
+
+  .portfolio .portfolioContainer img {
+    margin: 5px;
+    max-width: 400px;
   }
 
   /* PROJECTS */
