@@ -42,7 +42,7 @@ class PagesController extends BaseController
 
 
 
-    public function allPosts(){
+    /*public function allPosts(){
     return Post::all();
   }
 
@@ -62,7 +62,7 @@ class PagesController extends BaseController
         // ACABA AQUI A ORDENAÇÂO
         
         return view('pages.home', compact('classes', 'mostRecentPosts'));
-    }
+    }*/
 
     function redesSociais(){
         $classes = "redes";

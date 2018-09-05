@@ -316,7 +316,7 @@
 
 
    <div class="flex-center">
-      <button type="button" class="btn btn-elegant">Ver Portfólio</button>
+      <a class="btn btn-elegant" href="/portfolio">Ver Portfólio</a>
    </div>
 
 
