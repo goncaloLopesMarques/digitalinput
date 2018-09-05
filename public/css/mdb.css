@@ -10722,19 +10722,18 @@ div.my.card-body > p {
   margin: 0px;
 }
 
+div.servicos-home h3 {
+  background: linear-gradient(40deg, #212121, #2E2E2E);
+}
+
 nav.navbar.fixed-top {
   background-color: white;
 }
 
 @media (min-width: 992px) {
-  .logo {
-    -webkit-box-shadow: inset 1px 1px 0px 0px rgba(0, 0, 0, 0.2), 0 0 25px rgba(0, 0, 0, 0.2) inset;
-    box-shadow: inset 1px 1px 0px 0px rgba(0, 0, 0, 0.2), 0 0 25px rgba(0, 0, 0, 0.2) inset;
-  }
-
   .logo:hover {
-    -webkit-box-shadow: unset;
-    box-shadow: unset;
+    -webkit-box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0 0 25px rgba(0, 0, 0, 0.2) inset;
+    box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0 0 25px rgba(0, 0, 0, 0.2) inset;
   }
 
   .navbar {
@@ -10786,7 +10785,7 @@ nav.navbar.fixed-top {
     background: linear-gradient(40deg, #42a5f5, #273654) !important;
     font-weight: 900;
     color: black;
-    text-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
+    /*text-shadow: 0 0 3px rgba(0,0,0,0.7);*/
   }
 
   nav.navbar.fixed-top > div > div {
@@ -10912,6 +10911,72 @@ div.blogGrid:hover div.titulo-blog-container {
   border: none;
 }
 
+.fixed-action-btn {
+  position: fixed;
+  z-index: 998;
+  right: 20px;
+  bottom: 20px;
+  margin-bottom: 0;
+  padding-top: 15px;
+}
+
+.btn-floating.btn-lg {
+  width: 61.1px;
+  height: 61.1px;
+}
+
+.btn-floating {
+  -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  width: 47px;
+  height: 47px;
+  position: relative;
+  z-index: 1;
+  vertical-align: middle;
+  display: inline-block;
+  overflow: hidden;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  margin: 10px;
+  border-radius: 50%;
+  padding: 0;
+  cursor: pointer;
+}
+
+.btn-floating.btn-lg i {
+  font-size: 1.625rem;
+  line-height: 61.1px;
+}
+
+.btn-floating i {
+  display: inline-block;
+  width: inherit;
+  text-align: center;
+  color: #fff;
+}
+
+.btn-floating i {
+  font-size: 1.25rem;
+  line-height: 47px;
+}
+
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.black-grey-gradient {
+  background: linear-gradient(40deg, #0d0c07, #333333) !important;
+}
+
+.radial-black-grey-gradient {
+  background: radial-gradient(circle at center top, rgba(136, 136, 136, 0.59), black);
+}
+
 .radial-purple-gradient {
   background: radial-gradient(circle at center top, #513057, #191f2c);
 }
@@ -11017,6 +11082,10 @@ div.blogGrid:hover div.titulo-blog-container {
 .near-moon-gradient {
   background-image: -webkit-gradient(linear, left bottom, left top, from(#5ee7df), to(#b490ca));
   background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+}
+
+.purple-gradient {
+  background: linear-gradient(40deg, #ff6ec4, #7873f5) !important;
 }
 
 /* CSS DO BRUNO */

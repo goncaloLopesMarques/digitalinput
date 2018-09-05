@@ -181,6 +181,21 @@ div.my.card-body > h3, div.my.card-body > p{
 }
 
 
+div.servicos-home h3{
+
+	background: linear-gradient(40deg,#212121,#2E2E2E);
+}
+
+
+
+
+
+
+
+
+
+
+// MENU
 
 
 nav.navbar.fixed-top{
@@ -190,9 +205,6 @@ nav.navbar.fixed-top{
 
 
 
-
-
-// MENU
 // nav bar depois de scrool
 
 @media (min-width: 992px){
@@ -201,15 +213,13 @@ nav.navbar.fixed-top{
 //  .top-nav-collapse   ( sticky navbar )
 
 	.logo{
-		-webkit-box-shadow: inset 1px 1px 0px 0px rgba(0, 0, 0,0.2), 0 0 25px rgba(0, 0, 0, 0.2) inset;
-    	-moz-box-shadow: inset 1px 1px 0px 0px rgba(0, 0, 0, 0.2), 0 0 25px rgba(0, 0, 0, 0.2) inset;
-    	box-shadow: inset 1px 1px 0px 0px rgba(0, 0, 0, 0.2), 0 0 25px rgba(0, 0, 0, 0.2) inset;
 
 	}
+
 	.logo:hover{
-		-webkit-box-shadow: unset;
-    	-moz-box-shadow: unset;
-    	box-shadow: unset;
+		-webkit-box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0,0.2), 0 0 25px rgba(0, 0, 0, 0.2) inset;
+    	-moz-box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0 0 25px rgba(0, 0, 0, 0.2) inset;
+    	box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0 0 25px rgba(0, 0, 0, 0.2) inset;
 	}
 
 	.navbar {
@@ -277,7 +287,7 @@ nav.navbar.fixed-top{
    	 	background: linear-gradient(40deg,#42a5f5,#273654)!important;
    	 	font-weight: 900;
    	 	color:black;
-   	 	text-shadow: 0 0 3px rgba(0,0,0,0.7);
+   	 	/*text-shadow: 0 0 3px rgba(0,0,0,0.7);*/
 	}
 
 	nav.navbar.fixed-top > div > div{
@@ -442,12 +452,85 @@ div.titulo-blog-container{
 
 
 
+.fixed-action-btn {
+    position: fixed;
+    z-index: 998;
+    right: 20px;
+    bottom: 20px;
+    margin-bottom: 0;
+    padding-top: 15px;
+}
+
+.btn-floating.btn-lg {
+    width: 61.1px;
+    height: 61.1px;
+}
+
+.btn-floating {
+    -webkit-box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+    box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+    width: 47px;
+    height: 47px;
+    position: relative;
+    z-index: 1;
+    vertical-align: middle;
+    display: inline-block;
+    overflow: hidden;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    margin: 10px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    padding: 0;
+    cursor: pointer;
+}
+
+.btn-floating.btn-lg i {
+    font-size: 1.625rem;
+    line-height: 61.1px;
+}
+
+.btn-floating i {
+    display: inline-block;
+    width: inherit;
+    text-align: center;
+    color: #fff;
+}
+
+.btn-floating i {
+    font-size: 1.25rem;
+    line-height: 47px;
+}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+
 
 
 
 
 // GRADIENTS
 //--------------------------------------------------------------------
+
+
+.black-grey-gradient{
+	background: linear-gradient(40deg, #0d0c07, #333333) !important;
+}
+
+.radial-black-grey-gradient{
+
+	background: radial-gradient(circle at center top, rgba(136, 136, 136, 0.59), rgb(0, 0, 0));
+}
+
 
 .radial-purple-gradient{
 	background: radial-gradient(circle at center top, rgb(81, 48, 87), rgb(25, 31, 44));
@@ -526,6 +609,11 @@ background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
 }
 .near-moon-gradient {
 background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+}
+.purple-gradient {
+    background: -webkit-linear-gradient(50deg,#ff6ec4,#7873f5)!important;
+    background: -o-linear-gradient(50deg,#ff6ec4,#7873f5)!important;
+    background: linear-gradient(40deg,#ff6ec4,#7873f5)!important;
 }
 
 

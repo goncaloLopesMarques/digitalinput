@@ -109,3 +109,9 @@
 
     </footer>
     <!--/.Footer-->
+
+    <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+
+        <a class="btn-floating btn-lg radial-black-grey-gradient" data-toggle="modal" data-target="#sendMessageFooter"><i class="fa fa-envelope-o"></i></a>
+
+    </div>

@@ -17,12 +17,12 @@
 
                     <!-- Left -->
                     <ul class="navbar-nav">
-                        <li class="nav-item active">
-                            <a class="nav-link waves-effect" href="/">Home
+                        <li class="nav-item {{ Request::segment(1) === '' ? 'active' : null }}">
+                            <a class="nav-link waves-effect" href="/">Home   <!-- / -->
                                 <span class="sr-only">(current)</span>
                             </a>
                         </li>
-                        <li class="dropdown" ><!-- style="position: initial;" -->
+                        <li class="dropdown {{ Request::segment(1) === 'blog' ? 'active' : null }}" ><!-- style="position: initial;" -->
                             <a class="nav-link waves-effect dropdown-toggle" data-toggle="dropdown" href="#" >Serviços</a>
                             <ul class="dropdown-menu animated slideInLeft" style="width: 100%;">
                                 {{-- <div class="container"> --}}
@@ -115,10 +115,10 @@
                                {{--  </div> --}}
                             </ul>
                         </li>  
-                        <li class="nav-item">
+                        <li class="nav-item {{ Request::segment(1) === 'portfolio' ? 'active' : null }}">
                             <a class="nav-link waves-effect" href="/portfolio" target="_self">Portfólio</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item {{ Request::segment(1) === 'orcamento' ? 'active' : null }}">
                             <a class="nav-link waves-effect" href="/orcamento" target="_self">Orçamento</a>
                         </li>                                                                      
                     </ul>
@@ -132,29 +132,30 @@
 
                     <!-- Right -->
                     <ul class="navbar-nav nav-flex-icons">
-                        <li class="nav-item">
+
+
+                        <li class="nav-item {{ Request::segment(1) === 'blog' ? 'active' : null }}">
                             <a class="nav-link waves-effect" href="/blog" target="_self">Blog</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item {{ Request::segment(1) === 'contactos' ? 'active' : null }}">
                             <a class="nav-link waves-effect" href="/contactos" target="_self">Contactos</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item {{ Request::segment(1) === '' ? 'active' : null }}">
                             <a href="https://www.facebook.com/digitalinputwebmarketing/" class="nav-link waves-effect" target="_blank">
                                 <i class="fa fa-facebook"></i>
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item {{ Request::segment(1) === '' ? 'active' : null }}">
                             <a href="https://twitter.com/Digitalinputweb" class="nav-link waves-effect" target="_blank">
                                 <i class="fa fa-twitter"></i>
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item {{ Request::segment(1) === '' ? 'active' : null }}">
                             <a href="https://www.linkedin.com/company/digitalinput" class="nav-link waves-effect" target="_blank">
                                 <i class="fa fa-linkedin-square"></i>
                             </a>
                         </li>
                             
-
 
                         <!-- <li class="nav-item">
                             <a href="https://github.com/mdbootstrap/bootstrap-material-design" class="nav-link border border-light rounded waves-effect" target="_blank">

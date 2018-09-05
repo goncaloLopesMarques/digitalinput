@@ -1,3 +1,10 @@
+$('.navbar-nav .nav-link').click(function(){
+    $('.navbar-nav .nav-link').removeClass('active');
+    $(this).addClass('active');
+})
+
+
+
 /*!
  * Material Design for Bootstrap 4
  * Version: MDB FREE: 4.5.6
