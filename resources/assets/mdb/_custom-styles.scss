@@ -639,11 +639,6 @@ background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
 	background-color: rgba(5,5,5,.7);
 }
 
-.navbar{
-	webkit-box-shadow: none;
-	box-shadow: none;
-}
-
 .text-blue{
 	color: #0069aa !important;
 }
@@ -675,11 +670,7 @@ background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
 	color: #000;
 	font-weight: bold;
 }
-/*
-.navbar .navbar-nav .dropdown-menu li.nav-item a.nav-link:hover{
-	color: #8c9c22;
-}
-*/
+
 .home .main-title{
 	margin-left: -40em;
 	transition: margin 3s ease;
@@ -690,14 +681,12 @@ background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
 /* PORTFOLIO  */
 
 
-
-
-
-
-
-
 .portfolio-headers{
 	margin: 4rem 0 0;
+	padding-top: 25vh;
+	padding-bottom: 60vh;
+	background-size: cover;
+	background-position: center center;
 }
 
 .parallax {
@@ -706,14 +695,15 @@ background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
     background-repeat: no-repeat;
 }
 
+	/* PROJECTS */
+.project-container{
+	margin: 4rem 0 0;
+}
+
 }
 
 #portfolio-background{
 	background-image: url("/images/Port_2_Background.jpg");
-	padding-top: 25vh;
-	padding-bottom: 60vh;
-	background-size: cover;
-	background-position: center center;
 }
 
 .portfolio h1{
@@ -795,6 +785,9 @@ background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
   transition-property: transform, opacity;
 }
 
-
+/* Project Page */
+.portfolio-project .project-thumbnail img{
+	max-width: 100%;
+}
 
 
