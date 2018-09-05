@@ -17,7 +17,7 @@
 
                     <!-- Left -->
                     <ul class="navbar-nav">
-                        <li class="nav-item {{ Request::segment(1) === '' ? 'active' : null }}">
+                        <li class="nav-item {{ Request::segment(1) == '' ? 'active' : null }}">
                             <a class="nav-link waves-effect" href="/">Home   <!-- / -->
                                 <span class="sr-only">(current)</span>
                             </a>
