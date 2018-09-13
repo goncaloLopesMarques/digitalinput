@@ -45,6 +45,21 @@
 	<section class="project-body">
 		
 
+		<div class="row" id="gallery-project">
+<?php
+			$imagens = json_decode($project->images);					
+		    $htmlpic = "";
+				foreach($imagens as $pic)
+				{
+					$htmlpic .= "<div class='col-md-3'>
+								   <div class='project-image'>
+									 <img src=". Voyager::image($pic) ." alt=''>
+								   </div>
+								</div>";
+				}
+			echo $htmlpic;
+?>
+		</div>
 
 
 	</section>
