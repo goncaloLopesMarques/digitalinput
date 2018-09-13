@@ -16,7 +16,10 @@
 
 				<div class="project-thumbnail">
 
-					<img src="..\storage\{{ $project->thumbnail }}" alt="">
+					<img src="{{ Voyager::image( $project->thumbnail ) }}" alt="">
+
+
+					
 
 				</div>
 

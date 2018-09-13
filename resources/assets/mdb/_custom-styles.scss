@@ -347,6 +347,16 @@ nav.navbar.fixed-top{
 }
 
 
+// serviços mais recentes da homepage
+body.home div.carousel-inner{
+
+	width: calc(100% - 60px);
+    margin: 0 auto;
+
+    div.carousel-item.active.row{
+    	width:unset;
+    }
+}
 
 div.my.carousel-item.active{
 	display: flex!important;
@@ -381,13 +391,21 @@ span.my.carousel-control-next-icon{
 div.titulo-blog-container{
 	width: 100%;
     position: absolute;
-    background-color: rgba(0,0,0,.5);
+    /*background-color: rgba(0,0,0,.5);*/
     height: 100%;
+
+
     
     p{
     	color: white;
-    	font-size: 2.2rem;
+    	font-size: 1rem;
     	font-weight: 600;
+
+    	border: 1px solid pink;
+    	bottom: 0px;
+    	position: absolute;
+    	width: 100%;
+    	background-color: rgba(0,0,0,.5);
     }
 }
 
