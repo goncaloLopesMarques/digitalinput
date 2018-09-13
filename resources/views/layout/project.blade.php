@@ -16,7 +16,7 @@
 
 				<div class="project-thumbnail">
 
-					<img src="{{ $project->thumbnail }}" alt="">
+					<img src="..\storage\{{ $project->thumbnail }}" alt="">
 
 				</div>
 
