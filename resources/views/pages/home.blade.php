@@ -60,6 +60,9 @@
            var recentArray = <?php echo json_encode($recentwork); ?>;
            console.log(recentArray);
 
+
+
+
             //ciclo for para preencher a grid com posts  background:linear-gradient( rgba(0, 0, 0,96), rgba(0, 0, 0,0.6 ) ),url('+dataArray["data"][i]["image"]+');
 
             for(var i=0 ; i< recentArray.length ; i++){
@@ -80,11 +83,20 @@
 
 
 
-                                                    
+                if(recentArray[i]["images"]){
+
+
+                    for(var j=0 ; j< recentArray[i]["images"].length ; j++){
+           
+                        console.log("-----------------------");   
+                        console.log(recentArray[i]["images"][j]);
+                    }
+                }
+
 
              
 
-                $("#posts-" + x).append('<div class="col-lg-4 col-sm-12 p-0 blogGrid">   <div class="flex-center waves-effect waves-light view overlay zoom">   <img style="height:100%" src="storage/'+recentArray[i]["thumbnail"]+'" alt="'+recentArray[i]["name"]+'"><div class="flex-center titulo-blog-container">   <p class="p-1 text-center my-text-shadow-strong">'+recentArray[i]["name"]+'</p>   </div>   <div class="my-mask-over mask rgba-black-stronger flex-center waves-effect waves-light"><p class="white-text text-center">'+recentArray[i]["description"]+'</p></div></div></div>');
+                $("#posts-" + x).append('<div class="col-lg-4 col-sm-12 p-0 blogGrid">   <div class="flex-center waves-effect waves-light view overlay zoom">   <img style="height:calc(100% - 35px)" src="storage/'+recentArray[i]["thumbnail"]+'" alt="'+recentArray[i]["name"]+'"><div class="flex-center titulo-blog-container">   <p class="p-1 text-center my-text-shadow-strong">'+recentArray[i]["name"]+'</p>   </div>   <div class="my-mask-over mask rgba-black-stronger flex-center waves-effect waves-light"><p class="white-text text-center">'+recentArray[i]["description"]+'</p></div></div></div>');
          
             }       
        
