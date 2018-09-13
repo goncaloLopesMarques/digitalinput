@@ -138,6 +138,8 @@ div.my.card{
   background-color: unset;
   padding:0px;
   height: 100%;
+  -webkit-box-shadow: none; 
+  box-shadow:none; 
   /*border: 1px solid #0d0c07;*/
   /*margin: 1rem!important;*/
 
@@ -156,9 +158,8 @@ div.my.card-body{
 
 div.my.card-body:hover{
 
-
-    webkit-box-shadow: inset 1px 1px 0px 0px rgba(0, 0, 0, 0.2), 0 0 25px 0px rgba(0, 0, 0, 0.2) inset;
-    box-shadow:inset 1px 1px 0px 0px rgba(0, 0, 0, 0.2), 0 0 25px rgba(0, 0, 0, 0.2) inset;
+    -webkit-box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0 0 25px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.1), 0 0 25px rgba(0, 0, 0, 0.1) inset;
 
     cursor:pointer;
     p{

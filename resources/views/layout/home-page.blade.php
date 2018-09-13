@@ -57,7 +57,7 @@
     
                                <!-- 3colunas - 2colunas - 1coluna -->
           <div class="servicos-home col-lg-4 col-md-6 col-xs-12">
-            <div class="my card col-md-12 cloudy-knoxville-gradient">
+            <div class="my card col-md-12">
               <div class="my card-body">
                   <h3 class="card-title white-text">Criação de Sites para Empresas</h3>
                   <p class="py-1">- Criar Site</p>
@@ -77,7 +77,7 @@
           <!--Panel-->
      
           <div class="servicos-home col-lg-4 col-md-6 col-xs-12">
-            <div class="my card col-md-12 cloudy-knoxville-gradient">
+            <div class="my card col-md-12">
               <div class="my card-body">
                   <h3 class="card-title white-text">Criar Loja Online</h3>
                   <p class="card-text">Criar Loja Online, Site de Vendas, Loja Virtual com base nas mais recentes técnicas SEO. Crie Websites que vendem online.</p>
@@ -93,7 +93,7 @@
           <!--Panel-->
       
           <div class="servicos-home col-lg-4 col-md-6 col-xs-12">
-            <div class="my card col-md-12 cloudy-knoxville-gradient">
+            <div class="my card col-md-12">
               <div class="my card-body">
                   <h3 class="card-title white-text">Design Gráfico | Identidade Visual</h3>
                   <p class="card-text">identidade visual corporativa. logotipo; design grafico; criar logo; designer grafico; criar logotipos; empresas de design; identidade visual; agencia design; empresas de design grafico</p>
@@ -109,7 +109,7 @@
           <!--Panel-->
       
           <div class="servicos-home col-lg-4 col-md-6 col-xs-12">
-            <div class="my card col-md-12 cloudy-knoxville-gradient">
+            <div class="my card col-md-12">
               <div class="my card-body">
                   <h3 class="card-title white-text">Adwords | Anunciar Google</h3>
                   <p class="card-text">google adwords; publicidade na internet; como anunciar no google; google adwords preço; google adwords preço; divulgar site; agência adwords</p>
@@ -125,7 +125,7 @@
           <!--Panel-->
      
           <div class="servicos-home col-lg-4 col-md-6 col-xs-12">
-            <div class="my card col-md-12 cloudy-knoxville-gradient">
+            <div class="my card col-md-12">
               <div class="my card-body">
                   <h3 class="card-title white-text">Publicidade Facebook | Promover</h3>
                   <p class="card-text">facebook para empresas; publicidade facebook; anunciar no facebook; facebookads</p>
@@ -141,7 +141,7 @@
           <!--Panel-->
 
           <div class="servicos-home col-lg-4 col-md-6 col-xs-12">
-            <div class="my card col-md-12 cloudy-knoxville-gradient">
+            <div class="my card col-md-12">
               <div class="my card-body">
                   <h3 class="card-title white-text">Consultoria Marketing Digital</h3>
                   <p class="card-text">micro e pequenas empresas; Médias Empresas; PME's; Consultor marketing digital; consultoria marketing digital; especialista em marketing digital</p>
@@ -159,7 +159,7 @@
            <!--Panel-->
  
           <div class="servicos-home col-lg-4 col-md-6 col-xs-12">
-            <div class="my card col-md-12 cloudy-knoxville-gradient">
+            <div class="my card col-md-12">
               <div class="my card-body">
                   <h3 class="card-title white-text">Gestão de Redes Sociais</h3>
                   <p class="card-text">Gestão de Redes Sociais Preços - O Parceiro ideal para criar empatia e identidade de Marca junto dos seus Clientes</p>
@@ -175,7 +175,7 @@
           <!--Panel-->
 
           <div class="servicos-home col-lg-4 col-md-6 col-xs-12">
-            <div class="my card col-md-12 cloudy-knoxville-gradient">
+            <div class="my card col-md-12">
               <div class="my card-body">
                   <h3 class="card-title white-text">Optimização de Sites | SEO</h3>
                   <p class="card-text">Optimização de Sites com as mais recentes e inovadoras técnicas  SEO</p>
@@ -191,7 +191,7 @@
          <!--Panel-->
     
           <div class="servicos-home col-lg-4 col-md-6 col-xs-12">
-            <div class="my card col-md-12 cloudy-knoxville-gradient">
+            <div class="my card col-md-12">
               <div class="my card-body">
                   <h3 class="card-title white-text">Agência Email Marketing</h3>
                   <p class="card-text">Precisa de um Parceiro para implementação técnicas Email Marketing?</p>
@@ -207,7 +207,7 @@
           <!--Panel-->
  
           <div class="servicos-home col-lg-12 col-md-6 col-xs-12">
-            <div class="my card col-md-12 cloudy-knoxville-gradient">
+            <div class="my card col-md-12">
               <div class="my card-body">
                   <h3 class="card-title white-text">Simulador de Custos</h3>
                   <p class="card-text">Não conhece os preços do Marketing Digital? Selecione os serviços que mais se adatam à realidade do seu negócio e tenha uma ideia de quanto poderá investir.</p>
@@ -245,11 +245,11 @@
     </div> --}}
 
     <!--Controls-->
-                <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
+                <a class="carousel-control-prev" href="#multi-item-example" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="sr-only">Previous</span>
                 </a>
-                <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
+                <a class="carousel-control-next" href="#multi-item-example" role="button" data-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                 </a>

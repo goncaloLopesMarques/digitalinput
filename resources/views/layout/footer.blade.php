@@ -14,7 +14,7 @@
 
                 
                 <a href="#" class="list-group-item list-group-item-black">
-                    <img src="/images/Digitalinput-LOGO.png" alt="Digitalinput Logo" style="height: 42px;padding-left: 5px;padding-right: 5px;">
+                    <img src="/images/Digitalinput-LOGO.png" alt="Digitalinput Logo" style="height: 37px;">
                 </a>
 
                 <a href="#" class="list-group-item list-group-item-black waves-effect">Agência de Marketing Digital</a>
