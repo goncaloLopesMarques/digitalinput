@@ -11282,7 +11282,7 @@ div.blogGrid:hover div.titulo-blog-container {
 }
 
 .project-thumbnail {
-  border: 5px solid #c6d644;
+  border: 4px solid #333;
 }
 
 #gallery-project .project-image img {
@@ -11366,8 +11366,8 @@ main {
   }
 
   .portfolio .portfolioContainer img {
-    margin: 5px;
-    max-width: 400px;
+    margin: 3px;
+    max-width: 373px;
   }
 
   /* PROJECTS */

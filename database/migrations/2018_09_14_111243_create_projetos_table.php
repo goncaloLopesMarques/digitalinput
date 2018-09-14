@@ -22,6 +22,7 @@ class CreateProjetosTable extends Migration {
 			$table->integer('cliente_id')->unsigned()->nullable()->index();
 			$table->string('thumbnail')->nullable();
 			$table->string('slug');
+			$table->text('images')->nullable();
 		});
 	}
 
