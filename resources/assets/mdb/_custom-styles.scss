@@ -820,6 +820,9 @@ background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
 .project-thumbnail{
 	border: 5px solid #c6d644;
 }
+#gallery-project .project-image img{
+	max-width: 100%;
+}
 
 
 /* MAIN FIX FOR HEADER */
