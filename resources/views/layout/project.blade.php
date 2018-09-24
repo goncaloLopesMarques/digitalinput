@@ -46,19 +46,25 @@
 		
 
 		<div class="row" id="gallery-project">
-<?php
+@php
 			$imagens = json_decode($project->images);					
 		    $htmlpic = "";
+
+		    if ($imagens){
+
 				foreach($imagens as $pic)
 				{
-					$htmlpic .= "<div class='col-md-3'>
-								   <div class='project-image'>
-									 <img src=". Voyager::image($pic) ." alt=''>
-								   </div>
-								</div>";
+						$htmlpic .= "<div class='col-md-3'>
+									   <div class='project-image'>
+										 <img src=". Voyager::image($pic) ." alt=''>
+									   </div>
+									</div>";
 				}
-			echo $htmlpic;
-?>
+
+				echo $htmlpic;
+
+			}
+@endphp
 		</div>
 
 
