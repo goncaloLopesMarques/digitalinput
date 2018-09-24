@@ -46,11 +46,11 @@
    </section>
 
    <!-- SERVIÇOS -->
-   <section class="mx-auto px-0">
+   <section class="mx-auto px-0 pt-4">
 
      
       
-         <div class="row">
+         <div class="row m-0">
 
          
           <!--Panel-->
@@ -209,7 +209,7 @@
           <div class="servicos-home col-lg-12 col-md-6 col-xs-12">
             <div class="my card col-md-12">
               <div class="my card-body">
-                  <h3 class="card-title white-text">Simulador de Custos</h3>
+                  <h3 class="card-title white-text" style="background: linear-gradient(40deg,#212121,#8bc34a);">Simulador de Custos</h3>
                   <p class="card-text">Não conhece os preços do Marketing Digital? Selecione os serviços que mais se adatam à realidade do seu negócio e tenha uma ideia de quanto poderá investir.</p>
               </div>
               <div class="card-footer">
@@ -221,6 +221,7 @@
           <!--/.Panel-->
 
        </div>
+     </section>
   
 
    </section>
@@ -230,8 +231,8 @@
    </div> --}}
 
 
-<h3 class="h1-responsive ml-5 mt-5 pl-5 pt-5">
-               <p class="font-weight-bold" style="text-decoration: overline;text-decoration-color: #212529;">Trabalhos Recentes</p>
+<h3 class="section-title h1-responsive ml-5 mt-5 pl-5 pt-5">
+                <b>C</b>lientes
             </h3>
 
 
@@ -315,7 +316,7 @@
 <!--/.Carousel Wrapper-->
 
 
-   <div class="flex-center">
+   <div class="flex-center mt-5">
       <a class="btn btn-elegant" href="/portfolio">Ver Portfólio</a>
    </div>
 

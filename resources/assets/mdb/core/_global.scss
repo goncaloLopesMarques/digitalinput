@@ -47,6 +47,7 @@ a {
   &:hover {
     transition: $transition-basic;
     text-decoration: none;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.8);
   }
   &.disabled,
   &:disabled {

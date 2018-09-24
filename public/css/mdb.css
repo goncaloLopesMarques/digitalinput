@@ -1,4 +1,4 @@
-/*!
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400|Playfair+Display:400,700,400italic|Libre+Baskerville:400,700,400italic|Muli:300,400|Open+Sans:400,300,700|Oswald:400,700|Raleway:400,100,300,700|Montserrat:200,400,700|Merriweather:400,300,300italic,400italic,700|Bree+Serif|Vollkorn:400italic,400,700|Abril+Fatface|Cardo:400,400italic);/*!
  * Material Design for Bootstrap 4
  * Version: MDB Free 4.5.6
  *
@@ -1678,7 +1678,7 @@
 a {
   cursor: pointer;
   text-decoration: none;
-  color: #007bff;
+  color: #3f729b;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
@@ -1687,11 +1687,12 @@ a:hover {
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.8);
 }
 
 a.disabled:hover,
 a:disabled:hover {
-  color: #007bff;
+  color: #3f729b;
 }
 
 a:not([href]):not([tabindex]),
@@ -10613,6 +10614,8 @@ table.table-sm td {
   text-shadow: 0 0 3px rgba(0, 0, 0, 0.8);
 }
 
+/* VERTICAL ALIGN (muita bom)*/
+
 .my-vertical-align {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -10655,6 +10658,33 @@ table.table-sm td {
   transition: all .2s linear;
 }
 
+/* Titulos*/
+
+h3.section-title {
+  background: #fff;
+  z-index: 1;
+  font-family: "Montserrat";
+  letter-spacing: 5px;
+  display: block;
+  text-align: center;
+  font-size: 55px;
+  text-transform: uppercase;
+  font-weight: 200;
+  text-transform: uppercase;
+  padding: 0 3% 40px 8%;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  /* Just add shadows, every time with a different top, right and opacity */
+  text-shadow: #c0c0c0 -1px 1px 0, #fff -2px 2px 0, #c3c3c3 -3px 3px 0, #fff -4px 4px 0, #c6c6c6 -5px 5px 0, #fff -6px 6px 0, #c9c9c9 -7px 7px 0, #fff -8px 8px 0, #ccc -9px 9px 0, #fff -10px 10px 0, #cfcfcf -11px 11px 0, #fff -12px 12px 0, #d2d2d2 -13px 13px 0, #fff -14px 14px 0, #d5d5d5 -15px 15px 0, #fff -16px 16px 0, #d8d8d8 -17px 17px 0, #fff -18px 18px 0, #dbdbdb -19px 19px 0, #fff -20px 20px 0, #dfdfdf -21px 21px 0, #fff -22px 22px 0, #e2e2e2 -23px 23px 0, #fff -24px 24px 0, #e5e5e5 -25px 25px 0, #fff -26px 26px 0, #e8e8e8 -27px 27px 0, #fff -28px 28px 0, #ebebeb -29px 29px 0, #fff -30px 30px 0, #eee -31px 31px 0, #fff -32px 32px 0, #f1f1f1 -33px 33px 0, #fff -34px 34px 0, #f4f4f4 -35px 35px 0, #fff -36px 36px 0, #f7f7f7 -37px 37px 0, #fff -38px 38px 0, #fafafa -39px 39px 0, #fbfbfb -40px 40px 0, #fdfdfd -41px 41px 0, #fff -42px 42px 0;
+}
+
+h3.section-title b {
+  position: relative;
+  font-weight: bold;
+}
+
 /* MEDIA QUERIES SASS 
 -------------------------------------------------------
 https://mdbootstrap.com/layout/bootstrap-media-queries/
@@ -10663,11 +10693,6 @@ https://mdbootstrap.com/layout/bootstrap-media-queries/
 phone & tabklet queries */
 
 @media (max-width: 767.98px) {
-  div.servicos-home {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-
   div.my.card-body {
     padding: 0px;
   }
@@ -10676,10 +10701,6 @@ phone & tabklet queries */
 /* pc & desktop queries */
 
 @media (min-width: 576px) {
-  div.servicos-home {
-    padding: 1rem;
-  }
-
   div.my.card-body {
     padding: 1rem;
   }
@@ -10721,6 +10742,10 @@ div.my.card-body > p {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   margin: 0px;
+}
+
+div.servicos-home {
+  padding: 0.25rem !important;
 }
 
 div.servicos-home h3 {
@@ -10862,6 +10887,24 @@ span.my.carousel-control-next-icon {
   height: 30px;
 }
 
+body.home ol.carousel-indicators {
+  bottom: -35px;
+}
+
+body.home ol.carousel-indicators li.active {
+  background-color: #fff;
+  border: 1px solid black;
+}
+
+body.home ol.carousel-indicators li {
+  background-color: #111;
+}
+
+div.my-mask-over {
+  padding: 20px;
+  color: white;
+}
+
 .blogGrid {
   height: 45vh;
   background-size: cover;
@@ -10875,15 +10918,14 @@ div.titulo-blog-container {
 }
 
 div.titulo-blog-container p {
-  color: white;
+  color: #111;
   font-size: 1rem;
-  font-weight: 600;
-  border: 1px solid pink;
+  border: 1px solid #dee2e6;
   bottom: 0px;
   position: absolute;
   width: 100%;
   height: 35px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: whitesmoke;
 }
 
 div.blogGrid div.titulo-blog-container {

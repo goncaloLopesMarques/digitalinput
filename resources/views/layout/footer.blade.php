@@ -1,5 +1,5 @@
 <!--Footer-->
-<footer class="page-footer text-center font-small wow fadeIn red"><!- mdb-color darken-2 -->
+<footer class="page-footer text-center font-small wow fadeIn red">
 
     {{-- <hr class="my-4"> --}}
 
@@ -93,7 +93,7 @@
 
 
         <!-- Social icons -->
-        <div class="color-block-dark unique-color-dark py-3">
+        <div class="color-block-dark unique-color py-3">
             <a href="https://www.facebook.com/digitalinputwebmarketing/" target="_blank">
                 <i class="fa fa-facebook mr-3"></i>
             </a>
