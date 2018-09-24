@@ -1,6 +1,6 @@
-<!-- Navbar -->
+
         <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
-           {{--  <div class="container"> --}}
+             <!-- <div class="container"> --> 
 
                 <!-- Brand -->
                 <!-- <a class="navbar-brand waves-effect" href="https://mdbootstrap.com/material-design-for-bootstrap/" target="_blank">
@@ -25,11 +25,11 @@
                         <li class="dropdown {{ Request::segment(1) === 'blog' ? 'active' : null }}" ><!-- style="position: initial;" -->
                             <a class="nav-link waves-effect dropdown-toggle" data-toggle="dropdown" href="#" >Serviços</a>
                             <ul class="dropdown-menu animated slideInLeft" style="width: 100%;">
-                                {{-- <div class="container"> --}}
+                                 <div class="container"> 
                                     <div class="row">
 
 
-                                        <div class="my-col-3 col-lg-4 col-md-6 col-xs-12 p-0">
+                                        <!-- <div class="my-col-3 col-lg-4 col-md-6 col-xs-12 p-0">
                                             xxxxx xxxxx
                                         </div>
 
@@ -67,11 +67,11 @@
 
                                         <div class="my-col-3 col-lg-4 col-md-6 col-xs-12 p-0">
                                             xxxxx xxxxx
-                                        </div>
+                                        </div> -->
 
 
 
-{{--                                         <div class="col-md-6">
+                                        <div class="col-md-6">
                                             <li class="nav-item">
                                                 <a class="nav-link waves-effect" href="/gestao-redes-sociais-preços" target="_self">Gestao de Redes Sociais</a>
                                             </li>
@@ -110,9 +110,9 @@
                                             <li class="nav-item">
                                                 <a class="nav-link waves-effect" href="/consultoria-marketing-digital-empresas" target="_self">Consultoria Marketing Digital</a>
                                             </li>
-                                        </div> --}}
+                                        </div> 
                                     </div>
-                               {{--  </div> --}}
+                                 </div> 
                             </ul>
                         </li>  
                         <li class="nav-item {{ Request::segment(1) === 'portfolio' ? 'active' : null }}">
@@ -166,6 +166,5 @@
 
                 </div>
 
-            {{-- </div> --}}
+             <!-- </div> --> 
         </nav>
-        <!-- Navbar -->

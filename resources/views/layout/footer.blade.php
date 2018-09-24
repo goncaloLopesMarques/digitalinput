@@ -1,5 +1,5 @@
 <!--Footer-->
-<footer class="page-footer text-center font-small wow fadeIn red"><!- mdb-color darken-2 -->
+<footer class="page-footer text-center font-small wow fadeIn red"><!-- mdb-color darken-2 -->
 
     {{-- <hr class="my-4"> --}}
 
