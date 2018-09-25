@@ -41,5 +41,6 @@
 @section('scripts-css')
 
     @include('layout.scripts-css')
+    <script type="text/javascript" src="/js/project.js"></script>
     
 @endsection

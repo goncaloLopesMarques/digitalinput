@@ -11330,6 +11330,10 @@ div.blogGrid:hover div.titulo-blog-container {
   max-width: 100%;
 }
 
+.project-body {
+  padding: 3em 0;
+}
+
 /* MAIN FIX FOR HEADER */
 
 main {
