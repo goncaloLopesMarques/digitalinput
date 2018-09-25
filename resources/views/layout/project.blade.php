@@ -18,9 +18,6 @@
 
 					<img src="{{ Voyager::image( $project->thumbnail ) }}" alt="">
 
-
-					
-
 				</div>
 
 			</div>
@@ -37,13 +34,9 @@
 
 		</div>
 
-
-
-
 	</section>
 
 	<section class="project-body">
-		
 
 		<div class="row" id="gallery-project">
 @php
@@ -69,7 +62,7 @@
   											<img src='". Voyager::image($pic) ."' style='width:100%'>
   									</div>";
   						$htmlthumb .= "<div class='column'>
-											<img class='demo' src='". Voyager::image($pic) ."' onclick=\"currentSlide(".$it.")\" alt='".$target[1]."'>
+											<img class='demo cursor' src='". Voyager::image($pic) ."' onclick=\"currentSlide(".$it.")\" alt='".$target[1]."'>
 								  	    </div>";
 					$it++;
 				}
@@ -79,7 +72,7 @@
 			<!-- The Modal/Lightbox -->
 			<div id="myModal" class="modal">
   				<span class="close cursor" onclick="closeModal()">&times;</span>
-  					<div class="modal-content">
+  					<div class="modal-content-port">
   
   						@php echo $htmlslides; @endphp
 
@@ -99,15 +92,10 @@
 
 		</div>
 
-
 	</section>
 
 </div>
 <style>
-
-.column {
-  padding: 0 8px;
-}
 
 .row:after {
   content: "";
@@ -125,8 +113,8 @@
 .modal {
   display: none;
   position: fixed;
-  z-index: 1;
-  padding-top: 100px;
+  z-index: 99999999999;
+  padding-top: 50px;
   left: 0;
   top: 0;
   width: 100%;
@@ -136,12 +124,13 @@
 }
 
 /* Modal Content */
-.modal-content {
+.modal-content-port {
   position: relative;
   background-color: #fefefe;
   margin: auto;
   padding: 0;
   width: 90%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   max-width: 1200px;
 }
 
@@ -153,11 +142,12 @@
   right: 25px;
   font-size: 35px;
   font-weight: bold;
+  opacity: 1;
 }
 
 .close:hover,
 .close:focus {
-  color: #999;
+  color: #999 !important;
   text-decoration: none;
   cursor: pointer;
 }
@@ -165,6 +155,9 @@
 /* Hide the slides by default */
 .mySlides {
   display: none;
+}
+.mySlides img{
+	max-height: 460px;
 }
 
 /* Next & previous buttons */
@@ -176,7 +169,7 @@
   width: auto;
   padding: 16px;
   margin-top: -50px;
-  color: white;
+  color: white !important;
   font-weight: bold;
   font-size: 20px;
   transition: 0.6s ease;
@@ -214,11 +207,20 @@
   color: white;
 }
 
-img.demo {
-  opacity: 0.6;
+p#caption{
+	margin-top: 1rem;
 }
 
-.active,
+.modal img, .row img {
+    margin-bottom: -6px;
+}
+
+img.demo {
+  opacity: 0.6;
+  width: 100%;
+}
+
+img.active,
 .demo:hover {
   opacity: 1;
 }
@@ -229,6 +231,10 @@ img.hover-shadow {
 
 .hover-shadow:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.cursor {
+    cursor: pointer;
 }
 
 </style>
