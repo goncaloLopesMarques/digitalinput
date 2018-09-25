@@ -76,7 +76,7 @@
 
 
 
-h3.section-title{
+h1.section-title, h3.section-title{
 
   z-index:1;
   font-family: "Montserrat";
@@ -897,7 +897,7 @@ background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
 
 /* MAIN FIX FOR HEADER */
 main{
-	margin: 38px 0 0;
+	padding: 38px 0 0;
 }
 
 
@@ -913,7 +913,7 @@ main{
 
 /* MAIN FIX FOR HEADER */
 main{
-	margin: 64px 0 0;
+	padding: 64px 0 0;
 }
 
 

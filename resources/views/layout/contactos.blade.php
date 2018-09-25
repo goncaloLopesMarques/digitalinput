@@ -1,5 +1,13 @@
 <div class="container">
- <h1>Contactos</h1>
+
+
+
+<h1 class="section-title h1-responsive ml-5 mt-5 pl-5 pt-5">
+      <b>C</b>ontactos
+</h1>
+
+
+
  <h2>Em que podemos ajudar</h2>
 
  <h3>Qual é o seu objetivo?</h3>
