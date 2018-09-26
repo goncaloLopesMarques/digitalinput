@@ -49,11 +49,11 @@
 		    	$it = 1;
 				foreach($imagens as $pic)
 				{
-						preg_match('/\\\([a-zA-Z0-9]+)\.png$/', $pic, $target);						
+						preg_match('/\\\([a-zA-Z0-9_]+)\.png$/', $pic, $target);						
 						$htmlpic .= "<div class='col-md-3'>
 									   <div class='project-image'>
 									   		
-										 	<img src='". Voyager::image($pic) ."' onclick=\"openModal();currentSlide(".$it.")\" alt='".$target[1]."'>
+										 	<img src='". Voyager::image($pic) ."' onclick=\"openModal();currentSlide(".$it.")\" class='margin-bb cursor' alt='".$target[1]."'>
 											
 									   </div>
 									</div>";
@@ -62,7 +62,7 @@
   											<img src='". Voyager::image($pic) ."' style='width:100%'>
   									</div>";
   						$htmlthumb .= "<div class='column'>
-											<img class='demo cursor' src='". Voyager::image($pic) ."' onclick=\"currentSlide(".$it.")\" alt='".$target[1]."'>
+											<img class='demo cursor margin-bb' src='". Voyager::image($pic) ."' onclick=\"currentSlide(".$it.")\" alt='".$target[1]."'>
 								  	    </div>";
 					$it++;
 				}
@@ -211,8 +211,8 @@ p#caption{
 	margin-top: 1rem;
 }
 
-.modal img, .row img {
-    margin-bottom: -6px;
+.margin-bb {
+    margin-bottom: 5%;
 }
 
 img.demo {
