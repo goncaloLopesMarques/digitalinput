@@ -51,7 +51,7 @@
 		    	$it = 1;
 				foreach($imagens as $pic)
 				{
-					preg_match('/\\\([a-zA-Z0-9_]+)\.png$/', $pic, $target);						
+					preg_match('/\\\([a-zA-Z0-9_&]+)\.png$/', $pic, $target);						
 					$htmlpic .= "<div class='my-col-xxl-3 col-lg-4 col-md-6 col-xs-12 p-0 blogGrid'>
 								   <div class='project-image flex-center waves-effect waves-light view overlay zoom'>
 									   		
