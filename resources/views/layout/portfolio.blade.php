@@ -27,13 +27,17 @@
 					foreach($project->portfolio_categories as $cat){
 						$cat_names .= str_replace(' ', '', $cat->name)." ";
 					}
-					 echo "<div class='".$cat_names."'>
-					<a href='/portfolio/".$project->slug."'><img src='".Voyager::image( $project->thumbnail )."'' alt='image'></a>
-
-					                                       
-															
-
-				</div>"; ?>
+					 echo "<div class='".$cat_names." view overlay zoom'>
+							<a href='/portfolio/".$project->slug."'>
+								<img src='".Voyager::image( $project->thumbnail )."'' alt='image'>
+								<div class='mask rgba-black-stronger flex-center'>
+									<p class='white-text text-center'> 
+										".$project->name."
+									</p>
+								</div>
+							</a>															
+						</div>"; 
+					?>
 
 				@endforeach
 								

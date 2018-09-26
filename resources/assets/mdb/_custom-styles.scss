@@ -772,10 +772,6 @@ background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
 /* PORTFOLIO  */
 
 
-.portfolio-headers{
-	margin: 4rem 0 0;
-}
-
 .parallax {
     height: 100%;
     background-attachment: fixed;
@@ -886,7 +882,13 @@ background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
 	max-width: 100%;
 }
 .project-body{
-	padding: 3em 0;
+	padding: 3em 0 0;
+}
+.project-body .blogGrid{
+	height: 100%;
+}
+.project-title a{
+	color: #000;
 }
 
 
