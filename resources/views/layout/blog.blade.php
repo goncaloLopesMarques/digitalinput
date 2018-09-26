@@ -18,7 +18,14 @@
 
 <div class="row">
    <div class = "col-md-6 blogHeaders">
-      <h1>Blog</h1>
+
+
+
+    <h3 class="section-title h1-responsive ml-5 mt-5 pl-5 pt-5">
+      <b>B</b>log
+    </h3>
+
+
    </div>
     <div class="col-md-6 blogHeaders">
     <div class="row">
@@ -34,8 +41,10 @@
     </div>
 </div>
 </div>
+
 <div class="row" id="posts">
-   </div>
+</div>
+
 <style>
 
   .darken-overlay{

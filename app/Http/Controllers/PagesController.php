@@ -9,6 +9,7 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
 use App\Post;
 use App\Projeto;
+use App\Cliente;
 
 
 class PagesController extends BaseController
@@ -19,7 +20,9 @@ class PagesController extends BaseController
 
         $classes = "home";
         $recentwork = $this->mostRecentProjects();
-        return view('pages.home', compact('classes', 'recentwork'));
+        $clientes = $this->getClientes();
+
+        return view('pages.home', compact('classes', 'recentwork', 'clientes'));
     }
 
 
@@ -37,6 +40,22 @@ class PagesController extends BaseController
         // ACABA AQUI A ORDENAÇÂO
         
         return $mostRecentPosts;
+    }
+
+    public function getClientes(){
+
+        $clients = json_decode(Cliente::all(), true);
+        $arrayAux = array();
+        foreach ($clients as $key => $row)
+        {
+          $arrayAux[$key] = $row['created_at'];
+        }
+        array_multisort($arrayAux, SORT_DESC, $clients);
+        //ISTO È PARA IR BUSCAR SÒ OS 3 PRIMEIROS, aqui podemos escolher quantos projetos queremos mostrar
+        //$clients = array_slice($clients, 0, 9);
+        // ACABA AQUI A ORDENAÇÂO
+        
+        return $clients;
     }
 
 

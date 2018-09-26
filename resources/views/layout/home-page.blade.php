@@ -46,11 +46,11 @@
    </section>
 
    <!-- SERVIÇOS -->
-   <section class="mx-auto px-0">
+   <section class="mx-auto px-0 pt-4">
 
      
       
-         <div class="row">
+         <div class="row m-0">
 
          
           <!--Panel-->
@@ -209,7 +209,7 @@
           <div class="servicos-home col-lg-12 col-md-6 col-xs-12">
             <div class="my card col-md-12">
               <div class="my card-body">
-                  <h3 class="card-title white-text">Simulador de Custos</h3>
+                  <h3 class="card-title white-text" style="background: linear-gradient(40deg,#212121,#8bc34a);">Simulador de Custos</h3>
                   <p class="card-text">Não conhece os preços do Marketing Digital? Selecione os serviços que mais se adatam à realidade do seu negócio e tenha uma ideia de quanto poderá investir.</p>
               </div>
               <div class="card-footer">
@@ -221,108 +221,119 @@
           <!--/.Panel-->
 
        </div>
+     </section>
   
 
    </section>
 
-   <section>
-{{-- <div class="row" id="posts">
-   </div> --}}
-
-
-<h3 class="h1-responsive ml-5 mt-5 pl-5 pt-5">
-               <p class="font-weight-bold" style="text-decoration: overline;text-decoration-color: #212529;">Trabalhos Recentes</p>
-            </h3>
-
-
-<!--Carousel Wrapper-->
-<div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
-
-    <!--Controls-->
-{{--     <div class="controls-top">
-        <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
-        <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
-    </div> --}}
-
-    <!--Controls-->
-   <a class="carousel-control-prev" href="#multi-item-example" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-   </a>
-   <a class="carousel-control-next" href="#multi-item-example" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-   </a>
-
-
-    <!--/.Controls-->
-
-    <!--Indicators-->
-    <ol class="carousel-indicators">
-        <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
-        <li data-target="#multi-item-example" data-slide-to="1"></li>
-        <li data-target="#multi-item-example" data-slide-to="2"></li>
-    </ol>
-    <!--/.Indicators-->
-
-    <!--Slides-->
-    <div class="my carousel-inner" role="listbox" style="">
-
-        <!--First slide-->
-        <div class="container-fluid slide-container-homepage">
-           <div class="my carousel-item active row" id="posts-1">
-
-
-           </div>
-        </div>
-        <!--/.First slide-->
-
-        <!--Second slide-->
-        <div class="container-fluid slide-container-homepage">
-           <div class="my carousel-item row" id="posts-2">
-               
-
-           </div>
-        </div>
-        <!--/.Second slide-->
-
-        <!--Third slide-->
-        <div class="container-fluid slide-container-homepage">
-           <div class="my carousel-item row" id="posts-3">
-
-
-           </div>
-        </div>
-        <!--/.Third slide-->
-
-    </div>
-    <!--/.Slides-->
-
-    <!--Controls-->
-   <a class="my carousel-control-prev" href="#multi-item-example" role="button" data-slide="prev">
-                    <span class="my carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-   </a>
-
-   <a class="my carousel-control-next" href="#multi-item-example" role="button" data-slide="next">
-                    <span class="my carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-   </a>
 
 
 
-</div>
-<!--/.Carousel Wrapper-->
+
+<section class="pt-5">
 
 
-   <div class="flex-center">
-      <a class="btn btn-elegant" href="/portfolio">Ver Portfólio</a>
-   </div>
+
+
+  <h3 class="section-title h1-responsive ml-5 mt-5 pl-5 pt-5">
+      <b>C</b>lientes
+  </h3>
+
+
+  <!--Carousel Wrapper-->
+  <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+
+
+      <!--Controls-->
+     <a class="carousel-control-prev" href="#multi-item-example" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+     </a>
+     <a class="carousel-control-next" href="#multi-item-example" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+     </a>
+      <!--/.Controls-->
+
+      <!--Indicators-->
+      <ol class="carousel-indicators">
+          <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+          <li data-target="#multi-item-example" data-slide-to="1"></li>
+          <li data-target="#multi-item-example" data-slide-to="2"></li>
+      </ol>
+      <!--/.Indicators-->
+
+      <!--Slides-->
+      <div class="my carousel-inner" role="listbox" style="">
+
+
+          <!--First slide-->
+          <div class="container-fluid slide-container-homepage">
+             <div class="my carousel-item active row" id="posts-1"></div>
+          </div>
+
+
+
+          <!--Second slide-->
+          <div class="container-fluid slide-container-homepage">
+             <div class="my carousel-item row" id="posts-2"></div>
+          </div>
+
+
+
+          <!--Third slide-->
+          <div class="container-fluid slide-container-homepage">
+             <div class="my carousel-item row" id="posts-3"></div>
+          </div>
+
+
+
+      </div>
+      <!--/.Slides-->
+
+      <!--Controls-->
+     <a class="my carousel-control-prev" href="#multi-item-example" role="button" data-slide="prev">
+                      <span class="my carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+     </a>
+
+     <a class="my carousel-control-next" href="#multi-item-example" role="button" data-slide="next">
+                      <span class="my carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+     </a>
+
+
+
+  </div>
+  <!--/.Carousel Wrapper-->
+
+
+     <div class="flex-center mt-5">
+        <a class="btn btn-elegant" href="/portfolio">Ver Portfólio</a>
+     </div>
 
 
 
 
       
+</section>
+
+
+
+
+
+
+<section class="pt-5">
+
+  <h3 class="section-title h1-responsive ml-5 mt-5 pl-5 pt-5">
+    <b>T</b>rabalhos <b>R</b>ecentes
+  </h3>
+
+
+  <div class="row" id="trabalhos-recentes"></div>
+
+
 </section>
 
 
