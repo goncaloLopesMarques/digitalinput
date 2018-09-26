@@ -111,7 +111,7 @@ defer(function () {
 
         //ciclo for para preencher o slider
      for(var i=0 ; i< recentArray.length ; i++) { 
-       $('<div class="carousel-item"><img class="d-block w-100" src="'+recentArray[i]["image"]+'"><div class="carousel-caption d-none d-md-block"><a href="/blog/'+recentArray[i]["slug"]+'">'+recentArray[i]["title"]+'</a><p>'+recentArray[i]["excerpt"]+'</p></div></div>').appendTo('.carousel-inner');
+       $('<div class="carousel-item"><img class="d-block w-100" src="'+recentArray[i]["image"]+'"><div class="carousel-caption d-none d-md-block"><a href="/blog/'+recentArray[i]["slug"]+'">'+recentArray[i]["title"]+'</a><p>'+recentArray[i]["description"]+'</p></div></div>').appendTo('.carousel-inner');
        $('<li data-target="#carousel-example-generic" data-slide-to="'+i+'"></li>').appendTo('.carousel-indicators')
      }
      $('.carousel-item').first().addClass('active');
