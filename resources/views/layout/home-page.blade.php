@@ -310,7 +310,7 @@
 
 
      <div class="flex-center mt-5">
-        <a class="btn btn-elegant" href="/portfolio">Ver Portfólio</a>
+        <a class="btn btn-elegant" href="/portfolio">Ver Clientes</a>
      </div>
 
 
@@ -332,6 +332,10 @@
 
 
   <div class="row" id="trabalhos-recentes"></div>
+
+  <div class="flex-center mt-5">
+        <a class="btn btn-elegant" href="/portfolio">Ver Portfólio</a>
+     </div>
 
 
 </section>

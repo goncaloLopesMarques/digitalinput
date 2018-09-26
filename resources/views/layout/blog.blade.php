@@ -106,12 +106,12 @@ defer(function () {
         //ciclo for para preencher a grid com posts  background:linear-gradient( rgba(0, 0, 0,96), rgba(0, 0, 0,0.6 ) ),url('+dataArray["data"][i]["image"]+');
         for(var i=0 ; i< dataArray["data"].length ; i++){
             
-                $("#posts").append('<div class="my-col-xxl-3 col-lg-4 col-md-6 col-xs-12 p-0 blogGrid">   <div class="flex-center waves-effect waves-light view overlay zoom">   <img src="'+dataArray["data"][i]["image"]+'" alt="zoom"><div class="flex-center titulo-blog-container">   <p class="p-1 text-center my-text-shadow-strong">'+dataArray["data"][i]["title"]+'</p>   </div>   <div class="my-mask-over mask rgba-black-stronger flex-center waves-effect waves-light"><p class="white-text text-center">'+dataArray["data"][i]["excerpt"]+'</p></div></div></div>');
+                $("#posts").append('<div class="my-col-xxl-3 col-lg-4 col-md-6 col-xs-12 p-0 blogGrid">   <div class="flex-center waves-effect waves-light view overlay zoom">   <img src="'+dataArray["data"][i]["image"]+'" alt="zoom"><div class="flex-center titulo-blog-container">   <p class="p-1 text-center my-text-shadow-strong">'+dataArray["data"][i]["title"]+'</p>   </div>   <div class="my-mask-over mask rgba-black-stronger flex-center waves-effect waves-light"><p class="white-text text-center">'+dataArray["data"][i]["description"]+'</p></div></div></div>');
         }
 
         //ciclo for para preencher o slider
      for(var i=0 ; i< recentArray.length ; i++) { 
-       $('<div class="carousel-item"><img class="d-block w-100" src="'+recentArray[i]["image"]+'"><div class="carousel-caption d-none d-md-block"><a href="/blog/'+recentArray[i]["slug"]+'">'+recentArray[i]["title"]+'</a><p>'+recentArray[i]["excerpt"]+'</p></div></div>').appendTo('.carousel-inner');
+       $('<div class="carousel-item"><img class="d-block w-100" src="'+recentArray[i]["image"]+'"><div class="carousel-caption d-none d-md-block"><a href="/blog/'+recentArray[i]["slug"]+'">'+recentArray[i]["title"]+'</a><p>'+recentArray[i]["description"]+'</p></div></div>').appendTo('.carousel-inner');
        $('<li data-target="#carousel-example-generic" data-slide-to="'+i+'"></li>').appendTo('.carousel-indicators')
      }
      $('.carousel-item').first().addClass('active');

@@ -92,10 +92,12 @@
                     }
 
                 }
+
+                imagem clientes: style="height:calc(100% - 35px); margin-top:-35px;"
                 */
              
 
-                $("#posts-" + x).append('<div class="col-lg-3 col-sm-6 p-0 blogGrid"> <div class="flex-center waves-effect waves-light view overlay zoom">  <img style="height:calc(100% - 35px); margin-top:-35px;" src="storage/'+clientes[i]["image"]+'" alt="'+clientes[i]["name"]+'"><div class="titulo-blog-container">   <p class="p-1 text-center my-text-shadow-strong">'+clientes[i]["name"]+'</p>   </div>   <div class="my-vertical-align my-mask-over mask rgba-black-stronger waves-effect waves-light">'+clientes[i]["description"].slice(0, 250)+'...</div></div></div>');
+                $("#posts-" + x).append('<div class="col-lg-3 col-sm-6 p-0 blogGrid"> <div class="flex-center waves-effect waves-light view overlay zoom">  <img style="max-width:50%;" src="storage/'+clientes[i]["image"]+'" alt="'+clientes[i]["name"]+'"><div class="titulo-blog-container">   <p class="p-1 text-center my-text-shadow-strong">'+clientes[i]["name"]+'</p>   </div>   <div class="my-vertical-align my-mask-over mask rgba-black-stronger waves-effect waves-light">'+clientes[i]["description"].slice(0, 250)+'...</div></div></div>');
             } 
 
 
@@ -103,7 +105,7 @@
             // apresentação trabalhios recentes
             for(var i=0 ; i< trabalhosRecentes.length ; i++){
             
-                $("#trabalhos-recentes").append('<div class="my-col-xxl-3 col-lg-4 col-md-6 col-xs-12 p-0 blogGrid">   <div class="flex-center waves-effect waves-light view overlay zoom">   <img src="'+trabalhosRecentes[i]["image"]+'" alt="zoom"><div class="flex-center titulo-blog-container">   <p class="p-1 text-center my-text-shadow-strong">'+trabalhosRecentes[i]["title"]+'</p>   </div>   <div class="my-mask-over mask rgba-black-stronger flex-center waves-effect waves-light"><p class="white-text text-center">'+trabalhosRecentes[i]["description"]+'</p></div></div></div>');
+                $("#trabalhos-recentes").append('<div class="my-col-xxl-3 col-lg-4 col-md-6 col-xs-12 p-0 blogGrid">   <div class="flex-center waves-effect waves-light view overlay zoom">   <img src="storage/'+trabalhosRecentes[i]["thumbnail"]+'" alt="zoom"><div class="flex-center titulo-blog-container">   <p class="p-1 text-center my-text-shadow-strong">'+trabalhosRecentes[i]["title"]+'</p>   </div>   <div class="my-mask-over mask rgba-black-stronger flex-center waves-effect waves-light"><p class="white-text text-center">'+trabalhosRecentes[i]["description"]+'</p></div></div></div>');
             }      
        
          
