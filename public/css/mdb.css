@@ -11211,10 +11211,6 @@ div.blogGrid:hover div.titulo-blog-container {
 
   /* PORTFOLIO  */
 
-  .portfolio-headers {
-    margin: 4rem 0 0;
-  }
-
   .parallax {
     height: 100%;
     background-attachment: fixed;
@@ -11335,7 +11331,15 @@ div.blogGrid:hover div.titulo-blog-container {
 }
 
 .project-body {
-  padding: 3em 0;
+  padding: 3em 0 0;
+}
+
+.project-body .blogGrid {
+  height: 100%;
+}
+
+.project-title a {
+  color: #000;
 }
 
 /* MAIN FIX FOR HEADER */

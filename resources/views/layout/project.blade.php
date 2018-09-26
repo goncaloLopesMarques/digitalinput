@@ -6,7 +6,7 @@
 
 		<div class="project-title">
 
-			<h1>{{ $project->name }}</h1>
+			<a href="http://{{ $project->name }}" target="_blank"><h1 class="">{{ $project->name }}</h1></a>
 
 		</div>
 
@@ -38,6 +38,8 @@
 
 	<section class="project-body">
 
+		<h2 class="text-center margin-bb">Galeria de Imagens</h2>
+
 		<div class="row" id="gallery-project">
 @php
 			$imagens = json_decode($project->images);					
@@ -49,14 +51,20 @@
 		    	$it = 1;
 				foreach($imagens as $pic)
 				{
-						preg_match('/\\\([a-zA-Z0-9_]+)\.png$/', $pic, $target);						
-						$htmlpic .= "<div class='col-md-3'>
-									   <div class='project-image'>
+					preg_match('/\\\([a-zA-Z0-9_]+)\.png$/', $pic, $target);						
+					$htmlpic .= "<div class='my-col-xxl-3 col-lg-4 col-md-6 col-xs-12 p-0 blogGrid'>
+								   <div class='project-image flex-center waves-effect waves-light view overlay zoom'>
 									   		
-										 	<img src='". Voyager::image($pic) ."' onclick=\"openModal();currentSlide(".$it.")\" class='margin-bb cursor' alt='".$target[1]."'>
+									 	<img src='". Voyager::image($pic) ."'  class='margin-bb cursor' alt='".$target[1]."'>										 
+
+									 	<div class='mask rgba-black-stronger flex-center' onclick=\"openModal();currentSlide(".$it.")\">
+									 		<p class='white-text text-center'> 
+										 			".$target[1]."
+									 		</p>
+									 	</div>
 											
-									   </div>
-									</div>";
+								   </div>
+								</div>";
 						$htmlslides .= "<div class='mySlides'>
   										<div class='numbertext'>".$it." / ".$total."</div>
   											<img src='". Voyager::image($pic) ."' style='width:100%'>
@@ -169,7 +177,8 @@
   width: auto;
   padding: 16px;
   margin-top: -50px;
-  color: white !important;
+  color: #000 !important;
+  background-color: rgba(0, 0, 0, 0.4);
   font-weight: bold;
   font-size: 20px;
   transition: 0.6s ease;
@@ -188,6 +197,7 @@
 .prev:hover,
 .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
+  color: #fff !important;
 }
 
 /* Number text (1/3 etc) */
