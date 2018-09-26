@@ -61,7 +61,7 @@
            var trabalhosRecentes = <?php echo json_encode($recentwork); ?>;
 
            var clientes = <?php echo json_encode($clientes); ?>;
-           //console.log(recentArray);
+           console.log(trabalhosRecentes);
 
 
 
@@ -95,7 +95,7 @@
                 */
              
 
-                $("#posts-" + x).append('<div class="col-lg-3 col-sm-6 p-0 blogGrid"> <div class="flex-center waves-effect waves-light view overlay zoom" style="padding: 35px;">  <img style="height:calc(100% - 35px); margin-top:-35px;" src="storage/'+clientes[i]["image"]+'" alt="'+clientes[i]["name"]+'"><div class="titulo-blog-container">   <p class="p-1 text-center my-text-shadow-strong">'+clientes[i]["name"]+'</p>   </div>   <div class="my-vertical-align my-mask-over mask rgba-black-stronger waves-effect waves-light">'+clientes[i]["description"].slice(0, 250)+'...</div></div></div>');
+                $("#posts-" + x).append('<div class="col-lg-3 col-sm-6 p-0 blogGrid"> <div class="flex-center waves-effect waves-light view overlay zoom">  <img style="height:calc(100% - 35px); margin-top:-35px;" src="storage/'+clientes[i]["image"]+'" alt="'+clientes[i]["name"]+'"><div class="titulo-blog-container">   <p class="p-1 text-center my-text-shadow-strong">'+clientes[i]["name"]+'</p>   </div>   <div class="my-vertical-align my-mask-over mask rgba-black-stronger waves-effect waves-light">'+clientes[i]["description"].slice(0, 250)+'...</div></div></div>');
             } 
 
 
