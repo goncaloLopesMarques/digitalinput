@@ -29,7 +29,7 @@ route::get('/contactos', 'PagesController@contactos');
 //ROTAS PARA FAZER O DISPLAY DOS POSTS
 Route::get('/blog/search', 'BlogController@search');
 Route::get('/blog', 'BlogController@show');
-Route::get('blog/{slug}', 'BlogController@post');
+Route::get('/blog/{slug}', 'BlogController@post');
 
 //--------FIM DAS ROTAS DOS POSTS
 route::get('/orcamento', 'PagesController@orcamento');

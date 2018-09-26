@@ -4,10 +4,10 @@
 
 @section('head')
 
-    <title></title>
-    <meta name="description" content="">
+    <title>{{ $post->title }}</title>
+    <meta name="description" content="{{ $post->meta_description }}">
 
-    <meta name="keywords" content="">
+    <meta name="keywords" content="{{ $post->meta_keywords }}">
     @include('layout.head') 
     
 @endsection

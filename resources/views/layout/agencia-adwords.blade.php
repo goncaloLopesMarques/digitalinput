@@ -4,7 +4,7 @@
  <h2>publicidade na internet</h2>
  <h2>como anunciar no google</h2>
  <h2>google adwords preço</h2>
- <h2>divulgar site/h2>
- <h2>agência adwords/h2>
+ <h2>divulgar site</h2>
+ <h2>agência adwords</h2>
 
 </div>

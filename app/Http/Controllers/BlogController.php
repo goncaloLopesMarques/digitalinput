@@ -25,11 +25,13 @@ class BlogController extends Controller
     return view('pages.blog',compact('posts','mostRecentPosts', 'classes'));
   }
   public function post($slug){
+    $classes = "single-post";
     $post = Post::where('slug', '=', $slug)->firstOrFail();
     $data =Carbon::parse($post->created_at)->format('d/m/Y');
-    $category = Category::Where('id','=',$post->category_id)->firstOrFail();
-    $avatar = User::Where('name','=',$post->author)->firstOrFail();
-    return view('layout.post', compact('post','category','avatar','data'));
+    $category = Category::where('id','=',$post->category_id)->firstOrFail();
+    $avatar = User::select('avatar')
+                ->where('name','=',$post->author->name)->firstOrFail();
+    return view('pages.post', compact('post','category','data', 'avatar','classes'));
   }
 
   public function show(){
