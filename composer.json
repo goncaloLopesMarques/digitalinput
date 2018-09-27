@@ -15,7 +15,8 @@
         "laravel/scout": "^5.0",
         "laravel/tinker": "^1.0",
         "tcg/voyager": "^1.1",
-        "orangehill/iseed": "dev-master"
+        "orangehill/iseed": "dev-master",
+        "cornford/googlmapper": "2.*"
     },
     "require-dev": {
         "filp/whoops": "^2.0",

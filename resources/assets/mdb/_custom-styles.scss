@@ -701,85 +701,14 @@ background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
 
 /* CSS DO BRUNO */
 
-/* Header Section */
-
 body.my-background{
 	background: linear-gradient(to top, #2d4e77, #fff) !important;
 }
 
-@media screen and (min-width: 992px){
+/* Contactos Page */
 
-.logo{
-	text-align: center;
-	margin: 0 auto;
-}
-
-.home-slider{
-	padding-top: 25vh;
-	padding-bottom: 60vh;
-}
-
-.darkned{
-	background-color: rgba(5,5,5,.7);
-}
-
-.navbar{
-	webkit-box-shadow: none;
-	/*box-shadow: none;*/
-}
-
-.text-blue{
-	color: #0069aa !important;
-}
-
-// .home .navbar-nav .nav-link,
-// .home .navbar-light .navbar-nav .active > .nav-link{
-// 	color: #8c9c22;
-// }
-
-/*.home .navbar.navbar-light .navbar-nav .nav-item.active > .nav-link:hover,*/
-/*.home .navbar .navbar-nav .nav-item .nav-link:hover,*/
-// .home .navbar-light .navbar-nav .show > .nav-link,
-// .home .navbar.navbar-light .navbar-toggler,
-/*.home .navbar-light .navbar-nav .nav-link:hover, */
-// .home .navbar-light .navbar-nav .nav-link:focus {
-//     color: #fff;
-// }
-
-.navbar .dropdown-menu a{
-	font-size: 0.8rem;
-}
-
-.dropdown-menu {
-	min-width: 20rem;
-	background-color: rgba(255,255,255,.9);
-}
-
-.dropdown-menu li.nav-item a.nav-link{
-	color: #000;
-	font-weight: bold;
-}
-/*
-.navbar .navbar-nav .dropdown-menu li.nav-item a.nav-link:hover{
-	color: #8c9c22;
-}
-*/
-.home .main-title{
-	margin-left: -40em;
-	transition: margin 3s ease;
-	-webkit-transition: margin 3s ease;
-	transition-delay: .5s;
-}
-
-/* PORTFOLIO  */
-
-
-.parallax {
-    height: 100%;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-}
-
+.contactos-header{
+	padding: 0 2rem;
 }
 
 #portfolio-background{
@@ -837,8 +766,6 @@ body.my-background{
 .portfolio a:focus {
   outline: none;
 }
-
-
 
 
 /* galeria filtrada projetos */
@@ -900,11 +827,6 @@ body.my-background{
 }
 
 
-
-
-
-
-
 /* MAIN FIX FOR HEADER */
 main{
 	padding: 38px 0 0;
@@ -919,9 +841,51 @@ main{
 	background-position: center center;
 }
 
+
+/* Header Section */
+
 @media screen and (min-width: 992px){
 
+.logo{
+	text-align: center;
+	margin: 0 auto;
+}
+
+.home-slider{
+	padding-top: 25vh;
+	padding-bottom: 60vh;
+}
+
+.darkned{
+	background-color: rgba(5,5,5,.7);
+}
+
+.text-blue{
+	color: #0069aa !important;
+}
+
+.navbar .dropdown-menu a{
+	font-size: 0.8rem;
+}
+
+.dropdown-menu {
+	min-width: 20rem;
+	background-color: rgba(255,255,255,.9);
+}
+
+.dropdown-menu li.nav-item a.nav-link{
+	color: #000;
+	font-weight: bold;
+}
+
+.home .main-title{
+	margin-left: -20em;
+	transition: margin 3s ease;
+	-webkit-transition: margin 3s ease;
+}
+
 /* MAIN FIX FOR HEADER */
+
 main{
 	padding: 64px 0 0;
 }
@@ -945,20 +909,6 @@ main{
 	color: #0069aa !important;
 }
 
-// .home .navbar-nav .nav-link,
-// .home .navbar-light .navbar-nav .active > .nav-link{
-// 	color: #8c9c22;
-// }
-
-/*.home .navbar.navbar-light .navbar-nav .nav-item.active > .nav-link:hover,*/
-/*.home .navbar .navbar-nav .nav-item .nav-link:hover,*/
-// .home .navbar-light .navbar-nav .show > .nav-link,
-// .home .navbar.navbar-light .navbar-toggler,
-/*.home .navbar-light .navbar-nav .nav-link:hover, */
-// .home .navbar-light .navbar-nav .nav-link:focus {
-//     color: #fff;
-// }
-
 .navbar .dropdown-menu a{
 	font-size: 0.8rem;
 }
@@ -973,14 +923,9 @@ main{
 	font-weight: bold;
 }
 
-.home .main-title{
-	margin-left: -40em;
-	transition: margin 3s ease;
-	-webkit-transition: margin 3s ease;
-	transition-delay: .5s;
-}
 
 /* PORTFOLIO  */
+
 .parallax {
     height: 100%;
     background-attachment: fixed;
@@ -991,7 +936,24 @@ main{
   max-width: 373px;
 }
 
-	/* PROJECTS */
+
+.parallax {
+    height: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+}
+
+@media screen and (min-width: 1200px){
+
+	.home .main-title{
+		font-size: 280%;
+	}
+
 
 
 }
+
+
+

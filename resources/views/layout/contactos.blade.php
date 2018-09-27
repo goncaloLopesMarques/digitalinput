@@ -1,4 +1,4 @@
-<div class="container">
+<section class="contactos-header">
 
 
 
@@ -13,12 +13,12 @@
  <h3>Qual é o seu objetivo?</h3>
  <p>"Tendo por base os seus objetivos, analisamos dados e tendências no mercado onde atua. Este é o ponto de partida para definirmos uma estratégia, uma equipa e planearemos a sua execução."</p>
  
-</div>
+</section> 
 
 
 
 <!-- Section: Contact v.3 -->
-<section class="contact-section my-5">
+<section class="contact-section mt-5">
 
   <!-- Form with header -->
   <div class="card">
@@ -110,16 +110,16 @@
 
         <div class="card-body contact text-center h-100 white-text">
 
-          <h3 class="my-4 pb-2">Contactos</h3>
+          <h2 class="my-4 pb-2">Contactos</h2>
           <ul class="text-lg-left list-unstyled ml-4">
             <li>
-              <p><i class="fa fa-map-marker pr-2"></i>New York, 94126, USA</p>
+              <p><i class="fa fa-map-marker pr-2"></i>Rua das Laranjeiras<br/>  lote 40, Loja B<br/>  Urbanização do Vale Verde, Marrazes<br/>  2415-773 Leiria</p>
             </li>
             <li>
-              <p><i class="fa fa-phone pr-2"></i>+ 01 234 567 89</p>
+              <p><a href="tel:+351919165229" class="white"><i class="fa fa-phone pr-2"></i>+351 919165229</a></p>
             </li>
             <li>
-              <p><i class="fa fa-envelope pr-2"></i>info@digitalinput.pt</p>
+              <p><a href="mailto:info@digitalinput.pt" class="white"><i class="fa fa-envelope pr-2"></i>info@digitalinput.pt</a></p>
             </li>
           </ul>
           <hr class="hr-light my-4">
@@ -154,3 +154,10 @@
 
 </section>
 <!-- Section: Contact v.3 -->
+<section class="map-section">
+
+<div style="width: 100%; height: 500px;">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5379.6637686768345!2d-8.796949276580637!3d39.76645380080984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd227300e6713c99%3A0x9b89ea78566f96a4!2sDigitalInput+-+Marketing+Digital!5e1!3m2!1spt-PT!2spt!4v1538061865604" width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+
+</section>
