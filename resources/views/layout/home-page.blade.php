@@ -331,7 +331,9 @@
   </h3>
 
 
-  <div class="row" id="trabalhos-recentes"></div>
+  <div class="row m-0" id="trabalhos-recentes">
+    
+  </div>
 
   <div class="flex-center mt-5">
         <a class="btn btn-elegant" href="/portfolio">Ver Portfólio</a>
