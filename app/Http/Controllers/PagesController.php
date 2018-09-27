@@ -11,6 +11,8 @@ use App\Post;
 use App\Projeto;
 use App\Cliente;
 
+use Mapper;
+
 
 class PagesController extends BaseController
 {
@@ -116,7 +118,7 @@ class PagesController extends BaseController
         return view('pages.publicidade-facebook', compact('classes'));
     }
     function agenciaAdwords(){
-        $classes = "googleads my-background";
+        $classes = "campanhas my-background";
         return view('pages.agencia-adwords', compact('classes'));
     }
     function manutencaoWebsites(){
@@ -137,7 +139,8 @@ class PagesController extends BaseController
     }
 
     function contactos(){
-        $classes = "contactos";
+        $classes = "contactos my-background";
+     //   Mapper::map(39.767193, -8.794251);
         return view('pages.contactos', compact('classes'));
     }
     

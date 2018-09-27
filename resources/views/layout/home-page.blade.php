@@ -7,7 +7,7 @@
 
        
          <div class="col-md-12 h-25 my-vertical-align">
-            <h1 class="h1-responsive ml-5 mt-5 pl-5 pt-5">
+            <h1 class="h1-responsive mt-5 pl-5 pt-5 main-title">
                <strong>Agência Marketing Digital em Leiria</strong>
             </h1>
          </div>
