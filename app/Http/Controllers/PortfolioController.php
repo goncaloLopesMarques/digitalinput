@@ -9,7 +9,7 @@ use App\Projeto;
 class PortfolioController extends Controller
 {
     function portfolio(){
-        $classes = "portfolio";
+        $classes = "portfolio my-background";
         $categories = Portfolio_category::get()->all();
         $projetos = Projeto::get()->all();
         return view('pages.portfolio', compact('classes', 'categories', 'projetos'));

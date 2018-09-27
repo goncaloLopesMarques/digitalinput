@@ -1,3 +1,4 @@
+<section class="mt-4">
 <div class="container">
  <h1>Criar Loja Online</h1>
  <h2>Site de Vendas</h2>
@@ -7,3 +8,4 @@
  <h2>vendas online</h2>
  <h2>desenvolvimento de sites e commerce</h2>
 </div>
+</section>

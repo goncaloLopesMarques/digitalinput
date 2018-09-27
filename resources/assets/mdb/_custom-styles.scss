@@ -703,7 +703,9 @@ background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
 
 /* Header Section */
 
-
+body.my-background{
+	background: linear-gradient(to top, #2d4e77, #fff) !important;
+}
 
 @media screen and (min-width: 992px){
 
@@ -792,6 +794,7 @@ background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
 
 .portfolio-content{
   margin-top: -10%;
+  margin-bottom: 5rem;
 }
 
 .portfolio-content .row{
@@ -825,6 +828,7 @@ background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
 .portfolioContainer{
   border: 1px solid #eee;
   border-radius: 3px;
+  background: rgba(0, 0, 0, 0) linear-gradient(to top, rgb(255, 255, 255), #2d4e77) repeat scroll 0% 0% !important;
 }
 .portfolio .portfolioContainer img {
   margin: 5px;
