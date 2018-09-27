@@ -11151,6 +11151,11 @@ div.blogGrid:hover div.titulo-blog-container {
 
 /* Header Section */
 
+body.my-background {
+  background: -webkit-gradient(linear, left bottom, left top, from(#2d4e77), to(#fff)) !important;
+  background: linear-gradient(to top, #2d4e77, #fff) !important;
+}
+
 @media screen and (min-width: 992px) {
   .logo {
     text-align: center;
@@ -11230,6 +11235,7 @@ div.blogGrid:hover div.titulo-blog-container {
 
 .portfolio-content {
   margin-top: -10%;
+  margin-bottom: 5rem;
 }
 
 .portfolio-content .row {
@@ -11264,6 +11270,8 @@ div.blogGrid:hover div.titulo-blog-container {
 .portfolioContainer {
   border: 1px solid #eee;
   border-radius: 3px;
+  background: rgba(0, 0, 0, 0) -webkit-gradient(linear, left bottom, left top, from(white), to(#2d4e77)) repeat scroll 0% 0% !important;
+  background: rgba(0, 0, 0, 0) linear-gradient(to top, white, #2d4e77) repeat scroll 0% 0% !important;
 }
 
 .portfolio .portfolioContainer img {

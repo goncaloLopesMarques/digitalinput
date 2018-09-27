@@ -84,51 +84,51 @@ class PagesController extends BaseController
     }*/
 
     function redesSociais(){
-        $classes = "redes";
+        $classes = "redes my-background";
         return view('pages.gestao-redes-sociais', compact('classes'));
     }
     function gestaoMarketing(){
-        $classes = "gestao";
+        $classes = "gestao my-background";
         return view('pages.gestao-marketing', compact('classes'));
     }
     function criacaoSites(){
-        $classes = "sites";
+        $classes = "sites my-background";
         return view('pages.criacao-sites', compact('classes'));
     }
     function optimizacaoSites(){
-        $classes = "optimizacao";
+        $classes = "optimizacao my-background";
         return view('pages.optimizacao-sites', compact('classes'));
     }
     function criarLojaOnline(){
-        $classes = "ecommerce";
+        $classes = "ecommerce my-background";
         return view('pages.criar-loja-online', compact('classes'));
     }
     function empresaWebDesign(){
-        $classes = "webdesign";
+        $classes = "webdesign my-background";
         return view('pages.empresas-web-design', compact('classes'));
     }
     function empresaDesign(){
-        $classes = "design";
+        $classes = "design my-background";
         return view('pages.empresas-design', compact('classes'));
     }
     function publicidadeFacebook(){
-        $classes = "facebook";
+        $classes = "facebook my-background";
         return view('pages.publicidade-facebook', compact('classes'));
     }
     function agenciaAdwords(){
-        $classes = "adwords";
+        $classes = "googleads my-background";
         return view('pages.agencia-adwords', compact('classes'));
     }
     function manutencaoWebsites(){
-        $classes = "manutencao";
+        $classes = "manutencao my-background";
         return view('pages.manutencao-websites', compact('classes'));
     }
     function agenciaEmailMarketing(){
-        $classes = "email-marketing";
+        $classes = "email-marketing my-background";
         return view('pages.agencia-email-marketing', compact('classes'));
     }
     function consultoriaMarketing(){
-        $classes = "consultoria";
+        $classes = "consultoria my-background";
         return view('pages.consultoria-marketing-digital', compact('classes'));
     }
     function orcamento(){

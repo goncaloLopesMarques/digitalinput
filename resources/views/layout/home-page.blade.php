@@ -1,7 +1,7 @@
 
 
    <!-- APRESENTAÇÃO -->
-   <section class="card wow fadeIn radial-purple-gradient intro" style="background:radial-gradient( circle at top, #513057, #191f2c ) ;visibility: visible; animation-name: fadeIn;">
+   <section class="card wow fadeIn radial-purple-gradient intro" style="background:radial-gradient( circle at top, #42a5f5, #273654 ) ;visibility: visible; animation-name: fadeIn;">
       <!-- Content -->
       <div class="m-0 row text-white" style="height:calc(100vh - 45px)"><!-- style="background-image: url('/images/Programmer-Developer-Wallpaper.jpg');" -->
 

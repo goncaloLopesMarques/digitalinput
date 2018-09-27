@@ -1,3 +1,4 @@
+<section class="mt-4">
 <div class="container">
  <h1>Optimização de Sites</h1>
  <h2>SEO Portugal</h2>
@@ -9,3 +10,4 @@
  <h2> empresa de seo</h2>
  <h2>tecnicas de seo</h2>
 </div>
+</section>
