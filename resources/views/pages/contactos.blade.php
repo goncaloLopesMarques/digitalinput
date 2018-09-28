@@ -41,6 +41,7 @@
 @section('scripts-css')
 
     @include('layout.scripts-css')
+    <script type="text/javascript" src="/js/contactos.js"></script>
     
 @endsection
 

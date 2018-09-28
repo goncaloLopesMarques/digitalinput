@@ -710,6 +710,12 @@ body.my-background{
 .contactos-header{
 	padding: 0 2rem;
 }
+.gradient-blue{
+	background: linear-gradient(40deg, #42a5f5, #273654) !important;
+}
+#contact_form button[type="submit"]{
+	margin-left: 0;
+}
 
 #portfolio-background{
 	background-image: url("/images/Port_2_Background.jpg");

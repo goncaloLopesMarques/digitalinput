@@ -1,4 +1,4 @@
-<section class="contactos-header">
+<section class="contactos-header pt-4">
 
 
 
@@ -12,6 +12,12 @@
 
  <h3>Qual é o seu objetivo?</h3>
  <p>"Tendo por base os seus objetivos, analisamos dados e tendências no mercado onde atua. Este é o ponto de partida para definirmos uma estratégia, uma equipa e planearemos a sua execução."</p>
+
+@if(Session::has('message'))
+ <div class="container">
+    <h2 style="color: #1369a7;" class="text-center alert {{ Session::get('alert-class', 'alert-info') }}">{{ Session::get('message') }}</h2>
+ </div>
+@endif
  
 </section> 
 
@@ -34,71 +40,75 @@
           <!-- Header -->
           <h3 class="mt-4"><i class="fa fa-envelope pr-2"></i>Entrar em contacto:</h3>
 
-          <!-- Grid row -->
-          <div class="row">
+          <form id="contact_form" method="POST">
+            @csrf  
+            <!-- Grid row -->
+            <div class="row">
 
-            <!-- Grid column -->
-            <div class="col-md-6">
-              <div class="md-form mb-0">
-                <input type="text" id="form-contact-name" class="form-control">
-                <label for="form-contact-name" class="">Nome</label>
+              <!-- Grid column -->
+              <div class="col-md-6">
+                <div class="md-form mb-0">
+                  <input type="text" name="form-contact-name" class="form-control" required>
+                  <label for="form-contact-name" class="">Nome</label>
+                </div>
               </div>
-            </div>
-            <!-- Grid column -->
+              <!-- Grid column -->
 
-            <!-- Grid column -->
-            <div class="col-md-6">
-              <div class="md-form mb-0">
-                <input type="text" id="form-contact-email" class="form-control">
-                <label for="form-contact-email" class="">Email</label>
+              <!-- Grid column -->
+              <div class="col-md-6">
+                <div class="md-form mb-0">
+                  <input type="email" name="form-contact-email" class="form-control" required>
+                  <label for="form-contact-email" class="">Email</label>
+                </div>
               </div>
+              <!-- Grid column -->
+
             </div>
-            <!-- Grid column -->
+            <!-- Grid row -->
 
-          </div>
-          <!-- Grid row -->
+            <!-- Grid row -->
+            <div class="row">
 
-          <!-- Grid row -->
-          <div class="row">
-
-            <!-- Grid column -->
-            <div class="col-md-6">
-              <div class="md-form mb-0">
-                <input type="text" id="form-contact-phone" class="form-control">
-                <label for="form-contact-phone" class="">Telefone</label>
+              <!-- Grid column -->
+              <div class="col-md-6">
+                <div class="md-form mb-0">
+                  <input type="tel" name="form-contact-phone" class="form-control">
+                  <label for="form-contact-phone" class="">Telefone</label>
+                </div>
               </div>
-            </div>
-            <!-- Grid column -->
+              <!-- Grid column -->
 
-            <!-- Grid column -->
-            <div class="col-md-6">
-              <div class="md-form mb-0">
-                <input type="text" id="form-contact-company" class="form-control">
-                <label for="form-contact-company" class="">Área de Actividade</label>
+              <!-- Grid column -->
+              <div class="col-md-6">
+                <div class="md-form mb-0">
+                  <input type="text" name="form-contact-company" class="form-control" required>
+                  <label for="form-contact-company" class="">Área de Actividade</label>
+                </div>
               </div>
+              <!-- Grid column -->
+
             </div>
-            <!-- Grid column -->
+            <!-- Grid row -->
 
-          </div>
-          <!-- Grid row -->
+            <!-- Grid row -->
+            <div class="row">
 
-          <!-- Grid row -->
-          <div class="row">
+              <!-- Grid column -->
+              <div class="col-md-12">
+                <div class="md-form mb-0">
+                  <textarea type="text" name="form-contact-message" class="form-control md-textarea" rows="3" style="border: 1px solid #ced4da;" required></textarea>
+                  <label for="form-contact-message" style="margin-left:5px">Mensagem</label>
+                  
+                  <button type="submit" id="submit_button" class="btn gradient-blue">Enviar</button>
 
-            <!-- Grid column -->
-            <div class="col-md-12">
-              <div class="md-form mb-0">
-                <textarea type="text" id="form-contact-message" class="form-control md-textarea" rows="3" style="border: 1px solid #ced4da;"></textarea>
-                <label for="form-contact-message" style="margin-left:5px">Mensagem</label>
-                <a class="btn-floating btn-lg blue">
-                  <i class="fa fa-send-o"></i>
-                </a>
+                </div>
               </div>
-            </div>
-            <!-- Grid column -->
+              <!-- Grid column -->
 
-          </div>
-          <!-- Grid row -->
+            </div>
+            <!-- Grid row -->
+
+          </form>
 
         </div>
 
@@ -110,7 +120,7 @@
 
         <div class="card-body contact text-center h-100 white-text">
 
-          <h2 class="my-4 pb-2">Contactos</h2>
+          <h2 style="font-size: 175%;text-shadow: 1px 1px 1px black;" class="my-4 pb-2">Contactos</h2>
           <ul class="text-lg-left list-unstyled ml-4">
             <li>
               <p><i class="fa fa-map-marker pr-2"></i>Rua das Laranjeiras<br/>  lote 40, Loja B<br/>  Urbanização do Vale Verde, Marrazes<br/>  2415-773 Leiria</p>
@@ -125,18 +135,18 @@
           <hr class="hr-light my-4">
           <ul class="list-inline text-center list-unstyled">
             <li class="list-inline-item">
-              <a class="p-2 fa-lg tw-ic">
+              <a href="https://twitter.com/Digitalinputweb" target="_blank" class="p-2 fa-lg tw-ic">
                 <i class="fa fa-twitter"></i>
               </a>
             </li>
             <li class="list-inline-item">
-              <a class="p-2 fa-lg li-ic">
+              <a href="https://www.linkedin.com/company/digitalinput" target="_blank" class="p-2 fa-lg li-ic">
                 <i class="fa fa-linkedin"> </i>
               </a>
             </li>
             <li class="list-inline-item">
-              <a class="p-2 fa-lg ins-ic">
-                <i class="fa fa-instagram"> </i>
+              <a href="https://www.facebook.com/digitalinputwebmarketing/" target="_blank" class="p-2 fa-lg ins-ic">
+                <i class="fa fa-facebook"> </i>
               </a>
             </li>
           </ul>

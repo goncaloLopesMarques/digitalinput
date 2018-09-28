@@ -20,7 +20,7 @@
 
                <small class="col-md-12 font-weight-light">agencia de comunicação | web marketing | agencia de marketing digital | pequenas e médias empresas</small>
 
-               <button type="button" class="btn btn-elegant">Informações</button><button type="button" class="btn btn-elegant">Portfolio</button>
+               <button type="button" class="btn btn-elegant">Informações</button><a href="/portfolio" class="btn btn-elegant">Portfolio</a>
             </div>
          </div>
          

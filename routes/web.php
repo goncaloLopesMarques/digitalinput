@@ -42,3 +42,5 @@ route::get('/portfolio/{slug}', 'PortfolioController@project');
 Route::post('/orcamento/site', 'SendMailController@enviarOrcamentoSite');
 Route::post('/orcamento/app', 'SendMailController@enviarOrcamentoApp');
 Route::post('/orcamento/info', 'SendMailController@enviarOrcamentoParaInfo');
+
+Route::post('/contactos', 'SendMailController@contactForm');
