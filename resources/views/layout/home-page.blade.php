@@ -246,7 +246,7 @@
 
   <!--Carousel Wrapper-->
   <!-- <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel"> -->
-    <div id="clientes-slider" class="logos-row row center-logos">
+    <div id="clientes-slider" class="logos-row center-logos">
 
 
       <!--Controls-->
@@ -310,10 +310,10 @@
 
 
       <!--Controls-->
-  <div class="flex-center">
+  <!-- <div class="flex-center">
     <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
     <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
-  </div>
+  </div> -->
   <!--/.Controls-->
 
 

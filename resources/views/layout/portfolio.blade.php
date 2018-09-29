@@ -19,7 +19,7 @@
 
 			</div>
 		</div>
-		<div>
+		<div class="portfolioContainer">
 
 			@foreach($projetos as $project)
 

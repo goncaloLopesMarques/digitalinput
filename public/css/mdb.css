@@ -11191,6 +11191,27 @@ body.my-background {
   background: linear-gradient(to top, #2d4e77, #fff) !important;
 }
 
+/* Home Page */
+
+.slick-prev::before,
+.slick-next::before {
+  color: #000;
+}
+
+.slick-prev {
+  left: 10px;
+}
+
+.slick-next {
+  right: 10px;
+}
+
+.slick-initialized .slick-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 /* Services Pages */
 
 .pages-header {

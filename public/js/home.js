@@ -6,6 +6,7 @@ jQuery(document).ready(function(){
 
 	$('.center-logos').slick({
 		centerMode: true,
+		autoplay: true,
 		centerPadding: '60px',
 		slidesToShow: 5,
 		responsive: [
