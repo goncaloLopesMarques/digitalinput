@@ -16,6 +16,8 @@
     serviços marketing digital,marketing digital para pequenas empresas">
     
     @include('layout.head') 
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
     
 @endsection
 
@@ -48,12 +50,9 @@
 @section('scripts-css')
 
     @include('layout.scripts-css')
-    <script type="text/javascript" src="/js/home.js"></script>
     <script>
 
       defer(function () {
-    
-
 
         $(document).ready(function(){  
            
@@ -61,48 +60,19 @@
            var trabalhosRecentes = <?php echo json_encode($recentwork); ?>;
 
            var clientes = <?php echo json_encode($clientes); ?>;
-           console.log(trabalhosRecentes);
 
 
 
             // apresentação clientes 
             for(var i=0 ; i< clientes.length ; i++){
-
-                x=0;
-                
-                
-                // slide 1
-                if(i < 4) x=1;
-
-                // slide 2 
-                else if (i < 8) x=2;
-
-                // slide 3
-                else if (i < 12) x=3;
-
-
-                /*
-                if(recentArray[i]["images"]){
-
-                    var imagens = JSON.parse(recentArray[i]["images"]);
-
-                    for(var j=0 ; j< imagens.length ; j++){
-           
-                        console.log(imagens[j]);
-                    }
-
-                }
-
-                imagem clientes: style="height:calc(100% - 35px); margin-top:-35px;"
-                */
              
 
-                $("#posts-" + x).append('<div class="col-lg-3 col-sm-6 p-0 blogGrid"> <div class="flex-center waves-effect waves-light view overlay zoom">  <img style="max-width:50%;" src="storage/'+clientes[i]["image"]+'" alt="'+clientes[i]["name"]+'"><div class="titulo-blog-container">   <p class="p-1 text-center my-text-shadow-strong">'+clientes[i]["name"]+'</p>   </div>   <div class="my-vertical-align my-mask-over mask rgba-black-stronger waves-effect waves-light">'+clientes[i]["description"].slice(0, 250)+'...</div></div></div>');
+                $("#clientes-slider").append('<div class="waves-effect waves-light view overlay zoom">  <img style="max-width:50%;" src="storage/'+clientes[i]["image"]+'" alt="'+clientes[i]["name"]+'"><div class="titulo-blog-container">   <p class="p-1 text-center my-text-shadow-strong">'+clientes[i]["name"]+'</p>   </div>   <div class="my-vertical-align my-mask-over mask rgba-black-stronger waves-effect waves-light">'+clientes[i]["description"].slice(0, 250)+'...</div></div>');
             } 
 
 
 
-            // apresentação trabalhios recentes
+            // apresentação trabalhos recentes
             for(var i=0 ; i< trabalhosRecentes.length ; i++){
             
                 $("#trabalhos-recentes").append('<div class="my-col-xxl-3 col-lg-4 col-md-6 col-xs-12 p-0 blogGrid">   <div class="flex-center waves-effect waves-light view overlay zoom">   <img src="storage/'+trabalhosRecentes[i]["thumbnail"]+'" alt="zoom"><div class="flex-center titulo-blog-container">   <p class="p-1 text-center my-text-shadow-strong">'+trabalhosRecentes[i]["title"]+'</p>   </div>   <div class="my-mask-over mask rgba-black-stronger flex-center waves-effect waves-light"><p class="white-text text-center">'+trabalhosRecentes[i]["description"]+'</p></div></div></div>');
@@ -115,15 +85,8 @@
     });
      
     </script>
-
-
-
-
-
-
-
-
-
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script type="text/javascript" src="/js/home.js"></script>
 
     
 @endsection
