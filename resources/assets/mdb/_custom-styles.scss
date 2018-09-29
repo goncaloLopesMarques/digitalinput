@@ -760,10 +760,28 @@ body.my-background{
 	background: linear-gradient(to top, #2d4e77, #fff) !important;
 }
 
+/* Services Pages */
+
+.pages-header{
+	padding: 0 2rem;
+}
+
+.pages-content{
+	padding: 3rem 0;
+}
+
+
+
 /* Contactos Page */
 
 .contactos-header{
 	padding: 0 2rem;
+}
+.gradient-blue{
+	background: linear-gradient(40deg, #42a5f5, #273654) !important;
+}
+#contact_form button[type="submit"]{
+	margin-left: 0;
 }
 
 #portfolio-background{

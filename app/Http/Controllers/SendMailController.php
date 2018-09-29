@@ -4,10 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Mail\OrcamentoApp;
 use App\Mail\OrcamentoSite;
+use App\Mail\ContactFormApp;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Http\Controllers\Controller;
 
+use Session;
 
 class SendMailController extends Controller
 {
@@ -72,6 +74,31 @@ class SendMailController extends Controller
             dd($e);
 
            }
+    }
+
+    public function contactForm(Request $request){
+
+        $data=[
+            'email' => $request->input('form-contact-email'),
+            'nome' => $request->input('form-contact-name'),
+            'telefone' => $request->input('form-contact-phone'),
+            'actividade' => $request->input('form-contact-company'),
+            'mensagem' => $request->input('form-contact-message'),
+        ];
+
+        try{
+
+            $result = Mail::to('info@digitalinput.pt')->send(new ContactFormApp($data));
+            Session::flash('message', 'A sua mensagem foi enviada. Será contactado em breve!'); 
+            Session::flash('alert-class', 'alert-success');
+            return redirect('/contactos');
+
+        }catch(Exception $e){
+
+            dd($e);
+
+        }
+
     }
 
 

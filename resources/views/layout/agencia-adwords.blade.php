@@ -1,12 +1,33 @@
-<section class="mt-4">
-<div class="container">
- <h1>Agência Adwords</h1>
- <h2>google adwords</h2>
- <h2>publicidade na internet</h2>
- <h2>como anunciar no google</h2>
- <h2>google adwords preço</h2>
- <h2>divulgar site</h2>
- <h2>agência adwords</h2>
+<section class="mt-4 pages-header">
 
-</div>
+	<h1>Agência Google Adds</h1>
+
+
+
+</section>
+
+<section class="pages-content">
+
+	<div class="container">
+
+		<div class="row d-md-block">
+
+			<h2>Google adds</h2>
+
+
+			<h2>publicidade na internet</h2>
+
+
+			<h2>como anunciar no google</h2>
+
+			<h2>google adwords preço</h2>
+
+			<h2>divulgar site</h2>
+
+			<h2>agência adwords</h2>
+
+		</div>
+
+	</div>
+
 </section>
