@@ -1,4 +1,8 @@
-
+            <div class="loader" style="display: none;">
+      <div class="placeholder light">
+        <div class="spinner"></div>
+      </div>
+    </div>
 
    <!-- APRESENTAÇÃO -->
    <section class="card wow fadeIn radial-purple-gradient intro" style="background:radial-gradient( circle at top, #42a5f5, #273654 ) ;visibility: visible; animation-name: fadeIn;">
@@ -245,16 +249,7 @@
 
 
 
-      <!--Controls-->
-     <a class="carousel-control-prev" href="#multi-item-example" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-     </a>
-     <a class="carousel-control-next" href="#multi-item-example" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-     </a>
-      <!--/.Controls-->
+
 
       <!--Indicators-->
       <ol class="carousel-indicators">
@@ -268,24 +263,21 @@
       <div class="my carousel-inner" role="listbox" style="">
 
 
-          <!--First slide-->
-          <div class="container-fluid slide-container-homepage">
+
              <div class="my carousel-item active row" id="posts-1"></div>
-          </div>
+      
 
 
 
-          <!--Second slide-->
-          <div class="container-fluid slide-container-homepage">
+
              <div class="my carousel-item row" id="posts-2"></div>
-          </div>
+    
 
 
 
-          <!--Third slide-->
-          <div class="container-fluid slide-container-homepage">
+   
              <div class="my carousel-item row" id="posts-3"></div>
-          </div>
+      
 
 
 
@@ -293,15 +285,23 @@
       <!--/.Slides-->
 
       <!--Controls-->
-     <a class="my carousel-control-prev" href="#multi-item-example" role="button" data-slide="prev">
+     <a class="my-clientes carousel-control-prev" href="#multi-item-example" role="button" data-slide="prev">
                       <span class="my carousel-control-prev-icon" aria-hidden="true"></span>
                       <span class="sr-only">Previous</span>
      </a>
 
-     <a class="my carousel-control-next" href="#multi-item-example" role="button" data-slide="next">
+     <a class="my-clientes carousel-control-next" href="#multi-item-example" role="button" data-slide="next">
                       <span class="my carousel-control-next-icon" aria-hidden="true"></span>
                       <span class="sr-only">Next</span>
      </a>
+
+
+      <!--Controls-->
+  <div class="flex-center">
+    <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+    <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+  </div>
+  <!--/.Controls-->
 
 
 

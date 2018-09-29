@@ -3,6 +3,47 @@
 // AS MINHAS CLASSES
 
 
+
+
+
+
+
+
+
+
+.spinner {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 150px;
+    width: 300px;
+    border: 3px solid #1E8CE2;
+    border-bottom: 0;
+    border-radius: 200px 200px 0 0;
+    -webkit-transform-origin: bottom center;
+    -moz-transform-origin: bottom center;
+    -webkit-animation: spinner .4s infinite linear;
+    -moz-animation: spinner .4s infinite linear;
+}
+
+
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+
 /* texto branco em fundo claro*/
 .my-text-shadow{
 	text-shadow: 0 0 3px rgba(0,0,0,0.5);
@@ -409,6 +450,15 @@ a.my.carousel-control-next{
     opacity: 1;
 }
 
+a.my-clientes.carousel-control-prev,
+a.my-clientes.carousel-control-next{
+	
+    background-color: #0d0c07;
+    width:30px;
+    opacity: 1;
+    height:28vh;
+}
+
 span.my.carousel-control-prev-icon,
 span.my.carousel-control-next-icon{
 
@@ -441,7 +491,10 @@ div.my-mask-over{
  }
 
 
+.clientesGrid{
 
+	height: 28vh;
+}
 
 // B L O G 
 //--------------------------------------------------------------------
@@ -449,6 +502,8 @@ div.my-mask-over{
     height: 45vh;
     background-size: cover;
 }
+
+
 
 div.titulo-blog-container{
 	width: 100%;
