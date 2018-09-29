@@ -1,4 +1,8 @@
-
+            <div class="loader" style="display: none;">
+      <div class="placeholder light">
+        <div class="spinner"></div>
+      </div>
+    </div>
 
    <!-- APRESENTAÇÃO -->
    <section class="card wow fadeIn radial-purple-gradient intro" style="background:radial-gradient( circle at top, #42a5f5, #273654 ) ;visibility: visible; animation-name: fadeIn;">
@@ -256,6 +260,7 @@
      </a> -->
       <!--/.Controls-->
 
+
       <!--Indicators-->
       <!-- <ol class="carousel-indicators">
           <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
@@ -298,10 +303,18 @@
                       <span class="sr-only">Previous</span>
      </a>
 
-     <a class="my carousel-control-next" href="#multi-item-example" role="button" data-slide="next">
+     <a class="my-clientes carousel-control-next" href="#multi-item-example" role="button" data-slide="next">
                       <span class="my carousel-control-next-icon" aria-hidden="true"></span>
                       <span class="sr-only">Next</span>
      </a> -->
+
+
+      <!--Controls-->
+  <div class="flex-center">
+    <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+    <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+  </div>
+  <!--/.Controls-->
 
 
 
@@ -331,7 +344,9 @@
   </h3>
 
 
-  <div class="row" id="trabalhos-recentes"></div>
+  <div class="row m-0" id="trabalhos-recentes">
+    
+  </div>
 
   <div class="flex-center mt-5">
         <a class="btn btn-elegant" href="/portfolio">Ver Portfólio</a>
