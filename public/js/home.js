@@ -13,7 +13,7 @@ jQuery(document).ready(function(){
 		{
 			breakpoint: 768,
 			settings: {
-				arrows: false,
+			//	arrows: false,
 				centerMode: true,
 				centerPadding: '40px',
 				slidesToShow: 3
@@ -22,7 +22,7 @@ jQuery(document).ready(function(){
 		{
 			breakpoint: 480,
 			settings: {
-				arrows: false,
+			//	arrows: false,
 				centerMode: true,
 				centerPadding: '40px',
 				slidesToShow: 1

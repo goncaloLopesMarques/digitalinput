@@ -764,15 +764,40 @@ body.my-background{
 /* Home Page */
 .slick-prev::before, .slick-next::before{
 	color: #000;
+	font-size: 30px;
 }
 .slick-prev {
     left: 10px;
+    z-index: 999;
 }
 .slick-next {
     right: 10px;
+    z-index: 999;
 }
 .slick-initialized .slick-slide {
     display: flex;
+}
+#clientes-slider > div > div > div{
+	height: 240px;
+}
+#clientes-slider img{
+	width: 50%;
+	max-height: 170px;
+	max-width: 170px;
+}
+#clientes-slider .slick-center img{
+	width: 100%;
+}
+.h3-voyager-descricao-cliente{
+	font-size: 1.25rem;
+	text-align: center;
+}
+.p-voyager-descricao-cliente, #clientes-slider div.titulo-blog-container p{
+	font-size: .85rem;
+}
+#clientes-slider .slick-center div.titulo-blog-container p{	
+	font-weight: bold;
+	font-size: 1.25rem;
 }
 
 
@@ -802,8 +827,13 @@ body.my-background{
 
 
 
-
-
+/* PORFOLIO PAGE */
+.portfolio-headers{
+	padding-top: 25vh;
+	padding-bottom: 60vh;
+	background-size: cover;
+	background-position: center center;
+}
 
 #portfolio-background{
 	background-image: url("/images/Port_2_Background.jpg");
@@ -835,7 +865,7 @@ body.my-background{
 
 .portfolioFilter a {
   margin-right: 6px;
-  color: #666;
+  color: #fff;
   text-decoration: none;
   border: 1px solid #ccc;
   padding: 4px 15px;
@@ -922,15 +952,6 @@ body.my-background{
 /* MAIN FIX FOR HEADER */
 main{
 	padding: 38px 0 0;
-}
-
-
-/* PORFOLIO PAGE */
-.portfolio-headers{
-	padding-top: 25vh;
-	padding-bottom: 60vh;
-	background-size: cover;
-	background-position: center center;
 }
 
 

@@ -68,7 +68,7 @@
             for(var i=0 ; i< clientes.length ; i++){
              
 
-                $("#clientes-slider").append('<div class="flex-center waves-effect waves-light view overlay zoom">  <img style="width:100%;" src="storage/'+clientes[i]["image"]+'" alt="'+clientes[i]["name"]+'"><div class="titulo-blog-container">   <p class="p-1 text-center my-text-shadow-strong">'+clientes[i]["name"]+'</p>   </div>   <div class="my-vertical-align my-mask-over mask rgba-black-stronger waves-effect waves-light">'+clientes[i]["description"].slice(0, 250)+'...</div></div>');
+                $("#clientes-slider").append('<div class="flex-center waves-effect waves-light view overlay zoom">  <img src="storage/'+clientes[i]["image"]+'" alt="'+clientes[i]["name"]+'"><div class="titulo-blog-container">   <p class="p-1 text-center my-text-shadow-strong">'+clientes[i]["name"]+'</p>   </div>   <div class="my-vertical-align my-mask-over mask rgba-black-stronger waves-effect waves-light">'+clientes[i]["description"].slice(0, 250)+'...</div></div>');
             } 
 
 
