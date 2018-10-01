@@ -216,8 +216,8 @@
                   <h3 class="card-title white-text" style="background: linear-gradient(40deg,#212121,#8bc34a);">Simulador de Custos</h3>
                   <p class="card-text">Não conhece os preços do Marketing Digital? Selecione os serviços que mais se adatam à realidade do seu negócio e tenha uma ideia de quanto poderá investir.</p>
               </div>
-              <div class="card-footer">
-                  <small class="text-muted">Simulador - Obter estimativa</small>
+              <div class="card-footer text-center">
+                  <a class="text-muted btn btn-elegant waves-effect waves-light">Simulador - Obter estimativa</a>
               </div>
            </div>
           </div>
@@ -237,97 +237,13 @@
 <section class="pt-5">
 
 
-
-
   <h3 class="section-title h1-responsive ml-5 mt-5 pl-5 pt-5">
       <b>C</b>lientes
   </h3>
-
-
-  <!--Carousel Wrapper-->
-  <!-- <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel"> -->
-    <div id="clientes-slider" class="logos-row center-logos">
-
-
-      <!--Controls-->
-     <!-- <a class="carousel-control-prev" href="#multi-item-example" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-     </a>
-     <a class="carousel-control-next" href="#multi-item-example" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-     </a> -->
-      <!--/.Controls-->
-
-
-      <!--Indicators-->
-      <!-- <ol class="carousel-indicators">
-          <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
-          <li data-target="#multi-item-example" data-slide-to="1"></li>
-          <li data-target="#multi-item-example" data-slide-to="2"></li>
-      </ol> -->
-      <!--/.Indicators-->
-
-      <!--Slides-->
-      <!-- <div class="my carousel-inner center-logos" role="listbox" style=""> -->
-
-
-          <!--First slide-->
-          <!-- <div class="container-fluid slide-container-homepage"> -->
-             <!-- <div class="logo-div" id="posts-1"></div> -->
-          <!-- </div> -->
-
-
-
-          <!--Second slide-->
-          <!-- <div class="container-fluid slide-container-homepage"> -->
-             <!-- <div class="logo-div" id="posts-2"></div> -->
-          <!-- </div> -->
-
-
-
-          <!--Third slide-->
-          <!-- <div class="container-fluid slide-container-homepage"> -->
-             <!-- <div class="logo-div" id="posts-3"></div> -->
-          <!-- </div> -->
-
-
-
-      <!-- </div> -->
-      <!--/.Slides-->
-
-      <!--Controls-->
-     <!-- <a class="my carousel-control-prev" href="#multi-item-example" role="button" data-slide="prev">
-                      <span class="my carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="sr-only">Previous</span>
-     </a>
-
-     <a class="my-clientes carousel-control-next" href="#multi-item-example" role="button" data-slide="next">
-                      <span class="my carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="sr-only">Next</span>
-     </a> -->
-
-
-      <!--Controls-->
-  <!-- <div class="flex-center">
-    <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
-    <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
-  </div> -->
-  <!--/.Controls-->
-
-
+  
+  <div id="clientes-slider" class="logos-row center-logos">
 
   </div>
-  <!--/.Carousel Wrapper-->
-
-
-     <div class="flex-center mt-5">
-        <a class="btn btn-elegant" href="/portfolio">Ver Clientes</a>
-     </div>
-
-
-
 
       
 </section>
