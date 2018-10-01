@@ -19,6 +19,8 @@
 
 			</div>
 		</div>
+	</div>
+	<div class="row">
 		<div class="portfolioContainer">
 
 			@foreach($projetos as $project)
@@ -27,7 +29,7 @@
 			foreach($project->portfolio_categories as $cat){
 				$cat_names .= str_replace(' ', '', $cat->name)." ";
 			}
-			echo "<div class='".$cat_names." view overlay zoom'>
+			echo "<div class='".$cat_names." view overlay zoom col-sm-12 col-md-6 col-lg-4 col-xl-3'>
 			<a href='/portfolio/".$project->slug."'>
 			<img src='".Voyager::image( $project->thumbnail )."'' alt='image'>
 			<div class='mask rgba-black-stronger flex-center'>
