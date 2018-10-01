@@ -58,7 +58,7 @@
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
   --breakpoint-lg: 1200px;
-  --breakpoint-xl: 1700px;
+  --breakpoint-xl: 1600px;
   --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
@@ -631,13 +631,13 @@ pre code {
 
 @media (min-width: 1200px) {
   .container {
-    max-width: 960px;
+    max-width: 1125px;
   }
 }
 
-@media (min-width: 1700px) {
+@media (min-width: 1600px) {
   .container {
-    max-width: 1140px;
+    max-width: 1500px;
   }
 }
 
@@ -1705,7 +1705,7 @@ pre code {
   }
 }
 
-@media (min-width: 1700px) {
+@media (min-width: 1600px) {
   .col-xl {
     -ms-flex-preferred-size: 0;
         flex-basis: 0;
@@ -2219,7 +2219,7 @@ pre code {
   }
 }
 
-@media (max-width: 1699.98px) {
+@media (max-width: 1599.98px) {
   .table-responsive-xl {
     display: block;
     width: 100%;
@@ -4863,7 +4863,7 @@ input[type="button"].btn-block {
   }
 }
 
-@media (max-width: 1699.98px) {
+@media (max-width: 1599.98px) {
   .navbar-expand-xl > .container,
   .navbar-expand-xl > .container-fluid {
     padding-right: 0;
@@ -4871,7 +4871,7 @@ input[type="button"].btn-block {
   }
 }
 
-@media (min-width: 1700px) {
+@media (min-width: 1600px) {
   .navbar-expand-xl {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -7262,7 +7262,7 @@ button.bg-dark:focus {
   }
 }
 
-@media (min-width: 1700px) {
+@media (min-width: 1600px) {
   .d-xl-none {
     display: none !important;
   }
@@ -8155,7 +8155,7 @@ button.bg-dark:focus {
   }
 }
 
-@media (min-width: 1700px) {
+@media (min-width: 1600px) {
   .flex-xl-row {
     -webkit-box-orient: horizontal !important;
     -webkit-box-direction: normal !important;
@@ -8401,7 +8401,7 @@ button.bg-dark:focus {
   }
 }
 
-@media (min-width: 1700px) {
+@media (min-width: 1600px) {
   .float-xl-left {
     float: left !important;
   }
@@ -9804,7 +9804,7 @@ button.bg-dark:focus {
   }
 }
 
-@media (min-width: 1700px) {
+@media (min-width: 1600px) {
   .m-xl-0 {
     margin: 0 !important;
   }
@@ -10190,7 +10190,7 @@ button.bg-dark:focus {
   }
 }
 
-@media (min-width: 1700px) {
+@media (min-width: 1600px) {
   .text-xl-left {
     text-align: left !important;
   }
@@ -12464,7 +12464,7 @@ h6 {
   }
 }
 
-@media (min-width: 1700px) {
+@media (min-width: 1600px) {
   .h1-responsive {
     font-size: 250%;
   }
@@ -21583,8 +21583,6 @@ table.table-sm td {
   transition: all .2s linear;
 }
 
-/* Titulos*/
-
 h1.section-title,
 h3.section-title {
   z-index: 1;
@@ -21598,9 +21596,6 @@ h3.section-title {
   text-transform: uppercase;
   padding: 0 3% 40px 8%;
   position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
   /* Just add shadows, every time with a different top, right and opacity */
   text-shadow: #c0c0c0 -1px 1px 0, #fff -2px 2px 0, #c3c3c3 -3px 3px 0, #fff -4px 4px 0, #c6c6c6 -5px 5px 0, #fff -6px 6px 0, #c9c9c9 -7px 7px 0, #fff -8px 8px 0, #ccc -9px 9px 0, #fff -10px 10px 0, #cfcfcf -11px 11px 0, #fff -12px 12px 0, #d2d2d2 -13px 13px 0, #fff -14px 14px 0, #d5d5d5 -15px 15px 0, #fff -16px 16px 0, #d8d8d8 -17px 17px 0, #fff -18px 18px 0, #dbdbdb -19px 19px 0, #fff -20px 20px 0, #dfdfdf -21px 21px 0, #fff -22px 22px 0, #e2e2e2 -23px 23px 0, #fff -24px 24px 0, #e5e5e5 -25px 25px 0, #fff -26px 26px 0, #e8e8e8 -27px 27px 0, #fff -28px 28px 0, #ebebeb -29px 29px 0, #fff -30px 30px 0, #eee -31px 31px 0, #fff -32px 32px 0, #f1f1f1 -33px 33px 0, #fff -34px 34px 0, #f4f4f4 -35px 35px 0, #fff -36px 36px 0, #f7f7f7 -37px 37px 0, #fff -38px 38px 0, #fafafa -39px 39px 0, #fbfbfb -40px 40px 0, #fdfdfd -41px 41px 0, #fff -42px 42px 0;
 }
@@ -22123,8 +22118,6 @@ body.my-background {
 
 #clientes-slider img {
   width: 50%;
-  max-height: 170px;
-  max-width: 170px;
 }
 
 #clientes-slider .slick-center img {
@@ -22231,8 +22224,11 @@ body.my-background {
 }
 
 .portfolio .portfolioContainer img {
-  margin: 5px;
-  max-width: 250px;
+  max-width: 100%;
+}
+
+.portfolio .portfolioContainer .view .mask {
+  left: 0;
 }
 
 .portfolio a:focus {
@@ -22395,11 +22391,6 @@ main {
     background-repeat: no-repeat;
   }
 
-  .portfolio .portfolioContainer img {
-    margin: 3px;
-    max-width: 373px;
-  }
-
   .parallax {
     height: 100%;
     background-attachment: fixed;
@@ -22410,6 +22401,13 @@ main {
 @media screen and (min-width: 1200px) {
   .home .main-title {
     font-size: 280%;
+  }
+}
+
+@media screen and (max-width: 1550px) {
+  #clientes-slider img {
+    max-height: 170px;
+    max-width: 170px;
   }
 }
 

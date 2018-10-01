@@ -17,30 +17,42 @@
 <!-- CAROUSEL -->
 
 <div class="row">
-   <div class = "col-md-6 blogHeaders">
+ <div class = "col-md-12 blogHeaders">
 
 
 
-    <h3 class="section-title h1-responsive ml-5 mt-5 pl-5 pt-5">
-      <b>B</b>log
-    </h3>
+  <h3 class="section-title h1-responsive text-center ml-5 pl-5 pt-5">
+    <b>B</b>log
+  </h3>
 
 
-   </div>
-    <div class="col-md-6 blogHeaders">
+</div>
+</div>
+
+<form class="form-search mb-2" method="GET" action="/blog/search">
+
+  <div class="container">
+
     <div class="row">
-        <div class="col-md-8"><form class="form-inline" method="GET" action="/blog/search">
-     <i class="fa fa-search" aria-hidden="true"></i>
-     <input class="form-control form-control-sm ml-3 w-75" name="q" type="text" placeholder="Search" aria-label="Search"></div>
-        <div class="col-md-2">  <button class="btn btn-primary"  type="submit">Pesquisar</button>  </form></div>
-        <div class="col-md-2"></div>
-        <div class="col-md-2">Search by:</div>
-        <div class="col-md-2"><img src="/images/algolia.png" style="max-height: 100%;max-width: 100%;"> </div>
+
+      <div class="col-md-8">
+
+        <i class="fa fa-search" aria-hidden="true"></i>
+        <input class="form-control form-control-sm d-inline my-3 ml-3 w-75" name="q" type="text" placeholder="Pesquisar" aria-label="Search">
+
+      </div>
+
+      <div class="col-md-4">  
+
+        <button class="btn btn-primary"  type="submit">Pesquisar</button>  
+
+      </div>
+
     </div>
-    <div class="col-md-6"></div>
-    </div>
-</div>
-</div>
+
+  </div>
+
+</form>
 
 <div class="row" id="posts">
 </div>
