@@ -822,7 +822,7 @@ body.my-background{
 }
 
 .portfolio-content{
-  margin-top: -10%;
+  margin-top: -250px;
   margin-bottom: 5rem;
 }
 
@@ -840,7 +840,7 @@ body.my-background{
 }
 
 .portfolioFilter a {
-  margin-right: 6px;
+  margin: 5px;
   color: #fff;
   text-decoration: none;
   border: 1px solid #ccc;
@@ -930,6 +930,16 @@ body.my-background{
 /* MAIN FIX FOR HEADER */
 main{
 	padding: 38px 0 0;
+}
+
+
+
+@media screen and (min-width: 550px){
+
+	.portfolio-content{
+  		margin-top: -200px;
+	}
+
 }
 
 
@@ -1024,12 +1034,6 @@ main{
 }
 
 
-.parallax {
-    height: 100%;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-}
-
 }
 
 @media screen and (min-width: 1200px){
@@ -1038,6 +1042,9 @@ main{
 		font-size: 280%;
 	}
 
+	.portfolio-content{
+  		margin-top: -150px;
+	}
 
 
 }
