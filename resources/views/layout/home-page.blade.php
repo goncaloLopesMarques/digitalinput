@@ -245,47 +245,60 @@
 
 
   <!--Carousel Wrapper-->
-  <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+  <!-- <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel"> -->
+    <div id="clientes-slider" class="logos-row center-logos">
 
 
-
+      <!--Controls-->
+     <!-- <a class="carousel-control-prev" href="#multi-item-example" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+     </a>
+     <a class="carousel-control-next" href="#multi-item-example" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+     </a> -->
+      <!--/.Controls-->
 
 
       <!--Indicators-->
-      <ol class="carousel-indicators">
+      <!-- <ol class="carousel-indicators">
           <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
           <li data-target="#multi-item-example" data-slide-to="1"></li>
           <li data-target="#multi-item-example" data-slide-to="2"></li>
-      </ol>
+      </ol> -->
       <!--/.Indicators-->
 
       <!--Slides-->
-      <div class="my carousel-inner" role="listbox" style="">
+      <!-- <div class="my carousel-inner center-logos" role="listbox" style=""> -->
+
+
+          <!--First slide-->
+          <!-- <div class="container-fluid slide-container-homepage"> -->
+             <!-- <div class="logo-div" id="posts-1"></div> -->
+          <!-- </div> -->
 
 
 
-             <div class="my carousel-item active row" id="posts-1"></div>
-      
+          <!--Second slide-->
+          <!-- <div class="container-fluid slide-container-homepage"> -->
+             <!-- <div class="logo-div" id="posts-2"></div> -->
+          <!-- </div> -->
 
 
 
-
-             <div class="my carousel-item row" id="posts-2"></div>
-    
-
-
-
-   
-             <div class="my carousel-item row" id="posts-3"></div>
-      
+          <!--Third slide-->
+          <!-- <div class="container-fluid slide-container-homepage"> -->
+             <!-- <div class="logo-div" id="posts-3"></div> -->
+          <!-- </div> -->
 
 
 
-      </div>
+      <!-- </div> -->
       <!--/.Slides-->
 
       <!--Controls-->
-     <a class="my-clientes carousel-control-prev" href="#multi-item-example" role="button" data-slide="prev">
+     <!-- <a class="my carousel-control-prev" href="#multi-item-example" role="button" data-slide="prev">
                       <span class="my carousel-control-prev-icon" aria-hidden="true"></span>
                       <span class="sr-only">Previous</span>
      </a>
@@ -293,14 +306,14 @@
      <a class="my-clientes carousel-control-next" href="#multi-item-example" role="button" data-slide="next">
                       <span class="my carousel-control-next-icon" aria-hidden="true"></span>
                       <span class="sr-only">Next</span>
-     </a>
+     </a> -->
 
 
       <!--Controls-->
-  <div class="flex-center">
+  <!-- <div class="flex-center">
     <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
     <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
-  </div>
+  </div> -->
   <!--/.Controls-->
 
 
