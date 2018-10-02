@@ -217,7 +217,7 @@
                   <p class="card-text">Não conhece os preços do Marketing Digital? Selecione os serviços que mais se adatam à realidade do seu negócio e tenha uma ideia de quanto poderá investir.</p>
               </div>
               <div class="card-footer text-center">
-                  <a class="text-muted btn btn-elegant waves-effect waves-light">Simulador - Obter estimativa</a>
+                  <a href="/orcamento" class="text-muted btn btn-elegant waves-effect waves-light">Simulador - Obter estimativa</a>
               </div>
            </div>
           </div>

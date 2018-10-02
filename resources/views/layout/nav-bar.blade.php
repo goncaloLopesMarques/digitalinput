@@ -99,7 +99,7 @@
                                                 <a class="nav-link waves-effect" href="/publicidade-facebook-anunciar-empresas" target="_self">Facebook Adds</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link waves-effect" href="/agencia-adwords-publicidade-anunciar-google" target="_self">Google Adds</a>
+                                                <a class="nav-link waves-effect" href="/agencia-adwords-publicidade-anunciar-google" target="_self">Google Ads</a>
                                             </li>
                                             <li class="nav-item">
                                                 <a class="nav-link waves-effect" href="/manutencao-websites" target="_self">Manutenção / Otimização Websites</a>
