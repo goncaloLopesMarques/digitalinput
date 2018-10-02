@@ -619,25 +619,25 @@ pre code {
 
 @media (min-width: 576px) {
   .container {
-    max-width: 540px;
+    max-width: 100%;
   }
 }
 
 @media (min-width: 768px) {
   .container {
-    max-width: 720px;
+    max-width: 90%;
   }
 }
 
 @media (min-width: 1200px) {
   .container {
-    max-width: 1125px;
+    max-width: 85%;
   }
 }
 
 @media (min-width: 1600px) {
   .container {
-    max-width: 1500px;
+    max-width: 84%;
   }
 }
 
@@ -21585,6 +21585,8 @@ table.table-sm td {
 
 h1.section-title,
 h3.section-title {
+  padding-top: 1em;
+  padding-bottom: 1em;
   z-index: 1;
   font-family: "Montserrat";
   letter-spacing: 5px;
@@ -21594,8 +21596,8 @@ h3.section-title {
   text-transform: uppercase;
   font-weight: 200;
   text-transform: uppercase;
-  padding: 0 3% 40px 8%;
   position: relative;
+  background-color: white;
   /* Just add shadows, every time with a different top, right and opacity */
   text-shadow: #c0c0c0 -1px 1px 0, #fff -2px 2px 0, #c3c3c3 -3px 3px 0, #fff -4px 4px 0, #c6c6c6 -5px 5px 0, #fff -6px 6px 0, #c9c9c9 -7px 7px 0, #fff -8px 8px 0, #ccc -9px 9px 0, #fff -10px 10px 0, #cfcfcf -11px 11px 0, #fff -12px 12px 0, #d2d2d2 -13px 13px 0, #fff -14px 14px 0, #d5d5d5 -15px 15px 0, #fff -16px 16px 0, #d8d8d8 -17px 17px 0, #fff -18px 18px 0, #dbdbdb -19px 19px 0, #fff -20px 20px 0, #dfdfdf -21px 21px 0, #fff -22px 22px 0, #e2e2e2 -23px 23px 0, #fff -24px 24px 0, #e5e5e5 -25px 25px 0, #fff -26px 26px 0, #e8e8e8 -27px 27px 0, #fff -28px 28px 0, #ebebeb -29px 29px 0, #fff -30px 30px 0, #eee -31px 31px 0, #fff -32px 32px 0, #f1f1f1 -33px 33px 0, #fff -34px 34px 0, #f4f4f4 -35px 35px 0, #fff -36px 36px 0, #f7f7f7 -37px 37px 0, #fff -38px 38px 0, #fafafa -39px 39px 0, #fbfbfb -40px 40px 0, #fdfdfd -41px 41px 0, #fff -42px 42px 0;
 }
@@ -21613,19 +21615,7 @@ https://mdbootstrap.com/layout/bootstrap-media-queries/
 
 phone & tabklet queries */
 
-@media (max-width: 767.98px) {
-  div.my.card-body {
-    padding: 0px;
-  }
-}
-
 /* pc & desktop queries */
-
-@media (min-width: 576px) {
-  div.my.card-body {
-    padding: 1rem;
-  }
-}
 
 section.intro {
   height: calc(100vh);
@@ -21640,6 +21630,10 @@ div.my.card {
   box-shadow: none;
   /*border: 1px solid #0d0c07;*/
   /*margin: 1rem!important;*/
+}
+
+div.my.card-body {
+  padding: 0px;
 }
 
 div.my.card-body h3 {
@@ -21663,6 +21657,12 @@ div.my.card-body > p {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   margin: 0px;
+}
+
+div.my.card-body > h3 {
+  border: 2px solid black;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
 }
 
 div.servicos-home {

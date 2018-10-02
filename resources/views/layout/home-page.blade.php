@@ -50,9 +50,9 @@
    </section>
 
    <!-- SERVIÇOS -->
-   <section class="mx-auto px-0 pt-4">
+   <section class="py-5 cloudy-knoxville-gradient">
 
-     
+      <div class="container">
       
          <div class="row m-0">
 
@@ -60,7 +60,7 @@
           <!--Panel-->
     
                                <!-- 3colunas - 2colunas - 1coluna -->
-          <div class="servicos-home col-lg-4 col-md-6 col-xs-12">
+          <div class="servicos-home col-xl-3 col-lg-4 col-md-6 col-xs-12">
             <div class="my card col-md-12">
               <div class="my card-body">
                   <h3 class="card-title white-text">Criação de Sites para Empresas</h3>
@@ -80,7 +80,7 @@
 
           <!--Panel-->
      
-          <div class="servicos-home col-lg-4 col-md-6 col-xs-12">
+          <div class="servicos-home col-xl-3 col-lg-4 col-md-6 col-xs-12">
             <div class="my card col-md-12">
               <div class="my card-body">
                   <h3 class="card-title white-text">Criar Loja Online</h3>
@@ -96,7 +96,7 @@
 
           <!--Panel-->
       
-          <div class="servicos-home col-lg-4 col-md-6 col-xs-12">
+          <div class="servicos-home col-xl-3 col-lg-4 col-md-6 col-xs-12">
             <div class="my card col-md-12">
               <div class="my card-body">
                   <h3 class="card-title white-text">Design Gráfico | Identidade Visual</h3>
@@ -112,7 +112,7 @@
 
           <!--Panel-->
       
-          <div class="servicos-home col-lg-4 col-md-6 col-xs-12">
+          <div class="servicos-home col-xl-3 col-lg-4 col-md-6 col-xs-12">
             <div class="my card col-md-12">
               <div class="my card-body">
                   <h3 class="card-title white-text">Adwords | Anunciar Google</h3>
@@ -128,7 +128,7 @@
 
           <!--Panel-->
      
-          <div class="servicos-home col-lg-4 col-md-6 col-xs-12">
+          <div class="servicos-home col-xl-3 col-lg-4 col-md-6 col-xs-12">
             <div class="my card col-md-12">
               <div class="my card-body">
                   <h3 class="card-title white-text">Publicidade Facebook | Promover</h3>
@@ -144,7 +144,7 @@
 
           <!--Panel-->
 
-          <div class="servicos-home col-lg-4 col-md-6 col-xs-12">
+          <div class="servicos-home col-xl-3 col-lg-4 col-md-6 col-xs-12">
             <div class="my card col-md-12">
               <div class="my card-body">
                   <h3 class="card-title white-text">Consultoria Marketing Digital</h3>
@@ -159,26 +159,9 @@
           <!--/.Panel-->
 
 
-
-           <!--Panel-->
- 
-          <div class="servicos-home col-lg-4 col-md-6 col-xs-12">
-            <div class="my card col-md-12">
-              <div class="my card-body">
-                  <h3 class="card-title white-text">Gestão de Redes Sociais</h3>
-                  <p class="card-text">Gestão de Redes Sociais Preços - O Parceiro ideal para criar empatia e identidade de Marca junto dos seus Clientes</p>
-              </div>
-              <div class="card-footer">
-                  <small class="text-muted">Gestão Redes Sociais Preços</small>
-              </div>
-           </div>
-          </div>
-   
-          <!--/.Panel-->
-
           <!--Panel-->
 
-          <div class="servicos-home col-lg-4 col-md-6 col-xs-12">
+          <div class="servicos-home col-xl-3 col-lg-4 col-md-6 col-xs-12">
             <div class="my card col-md-12">
               <div class="my card-body">
                   <h3 class="card-title white-text">Optimização de Sites | SEO</h3>
@@ -194,7 +177,7 @@
 
          <!--Panel-->
     
-          <div class="servicos-home col-lg-4 col-md-6 col-xs-12">
+          <div class="servicos-home col-xl-3 col-lg-4 col-md-6 col-xs-12">
             <div class="my card col-md-12">
               <div class="my card-body">
                   <h3 class="card-title white-text">Agência Email Marketing</h3>
@@ -210,13 +193,13 @@
 
           <!--Panel-->
  
-          <div class="servicos-home col-lg-12 col-md-6 col-xs-12">
+          <div class="servicos-home col-xl-12 col-lg-4 col-md-6 col-xs-12">
             <div class="my card col-md-12">
               <div class="my card-body">
                   <h3 class="card-title white-text" style="background: linear-gradient(40deg,#212121,#8bc34a);">Simulador de Custos</h3>
                   <p class="card-text">Não conhece os preços do Marketing Digital? Selecione os serviços que mais se adatam à realidade do seu negócio e tenha uma ideia de quanto poderá investir.</p>
               </div>
-              <div class="card-footer text-center">
+              <div class="card-footer text-center" style="border-bottom: 1px solid rgba(0, 0, 0, 0.125);">
                   <a class="text-muted btn btn-elegant waves-effect waves-light">Simulador - Obter estimativa</a>
               </div>
            </div>
@@ -225,10 +208,13 @@
           <!--/.Panel-->
 
        </div>
-     </section>
+    </div>
+
+
+    </section>
   
 
-   </section>
+   {{-- </section> --}}
 
 
 
@@ -237,7 +223,7 @@
 <section class="pt-5">
 
 
-  <h3 class="section-title h1-responsive ml-5 mt-5 pl-5 pt-5">
+  <h3 class="section-title h1-responsive">
       <b>C</b>lientes
   </h3>
   
@@ -255,7 +241,7 @@
 
 <section class="pt-5">
 
-  <h3 class="section-title h1-responsive ml-5 mt-5 pl-5 pt-5">
+  <h3 class="section-title h1-responsive">
     <b>T</b>rabalhos <b>R</b>ecentes
   </h3>
 

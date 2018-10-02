@@ -34,7 +34,7 @@
 			<img src='".Voyager::image( $project->thumbnail )."'' alt='image'>
 			<div class='mask rgba-black-stronger flex-center'>
 			<p class='white-text text-center'> 
-			".$project->name."
+			".$project->site."
 			</p>
 			</div>
 			</a>															
