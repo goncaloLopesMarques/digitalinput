@@ -199,8 +199,8 @@
                   <h3 class="card-title white-text" style="background: linear-gradient(40deg,#212121,#8bc34a);">Simulador de Custos</h3>
                   <p class="card-text">Não conhece os preços do Marketing Digital? Selecione os serviços que mais se adatam à realidade do seu negócio e tenha uma ideia de quanto poderá investir.</p>
               </div>
-              <div class="card-footer text-center" style="border-bottom: 1px solid rgba(0, 0, 0, 0.125);">
-                  <a class="text-muted btn btn-elegant waves-effect waves-light">Simulador - Obter estimativa</a>
+              <div class="card-footer text-center">
+                  <a href="/orcamento" class="text-muted btn btn-elegant waves-effect waves-light">Simulador - Obter estimativa</a>
               </div>
            </div>
           </div>
