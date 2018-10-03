@@ -22139,6 +22139,10 @@ body.my-background {
   font-size: 1.25rem;
 }
 
+.servicos-home h3.card-title {
+  background: linear-gradient(40deg, #212121, #42a5f5, #212121);
+}
+
 /* Services Pages */
 
 .pages-header {

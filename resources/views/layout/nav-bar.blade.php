@@ -1,11 +1,5 @@
 
         <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
-             <!-- <div class="container"> --> 
-
-                <!-- Brand -->
-                <!-- <a class="navbar-brand waves-effect" href="https://mdbootstrap.com/material-design-for-bootstrap/" target="_blank">
-                    <strong class="blue-text">MDB</strong>
-                </a> -->
 
                 <!-- Collapse -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,49 +21,6 @@
                             <ul class="dropdown-menu animated slideInLeft" style="width: 100%;">
                                  <div class="container"> 
                                     <div class="row">
-
-
-                                        <!-- <div class="my-col-3 col-lg-4 col-md-6 col-xs-12 p-0">
-                                            xxxxx xxxxx
-                                        </div>
-
-                                        <div class="my-col-3 col-lg-4 col-md-6 col-xs-12 p-0">
-                                            xxxxx xxxxx
-                                        </div>
-
-                                        <div class="my-col-3 col-lg-4 col-md-6 col-xs-12 p-0">
-                                            xxxxx xxxxx
-                                        </div>
-
-                                        <div class="my-col-3 col-lg-4 col-md-6 col-xs-12 p-0">
-                                            xxxxx xxxxx
-                                        </div>
-
-                                        <div class="my-col-3 col-lg-4 col-md-6 col-xs-12 p-0">
-                                            xxxxx xxxxx
-                                        </div>
-
-                                        <div class="my-col-3 col-lg-4 col-md-6 col-xs-12 p-0">
-                                            xxxxx xxxxx
-                                        </div>
-
-                                        <div class="my-col-3 col-lg-4 col-md-6 col-xs-12 p-0">
-                                            xxxxx xxxxx
-                                        </div>
-
-                                        <div class="my-col-3 col-lg-4 col-md-6 col-xs-12 p-0">
-                                            xxxxx xxxxx
-                                        </div>
-
-                                        <div class="my-col-3 col-lg-4 col-md-6 col-xs-12 p-0">
-                                            xxxxx xxxxx
-                                        </div>
-
-                                        <div class="my-col-3 col-lg-4 col-md-6 col-xs-12 p-0">
-                                            xxxxx xxxxx
-                                        </div> -->
-
-
 
                                         <div class="col-md-6">
                                             <li class="nav-item">
@@ -156,12 +107,6 @@
                             </a>
                         </li>
                             
-
-                        <!-- <li class="nav-item">
-                            <a href="https://github.com/mdbootstrap/bootstrap-material-design" class="nav-link border border-light rounded waves-effect" target="_blank">
-                                <i class="fa fa-github mr-2"></i>MDB GitHub
-                            </a>
-                        </li> -->
                     </ul>
 
                 </div>

@@ -25,7 +25,7 @@
         <label for="nome">Nome</label>
         <input type="email" class="form-control" id="inputNome" placeholder="O seu nome" v-model ="dataToOrcamento.nome">
         <label for="email">Email</label>
-        <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="O seu email" v-model ="dataToOrcamento.email">
+        <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="O seu email" v-model ="dataToOrcamento.email" required>
       </div>
       <button @click.prevent="sendMail" class="fill">Enviar</button>
     </form>

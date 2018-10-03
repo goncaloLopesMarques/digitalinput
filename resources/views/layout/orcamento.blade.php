@@ -1,4 +1,4 @@
-<link href="{{asset('css/app.css')}}" rel="stylesheet">
+
 <div id="app">
   <orcamento/>
 </div>

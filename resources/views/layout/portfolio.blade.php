@@ -31,7 +31,7 @@
 			}
 			echo "<div class='".$cat_names." view overlay zoom col-sm-12 col-md-6 col-lg-4 col-xl-3'>
 			<a href='/portfolio/".$project->slug."'>
-			<img src='".Voyager::image( $project->thumbnail )."'' alt='image'>
+			<img src='".Voyager::image( $project->thumbnail )."' alt='image'>
 			<div class='mask rgba-black-stronger flex-center'>
 			<p class='white-text text-center'> 
 			".$project->site."

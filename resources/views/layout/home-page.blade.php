@@ -7,7 +7,7 @@
    <!-- APRESENTAÇÃO -->
    <section class="card wow fadeIn radial-purple-gradient intro" style="background:radial-gradient( circle at top, #42a5f5, #273654 ) ;visibility: visible; animation-name: fadeIn;">
       <!-- Content -->
-      <div class="m-0 row text-white" style="height:calc(100vh - 45px)"><!-- style="background-image: url('/images/Programmer-Developer-Wallpaper.jpg');" -->
+      <div class="m-0 row text-white" style="height:calc(100vh - 45px)">
 
        
          <div class="col-md-12 h-25 my-vertical-align">
@@ -123,8 +123,6 @@
               </div>
            </div>
           </div>
-     
-          <!--/.Panel-->
 
           <!--Panel-->
      
@@ -139,8 +137,6 @@
               </div>
            </div>
           </div>
-     
-          <!--/.Panel-->
 
           <!--Panel-->
 
@@ -155,9 +151,6 @@
               </div>
            </div>
           </div>
-    
-          <!--/.Panel-->
-
 
           <!--Panel-->
 
@@ -172,8 +165,6 @@
               </div>
            </div>
           </div>
-     
-          <!--/.Panel-->
 
          <!--Panel-->
     
@@ -188,15 +179,13 @@
               </div>
            </div>
           </div>
-    
-          <!--/.Panel-->
 
           <!--Panel-->
  
           <div class="servicos-home col-xl-12 col-lg-4 col-md-6 col-xs-12">
             <div class="my card col-md-12">
               <div class="my card-body">
-                  <h3 class="card-title white-text" style="background: linear-gradient(40deg,#212121,#8bc34a);">Simulador de Custos</h3>
+                  <h3 class="card-title white-text">Simulador de Custos</h3>
                   <p class="card-text">Não conhece os preços do Marketing Digital? Selecione os serviços que mais se adatam à realidade do seu negócio e tenha uma ideia de quanto poderá investir.</p>
               </div>
               <div class="card-footer text-center">
@@ -210,15 +199,7 @@
        </div>
     </div>
 
-
     </section>
-  
-
-   {{-- </section> --}}
-
-
-
-
 
 <section class="pt-5">
 
@@ -233,11 +214,6 @@
 
       
 </section>
-
-
-
-
-
 
 <section class="pt-5">
 
