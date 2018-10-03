@@ -53,7 +53,7 @@
                 <a href="#" class="list-group-item list-group-item-black"> 
                     <h3 class="h2-responsive font-weight-bold">Título</h3>
                 </a>
-
+                
                 <a href="#" class="list-group-item list-group-item-black waves-effect">...</a>
                 <a href="#" class="list-group-item list-group-item-black waves-effect">...</a>
                 <a href="#" class="list-group-item list-group-item-black waves-effect">...</a>
@@ -73,14 +73,20 @@
                     <h3 class="h2-responsive font-weight-bold">Contactos</h3>
                 </a>
 
-                <a href="#" class="list-group-item list-group-item-black waves-effect">
-                    <i class="far fa-envelope fa-lg" aria-hidden="true"></i> Consultoria Marketing Digital
+                <a href="mailto:info@digitalinput.pt" class="list-group-item list-group-item-black waves-effect">
+                    <i class="fa fa-envelope fa-lg" aria-hidden="true"></i> info@digitalinput.pt
                 </a>
-                <a href="#" class="list-group-item list-group-item-black waves-effect">Criação de websites | Lojas Online</a>
-                <a href="#" class="list-group-item list-group-item-black waves-effect">Publicidade Online</a>
-                <a href="#" class="list-group-item list-group-item-black waves-effect">Design Gráfico</a>
 
-                <a href="#" class="list-group-item list-group-item-action waves-effect z-depth-1-half hoverable">Pedir Orçamento</a>
+                <a href="tel:+351919165229" class="list-group-item list-group-item-black waves-effect">
+                    <i class="fa fa-phone pr-2"></i>+351 919165229
+                </a>
+
+                <a href="#" class="list-group-item list-group-item-black waves-effect"><i class="fa fa-map-marker pr-2"></i>Rua das Laranjeiras,
+                                        lote 40, Loja B<br/>
+                                        Urbanização do Vale Verde, Marrazes<br/>
+                                        2415-773 Leiria</a>
+
+                <a href="http://melhorsitedomundo/orcamento" class="list-group-item list-group-item-action waves-effect z-depth-1-half hoverable">Pedir Orçamento</a>
 
             </div>
 

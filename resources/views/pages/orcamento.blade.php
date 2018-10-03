@@ -8,8 +8,9 @@
     <meta name="description" content="">
 
     <meta name="keywords" content="">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     @include('layout.head') 
-    
+    <link href="{{asset('css/app.css')}}" rel="stylesheet">
 @endsection
 
 
