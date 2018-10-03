@@ -119,7 +119,7 @@
                   <p class="card-text">google adwords; publicidade na internet; como anunciar no google; google adwords preço; google adwords preço; divulgar site; agência adwords</p>
               </div>
               <div class="card-footer">
-                  <small class="text-muted">Procura Agência Adwords, anunciar e divulgar o seu site no google?</small>
+                  <small class="text-muted">Agência Publicidade Online | Anunciar e divulgar no Google</small>
               </div>
            </div>
           </div>
@@ -132,10 +132,10 @@
             <div class="my card col-md-12">
               <div class="my card-body">
                   <h3 class="card-title white-text">Publicidade Facebook | Promover</h3>
-                  <p class="card-text">facebook para empresas; publicidade facebook; anunciar no facebook; facebookads</p>
+                  <p class="card-text">facebook para empresas; publicidade Facebook; anunciar no facebook; Facebook Ads</p>
               </div>
               <div class="card-footer">
-                  <small class="text-muted">Quer fazer Publicidade Facebook, anunciar a sua empresa com FacebookAds</small>
+                  <small class="text-muted">Publicidade Facebook | Promover empresa com Facebook Ads</small>
               </div>
            </div>
           </div>
@@ -151,40 +151,7 @@
                   <p class="card-text">micro e pequenas empresas; Médias Empresas; PME's; Consultor marketing digital; consultoria marketing digital; especialista em marketing digital</p>
               </div>
               <div class="card-footer">
-                  <small class="text-muted">É proprietário de uma pequena ou média Empresa? Obtenha Consultoria em Marketing Digital</small>
-              </div>
-           </div>
-          </div>
-    
-          <!--/.Panel-->
-
-
-          <!--Panel-->
-
-          <div class="servicos-home col-xl-3 col-lg-4 col-md-6 col-xs-12">
-            <div class="my card col-md-12">
-              <div class="my card-body">
-                  <h3 class="card-title white-text">Optimização de Sites | SEO</h3>
-                  <p class="card-text">Optimização de Sites com as mais recentes e inovadoras técnicas  SEO</p>
-              </div>
-              <div class="card-footer">
-                  <small class="text-muted">Optimização de Sites</small>
-              </div>
-           </div>
-          </div>
-     
-          <!--/.Panel-->
-
-         <!--Panel-->
-    
-          <div class="servicos-home col-xl-3 col-lg-4 col-md-6 col-xs-12">
-            <div class="my card col-md-12">
-              <div class="my card-body">
-                  <h3 class="card-title white-text">Agência Email Marketing</h3>
-                  <p class="card-text">Precisa de um Parceiro para implementação técnicas Email Marketing?</p>
-              </div>
-              <div class="card-footer">
-                  <small class="text-muted">Agência Email Marketing | Mailchimp</small>
+                  <small class="text-muted">Pequena ou média Empresa | Consultoria Marketing Digital</small>
               </div>
            </div>
           </div>
@@ -193,14 +160,14 @@
 
           <!--Panel-->
  
-          <div class="servicos-home col-xl-12 col-lg-4 col-md-6 col-xs-12">
+          <div class="servicos-home col-xl-6 col-lg-12 col-md-6 col-xs-12">
             <div class="my card col-md-12">
               <div class="my card-body">
                   <h3 class="card-title white-text" style="background: linear-gradient(40deg,#212121,#8bc34a);">Simulador de Custos</h3>
                   <p class="card-text">Não conhece os preços do Marketing Digital? Selecione os serviços que mais se adatam à realidade do seu negócio e tenha uma ideia de quanto poderá investir.</p>
               </div>
-              <div class="card-footer text-center">
-                  <a href="/orcamento" class="text-muted btn btn-elegant waves-effect waves-light">Simulador - Obter estimativa</a>
+              <div class="card-footer p-0 text-center">
+                  <a href="/orcamento" class="text-muted btn btn-elegant waves-effect waves-light m-0">Simulador - Obter estimativa</a>
               </div>
            </div>
           </div>

@@ -124,14 +124,14 @@
                     </ul>
 
                     <!-- Center -->
-                    <div class="logo my-vertical-align" >
+                    <div class="logo" >
                         <a href="/">
-                            <img src="/images/Digitalinput-LOGO.png" alt="Digitalinput Logo" style="height: 45px;padding-left: 5px;padding-right: 5px;">
+                            <img src="/images/Digitalinput-LOGO.png" alt="Digitalinput Logo">
                         </a>
                     </div>
 
                     <!-- Right -->
-                    <ul class="navbar-nav nav-flex-icons">
+                    <ul class="navbar-nav">
 
 
                         <li class="nav-item {{ Request::segment(1) === 'blog' ? 'active' : null }}">
@@ -140,21 +140,18 @@
                         <li class="nav-item {{ Request::segment(1) === 'contactos' ? 'active' : null }}">
                             <a class="nav-link waves-effect" href="/contactos" target="_self">Contactos</a>
                         </li>
-                        <li class="nav-item {{ Request::segment(1) === '' ? 'active' : null }}">
+                        <li class="nav-item flex-center">
                             <a href="https://www.facebook.com/digitalinputwebmarketing/" class="nav-link waves-effect" target="_blank">
                                 <i class="fa fa-facebook"></i>
                             </a>
-                        </li>
-                        <li class="nav-item {{ Request::segment(1) === '' ? 'active' : null }}">
                             <a href="https://twitter.com/Digitalinputweb" class="nav-link waves-effect" target="_blank">
                                 <i class="fa fa-twitter"></i>
                             </a>
-                        </li>
-                        <li class="nav-item {{ Request::segment(1) === '' ? 'active' : null }}">
-                            <a href="https://www.linkedin.com/company/digitalinput" class="nav-link waves-effect" target="_blank">
+                             <a href="https://www.linkedin.com/company/digitalinput" class="nav-link waves-effect" target="_blank">
                                 <i class="fa fa-linkedin-square"></i>
                             </a>
                         </li>
+                        
                             
 
                         <!-- <li class="nav-item">

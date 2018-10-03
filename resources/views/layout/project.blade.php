@@ -1,14 +1,12 @@
 
 
-<div class="container-fluid project-container" style="background-image: url('/images/PortfolioCovers/Supxperiencestore/sea-3652697_1920.jpg')">
+<div class="container-fluid project-container cloudy-knoxville-gradient">
+
+{{--   style="background-image: url('/images/PortfolioCovers/Supxperiencestore/sea-3652697_1920.jpg')" --}}
 
 	<section class="project-headers">
 
-		<div class="project-title">
 
-			<a href="http://{{ $project->name }}" target="_blank"><h1 class="">{{ $project->name }}</h1></a>
-
-		</div>
 
 		<div class="row project-row">
 
@@ -26,6 +24,12 @@
 
 				<div class="project-description">
 
+
+          <h1 class="">{{ $project->name }}</h1>
+
+
+
+
 					{!! $project->description !!}
 
 				</div>
@@ -38,7 +42,7 @@
 
 	<section class="project-body">
 
-		<h2 class="text-center margin-bb">Galeria de Imagens</h2>
+		<h3 class="text-center margin-bb">Galeria de Imagens</h3>
 
 		<div class="row" id="gallery-project">
 @php

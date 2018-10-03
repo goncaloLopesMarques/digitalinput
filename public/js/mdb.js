@@ -14830,6 +14830,7 @@ var OFFSET_TOP = 50;
 $(window).scroll(function () {
   if ($('.navbar').length) {
     if ($('.navbar').offset().top > OFFSET_TOP) {
+        
       $('.logo a img').attr('src', '/images/espiralPNG.png');  
       $('.logo a img').addClass("fa-spin");
       $('.scrolling-navbar').addClass("top-nav-collapse");

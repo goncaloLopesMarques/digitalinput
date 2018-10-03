@@ -5105,7 +5105,7 @@ input[type="button"].btn-block {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
-  padding: 1.25rem;
+  padding: 0.5rem;
 }
 
 .card-title {
@@ -5126,11 +5126,11 @@ input[type="button"].btn-block {
 }
 
 .card-link + .card-link {
-  margin-left: 1.25rem;
+  margin-left: 0.5rem;
 }
 
 .card-header {
-  padding: 0.75rem 1.25rem;
+  padding: 0.75rem 0.5rem;
   margin-bottom: 0;
   background-color: rgba(0, 0, 0, 0.03);
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
@@ -5145,7 +5145,7 @@ input[type="button"].btn-block {
 }
 
 .card-footer {
-  padding: 0.75rem 1.25rem;
+  padding: 0.75rem 0.5rem;
   background-color: rgba(0, 0, 0, 0.03);
   border-top: 1px solid rgba(0, 0, 0, 0.125);
 }
@@ -5155,15 +5155,15 @@ input[type="button"].btn-block {
 }
 
 .card-header-tabs {
-  margin-right: -0.625rem;
+  margin-right: -0.25rem;
   margin-bottom: -0.75rem;
-  margin-left: -0.625rem;
+  margin-left: -0.25rem;
   border-bottom: 0;
 }
 
 .card-header-pills {
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
+  margin-right: -0.25rem;
+  margin-left: -0.25rem;
 }
 
 .card-img-overlay {
@@ -21504,6 +21504,25 @@ table.table-sm td {
   height: 100%;
 }
 
+/* VERTICAL ALIGN */
+
+.my-vertical-align {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.hide {
+  display: none;
+}
+
 .spinner {
   position: absolute;
   top: 0;
@@ -21537,34 +21556,6 @@ table.table-sm td {
 
 .my-text-shadow-strong {
   text-shadow: 0 0 3px rgba(0, 0, 0, 0.8);
-}
-
-/* VERTICAL ALIGN (muita bom)*/
-
-.my-vertical-align {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.hide {
-  display: none;
-}
-
-@media (min-width: 1400px) {
-  .my-col-xxl-3 {
-    -ms-flex: 0 0 25%;
-    -webkit-box-flex: 0;
-            flex: 0 0 25%;
-    max-width: 25%;
-  }
 }
 
 .rgba-black-stronger {
@@ -21617,6 +21608,12 @@ phone & tabklet queries */
 
 /* pc & desktop queries */
 
+@media (min-width: 1200px) {
+  main {
+    padding: 64px 0 0;
+  }
+}
+
 section.intro {
   height: calc(100vh);
 }
@@ -21634,6 +21631,7 @@ div.my.card {
 
 div.my.card-body {
   padding: 0px;
+  background-color: white;
 }
 
 div.my.card-body h3 {
@@ -21670,14 +21668,60 @@ div.servicos-home {
 }
 
 div.servicos-home h3 {
-  background: linear-gradient(40deg, #212121, #2E2E2E);
+  background: linear-gradient(40deg, #212121, #346ea5);
 }
 
 nav.navbar.fixed-top {
   background-color: white;
 }
 
-@media (min-width: 992px) {
+@media (max-width: 1199.98px) {
+  div.logo {
+    border: 2px solid pink;
+    display: none !important;
+  }
+
+  nav.navbar {
+    padding: 0px;
+    height: 45px;
+  }
+
+  div.navbar-collapse.collapse.show {
+    background: radial-gradient(circle at center top, #42a5f5, #273654);
+  }
+
+  div.navbar-collapse.collapse.show ul {
+    -webkit-animation-name: fadeIn;
+            animation-name: fadeIn;
+    text-align: center;
+  }
+
+  div.navbar-collapse.collapse.show .navbar-nav {
+    width: 100%;
+  }
+
+  div.navbar-collapse.collapse.show li > a,
+  div.navbar-collapse.collapse.show li.nav-item > a {
+    color: white !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  div.logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    border: 2px solid green;
+    height: 63px;
+  }
+
   .logo:hover {
     -webkit-box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0 0 25px rgba(0, 0, 0, 0.2) inset;
     box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0 0 25px rgba(0, 0, 0, 0.2) inset;
@@ -21708,18 +21752,12 @@ nav.navbar.fixed-top {
     width: 100%;
   }
 
-  /* top */
-
   nav.navbar.fixed-top > div > ul.navbar-nav > li > a {
     background-color: none;
     padding-top: 20px;
     padding-bottom: 20px;
     overflow: inherit;
     font-weight: 900;
-    /*
-    	-webkit-box-shadow: inset 1px 1px 0px 0px rgba(0, 0, 0,0.2), 0 0 25px rgba(0, 0, 0, 0.2) inset;
-    	-moz-box-shadow: inset 1px 1px 0px 0px rgba(0, 0, 0, 0.2), 0 0 25px rgba(0, 0, 0, 0.2) inset;
-    	box-shadow: inset 1px 1px 0px 0px rgba(0, 0, 0, 0.2), 0 0 25px rgba(0, 0, 0, 0.2) inset;   */
   }
 
   nav.navbar.fixed-top > div > ul.navbar-nav > li > a:hover {
@@ -21760,6 +21798,10 @@ nav.navbar.fixed-top {
     color: #cccccc !important;
   }
 
+  nav.navbar.fixed-top.top-nav-collapse div.logo {
+    height: 45px;
+  }
+
   nav.navbar.fixed-top.top-nav-collapse > div > div {
     background-color: #0d0c07;
   }
@@ -21767,16 +21809,7 @@ nav.navbar.fixed-top {
   nav > div > ul.navbar-nav > li > a {
     background-color: white;
     width: 100%;
-    /* height: 51px;*/
     width: 100%;
-  }
-
-  li.nav-item > a.nav-link {
-    /*
-		display: flex!important;
-  		align-items: center!important;
-  		justify-content: center!important
-  		*/
   }
 }
 
@@ -22124,15 +22157,36 @@ body.my-background {
   width: 100%;
 }
 
-.h3-voyager-descricao-cliente {
+/* conteudo clientes e projetos voyager */
+
+div.my-mask-over .h3-voyager-descricao-cliente {
   font-size: 1.25rem;
-  text-align: center;
+  text-align: left;
 }
 
-.p-voyager-descricao-cliente,
-#clientes-slider div.titulo-blog-container p {
-  font-size: .85rem;
+div.my-mask-over .p-voyager-descricao-cliente {
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
 }
+
+div.project-description h1 {
+  margin-top: 4rem !important;
+}
+
+div.project-description .h3-voyager-descricao-cliente {
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-align: left;
+  margin-top: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+div.project-description .p-voyager-descricao-cliente {
+  font-size: 1rem;
+  margin-bottom: 0.7rem;
+}
+
+/* FIM conteudo clientes e projetos voyager */
 
 #clientes-slider .slick-center div.titulo-blog-container p {
   font-weight: bold;
@@ -22313,11 +22367,6 @@ main {
 /* Header Section */
 
 @media screen and (min-width: 992px) {
-  .logo {
-    text-align: center;
-    margin: 0 auto;
-  }
-
   .home-slider {
     padding-top: 25vh;
     padding-bottom: 60vh;
@@ -22352,15 +22401,6 @@ main {
   }
 
   /* MAIN FIX FOR HEADER */
-
-  main {
-    padding: 64px 0 0;
-  }
-
-  .logo {
-    text-align: center;
-    margin: 0 auto;
-  }
 
   .home-slider {
     padding-top: 25vh;

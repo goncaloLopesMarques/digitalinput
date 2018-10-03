@@ -2,8 +2,16 @@
 
 // AS MINHAS CLASSES
 
+/* VERTICAL ALIGN */
+.my-vertical-align{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
-
+.hide{
+  display:none
+}
 
 
 .spinner {
@@ -35,10 +43,6 @@
 
 
 
-
-
-
-
 /* texto branco em fundo claro*/
 .my-text-shadow{
 	text-shadow: 0 0 3px rgba(0,0,0,0.5);
@@ -49,30 +53,6 @@
 	text-shadow: 0 0 3px rgba(0,0,0,0.8);
 }
 
-
-
-/* VERTICAL ALIGN (muita bom)*/
-.my-vertical-align{
-	display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.hide{
-	display:none
-}
-
-@media(min-width:1400px){
-
-.my-col-xxl-3 {
-    -ms-flex: 0 0 25%;
-    flex: 0 0 25%;
-    max-width: 25%;
-  }
-
-
-
-}
 
 
 .rgba-black-stronger{
@@ -143,11 +123,7 @@ https://mdbootstrap.com/layout/bootstrap-media-queries/
 
 
 phone & tabklet queries */
-@include media-breakpoint-down(sm) {
-
-	
-
-
+@include media-breakpoint-down(lg) {
 
 
 
@@ -155,13 +131,12 @@ phone & tabklet queries */
 
 
 /* pc & desktop queries */
-@include media-breakpoint-up(sm){
+@include media-breakpoint-up(lg){
 
 	
-	
-
-
-
+    main{
+      padding: 64px 0 0;
+    }
 
 } 
 
@@ -206,6 +181,8 @@ div.my.card-body{
 
   padding:0px;
 
+  background-color:white;
+
 	
 }
 
@@ -241,7 +218,6 @@ div.my.card-body > h3{
   border: 2px solid black;
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
-
     
 }
 
@@ -251,7 +227,7 @@ div.my.card-body > h3{
 div.servicos-home {
 
 	h3{
-		background: linear-gradient(40deg,#212121,#2E2E2E);
+		background: linear-gradient(40deg,#212121,#346ea5);
 	}
 
 
@@ -272,6 +248,7 @@ div.servicos-home {
 
 // MENU
 
+//  .top-nav-collapse   ( sticky navbar )
 
 nav.navbar.fixed-top{
 	
@@ -280,16 +257,77 @@ nav.navbar.fixed-top{
 
 
 
-// nav bar depois de scrool
 
-@media (min-width: 992px){
+// COLLAPSED
+
+@include media-breakpoint-down(md){
 
 
-//  .top-nav-collapse   ( sticky navbar )
 
-	.logo{
+ div.logo{
+  border: 2px solid pink;
+    display:none!important;
+ }
 
-	}
+  nav.navbar{
+
+    padding:0px;
+    height:45px;
+  }
+
+
+  div.navbar-collapse.collapse.show{
+
+    background: radial-gradient(circle at center top, rgb(66, 165, 245), rgb(39, 54, 84));
+
+
+    ul {
+
+      animation-name: fadeIn;
+      text-align: center;
+    }
+
+    .navbar-nav{
+      
+      width:100%;
+      
+    }
+
+    li > a, li.nav-item > a{
+
+      color:white!important;
+    }
+
+
+  }
+
+
+
+}
+
+
+
+
+// NOT COLLAPSED
+
+
+@include media-breakpoint-up(lg){
+
+
+ div.logo{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border:2px solid green;
+
+    
+    height:63px;
+ }
+
+
+// STICKY NAVBAR
+
 
 	.logo:hover{
 		-webkit-box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0,0.2), 0 0 25px rgba(0, 0, 0, 0.2) inset;
@@ -325,17 +363,19 @@ nav.navbar.fixed-top{
 	}
 
 
-	/* top */
+	// TOP NAVBAR (acrescenta classe top-nav-collapse)
+
+
+
+
 	nav.navbar.fixed-top > div > ul.navbar-nav > li > a{
+
 		background-color:none;
 		padding-top: 20px;
-    	padding-bottom: 20px;
-    	overflow: inherit;
-    	font-weight: 900;
-/*
-    	-webkit-box-shadow: inset 1px 1px 0px 0px rgba(0, 0, 0,0.2), 0 0 25px rgba(0, 0, 0, 0.2) inset;
-    	-moz-box-shadow: inset 1px 1px 0px 0px rgba(0, 0, 0, 0.2), 0 0 25px rgba(0, 0, 0, 0.2) inset;
-    	box-shadow: inset 1px 1px 0px 0px rgba(0, 0, 0, 0.2), 0 0 25px rgba(0, 0, 0, 0.2) inset;   */
+    padding-bottom: 20px;
+    overflow: inherit;
+    font-weight: 900;
+
 	}
 
 	nav.navbar.fixed-top > div > ul.navbar-nav > li > a:hover{
@@ -346,18 +386,12 @@ nav.navbar.fixed-top{
     	color:#000;
 	}
 
-	// 	nav.navbar.fixed-top > div > ul.navbar-nav > li > a:hover{
-		
- //    	-webkit-box-shadow: inset 1px 1px 0px 0px rgba(255, 255, 255, 0.2), 0 0 25px rgba(255, 255, 255, 0.2) inset;
- //    	-moz-box-shadow: inset 1px 1px 0px 0px rgba(255, 255, 255, 0.2), 0 0 25px rgba(255, 255, 255, 0.2) inset;
- //    	box-shadow: inset 1px 1px 0px 0px rgba(255, 255, 255, 0.2), 0 0 25px rgba(255, 255, 255, 0.2) inset;
-	    
-	// }
+	
 
 	nav.navbar.fixed-top > div > ul.navbar-nav > li.nav-item.active > a{
 
 
-        background: -webkit-linear-gradient(50deg,#42a5f5,#273654)!important;
+      background: -webkit-linear-gradient(50deg,#42a5f5,#273654)!important;
     	background: -o-linear-gradient(50deg,#42a5f5,#273654)!important;
    	 	background: linear-gradient(40deg,#42a5f5,#273654)!important;
    	 	font-weight: 900;
@@ -376,17 +410,20 @@ nav.navbar.fixed-top{
 		border: 1px solid #111;
 		height: 45px;
 		display: flex;
-  		align-items: center;
-  		justify-content: center;
-  		font-weight: 300;
+  	align-items: center;
+  	justify-content: center;
+  	font-weight: 300;
 
-  		box-shadow: unset;
-  		color: #cccccc!important;
+  	box-shadow: unset;
+  	color: #cccccc!important;
 	    
 	}
 
+  nav.navbar.fixed-top.top-nav-collapse div.logo{
 
 
+    height:45px;
+  }
 
 
 	nav.navbar.fixed-top.top-nav-collapse > div > div{
@@ -394,31 +431,17 @@ nav.navbar.fixed-top{
 	}
 
 
-
-
-
 	nav > div > ul.navbar-nav > li > a{
 		background-color:white;
 	    width: 100%;
-	   /* height: 51px;*/
 	    width: 100%;
 	    
 	}
 
 
-
-	
-
-
-	li.nav-item > a.nav-link{
-		/*
-		display: flex!important;
-  		align-items: center!important;
-  		justify-content: center!important
-  		*/
-	}
-
 }
+
+// FIM media-breakpoint-up(lg)
 
 
 // Projetos Recentes
@@ -780,13 +803,65 @@ body.my-background{
 #clientes-slider .slick-center img{
 	width: 100%;
 }
-.h3-voyager-descricao-cliente{
-	font-size: 1.25rem;
-	text-align: center;
+
+
+
+
+/* conteudo clientes e projetos voyager */
+
+div.my-mask-over {
+
+
+    .h3-voyager-descricao-cliente{
+
+    font-size: 1.25rem;
+    text-align: left;
+
+  }
+
+
+  .p-voyager-descricao-cliente{
+
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+  }
+
 }
-.p-voyager-descricao-cliente, #clientes-slider div.titulo-blog-container p{
-	font-size: .85rem;
+
+
+div.project-description{
+
+    h1{
+       margin-top: 4rem!important;
+    }
+
+    .h3-voyager-descricao-cliente{
+
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: left;
+    margin-top: 4rem;
+    margin-bottom: 1.5rem;
+    
+  }
+
+
+  .p-voyager-descricao-cliente{
+
+    font-size: 1rem;
+    margin-bottom: 0.7rem;
+  }
+
 }
+/* FIM conteudo clientes e projetos voyager */
+
+
+
+
+
+
+
+
 #clientes-slider .slick-center div.titulo-blog-container p{	
 	font-weight: bold;
 	font-size: 1.25rem;
@@ -963,10 +1038,7 @@ main{
 
 @media screen and (min-width: 992px){
 
-.logo{
-	text-align: center;
-	margin: 0 auto;
-}
+
 
 .home-slider{
 	padding-top: 25vh;
@@ -1003,15 +1075,10 @@ main{
 
 /* MAIN FIX FOR HEADER */
 
-main{
-	padding: 64px 0 0;
-}
 
 
-.logo{
-	text-align: center;
-	margin: 0 auto;
-}
+
+
 
 .home-slider{
 	padding-top: 25vh;
