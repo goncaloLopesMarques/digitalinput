@@ -21677,7 +21677,6 @@ nav.navbar.fixed-top {
 
 @media (max-width: 1199.98px) {
   div.logo {
-    border: 2px solid pink;
     display: none !important;
   }
 
@@ -21704,6 +21703,15 @@ nav.navbar.fixed-top {
   div.navbar-collapse.collapse.show li.nav-item > a {
     color: white !important;
   }
+
+  ul.navbar-nav .dropdown.show ul.dropdown-menu {
+    width: 50% !important;
+    left: 25%;
+  }
+
+  ul.navbar-nav .dropdown.show .dropdown-menu .nav-item a {
+    color: #000 !important;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -21718,7 +21726,6 @@ nav.navbar.fixed-top {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    border: 2px solid green;
     height: 63px;
   }
 
@@ -22194,7 +22201,8 @@ div.project-description .p-voyager-descricao-cliente {
 }
 
 .servicos-home h3.card-title {
-  background: linear-gradient(40deg, #212121, #42a5f5, #212121);
+  text-align: center;
+  background: linear-gradient(40deg, #212121, #42a5f5);
 }
 
 /* Services Pages */
@@ -22403,8 +22411,6 @@ main {
     transition: margin 3s ease;
     -webkit-transition: margin 3s ease;
   }
-
-  /* MAIN FIX FOR HEADER */
 
   .home-slider {
     padding-top: 25vh;

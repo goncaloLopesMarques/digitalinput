@@ -235,17 +235,6 @@ div.servicos-home {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
 // MENU
 
 //  .top-nav-collapse   ( sticky navbar )
@@ -265,7 +254,6 @@ nav.navbar.fixed-top{
 
 
  div.logo{
-  border: 2px solid pink;
     display:none!important;
  }
 
@@ -301,6 +289,19 @@ nav.navbar.fixed-top{
 
   }
 
+  ul.navbar-nav .dropdown.show{
+
+  	ul.dropdown-menu{
+  		width: 50% !important;
+  		left: 25%;
+  	}
+
+  	.dropdown-menu .nav-item a{
+  		color: #000 !important;
+  	}
+
+
+  }
 
 
 }
@@ -319,9 +320,6 @@ nav.navbar.fixed-top{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border:2px solid green;
-
-    
     height:63px;
  }
 
@@ -857,17 +855,13 @@ div.project-description{
 
 
 
-
-
-
-
-
 #clientes-slider .slick-center div.titulo-blog-container p{	
 	font-weight: bold;
 	font-size: 1.25rem;
 }
 .servicos-home h3.card-title{
-	background: linear-gradient(40deg,#212121,#42a5f5,#212121);
+	text-align: center;
+	background: linear-gradient(40deg,#212121,#42a5f5);
 }
 
 
@@ -1075,13 +1069,6 @@ main{
 	transition: margin 3s ease;
 	-webkit-transition: margin 3s ease;
 }
-
-/* MAIN FIX FOR HEADER */
-
-
-
-
-
 
 .home-slider{
 	padding-top: 25vh;

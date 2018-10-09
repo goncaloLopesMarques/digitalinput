@@ -1,12 +1,8 @@
 
 
-<div class="container-fluid project-container cloudy-knoxville-gradient">
-
-{{--   style="background-image: url('/images/PortfolioCovers/Supxperiencestore/sea-3652697_1920.jpg')" --}}
+<div class="container-fluid project-container">
 
 	<section class="project-headers">
-
-
 
 		<div class="row project-row">
 
@@ -26,9 +22,6 @@
 
 
           <h1 class="">{{ $project->name }}</h1>
-
-
-
 
 					{!! $project->description !!}
 
@@ -56,10 +49,10 @@
 				foreach($imagens as $pic)
 				{
 					preg_match('/\\\([a-zA-Z0-9_&]+)\.png$/', $pic, $target);						
-					$htmlpic .= "<div class='my-col-xxl-3 col-lg-4 col-md-6 col-xs-12 p-0 blogGrid'>
+					$htmlpic .= "<div class='my-col-xxl-3 col-lg-3 col-md-4 col-xs-12 p-0 blogGrid'>
 								   <div class='project-image flex-center waves-effect waves-light view overlay zoom'>
 									   		
-									 	<img src='". Voyager::image($pic) ."'  class='margin-bb cursor' alt='".$target[1]."'>										 
+									 	<img src='". Voyager::image($pic) ."'  class='cursor' alt='".$target[1]."'>										 
 
 									 	<div class='mask rgba-black-stronger flex-center' onclick=\"openModal();currentSlide(".$it.")\">
 									 		<p class='white-text text-center'> 
@@ -74,7 +67,7 @@
   											<img src='". Voyager::image($pic) ."' style='width:100%'>
   									</div>";
   						$htmlthumb .= "<div class='column'>
-											<img class='demo cursor margin-bb' src='". Voyager::image($pic) ."' onclick=\"currentSlide(".$it.")\" alt='".$target[1]."'>
+											<img class='demo cursor' src='". Voyager::image($pic) ."' onclick=\"currentSlide(".$it.")\" alt='".$target[1]."'>
 								  	    </div>";
 					$it++;
 				}
@@ -132,7 +125,7 @@
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: black;
+  background-color: rgba(0,0,0,.95);
 }
 
 /* Modal Content */
@@ -169,7 +162,7 @@
   display: none;
 }
 .mySlides img{
-	max-height: 460px;
+	max-height: 500px;
 }
 
 /* Next & previous buttons */

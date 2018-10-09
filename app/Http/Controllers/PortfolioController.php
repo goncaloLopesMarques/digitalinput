@@ -15,7 +15,7 @@ class PortfolioController extends Controller
         return view('pages.portfolio', compact('classes', 'categories', 'projetos'));
     }
     function project($slug){
-    	$classes = "portfolio-project";
+    	$classes = "portfolio-project my-background";
     	$project = Projeto::where('slug', '=', $slug)->firstOrFail();
     	return view('pages.project', compact('classes', 'project'));
     }
