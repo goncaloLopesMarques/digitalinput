@@ -56,6 +56,11 @@
       defer(function () {
 
         $(document).ready(function(){  
+
+
+
+            var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+            var numProjetos = 0;
            
      
            var trabalhosRecentes = <?php echo json_encode($recentwork); ?>;
@@ -63,6 +68,7 @@
            var clientes = <?php echo json_encode($clientes); ?>;
 
 
+              console.log(w);
 
             // apresentação clientes 
             for(var i=0 ; i< clientes.length ; i++){
@@ -73,11 +79,24 @@
 
 
 
+            if ( w > 1600)
+                numProjetos = 4;
+
+
+            else if ( w > 1200)
+                numProjetos = 3;
+
+            else
+                numProjetos = 2; 
+
+
+
+
             // apresentação trabalhos recentes
-            for(var i=0 ; i< trabalhosRecentes.length ; i++){
+            for(var i=0 ; i< numProjetos ; i++){
 
 
-
+              
   
             
                 $("#trabalhos-recentes").append('<div class="col-xl-3 col-lg-4 col-md-6 col-xs-12 p-0 blogGrid"><a href="/portfolio/'+trabalhosRecentes[i]["slug"]+'">  <div class="flex-center waves-effect waves-light view overlay zoom">   <img style="max-width: 100%;" src="storage/'+trabalhosRecentes[i]["thumbnail"]+'" alt="'+trabalhosRecentes[i]["name"]+'"><div class="titulo-blog-container">   <p class="p-1 text-center my-text-shadow-strong">'+trabalhosRecentes[i]["name"]+'</p>   </div>   <div class="my-vertical-align my-mask-over mask rgba-black-stronger waves-effect waves-light"><p class="white-text text-center">'+trabalhosRecentes[i]["description"].slice(0, 400)+'...</p></div></div></a></div>');
