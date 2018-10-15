@@ -617,15 +617,9 @@ pre code {
   margin-left: auto;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 1600px) {
   .container {
-    max-width: 100%;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 90%;
+    max-width: 84%;
   }
 }
 
@@ -635,9 +629,15 @@ pre code {
   }
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 768px) {
   .container {
-    max-width: 84%;
+    max-width: 90%;
+  }
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 100%;
   }
 }
 
@@ -12383,11 +12383,12 @@ h6 {
 }
 
 .h2-responsive {
-  font-size: 145%;
+  font-size: 120%;
 }
 
 .h3-responsive {
-  font-size: 135%;
+  font-size: 100%;
+  font-weight: bold;
 }
 
 .h4-responsive {
@@ -21576,14 +21577,13 @@ table.table-sm td {
 
 h1.section-title,
 h3.section-title {
-  padding-top: 1em;
-  padding-bottom: 1em;
+  padding: 1.3em 0;
   z-index: 1;
   font-family: "Montserrat";
   letter-spacing: 5px;
   display: block;
   text-align: center;
-  font-size: 55px;
+  /*font-size: 55px;*/
   text-transform: uppercase;
   font-weight: 200;
   text-transform: uppercase;
@@ -22367,7 +22367,7 @@ div.project-description .p-voyager-descricao-cliente {
 /* MAIN FIX FOR HEADER */
 
 main {
-  padding: 38px 0 0;
+  padding: 64px 0 0;
 }
 
 @media screen and (min-width: 550px) {
