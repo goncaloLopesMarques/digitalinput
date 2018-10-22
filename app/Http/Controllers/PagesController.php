@@ -71,8 +71,8 @@ class PagesController extends BaseController
 
 
         $template_content->boostrap_class_grid = 'template-grid col';
-        $template_content->boostrap_class_section_1 = 'template-section col';
-        $template_content->boostrap_class_section_2 = 'template-section col';
+        $template_content->boostrap_class_section_1 = 'template-section col-12';
+        $template_content->boostrap_class_section_2 = 'template-section col-12';
 
         $template_content->num_colunas_grid = 0;
         $template_content->mostrar_coluna_1 = true;

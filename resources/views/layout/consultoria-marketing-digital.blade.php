@@ -30,7 +30,7 @@
 			<h3 class="h3-responsive simple">{{ $template_content->section1_h3 }}</h3>
 
 
-			<div>
+			<div class="section-1">
 
 				
 				{!! $template_content->section1_col1_content !!}
@@ -63,7 +63,7 @@
 
       <div class="container">
       
-         <div class="row m-0">
+         <div class="row m-0 row-eq-height">
 
 
 			{{--          	
@@ -231,7 +231,7 @@
 			<h3 class="h3-responsive simple">{{ $template_content->section2_h3 }}</h3>
 
 
-			<div>
+			<div class="section-2">
 
 				
 				{!! $template_content->section2_col1_content !!}

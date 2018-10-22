@@ -21529,6 +21529,31 @@ div.call-to-action {
   display: none;
 }
 
+.row-eq-height {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  /*to enable responsiveness*/
+}
+
+.row-eq-height > [class*="col-"] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.row-eq-height > [class*="col-"] > div {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
 .spinner {
   position: absolute;
   top: 0;
@@ -22477,10 +22502,6 @@ main {
 }
 
 /* cards do template para serviços */
-
-div.card.card-cascade {
-  height: 100%;
-}
 
 .card.card-cascade .view.view-cascade.gradient-card-header {
   padding: 1.6rem 1rem;
