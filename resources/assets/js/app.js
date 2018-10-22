@@ -1,4 +1,4 @@
-require('./bootstrap');
+//require('./bootstrap');
 import StoreData from './store';
 import Vuex from 'vuex';
 import 'jquery';

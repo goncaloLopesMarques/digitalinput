@@ -1,12 +1,12 @@
 
 // Fonts
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
-@import url("https://fonts.googleapis.com/css?family=PT+Sans:700|Pacifico|Changa+One");
+//@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+//@import url("https://fonts.googleapis.com/css?family=PT+Sans:700|Pacifico|Changa+One");
 // Variables
-@import "variables";
+//@import "variables";
 
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
+//@import '~bootstrap/scss/bootstrap';
 
 .navbar-laravel {
   background-color: #fff;
@@ -103,10 +103,7 @@ button {
 
   }
 }
-.show{
- display:flex;
- text-align: center;min-height:200px;
-}
+
 .notShow{
 display:none;
 }
@@ -262,7 +259,6 @@ html {
 body {
   background-image: url(https://subtlepatterns.com/patterns/gplaypattern.png);
   background-position: center center;
-  font-family: 'Open Sans', sans-serif;
 }
 .imgCard2{
   max-width: 100%;
@@ -456,9 +452,8 @@ body, html {
   margin:0;
   padding:0;
   width: 100%;
-    height: 100%;
-    color: #777;
-    line-height: 1.8;
+  height: 100%;
+  color: #777;
 }
 .center {
   font-family: 'Oswald', sans-serif;
