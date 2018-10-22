@@ -10,8 +10,12 @@
     $("div.template-grid a").addClass("btn btn-elegant waves-effect waves-light");
 
 
+
+    var boostrap_class_section_1 = <?php echo json_encode($template_content->boostrap_class_section_1); ?>;
+
+
     // table responsive
-    $("section.template-section td").addClass("col-sm-12 col-md-6 col-lg-3");
+    $("section.template-section td").addClass(boostrap_class_section_1);
 
   });
 
