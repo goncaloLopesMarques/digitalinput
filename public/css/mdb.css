@@ -21697,7 +21697,7 @@ nav.navbar.fixed-top {
 
   nav.navbar {
     padding: 0px;
-    height: 45px;
+    height: 55px;
     text-align: center;
   }
 
@@ -21799,7 +21799,7 @@ nav.navbar.fixed-top {
   nav.navbar.fixed-top.top-nav-collapse > div > ul.navbar-nav > li > a {
     background-color: #0d0c07;
     border: 1px solid #111;
-    height: 45px;
+    height: 55px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -21816,7 +21816,7 @@ nav.navbar.fixed-top {
   }
 
   nav.navbar.fixed-top.top-nav-collapse div.logo {
-    height: 45px;
+    height: 55px;
   }
 
   nav.navbar.fixed-top.top-nav-collapse > div > div {

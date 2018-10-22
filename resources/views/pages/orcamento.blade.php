@@ -42,6 +42,7 @@
 @section('scripts-css')
 
     @include('layout.scripts-css')
+    <script src="{{ asset('js/app.js')}}"></script>
     
 @endsection
 
