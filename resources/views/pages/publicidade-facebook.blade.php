@@ -4,9 +4,8 @@
 
 @section('head')
 
-    <title>Publicidade Facebook | Anunciar Empresas | FacebookAds</title>
-    <meta name="description" content="Quer fazer Publicidade Facebook, anunciar a sua empresa com FacebookAds, 
-    conheça os nossos serviços personalizados. Visite-nos!">
+    <title>{{ $template_content->metaTitle }}</title>
+    <meta name="description" content="{{ $template_content->metaDescription }}">
 
     <meta name="keywords" content="facebook para empresas, publicidade no facebook, anunciar no facebook,
      marketing no facebook, facebookads">
@@ -43,6 +42,7 @@
 @section('scripts-css')
 
     @include('layout.scripts-css')
+    @include('layout.scripts-css-template')
     
 @endsection
 

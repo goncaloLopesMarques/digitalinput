@@ -4,9 +4,8 @@
 
 @section('head')
 
-    <title>Marketing de Conteúdo | Gestão de Conteúdo | Digitalinput</title>
-    <meta name="description" content="Marketing de Conteúdo é a mais recente tendência de 2017. 
-    Saiba o que podemos fazer pela gestão do seu negócio. Visite-nos!">
+    <title>{{ $template_content->metaTitle }}</title>
+    <meta name="description" content="{{ $template_content->metaDescription }}">
 
     <meta name="keywords" content="motores de pesquisa, 
     marketing de conteúdo,gestão de conteúdo, como otimizar meu site">
@@ -43,6 +42,7 @@
 @section('scripts-css')
 
     @include('layout.scripts-css')
+    @include('layout.scripts-css-template')
     
 @endsection
 

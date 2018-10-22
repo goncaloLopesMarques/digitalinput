@@ -4,9 +4,8 @@
 
 @section('head')
 
-    <title>Empresas Design Gráfico | Identidade Visual | Agência Design </title>
-    <meta name="description" content="Procura Empresas Design Gráfico para criar Identidade Visual e 
-    Agência Design para as suas estratégias, conheça-nos!">
+    <title>{{ $template_content->metaTitle }}</title>
+    <meta name="description" content="{{ $template_content->metaDescription }}">
 
     <meta name="keywords" content="logotipo, design grafico, criar logo, designer grafico,
     criar logotipos, empresas de design, identidade visual, agencia design, empresas de design grafico">
@@ -43,6 +42,7 @@
 @section('scripts-css')
 
     @include('layout.scripts-css')
+    @include('layout.scripts-css-template')
     
 @endsection
 

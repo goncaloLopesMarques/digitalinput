@@ -7,7 +7,7 @@
                 </button>
 
                 <!-- Links -->
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent" style="background: radial-gradient(circle at center top, rgb(66, 165, 245), rgb(39, 54, 84));">
 
                     <!-- Left -->
                     <ul class="navbar-nav">

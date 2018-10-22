@@ -4,9 +4,8 @@
 
 @section('head')
 
-    <title>Consultoria Marketing Digital Empresas | Micro | Pequenas | Médias | Digitalinput</title>
-    <meta name="description" content="É proprietário de uma micro, pequena ou média Empresa?
-     Obtenha já uma Consultoria Marketing Digital Empresas ao melhor Preço. Visite-nos!">
+    <title>{{ $template_content->metaTitle }}</title>
+    <meta name="description" content="{{ $template_content->metaDescription }}">
 
     <meta name="keywords" content="consultoria em marketing digital, consultoria marketing digital, consultor marketing digital,
      consultoria marketing digital, consultoria digital, especialista em marketing digital">
@@ -43,6 +42,7 @@
 @section('scripts-css')
 
     @include('layout.scripts-css')
+    @include('layout.scripts-css-template')
     
 @endsection
 

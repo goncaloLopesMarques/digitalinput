@@ -1,5 +1,20 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:100,300,400|Playfair+Display:400,700,400italic|Libre+Baskerville:400,700,400italic|Muli:300,400|Open+Sans:400,300,700|Oswald:400,700|Raleway:400,100,300,700|Montserrat:200,400,700|Merriweather:400,300,300italic,400italic,700|Bree+Serif|Vollkorn:400italic,400,700|Abril+Fatface|Cardo:400,400italic);
 
+
+// template páginas simples
+div.call-to-action{
+
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
 // AS MINHAS CLASSES
 
 /* VERTICAL ALIGN */
@@ -111,6 +126,18 @@ h1.section-title, h3.section-title{
 	}
 
 
+}
+
+h2.section-title{
+
+  padding-bottom: 2vh;
+  text-align: center;
+}
+
+h3.simple{
+
+  padding-bottom: 2vh;
+  font-weight:bold;
 }
 
 
@@ -261,18 +288,21 @@ nav.navbar.fixed-top{
 
     padding:0px;
     height:45px;
+    text-align:center;
+
+    a {color:white!important;}
   }
 
 
   div.navbar-collapse.collapse.show{
 
-    background: radial-gradient(circle at center top, rgb(66, 165, 245), rgb(39, 54, 84));
+   
 
 
     ul {
 
       animation-name: fadeIn;
-      text-align: center;
+      
     }
 
     .navbar-nav{
@@ -281,10 +311,7 @@ nav.navbar.fixed-top{
       
     }
 
-    li > a, li.nav-item > a{
 
-      color:white!important;
-    }
 
 
   }
@@ -772,7 +799,8 @@ background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
 /* CSS DO BRUNO */
 
 body.my-background{
-	background: linear-gradient(to top, #2d4e77, #fff) !important;
+	/*background: linear-gradient(to top, #2d4e77, #fff) !important;*/
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
 }
 
 
@@ -872,7 +900,7 @@ div.project-description{
 }
 
 .pages-content{
-	padding: 3rem 0;
+	padding: 3rem 1vw;
 }
 
 
@@ -1130,5 +1158,32 @@ main{
 	}
 
 }
+
+
+
+/* cards do template para serviços */
+div.card.card-cascade{
+    height:100%
+}
+
+.card.card-cascade .view.view-cascade.gradient-card-header {
+    padding: 1.6rem 1rem;
+    text-align: center;}
+
+    .card.card-cascade .view.view-cascade {
+    -webkit-box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+    box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+    -webkit-border-radius: .25rem;
+    border-radius: .25rem;}
+
+    .card.card-cascade .view.view-cascade.gradient-card-header .card-header-title {
+    font-weight: 500;
+    font-size: 2.5vh;
+}
+
+.card.card-cascade .view.view-cascade.gradient-card-header{
+color: #fff!important;}
+
+/***********************************/
 
 

@@ -1,4 +1,6 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400|Playfair+Display:400,700,400italic|Libre+Baskerville:400,700,400italic|Muli:300,400|Open+Sans:400,300,700|Oswald:400,700|Raleway:400,100,300,700|Montserrat:200,400,700|Merriweather:400,300,300italic,400italic,700|Bree+Serif|Vollkorn:400italic,400,700|Abril+Fatface|Cardo:400,400italic);/*!
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400|Playfair+Display:400,700,400italic|Libre+Baskerville:400,700,400italic|Muli:300,400|Open+Sans:400,300,700|Oswald:400,700|Raleway:400,100,300,700|Montserrat:200,400,700|Merriweather:400,300,300italic,400italic,700|Bree+Serif|Vollkorn:400italic,400,700|Abril+Fatface|Cardo:400,400italic);@charset "UTF-8";
+
+/*!
  * Material Design for Bootstrap 4
  * Version: MDB Free 4.5.6
  *
@@ -12383,12 +12385,11 @@ h6 {
 }
 
 .h2-responsive {
-  font-size: 120%;
+  font-size: 145%;
 }
 
 .h3-responsive {
-  font-size: 100%;
-  font-weight: bold;
+  font-size: 135%;
 }
 
 .h4-responsive {
@@ -21505,6 +21506,10 @@ table.table-sm td {
   height: 100%;
 }
 
+div.call-to-action {
+  text-align: center;
+}
+
 /* VERTICAL ALIGN */
 
 .my-vertical-align {
@@ -21599,6 +21604,16 @@ h3.section-title b {
   font-weight: bold;
 }
 
+h2.section-title {
+  padding-bottom: 2vh;
+  text-align: center;
+}
+
+h3.simple {
+  padding-bottom: 2vh;
+  font-weight: bold;
+}
+
 /* MEDIA QUERIES SASS 
 -------------------------------------------------------
 https://mdbootstrap.com/layout/bootstrap-media-queries/
@@ -21683,25 +21698,20 @@ nav.navbar.fixed-top {
   nav.navbar {
     padding: 0px;
     height: 45px;
+    text-align: center;
   }
 
-  div.navbar-collapse.collapse.show {
-    background: radial-gradient(circle at center top, #42a5f5, #273654);
+  nav.navbar a {
+    color: white !important;
   }
 
   div.navbar-collapse.collapse.show ul {
     -webkit-animation-name: fadeIn;
             animation-name: fadeIn;
-    text-align: center;
   }
 
   div.navbar-collapse.collapse.show .navbar-nav {
     width: 100%;
-  }
-
-  div.navbar-collapse.collapse.show li > a,
-  div.navbar-collapse.collapse.show li.nav-item > a {
-    color: white !important;
   }
 
   ul.navbar-nav .dropdown.show ul.dropdown-menu {
@@ -22124,8 +22134,9 @@ div.blogGrid:hover div.titulo-blog-container {
 /* CSS DO BRUNO */
 
 body.my-background {
-  background: -webkit-gradient(linear, left bottom, left top, from(#2d4e77), to(#fff)) !important;
-  background: linear-gradient(to top, #2d4e77, #fff) !important;
+  /*background: linear-gradient(to top, #2d4e77, #fff) !important;*/
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#cfd9df), to(#e2ebf0));
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
 }
 
 /* Home Page */
@@ -22212,7 +22223,7 @@ div.project-description .p-voyager-descricao-cliente {
 }
 
 .pages-content {
-  padding: 3rem 0;
+  padding: 3rem 1vw;
 }
 
 /* Contactos Page */
@@ -22464,4 +22475,32 @@ main {
     max-width: 170px;
   }
 }
+
+/* cards do template para serviços */
+
+div.card.card-cascade {
+  height: 100%;
+}
+
+.card.card-cascade .view.view-cascade.gradient-card-header {
+  padding: 1.6rem 1rem;
+  text-align: center;
+}
+
+.card.card-cascade .view.view-cascade {
+  -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  border-radius: .25rem;
+}
+
+.card.card-cascade .view.view-cascade.gradient-card-header .card-header-title {
+  font-weight: 500;
+  font-size: 2.5vh;
+}
+
+.card.card-cascade .view.view-cascade.gradient-card-header {
+  color: #fff !important;
+}
+
+/***********************************/
 

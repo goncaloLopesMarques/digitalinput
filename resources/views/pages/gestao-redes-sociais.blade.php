@@ -4,10 +4,8 @@
 
 @section('head')
 
-    <title>Gestão de Redes Sociais Preços | Digitalinput | Marketing Digital</title>
-    <meta name="description" content="Gestão de Redes Sociais Preços 
-    - O Parceiro ideal para criar empatia e identidade de Marca junto dos seus Clientes. 
-    Orçamentos rápidos.">
+    <title>{{ $template_content->metaTitle }}</title>
+    <meta name="description" content="{{ $template_content->metaDescription }}">
 
     <meta name="keywords" content="gestão de redes sociais,
     agencia de redes sociais, gestão de redes sociais preço, preço gestão redes sociais">
@@ -44,6 +42,7 @@
 @section('scripts-css')
 
     @include('layout.scripts-css')
+    @include('layout.scripts-css-template')
     
 @endsection
 

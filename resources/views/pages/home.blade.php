@@ -63,12 +63,10 @@
             var numProjetos = 0;
            
      
-           var trabalhosRecentes = <?php echo json_encode($recentwork); ?>;
+            var trabalhosRecentes = <?php echo json_encode($recentwork); ?>;
+            var clientes = <?php echo json_encode($clientes); ?>;
 
-           var clientes = <?php echo json_encode($clientes); ?>;
-
-
-              console.log(w);
+            console.log(w);
 
             // apresentação clientes 
             for(var i=0 ; i< clientes.length ; i++){

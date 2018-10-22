@@ -4,8 +4,8 @@
 
 @section('head')
 
-    <title>Agência Email Marketing | Agência Comunicação | Digitalinput</title>
-    <meta name="description" content="Precisa de um Parceiro para implementação técnicas Email Marketing? Conheça as nossas soluções…">
+	<title>{{ $template_content->metaTitle }}</title>
+    <meta name="description" content="{{ $template_content->metaDescription }}">
 
     <meta name="keywords" content="email marketing, agencia email marketing">
     @include('layout.head') 
@@ -41,6 +41,7 @@
 @section('scripts-css')
 
     @include('layout.scripts-css')
+    @include('layout.scripts-css-template')
     
 @endsection
 

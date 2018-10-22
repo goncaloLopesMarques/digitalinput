@@ -4,9 +4,8 @@
 
 @section('head')
 
-    <title>Empresa Web Design | Webdesign | Leiria | Lisboa | Coimbra</title>
-    <meta name="description" content="Procura Empresa Web Design para melhorar a sua presença
-     e comunicação digital? Conheça os nossos preços!">
+    <title>{{ $template_content->metaTitle }}</title>
+    <meta name="description" content="{{ $template_content->metaDescription }}">
 
     <meta name="keywords" content="web design, webdesign, web designer, web design lisboa, empresa web design,
      agencia web design, empresa de web design, web designer freelancer, web design leiria">
@@ -43,6 +42,7 @@
 @section('scripts-css')
 
     @include('layout.scripts-css')
+    @include('layout.scripts-css-template')
     
 @endsection
 

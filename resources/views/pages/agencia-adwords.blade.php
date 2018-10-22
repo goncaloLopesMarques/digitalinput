@@ -4,9 +4,8 @@
 
 @section('head')
 
-    <title>Agência Adwords | Anunciar Google | Divulgar site</title>
-    <meta name="description" content="Procura Agência Adwords, anunciar e divulgar o seu site no google? 
-    Conheça as vantagens de ser nosso Parceiro.">
+    <title>{{ $template_content->metaTitle }}</title>
+    <meta name="description" content="{{ $template_content->metaDescription }}">
 
     <meta name="keywords" content="adwords, google adwords, publicidade na internet, anunciar no google,
      como anunciar no google, publicidade no google, Google Adwords Preço, divulgar site, Agência Adwords">
@@ -43,6 +42,7 @@
 @section('scripts-css')
 
     @include('layout.scripts-css')
+    @include('layout.scripts-css-template')
     
 @endsection
 

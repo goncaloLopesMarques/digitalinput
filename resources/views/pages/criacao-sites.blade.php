@@ -4,9 +4,8 @@
 
 @section('head')
 
-    <title>Criação de Sites para Empresas | Criar WebSite Profissional | Digitalinput</title>
-    <meta name="description" content="Criação de Sites para Empresas segundo as últimas técnicas de Mkt Digital. 
-    Consulte os nossos serviços.">
+    <title>{{ $template_content->metaTitle }}</title>
+    <meta name="description" content="{{ $template_content->metaDescription }}">
 
     <meta name="keywords" content="analytics, webmaster tools, criar site,
     criação de sites, google webmaster, criar website, criar pagina web,
@@ -49,6 +48,7 @@
 @section('scripts-css')
 
     @include('layout.scripts-css')
+    @include('layout.scripts-css-template')
     
 @endsection
 

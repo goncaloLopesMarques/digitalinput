@@ -4,9 +4,8 @@
 
 @section('head')
 
-    <title>Manutenção Websites | Wordpress | Prestashop | Mangento | Digitalinput</title>
-    <meta name="description" content="Precisa de manutenção website? Actualizamos e mantemos a sua plataforma sem erros. 
-    Gerimos os seus conteúdos. Visite-nos!">
+    <title>{{ $template_content->metaTitle }}</title>
+    <meta name="description" content="{{ $template_content->metaDescription }}">
 
     <meta name="keywords" content="programador, hospedagem de sites, designer freelancer, manutenção de sites">
     @include('layout.head') 
@@ -42,6 +41,7 @@
 @section('scripts-css')
 
     @include('layout.scripts-css')
+    @include('layout.scripts-css-template')
     
 @endsection
 
