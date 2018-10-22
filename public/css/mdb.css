@@ -619,15 +619,9 @@ pre code {
   margin-left: auto;
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 576px) {
   .container {
-    max-width: 84%;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-    max-width: 85%;
+    max-width: 100%;
   }
 }
 
@@ -637,9 +631,15 @@ pre code {
   }
 }
 
-@media (min-width: 576px) {
+@media (min-width: 1200px) {
   .container {
-    max-width: 100%;
+    max-width: 85%;
+  }
+}
+
+@media (min-width: 1600px) {
+  .container {
+    max-width: 84%;
   }
 }
 

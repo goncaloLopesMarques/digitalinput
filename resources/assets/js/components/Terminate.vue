@@ -27,7 +27,7 @@
         <label for="email">Email</label>
         <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="O seu email" v-model ="dataToOrcamento.email" required>
       </div>
-      <button @click.prevent="sendMail" class="fill">Enviar</button>
+      <button @click.prevent="checkForm" class="fill">Enviar</button>
     </form>
      <button @click="restart" type="button" class="fill">Repetir Orçamento</button>
 </div>
@@ -46,6 +46,7 @@ name: 'Terminate'
                     business:'',
                     nome:'',
                     email:'',
+                    errors: [],
                     items: this.$store.getters.produtosSelecionados,
                     preco: this.$store.getters.precoFinal,
                     itemsMarketing: this.$store.getters.produtosSelecionadosMarketing,
@@ -60,7 +61,24 @@ name: 'Terminate'
                this.$store.dispatch('restartApp');
                axios.get('orcamento');
             },
-              sendMail(){
+
+            checkForm(){
+
+                if (this.dataToOrcamento.email && this.dataToOrcamento.nome){
+                  this.sendMail();
+                }else{
+                  if (!this.dataToOrcamento.nome){
+                    alert("Por favor preencha o seu nome");
+                  }
+                  if(!this.dataToOrcamento.email){
+                    alert("Por favor preencha o seu email");  
+                  }
+                  
+                }
+
+            },
+
+            sendMail(){
                 axios.post('orcamento/site',this.dataToOrcamento)
                 .then(response=>{
                     // quando chega aqui o email JÁ foi enviado
@@ -89,8 +107,8 @@ name: 'Terminate'
                  console.log(error);
                 })
             }
+            }
             
         }
-    }
 </script>
 

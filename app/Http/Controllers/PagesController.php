@@ -170,7 +170,7 @@ class PagesController extends BaseController
 
 
 
-        COLOCAR NOS TD da tabela ! ! ! 
+//        COLOCAR NOS TD da tabela ! ! ! 
 
 
 
