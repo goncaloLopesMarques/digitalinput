@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Mail\OrcamentoApp;
 use App\Mail\OrcamentoSite;
+use App\Mail\OrcamentoSiteCliente;
 use App\Mail\ContactFormApp;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -32,7 +33,7 @@ class SendMailController extends Controller
             'preco' => $request->input('preco'),
         ];
         try{
-            $result = Mail::to($data["email"])->send(new OrcamentoSite($data));
+            $result = Mail::to($data["email"])->send(new OrcamentoSiteCliente($data));
     
            }catch(Exception $e){
             return redirect('orcamento')->with('Message','Erro ao enviar o email.');
