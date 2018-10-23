@@ -136,7 +136,7 @@ h1.section-title, h3.section-title{
   
   
 /* Just add shadows, every time with a different top, right and opacity */
-  text-shadow: #c0c0c0 -1px 1px 0, #fff -2px 2px 0, #c3c3c3 -3px 3px 0, #fff -4px 4px 0, #c6c6c6 -5px 5px 0, #fff -6px 6px 0, #c9c9c9 -7px 7px 0, #fff -8px 8px 0, #ccc -9px 9px 0, #fff -10px 10px 0, #cfcfcf -11px 11px 0, #fff -12px 12px 0, #d2d2d2 -13px 13px 0, #fff -14px 14px 0, #d5d5d5 -15px 15px 0, #fff -16px 16px 0, #d8d8d8 -17px 17px 0, #fff -18px 18px 0, #dbdbdb -19px 19px 0, #fff -20px 20px 0, #dfdfdf -21px 21px 0, #fff -22px 22px 0, #e2e2e2 -23px 23px 0, #fff -24px 24px 0, #e5e5e5 -25px 25px 0, #fff -26px 26px 0, #e8e8e8 -27px 27px 0, #fff -28px 28px 0, #ebebeb -29px 29px 0, #fff -30px 30px 0, #eee -31px 31px 0, #fff -32px 32px 0, #f1f1f1 -33px 33px 0, #fff -34px 34px 0, #f4f4f4 -35px 35px 0, #fff -36px 36px 0, #f7f7f7 -37px 37px 0, #fff -38px 38px 0, #fafafa -39px 39px 0, #fbfbfb -40px 40px 0, #fdfdfd -41px 41px 0, #fff -42px 42px 0;
+  text-shadow: #c0c0c0 -1px 1px 0, transparent -2px 2px 0, #c3c3c3 -3px 3px 0, transparent -4px 4px 0, #c6c6c6 -5px 5px 0, transparent -6px 6px 0, #c9c9c9 -7px 7px 0, transparent -8px 8px 0, #ccc -9px 9px 0, transparent -10px 10px 0, #cfcfcf -11px 11px 0, transparent -12px 12px 0, #d2d2d2 -13px 13px 0, transparent -14px 14px 0, #d5d5d5 -15px 15px 0, transparent -16px 16px 0, #d8d8d8 -17px 17px 0, transparent -18px 18px 0, #dbdbdb -19px 19px 0, transparent -20px 20px 0, #dfdfdf -21px 21px 0, transparent -22px 22px 0, #e2e2e2 -23px 23px 0, transparent -24px 24px 0, #e5e5e5 -25px 25px 0, transparent -26px 26px 0, #e8e8e8 -27px 27px 0, transparent -28px 28px 0, #ebebeb -29px 29px 0, transparent -30px 30px 0, #eee -31px 31px 0, transparent -32px 32px 0, #f1f1f1 -33px 33px 0, transparent -34px 34px 0, #f4f4f4 -35px 35px 0, transparent -36px 36px 0, #f7f7f7 -37px 37px 0, transparent -38px 38px 0, #fafafa -39px 39px 0, transparent -40px 40px 0, #fdfdfd -41px 41px 0, transparent -42px 42px 0;
 
 
 	b{
@@ -366,7 +366,7 @@ nav.navbar.fixed-top{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height:63px;
+    height:64px;
  }
 
 
@@ -914,13 +914,11 @@ div.project-description{
 
 /* Services Pages */
 
-.pages-header{
-	padding: 0 2rem;
-}
+// .pages-header{
+// 	padding: 0 2rem;
+// }
 
-.pages-content{
-	padding: 3rem 1vw;
-}
+
 
 
 
@@ -1179,19 +1177,24 @@ main{
 }
 
 
+// T E M P L A T E  SERVIÇOS
 
-/* cards do template para serviços */
+// cards do template para serviços
 
 
 .card.card-cascade .view.view-cascade.gradient-card-header {
     padding: 1.6rem 1rem;
     text-align: center;}
 
-    .card.card-cascade .view.view-cascade {
+    .view.view-cascade {
     -webkit-box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
     box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
     -webkit-border-radius: .25rem;
     border-radius: .25rem;}
+
+     .card.card-cascade{
+      box-shadow:none;
+     }
 
     .card.card-cascade .view.view-cascade.gradient-card-header .card-header-title {
     font-weight: 500;
@@ -1199,8 +1202,25 @@ main{
 }
 
 .card.card-cascade .view.view-cascade.gradient-card-header{
-color: #fff!important;}
+color: #fff!important;
+}
 
-/***********************************/
+
+
+section.template-section{
+
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 0.125rem;
+    margin: 2vh 2vw;
+    padding: 2vh 1vw;
+
+    background-image: linear-gradient(-90deg, #fdfbfb 0%, #dddfe0 100%);
+
+    border: 1px solid #bbb;
+
+
+
+}
 
 

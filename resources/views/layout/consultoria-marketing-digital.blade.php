@@ -21,7 +21,7 @@
 
 
 <!-- SECTION 1 -->
-<section class="pages-content template-section">
+<section class="template-section">
 
 	<div class="container">
 
@@ -33,18 +33,10 @@
 			<div class="section-1">
 
 				
-				{!! $template_content->section1_col1_content !!}
+				{!! $template_content->section1_content !!}
 
 
 			</div>
-
-			{{--
-			<div>
-	
-				{!! $template_content->section1_col2_content !!}
-
-			</div> 
-			--}}
 
 
 			<div class="col-md-12 call-to-action">
@@ -59,7 +51,7 @@
 
 
 <!-- GRID -->
-<section class="py-5 cloudy-knoxville-gradient">
+<section class="template-section py-5">
 
       <div class="container">
       
@@ -222,7 +214,7 @@
 
 
 <!-- SECTION 2 -->
-<section class="pages-content">
+<section class="template-section">
 
 	<div class="container">
 
@@ -234,20 +226,10 @@
 			<div class="section-2">
 
 				
-				{!! $template_content->section2_col1_content !!}
+				{!! $template_content->section2_content !!}
 
 
 			</div>
-
-			{{-- 
-			<div class="col-sm-12 col-lg-4">
-
-				
-				{!! $template_content->section2_col2_content !!}
-
-			</div> 
-			--}}
-
 
 
 
