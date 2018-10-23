@@ -23,7 +23,7 @@
         <label for="empresa">Empresa</label>
         <input type="text" class="form-control" id="inputEmpresa"  placeholder="A sua empresa" v-model ="dataToOrcamento.empresa">
         <label for="nome">Nome</label>
-        <input type="email" class="form-control" id="inputNome" placeholder="O seu nome" v-model ="dataToOrcamento.nome">
+        <input type="text" class="form-control" id="inputNome" placeholder="O seu nome" v-model ="dataToOrcamento.nome">
         <label for="email">Email</label>
         <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="O seu email" v-model ="dataToOrcamento.email" required>
       </div>
