@@ -104,13 +104,13 @@
   --hover: #252e41;
 }
 
-button {
+#app button {
   color: var(--color);
   -webkit-transition: 0.25s;
   transition: 0.25s;
 }
 
-button:hover {
+#app button:hover {
   border-color: var(--hover);
   color: white;
 }
@@ -119,7 +119,7 @@ button:hover {
   display: none;
 }
 
-button {
+#app button {
   background-color: unset;
   border: 2px solid;
   font: inherit;

@@ -93,7 +93,7 @@ $hover: #252e41;
 }
 
 // Now every button will have different colors as set above. We get to use the same structure, only changing the custom properties.
-button {  
+#app button {  
   color: var(--color);
   transition: 0.25s;
   
@@ -110,7 +110,7 @@ display:none;
 //=== Pen styling, ignore
 
 // Basic button styles
-button {
+#app button {
   background-color: unset;
   border: 2px solid;
   font: inherit;

@@ -3,33 +3,32 @@
 #ORÇAMENTO
 @component('mail::panel')
 
-Especificacoes:
+#Especificacoes:
 {{ $orcamentoSite["especificacoes"] }}
-
-Funcionalidades:
-@foreach($orcamentoSite["funcionalidades"] as $funcionalidade)
-{{ $funcionalidade }}
-<p>
-@endforeach
-
-
-Preço final: 
-{{  $orcamentoSite["preco"] }} euros
-
 
 @endcomponent
 
+@component('mail::panel')
 
+#Funcionalidades:
+@foreach($orcamentoSite["funcionalidades"] as $funcionalidade)
+-{{ $funcionalidade }};
+<p>
+@endforeach
 
+@endcomponent
 
+@component('mail::panel')
 
+#Preço-final:
+{{  $orcamentoSite["preco"] }} Euros;
 
+@endcomponent
 
+Obrigado,<br>
 
 @component('mail::button', ['url' => 'https://www.digitalinput.pt'])
 Digitalinput
 @endcomponent
-
-Obrigado,<br>
 
 @endcomponent

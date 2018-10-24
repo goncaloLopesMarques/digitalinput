@@ -187,7 +187,7 @@
       
 </section>
 
-<section class="pt-5">
+<section class="pt-5 pb-5">
 
   <h3 class="section-title h1-responsive">
     <b>T</b>rabalhos <b>R</b>ecentes
