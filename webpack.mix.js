@@ -17,3 +17,18 @@ mix.js('resources/assets/js/app.js', 'public/js')
    .sass('resources/assets/mdb/mdb.scss', 'public/css')
    .sourceMaps();
   /* .sass('resources/assets/mdb/style.scss', 'public/css')*/
+
+
+
+
+
+
+
+
+  mix.scripts([
+
+  		'resources/assets/js/mdb.js',
+        'node_modules/jarallax/dist/jarallax.js'
+
+     ], 'public/js/mdb.js');
+

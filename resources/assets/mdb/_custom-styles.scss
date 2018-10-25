@@ -169,8 +169,13 @@ https://mdbootstrap.com/layout/bootstrap-media-queries/
 
 
 phone & tabklet queries */
-@include media-breakpoint-down(lg) {
+@include media-breakpoint-down(md) {
 
+
+  div.jarallax{
+    width:100%;
+    margin: 1vh 0px;
+  }
 
 
 }
@@ -1177,50 +1182,6 @@ main{
 }
 
 
-// T E M P L A T E  SERVIÇOS
 
-// cards do template para serviços
-
-
-.card.card-cascade .view.view-cascade.gradient-card-header {
-    padding: 1.6rem 1rem;
-    text-align: center;}
-
-    .view.view-cascade {
-    -webkit-box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
-    box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
-    -webkit-border-radius: .25rem;
-    border-radius: .25rem;}
-
-     .card.card-cascade{
-      box-shadow:none;
-     }
-
-    .card.card-cascade .view.view-cascade.gradient-card-header .card-header-title {
-    font-weight: 500;
-    font-size: 2.5vh;
-}
-
-.card.card-cascade .view.view-cascade.gradient-card-header{
-color: #fff!important;
-}
-
-
-
-section.template-section{
-
-    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-    border-radius: 0.125rem;
-    margin: 2vh 2vw;
-    padding: 2vh 1vw;
-
-    background-image: linear-gradient(-90deg, #fdfbfb 0%, #dddfe0 100%);
-
-    border: 1px solid #bbb;
-
-
-
-}
 
 
