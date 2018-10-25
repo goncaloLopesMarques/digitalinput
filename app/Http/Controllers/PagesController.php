@@ -132,11 +132,9 @@ class PagesController extends BaseController
                 break;
         }
 
-
         
         // RESPONSIVE SECTION 1
-        $num_colunas_section_1 = substr_count($template_content->section1_col1_content, '<td ');
-        echo $num_colunas_section_1;
+        $num_colunas_section_1 = substr_count($template_content->section1_content, '<td ');
 
         switch ($num_colunas_section_1) {
            
@@ -153,7 +151,7 @@ class PagesController extends BaseController
 
 
         // RESPONSIVE SECTION 2
-        $num_colunas_section_2 = substr_count($template_content->section2_col1_content, '<td ');
+        $num_colunas_section_2 = substr_count($template_content->section2_content, '<td ');
 
         switch ($num_colunas_section_2) {
            
@@ -206,53 +204,65 @@ class PagesController extends BaseController
 
     function redesSociais(){
         $classes = "redes my-background";
-        return view('pages.gestao-redes-sociais', compact('classes'));
+        $template_content = $this->getTemplateContent('gestao-redes-sociais');
+        return view('pages.gestao-redes-sociais', compact('classes', 'template_content'));
     }
     function gestaoMarketing(){
         $classes = "gestao my-background";
-        return view('pages.gestao-marketing', compact('classes'));
+        $template_content = $this->getTemplateContent('gestao-marketing');
+        return view('pages.gestao-marketing', compact('classes', 'template_content'));
     }
     function criacaoSites(){
         $classes = "sites my-background";
-        return view('pages.criacao-sites', compact('classes'));
+        $template_content = $this->getTemplateContent('criacao-sites');
+        return view('pages.criacao-sites', compact('classes', 'template_content'));
     }
     function optimizacaoSites(){
         $classes = "optimizacao my-background";
-        return view('pages.optimizacao-sites', compact('classes'));
+        $template_content = $this->getTemplateContent('optimizacao-sites');
+        return view('pages.optimizacao-sites', compact('classes', 'template_content'));
     }
     function criarLojaOnline(){
         $classes = "ecommerce my-background";
-        return view('pages.criar-loja-online', compact('classes'));
+        $template_content = $this->getTemplateContent('criar-loja-online');
+        return view('pages.criar-loja-online', compact('classes', 'template_content'));
     }
     function empresaWebDesign(){
         $classes = "webdesign my-background";
-        return view('pages.empresas-web-design', compact('classes'));
+        $template_content = $this->getTemplateContent('empresas-web-design');
+        return view('pages.empresas-web-design', compact('classes', 'template_content'));
     }
     function empresaDesign(){
         $classes = "design my-background";
-        return view('pages.empresas-design', compact('classes'));
+        $template_content = $this->getTemplateContent('empresas-design');
+        return view('pages.empresas-design', compact('classes', 'template_content'));
     }
     function publicidadeFacebook(){
         $classes = "facebook my-background";
-        return view('pages.publicidade-facebook', compact('classes'));
+        $template_content = $this->getTemplateContent('publicidade-facebook');
+        return view('pages.publicidade-facebook', compact('classes', 'template_content'));
     }
     function agenciaAdwords(){
         $classes = "campanhas my-background";
-        return view('pages.agencia-adwords', compact('classes'));
+        $template_content = $this->getTemplateContent('agencia-adwords');
+        return view('pages.agencia-adwords', compact('classes', 'template_content'));
     }
     function manutencaoWebsites(){
         $classes = "manutencao my-background";
-        return view('pages.manutencao-websites', compact('classes'));
+        $template_content = $this->getTemplateContent('manutencao-websites');
+        return view('pages.manutencao-websites', compact('classes', 'template_content'));
     }
     function agenciaEmailMarketing(){
         $classes = "email-marketing my-background";
-        return view('pages.agencia-email-marketing', compact('classes'));
+        $template_content = $this->getTemplateContent('agencia-email-marketing');
+        return view('pages.agencia-email-marketing', compact('classes', 'template_content'));
     }
     function consultoriaMarketing(Request $request){
-        $classes = "consultoria my-background";
+        $classes = "consultoria";
         $template_content = $this->getTemplateContent('consultoria-marketing-digital');
         return view('pages.consultoria-marketing-digital', compact('classes', 'template_content'));
     }
+
     function orcamento(){
         $classes = "orcamento";
         return view('pages.orcamento', compact('classes'));
