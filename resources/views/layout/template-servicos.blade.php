@@ -31,31 +31,13 @@
 
 			</div>
 
-			{{--
- 			<div class="col-md-12 call-to-action">
-				<a type="button" class="btn btn-elegant">Informações</a><a href="/portfolio" class="btn btn-elegant">Orçamento</a>
-			</div> 
-			--}}
 
 		</div>
 
 	</div>
 
 </section>
-{{--
 
-<div class="jarallax">
-
-
-
- <div class="jarallax-container-1" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden; pointer-events: none; z-index: -100;">
-
-	<img title="Image Title" src="http://digitalinput/storage/templatepaginas/October2018/consultoria-em-marketing.jpg" alt="Image description" width="300" height="300" class="template-img jarallax-img" style="object-fit: cover; object-position: 50% 50%; max-width: none; position: fixed; top: 0px; left: 202.453px; width: 1498px; height: 306.4px; overflow: hidden; pointer-events: none; margin-top: 38.3px; transform: translate3d(0px, -19px, 0px);">
-
-</div>
-
-</div>
- --}}
 
 
 <!-- GRID -->
@@ -229,11 +211,6 @@
 
 			</div>
 
-			{{--
-			<div class="col-md-12 call-to-action">
-				<a type="button" class="btn btn-elegant">Informações</a><a href="/portfolio" class="btn btn-elegant">Orçamento</a>
-			</div> 
-			--}}
 
 		</div>
 
