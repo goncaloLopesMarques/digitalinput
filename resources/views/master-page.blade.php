@@ -42,6 +42,19 @@
                     <li><a class="btn-floating blue waves-effect waves-light" style="transform: scaleY(0.4) scaleX(0.4) translateY(40px) translateX(0px); opacity: 0;"><i class="fa fa-shopping-cart"></i></a></li>
                 </ul>
         </div> --> 
+        <script>
+
+            const images = Array.from(document.getElementsByTagName("img"));
+
+            for (const image of images) {
+              
+                image.classList.add("lazyload");
+
+                console.log(image);
+            }
+
+        </script>
+
 
 
     </body>

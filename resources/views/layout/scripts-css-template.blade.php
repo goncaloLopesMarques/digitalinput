@@ -108,7 +108,7 @@ section.template-section{
     -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
     border-radius: 0.125rem;
-    margin: 2vh 2vw;
+    margin: 5vh 2vw;
     padding: 2vh 1vw;
 
     background-image: linear-gradient(-90deg, #fdfbfb 0%, #dddfe0 100%);
