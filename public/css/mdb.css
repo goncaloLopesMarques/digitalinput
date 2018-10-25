@@ -2288,6 +2288,11 @@ pre code {
   opacity: 1;
 }
 
+.form-control:-ms-input-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+
 .form-control::-ms-input-placeholder {
   color: #6c757d;
   opacity: 1;
@@ -12731,39 +12736,39 @@ a.text-light:focus {
 }
 
 .pattern-1 {
-  background: url(/images/01.png?0a3750e6fdb29fcd632e627e2fc34dde);
+  background: url(/images/01.png?3888ecc03086ee849014409a07864ba6);
 }
 
 .pattern-2 {
-  background: url(/images/02.png?351bd6828f980ec53eb3a1ad0d3b1e31);
+  background: url(/images/02.png?06cefc0cc8bd642ccdd3135e650197dd);
 }
 
 .pattern-3 {
-  background: url(/images/03.png?e438ea2aabdb1087dc4f6fea5f6518e7);
+  background: url(/images/03.png?0a1396ef34d321f8c447c68c5056fc1f);
 }
 
 .pattern-4 {
-  background: url(/images/04.png?0284d042a6c29213aaa1979528195b7f);
+  background: url(/images/04.png?51f1b9c3e256a651da5cf5dfe8204461);
 }
 
 .pattern-5 {
-  background: url(/images/05.png?5014f9cce435c71ade6395a5ed0c50e7);
+  background: url(/images/05.png?acb4b13ad6bf258c24daa53e9ca2f747);
 }
 
 .pattern-6 {
-  background: url(/images/06.png?21612b9d3e9d84e7e8761a2caf43bc65);
+  background: url(/images/06.png?e25cdb8cfc9019880c36c107d92e6f38);
 }
 
 .pattern-7 {
-  background: url(/images/07.png?f8da0281186df8f17f732a2a22aa0efa);
+  background: url(/images/07.png?d7874b3604b242cc9945c3d652c80d87);
 }
 
 .pattern-8 {
-  background: url(/images/08.png?975f7e0074400e7561ba2124604aacf2);
+  background: url(/images/08.png?b85f136c7dbbd034469077f99a31019d);
 }
 
 .pattern-9 {
-  background: url(/images/09.png?fd19309a1932b475138799acc0b75a82);
+  background: url(/images/09.png?a67596aabdbed532dab23829db04495b);
 }
 
 /*!
@@ -19609,6 +19614,11 @@ a.waves-light {
   font-weight: 300;
 }
 
+.navbar.navbar-light form .md-form .form-control:-ms-input-placeholder {
+  color: #2e2e2e;
+  font-weight: 300;
+}
+
 .navbar.navbar-light form .md-form .form-control::-ms-input-placeholder {
   color: #2e2e2e;
   font-weight: 300;
@@ -19671,6 +19681,11 @@ a.waves-light {
 }
 
 .navbar.navbar-dark form .md-form .form-control::-webkit-input-placeholder {
+  color: #fff;
+  font-weight: 300;
+}
+
+.navbar.navbar-dark form .md-form .form-control:-ms-input-placeholder {
   color: #fff;
   font-weight: 300;
 }
@@ -20270,11 +20285,11 @@ body.scrollable {
 }
 
 .carousel .carousel-control-prev-icon {
-  background-image: url(/images/arrow_left.svg?11911410dca2de148f30954eb2fd5eab);
+  background-image: url(/images/arrow_left.svg?4d85a7505fbe98010cda4f596a9abec9);
 }
 
 .carousel .carousel-control-next-icon {
-  background-image: url(/images/arrow_right.svg?8ef6a08cdc1154920165680a4edde771);
+  background-image: url(/images/arrow_right.svg?c8216b44162631537096bb4a4690198d);
 }
 
 .carousel .carousel-indicators li {
