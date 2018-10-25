@@ -15,10 +15,16 @@
 
 {{-- funçao para esperar que o jquery seja carregado  --}}
 <script>
-function defer(method) {
-    if (window.jQuery)
-        method();
-    else
-        setTimeout(function() { defer(method) }, 50);
-}
+
+
+$("div td.template-section img").addClass("template-img jarallax-img");
+
+
+    
+// function defer(method) {
+//     if (window.jQuery)
+//         method();
+//     else
+//         setTimeout(function() { defer(method) }, 50);
+// }
 </script>
