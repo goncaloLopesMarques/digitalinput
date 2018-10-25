@@ -827,6 +827,8 @@ body.my-background{
 #ServicesModal .modal-dialog{
   max-width: 1000px;
 }
+#ServicesModal .modal-body{
+}
 #ServicesModal .modal-content{
   background: linear-gradient(to bottom, #2d4e77, #fff);
 }
@@ -838,6 +840,7 @@ body.my-background{
   margin-right: auto;
   color: #fff;
   font-weight: bold;
+  padding: 1rem;
 }
 #ServicesModal .modal-header button.close{
   margin: 0;
@@ -845,10 +848,15 @@ body.my-background{
 #ServicesModal .modal-body a.service{
   background: linear-gradient(40deg, #42a5f5, #273654) !important;
   font-weight: 900;
-  color: black;
-  width: 165px;
+  color: #000;
   height: 85px;
   display: table-cell;
+}
+#ServicesModal .modal-body a.service:hover{
+  color: #fff;
+}
+.mb-custom{
+  margin-bottom: 2.5rem;
 }
 
 

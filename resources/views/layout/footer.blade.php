@@ -40,7 +40,7 @@
                 <a href="#" class="list-group-item list-group-item-black waves-effect">Publicidade Online</a>
                 <a href="#" class="list-group-item list-group-item-black waves-effect">Design Gráfico</a>
 
-                <a href="#" class="color-block-dark list-group-item list-group-item-action transparent waves-effect z-depth-1-half hoverable">Ver Serviços</a>
+                <a href="#" class="color-block-dark list-group-item list-group-item-action transparent waves-effect z-depth-1-half hoverable" data-toggle="modal" data-target="#ServicesModal">Ver Serviços</a>
 
             </div>
 

@@ -63,7 +63,7 @@
 
 <!-- Modal -->
 <div class="modal fade" id="ServicesModal" tabindex="-1" role="dialog" aria-labelledby="ServicesModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">SERVIÇOS</h5>
@@ -73,46 +73,42 @@
       </div>
       <div class="modal-body">
         <div class="container"> 
-          <div class="row mb-5">
+          <div class="row">
 
-              <div class="col-md-3">
+              <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 mb-custom d-table">
                 <a class="btn service waves-effect" href="/gestao-redes-sociais-preços" target="_self">Gestao de Redes Sociais</a>
               </div>
-              <div class="col-md-3">
+              <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 mb-custom d-table">
                 <a class="btn service waves-effect" href="/gestao-marketing-conteudo" target="_self">Gestão de Conteúdos</a>
               </div>
-              <div class="col-md-3">
+              <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 mb-custom d-table">
                 <a class="btn service waves-effect" href="/criacao-sites-empresas-profissionais" target="_self">Website Profissional</a>
               </div>
-              <div class="col-md-3">
+              <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 mb-custom d-table">
                 <a class="btn service waves-effect" href="/optimizacao-sites-tecnicas-seo-portugal" target="_self">Integração SEO</a>
               </div>
-          </div>
-          <div class="row mb-5">
-              <div class="col-md-3">
+              <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 mb-custom d-table">
                 <a class="btn service waves-effect" href="/criar-loja-online-site-vendas" target="_self">Loja Online</a>
               </div>
-              <div class="col-md-3">
+              <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 mb-custom d-table">
                 <a class="btn service waves-effect" href="/empresas-design-grafico-identidade-visual" target="_self">Design Gráfico</a>
               </div>
-              <div class="col-md-3">
+              <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 mb-custom d-table">
                 <a class="btn service waves-effect" href="/empresa-web-design" target="_self">Web Design</a>
               </div>
-              <div class="col-md-3">
+              <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 mb-custom d-table">
                 <a class="btn service waves-effect" href="/publicidade-facebook-anunciar-empresas" target="_self">Facebook Adds</a>
               </div>
-          </div>
-          <div class="row">
-              <div class="col-md-3">
+              <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 mb-custom d-table">
                 <a class="btn service waves-effect" href="/agencia-adwords-publicidade-anunciar-google" target="_self">Google Ads</a>
               </div>
-              <div class="col-md-3">
+              <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 mb-custom d-table">
                 <a class="btn service waves-effect" href="/manutencao-websites" target="_self">Manutenção / Otimização Websites</a>
               </div>
-              <div class="col-md-3">
+              <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 mb-custom d-table">
                 <a class="btn service waves-effect" href="/agencia-email-marketing" target="_self">Email Marketing</a>
               </div>
-              <div class="col-md-3">
+              <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 mb-custom d-table">
                 <a class="btn service waves-effect" href="/consultoria-marketing-digital-empresas" target="_self">Consultoria Marketing Digital</a>
               </div>
              
