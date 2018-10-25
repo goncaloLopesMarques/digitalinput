@@ -16,9 +16,9 @@
                                 <span class="sr-only">(current)</span>
                             </a>
                         </li>
-                        <li class="dropdown {{ Request::segment(1) === 'blog' ? 'active' : null }}" ><!-- style="position: initial;" -->
-                            <a class="nav-link waves-effect dropdown-toggle" data-toggle="dropdown" href="#" >Serviços</a>
-                            <ul class="dropdown-menu animated slideInLeft" style="width: 100%;">
+                        <li class="nav-item" ><!-- style="position: initial;" -->
+                            <a class="nav-link waves-effect" data-toggle="modal" data-target="#ServicesModal" >Serviços</a>
+                            <!-- <ul class="dropdown-menu animated slideInLeft" style="width: 100%;">
                                  <div class="container"> 
                                     <div class="row">
 
@@ -64,7 +64,7 @@
                                         </div> 
                                     </div>
                                  </div> 
-                            </ul>
+                            </ul> -->
                         </li>  
                         <li class="nav-item {{ Request::segment(1) === 'portfolio' ? 'active' : null }}">
                             <a class="nav-link waves-effect" href="/portfolio" target="_self">Portfólio</a>

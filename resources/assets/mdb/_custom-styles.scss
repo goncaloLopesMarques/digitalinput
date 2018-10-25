@@ -826,6 +826,35 @@ body.my-background{
 	/*background: linear-gradient(to top, #2d4e77, #fff) !important;*/
   background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
 }
+.copyright{
+  text-transform: uppercase;
+}
+#ServicesModal .modal-dialog{
+  max-width: 1000px;
+}
+#ServicesModal .modal-content{
+  background: linear-gradient(to bottom, #2d4e77, #fff);
+}
+#ServicesModal .modal-header{
+  border-bottom: unset;
+}
+#ServicesModal .modal-header h5{
+  margin-left: auto;
+  margin-right: auto;
+  color: #fff;
+  font-weight: bold;
+}
+#ServicesModal .modal-header button.close{
+  margin: 0;
+}
+#ServicesModal .modal-body a.service{
+  background: linear-gradient(40deg, #42a5f5, #273654) !important;
+  font-weight: 900;
+  color: black;
+  width: 165px;
+  height: 85px;
+  display: table-cell;
+}
 
 
 /* Home Page */
