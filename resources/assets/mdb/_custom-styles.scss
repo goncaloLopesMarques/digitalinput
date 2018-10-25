@@ -1229,4 +1229,31 @@ main{
 
 
 
+  // img.lazyload {
+  //       -webkit-filter: blur(15px);
+  //   filter: blur(15px);
+  //   transition: filter 11400ms;
+  //   -webkit-filter 11400ms;
+  // }
+
+  // img.lazyloaded {
+   
+
+  //    -webkit-filter: blur(0);
+  //   filter: blur(0);
+  // }
+
+
+.lazyload {
+  opacity: 0;
+}
+
+.lazyloading {
+  opacity: 1;
+  transition: opacity 900ms;
+  background: #f7f7f7 url(loader.gif) no-repeat center;
+}
+
+
+
 
