@@ -55,8 +55,7 @@
 
           $('.jarallax').jarallax({
             speed: 0.2,
-            imgSize: 'contain',
-            automaticResize: true
+            imgSize: 'contain'
           });
 
         });
@@ -180,7 +179,7 @@ section.template-section{
     height: 400px;
     width: 400px;
     float: right;
-    margin: 1vh 1vw;
+    margin: 1vh 15px 1vh 1vh;
 }
 
 .jarallax > .jarallax-img {
