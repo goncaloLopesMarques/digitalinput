@@ -77,7 +77,7 @@
                     <!-- Center -->
                     <div class="logo" >
                         <a href="/">
-                            <img src="/images/Digitalinput-LOGO.png" alt="Digitalinput Logo">
+                            <img data-src="/images/Digitalinput-LOGO.png" class="lazyload blur-up" alt="Digitalinput Logo">
                         </a>
                     </div>
 

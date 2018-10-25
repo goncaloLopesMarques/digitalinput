@@ -10,7 +10,7 @@
 
 				<div class="project-thumbnail">
 
-					<img src="{{ Voyager::image( $project->thumbnail ) }}" alt="">
+					<img data-src="{{ Voyager::image( $project->thumbnail ) }}" alt="">
 
 				</div>
 
@@ -52,7 +52,7 @@
 					$htmlpic .= "<div class='my-col-xxl-3 col-lg-3 col-md-4 col-xs-12 p-0 blogGrid'>
 								   <div class='project-image flex-center waves-effect waves-light view overlay zoom'>
 									   		
-									 	<img src='". Voyager::image($pic) ."'  class='cursor' alt='".$target[1]."'>										 
+									 	<img data-src='". Voyager::image($pic) ."'  class='lazyload blur-up cursor' alt='".$target[1]."'>										 
 
 									 	<div class='mask rgba-black-stronger flex-center' onclick=\"openModal();currentSlide(".$it.")\">
 									 		<p class='white-text text-center'> 
@@ -64,10 +64,10 @@
 								</div>";
 						$htmlslides .= "<div class='mySlides'>
   										<div class='numbertext'>".$it." / ".$total."</div>
-  											<img src='". Voyager::image($pic) ."' style='width:100%'>
+  											<img data-src='". Voyager::image($pic) ."' class='lazyload blur-up' style='width:100%'>
   									</div>";
   						$htmlthumb .= "<div class='column'>
-											<img class='demo cursor' src='". Voyager::image($pic) ."' onclick=\"currentSlide(".$it.")\" alt='".$target[1]."'>
+											<img  data-src='". Voyager::image($pic) ."' class='lazyload blur-up demo cursor' onclick=\"currentSlide(".$it.")\" alt='".$target[1]."'>
 								  	    </div>";
 					$it++;
 				}
