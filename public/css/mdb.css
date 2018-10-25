@@ -22545,10 +22545,10 @@ main {
   opacity: 0;
 }
 
-.lazyloading {
+.lazyloaded {
   opacity: 1;
-  -webkit-transition: opacity 900ms;
-  transition: opacity 900ms;
+  -webkit-transition: opacity 5900ms;
+  transition: opacity 5900ms;
   /*background: #f7f7f7 url(loader.gif) no-repeat center;*/
 }
 

@@ -49,7 +49,7 @@
   console.log(template_content);
 
 
-    defer(function () {
+   
 
         $(document).ready(function(){  
 
@@ -60,7 +60,7 @@
 
         });
 
-    });
+   
 
 
 
