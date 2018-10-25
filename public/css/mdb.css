@@ -22204,6 +22204,19 @@ body.my-background {
   color: #000;
   height: 85px;
   display: table-cell;
+  -webkit-box-shadow: 6px 9px #273654, 5px 7px #273654;
+          box-shadow: 6px 9px #273654, 5px 7px #273654;
+  outline: none;
+  border-radius: 15px;
+  -webkit-transition: unset;
+  transition: unset;
+}
+
+#ServicesModal .modal-body a.service:active {
+  -webkit-box-shadow: 2px 3px #273654, 1px 1px #273654;
+          box-shadow: 2px 3px #273654, 1px 1px #273654;
+  -webkit-transform: translate(5px, 5px);
+          transform: translate(5px, 5px);
 }
 
 #ServicesModal .modal-body a.service:hover {

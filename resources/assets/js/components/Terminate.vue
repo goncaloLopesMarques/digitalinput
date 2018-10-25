@@ -27,7 +27,7 @@
         <label for="email">Email</label>
         <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="O seu email" v-model ="dataToOrcamento.email" required>
       </div>
-      <button @click.prevent="checkForm" class="fill">Enviar</button>
+      <button @click.prevent="checkForm" class="fill" id="buttonSubmit">Enviar</button>
     </form>
      <button @click="restart" type="button" class="fill">Repetir Orçamento</button>
 </div>
@@ -62,9 +62,16 @@ name: 'Terminate'
                axios.get('orcamento');
             },
 
+            spinIt(target){
+
+              $('#'+target).html("<i class='fa fa-spinner fa-spin'></i>");
+
+            },
+
             checkForm(){
 
                 if (this.dataToOrcamento.email && this.dataToOrcamento.nome){
+                  this.spinIt("buttonSubmit");
                   this.sendMail();
                 }else{
                   if (!this.dataToOrcamento.nome){
