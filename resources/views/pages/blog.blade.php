@@ -70,7 +70,7 @@
        $item.addClass('full-screen');
    
      $('.carousel img').each(function() {
-       var $src = $(this).attr('src');
+       var $src = $(this).attr('data-src');
        var $color = $(this).attr('data-color');
        $(this).parent().css({
          'background-image' : 'url(' + $src + ')',
