@@ -16,24 +16,20 @@
 </div>
 <!-- CAROUSEL -->
 
-<div class="row">
- <div class = "col-md-12 blogHeaders">
+<div class="container">
+  <div class="row">
+    <div class = "col-md-12 blogHeaders">
 
+    <h3 class="section-title h1-responsive text-center">
+      <b>B</b>log
+    </h3>
 
+    </div>
+  </div>
 
-  <h3 class="section-title h1-responsive text-center ml-5 pl-5 pt-5">
-    <b>B</b>log
-  </h3>
+  <form class="form-search mb-2" method="GET" action="/blog/search">
 
-
-</div>
-</div>
-
-<form class="form-search mb-2" method="GET" action="/blog/search">
-
-  <div class="container">
-
-    <div class="row">
+    <div class="row mb-4">
 
       <div class="col-md-8">
 
@@ -50,11 +46,11 @@
 
     </div>
 
-  </div>
+  </form>
 
-</form>
+</div>
 
-<div class="row" id="posts">
+<div class="row m-0" id="posts">
 </div>
 
 <style>
@@ -102,16 +98,3 @@
    font-size: 25px;
    }
 </style>
-
-
-<script>
-
-
-    
-
-   
-
-
-
- 
-</script>

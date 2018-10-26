@@ -24,7 +24,8 @@
 
                <small class="col-md-12 font-weight-light">agencia de comunicação | web marketing | agencia de marketing digital | pequenas e médias empresas</small>
 
-               <button type="button" class="btn btn-elegant">Informações</button><a href="/portfolio" class="btn btn-elegant">Portfolio</a>
+               <a href="#section_servicos" class="btn btn-elegant">Informações</a>
+               <a href="/portfolio" class="btn btn-elegant">Portfolio</a>
             </div>
          </div>
          
@@ -36,10 +37,10 @@
                   
                   <small class="row text-center">
 
-                     <a href="" class="col-xs-12 col-sm-6 col-md-3" style="margin: 0 auto">Criação de Sites</a>  
-                     <a href="" class="col-xs-12 col-sm-6 col-md-3" style="margin: 0 auto">Publicidade Online</a>  
-                     <a href="" class="col-xs-12 col-sm-6 col-md-3" style="margin: 0 auto">Design Gráfico</a> 
-                     <a href="" class="col-xs-12 col-sm-6 col-md-3" style="margin: 0 auto">Simulador</a>
+                     <a href="/criacao-sites-empresas-profissionais" class="col-xs-12 col-sm-6 col-md-3" style="margin: 0 auto">Criação de Sites</a>  
+                     <a href="/agencia-adwords-publicidade-anunciar-google" class="col-xs-12 col-sm-6 col-md-3" style="margin: 0 auto">Publicidade Online</a>  
+                     <a href="/empresas-design-grafico-identidade-visual" class="col-xs-12 col-sm-6 col-md-3" style="margin: 0 auto">Design Gráfico</a> 
+                     <a href="/orcamento" class="col-xs-12 col-sm-6 col-md-3" style="margin: 0 auto">Simulador</a>
 
                   </small>
          </div>
@@ -50,7 +51,7 @@
    </section>
 
    <!-- SERVIÇOS -->
-   <section class="py-5 cloudy-knoxville-gradient">
+   <section id="section_servicos" class="py-5 cloudy-knoxville-gradient">
 
       <div class="container">
       
@@ -71,7 +72,7 @@
                   <p class="py-1">- Criar site com dominio próprio</p>
               </div>
               <div class="card-footer">
-                  <small class="text-muted"><a href="">Criação de Sites para Empresas</a> | <a href="">Criar WebSite</a></small>
+                  <small class="text-muted">Criação de Sites para Empresas | Criar WebSite</small>
               </div>
            </div>
           </div>
@@ -173,9 +174,9 @@
 
     </section>
 
-<section class="pt-5">
+<section id="section_clientes" class="pt-5">
 
-
+  <hr>
   <h3 class="section-title h1-responsive">
       <b>C</b>lientes
   </h3>
@@ -187,12 +188,14 @@
       
 </section>
 
-<section class="pt-5 pb-5">
+<section id="section_trabalhos" class="pt-5 pb-5">
 
+  <hr>
   <h3 class="section-title h1-responsive">
     <b>T</b>rabalhos <b>R</b>ecentes
   </h3>
 
+  
 
   <div class="row m-0" id="trabalhos-recentes">
     

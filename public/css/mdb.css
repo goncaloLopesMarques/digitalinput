@@ -14707,7 +14707,7 @@ h6 {
 }
 
 .h1-responsive {
-  font-size: 150%;
+  font-size: 180%;
 }
 
 .h2-responsive {
@@ -14728,7 +14728,7 @@ h6 {
 
 @media (min-width: 576px) {
   .h1-responsive {
-    font-size: 170%;
+    font-size: 200%;
   }
 
   .h2-responsive {
@@ -14750,7 +14750,7 @@ h6 {
 
 @media (min-width: 768px) {
   .h1-responsive {
-    font-size: 200%;
+    font-size: 225%;
   }
 
   .h2-responsive {
@@ -14772,7 +14772,7 @@ h6 {
 
 @media (min-width: 1200px) {
   .h1-responsive {
-    font-size: 200%;
+    font-size: 250%;
   }
 
   .h2-responsive {
@@ -24579,6 +24579,10 @@ body.my-background {
 
 #clientes-slider .slick-center img {
   width: 100%;
+}
+
+.home hr {
+  width: 85%;
 }
 
 /* conteudo clientes e projetos voyager */
