@@ -10,7 +10,7 @@
 
 				<div class="project-thumbnail">
 
-					<img data-src="{{ Voyager::image( $project->thumbnail ) }}" alt="">
+					<img data-src="{{ Voyager::image( $project->thumbnail ) }}" class="lazyload blur-up" alt="">
 
 				</div>
 
@@ -52,7 +52,7 @@
 					$htmlpic .= "<div class='my-col-xxl-3 col-lg-3 col-md-4 col-xs-12 p-0 blogGrid'>
 								   <div class='project-image flex-center waves-effect waves-light view overlay zoom'>
 									   		
-									 	<img data-src='". Voyager::image($pic) ."'  class='lazyload blur-up cursor' alt='".$target[1]."'>										 
+									 	<img data-src='". Voyager::image($pic) ."' class='lazyload blur-up cursor' alt='".$target[1]."'>										 
 
 									 	<div class='mask rgba-black-stronger flex-center' onclick=\"openModal();currentSlide(".$it.")\">
 									 		<p class='white-text text-center'> 
