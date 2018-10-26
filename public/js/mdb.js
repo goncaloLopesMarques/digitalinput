@@ -16059,8 +16059,8 @@ var Jarallax = function () {
         self.$item = item;
 
         self.defaults = {
-            type: 'scroll', // type of parallax: scroll, scale, opacity, scale-opacity, scroll-opacity
-            speed: 0.5, // supported value from -1 to 2
+            type: 'scroll-opacity', // type of parallax: scroll, scale, opacity, scale-opacity, scroll-opacity
+            speed: 0.2, // supported value from -1 to 2
             imgSrc: null,
             imgElement: '.jarallax-img',
             imgSize: 'cover',

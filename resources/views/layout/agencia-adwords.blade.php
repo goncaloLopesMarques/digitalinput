@@ -1,6 +1,6 @@
+@include('layout.template-servicos')
 
-
-<section class="mt-4 pages-header">
+{{-- <section class="mt-4 pages-header">
 
 	<h1 class="section-title">Agência Google Adds</h1>
 
@@ -58,4 +58,4 @@
 
 	</div>
 
-</section>
+</section> --}}

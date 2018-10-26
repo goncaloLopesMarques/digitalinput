@@ -22,7 +22,9 @@
     $("div.section-1 td").addClass(boostrap_class_section_1);
     $("div.section-2 td").addClass(boostrap_class_section_2);
 
-    $("div td.template-section img").addClass("template-img jarallax-img lazyload blur-up");
+    $("div td.template-section img, section.template-section img").addClass("template-img jarallax-img lazyload blur-up");
+
+
 
 
     $("img.template-img" ).wrap( "<div id='jarallax-container-1' style='position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden; pointer-events: none; z-index: -100;'></div>" );
@@ -152,10 +154,13 @@ section.template-section{
      object-fit: contain!important; 
      object-position: 50% 50%; 
      max-width: none; 
-     position: fixed; top: 0px; left: 0px; width: 651px; 
+     position: fixed; top: 0px; 
+     left: 0px; 
+     width: 651px; 
      height: 744.5px; 
      overflow: hidden; 
-     pointer-events: none; margin-top: 72.25px; 
+     pointer-events: none; 
+     margin-top: 72.25px; 
      transform: translate3d(0px, -24.75px, 0px);
   }
 
@@ -167,8 +172,10 @@ section.template-section{
 
 
 #jarallax-container-1 {
+  /*
     clip: rect(0 651px 600px 0);
     clip: rect(0, 651px, 600px, 0);
+  */
 }
 
 
@@ -180,6 +187,7 @@ section.template-section{
     width: 400px;
     float: right;
     margin: 1vh 15px 1vh 1vh;
+    clear: right;
 }
 
 .jarallax > .jarallax-img {

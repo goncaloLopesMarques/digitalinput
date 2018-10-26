@@ -14,22 +14,28 @@
 
 
 <!-- SECTION 1 -->
+@if ($template_content->section1_h3 or $template_content->section1_content)
 <section class="template-section">
 
 	<div class="container">
 
 		<div class="row">
 
-			<h3 class="h3-responsive simple">{{ $template_content->section1_h3 }}</h3>
+
+			@if ($template_content->section1_h3)
+				<h3 class="h3-responsive simple">{{ $template_content->section1_h3 }}</h3>
+			@endif
 
 
-			<div class="section-1">
+			@if ($template_content->section1_content)
+				<div class="section-1">
 
-				
-				{!! $template_content->section1_content !!}
+					
+					{!! $template_content->section1_content !!}
 
 
-			</div>
+				</div>
+			@endif
 
 
 		</div>
@@ -37,10 +43,12 @@
 	</div>
 
 </section>
+@endif
 
 
 
 <!-- GRID -->
+@if ($template_content->num_colunas_grid > 0)
 <section class="template-section py-5">
 
       <div class="container">
@@ -190,19 +198,25 @@
     </div>
 
 </section>
+@endif
 <!-- FIM GRID -->
 
 
 <!-- SECTION 2 -->
+@if ($template_content->section2_h3 or $template_content->section2_content)
 <section class="template-section">
 
 	<div class="container">
 
 		<div class="row">
 
+
+			@if ($template_content->section2_h3)
 			<h3 class="h3-responsive simple">{{ $template_content->section2_h3 }}</h3>
+			@endif
 
 
+			@if ($template_content->section2_content)
 			<div class="section-2">
 
 				
@@ -210,6 +224,7 @@
 
 
 			</div>
+			@endif
 
 
 		</div>
@@ -217,4 +232,7 @@
 	</div>
 
 </section>
+@endif
+
+
 <!-- FIM SECTION 2 -->
