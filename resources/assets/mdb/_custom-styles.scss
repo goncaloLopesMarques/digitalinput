@@ -1233,31 +1233,22 @@ main{
 
 
 
-
-  // img.lazyload {
-  //       -webkit-filter: blur(15px);
-  //   filter: blur(15px);
-  //   transition: filter 11400ms;
-  //   -webkit-filter 11400ms;
-  // }
-
-  // img.lazyloaded {
-   
-
-  //    -webkit-filter: blur(0);
-  //   filter: blur(0);
-  // }
+/*lazy loading*/
 
 
-.lazyload {
-  opacity: 0;
-}
 
-.lazyloaded {
-  opacity: 1;
-  transition: opacity 5900ms;
-  /*background: #f7f7f7 url(loader.gif) no-repeat center;*/
-}
+
+
+.blur-up {
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+    transition: filter 400ms, -webkit-filter 400ms;
+  }
+
+  .blur-up.lazyloaded {
+    -webkit-filter: blur(0);
+    filter: blur(0);
+  }
 
 
 

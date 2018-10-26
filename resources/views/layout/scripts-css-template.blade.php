@@ -22,7 +22,7 @@
     $("div.section-1 td").addClass(boostrap_class_section_1);
     $("div.section-2 td").addClass(boostrap_class_section_2);
 
-    $("div td.template-section img").addClass("template-img jarallax-img");
+    $("div td.template-section img").addClass("template-img jarallax-img lazyload blur-up");
 
 
     $("img.template-img" ).wrap( "<div id='jarallax-container-1' style='position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden; pointer-events: none; z-index: -100;'></div>" );

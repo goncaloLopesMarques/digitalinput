@@ -24879,14 +24879,16 @@ main {
   }
 }
 
-.lazyload {
-  opacity: 0;
+/*lazy loading*/
+
+.blur-up {
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+  transition: filter 400ms, -webkit-filter 400ms;
 }
 
-.lazyloaded {
-  opacity: 1;
-  -webkit-transition: opacity 5900ms;
-  transition: opacity 5900ms;
-  /*background: #f7f7f7 url(loader.gif) no-repeat center;*/
+.blur-up.lazyloaded {
+  -webkit-filter: blur(0);
+  filter: blur(0);
 }
 

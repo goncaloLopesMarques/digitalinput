@@ -66,13 +66,13 @@
             var trabalhosRecentes = <?php echo json_encode($recentwork); ?>;
             var clientes = <?php echo json_encode($clientes); ?>;
 
-            console.log(w);
+            //console.log(w);
 
             // apresentação clientes 
             for(var i=0 ; i< clientes.length ; i++){
              
 
-                $("#clientes-slider").append('<div class="flex-center waves-effect waves-light view overlay zoom">  <img class="lazyload" data-src="storage/'+clientes[i]["image"]+'" alt="'+clientes[i]["name"]+'"><div class="titulo-blog-container">   <p class="p-1 text-center my-text-shadow-strong">'+clientes[i]["name"]+'</p>   </div>   <div class="my-vertical-align my-mask-over mask rgba-black-stronger waves-effect waves-light">'+clientes[i]["description"].slice(0, 250)+'...</div></div>');
+                $("#clientes-slider").append('<div class="flex-center waves-effect waves-light view overlay zoom">  <img class="lazyload blur-up" data-src="storage/'+clientes[i]["image"]+'" alt="'+clientes[i]["name"]+'"><div class="titulo-blog-container">   <p class="p-1 text-center my-text-shadow-strong">'+clientes[i]["name"]+'</p>   </div>   <div class="my-vertical-align my-mask-over mask rgba-black-stronger waves-effect waves-light">'+clientes[i]["description"].slice(0, 250)+'...</div></div>');
             } 
 
 
@@ -97,7 +97,7 @@
               
   
             
-                $("#trabalhos-recentes").append('<div class="col-xl-3 col-lg-4 col-md-6 col-xs-12 p-0 blogGrid"><a href="/portfolio/'+trabalhosRecentes[i]["slug"]+'">  <div class="flex-center waves-effect waves-light view overlay zoom">   <img class="lazyload" style="max-width: 100%;" data-src="storage/'+trabalhosRecentes[i]["thumbnail"]+'" alt="'+trabalhosRecentes[i]["name"]+'"><div class="titulo-blog-container">   <p class="p-1 text-center my-text-shadow-strong">'+trabalhosRecentes[i]["name"]+'</p>   </div>   <div class="my-vertical-align my-mask-over mask rgba-black-stronger waves-effect waves-light"><p class="white-text text-center">'+trabalhosRecentes[i]["description"].slice(0, 400)+'...</p></div></div></a></div>');
+                $("#trabalhos-recentes").append('<div class="col-xl-3 col-lg-4 col-md-6 col-xs-12 p-0 blogGrid"><a href="/portfolio/'+trabalhosRecentes[i]["slug"]+'">  <div class="flex-center waves-effect waves-light view overlay zoom">   <img class="lazyload blur-up" style="max-width: 100%;" data-src="storage/'+trabalhosRecentes[i]["thumbnail"]+'" alt="'+trabalhosRecentes[i]["name"]+'"><div class="titulo-blog-container">   <p class="p-1 text-center my-text-shadow-strong">'+trabalhosRecentes[i]["name"]+'</p>   </div>   <div class="my-vertical-align my-mask-over mask rgba-black-stronger waves-effect waves-light"><p class="white-text text-center">'+trabalhosRecentes[i]["description"].slice(0, 400)+'...</p></div></div></a></div>');
             }      
        
          

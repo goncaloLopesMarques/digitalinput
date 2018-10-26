@@ -44,14 +44,10 @@
         </div> --> 
         <script>
 
-            const images = Array.from(document.getElementsByTagName("img"));
 
-            for (const image of images) {
-              
-                image.classList.add("lazyload");
 
-                console.log(image);
-            }
+
+
 
         </script>
 
