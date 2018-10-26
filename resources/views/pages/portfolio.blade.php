@@ -41,7 +41,7 @@
 @section('scripts-css')
 
     @include('layout.scripts-css')
-    <script type="text/javascript" src="https://isotope.metafizzy.co/v1/jquery.isotope.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.isotope.min.js"></script>
     <script type="text/javascript" src="/js/portfolio.js"></script>
     
 @endsection

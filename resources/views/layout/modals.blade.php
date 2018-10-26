@@ -61,12 +61,12 @@
   <!-- Side Modal Top Right -->
 
 
-<!-- Modal -->
+<!--Services Modal -->
 <div class="modal fade" id="ServicesModal" tabindex="-1" role="dialog" aria-labelledby="ServicesModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">SERVIÇOS</h5>
+        <h4 class="modal-title" id="exampleModalLabel">SERVIÇOS</h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
