@@ -30,7 +30,7 @@
   <div class="card">
 
     <!-- Grid row -->
-    <div class="row">
+    <div class="row m-0">
 
       <!-- Grid column -->
       <div class="col-lg-8">
@@ -164,7 +164,7 @@
 
 </section>
 <!-- Section: Contact v.3 -->
-<section class="map-section">
+<section id="section_mapa" class="map-section">
 
 <div style="width: 100%; height: 500px;">
   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5379.6637686768345!2d-8.796949276580637!3d39.76645380080984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd227300e6713c99%3A0x9b89ea78566f96a4!2sDigitalInput+-+Marketing+Digital!5e1!3m2!1spt-PT!2spt!4v1538061865604" width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>

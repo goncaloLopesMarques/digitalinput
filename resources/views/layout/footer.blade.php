@@ -1,17 +1,12 @@
 <!--Footer-->
 <footer class="page-footer text-center font-small wow fadeIn red">
-
-    {{-- <hr class="my-4"> --}}
-
-                  
+          
     <div class="row m-0 text-left elegant-color">
        
                             <!-- 4colunas - 2colunas - 1coluna -->
         <div class="color-block col-lg-3 col-md-6 col-xs-12">
 
             <div class="list-group-flush py-3">
-
-
                 
                 <a href="#" class="list-group-item list-group-item-black">
                     <img src="/images/Digitalinput-LOGO.png" alt="Digitalinput Logo" style="height: 37px;">
@@ -56,13 +51,6 @@
                 
                 <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fdigitalinputwebmarketing%2F&tabs&width=340&height=250&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="250" style="border:none;max-width: 100%;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
 
-                <!-- <a href="#" class="list-group-item list-group-item-black waves-effect">...</a>
-                <a href="#" class="list-group-item list-group-item-black waves-effect">...</a>
-                <a href="#" class="list-group-item list-group-item-black waves-effect">...</a>
-                <a href="#" class="list-group-item list-group-item-black waves-effect">...</a> -->
-
-                <!-- <a href="#" class="color-block-dark list-group-item list-group-item-action transparent waves-effect z-depth-1-half hoverable">...</a> -->
-
             </div>
 
         </div>
@@ -83,7 +71,7 @@
                     <i class="fa fa-phone pr-2"></i>+351 919165229
                 </a>
 
-                <a href="#" class="list-group-item list-group-item-black waves-effect"><i class="fa fa-map-marker pr-2"></i>Rua das Laranjeiras,
+                <a href="/contactos/#section_mapa" class="list-group-item list-group-item-black waves-effect"><i class="fa fa-map-marker pr-2"></i>Rua das Laranjeiras,
                                         lote 40, Loja B<br/>
                                         Urbanização do Vale Verde, Marrazes<br/>
                                         2415-773 Leiria</a>
