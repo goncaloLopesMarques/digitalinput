@@ -15,7 +15,8 @@
     agência digital; franquia marketing digital,marketing digital para empresas,agencias de mkt digital
     serviços marketing digital,marketing digital para pequenas empresas">
     
-
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
     @include('layout.head') 
     
     
@@ -50,10 +51,6 @@
 @section('scripts-css')
 
     @include('layout.scripts-css')
-
-
-    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
     
     <script>
 

@@ -645,8 +645,9 @@ div.titulo-blog-container{
     background-color: $elegant-color-dark;
     color: white;
     font-weight:bold;
-    bottom: 10px;
     position: absolute;
+    bottom: 0;
+    left: 0;
 }
 
 .list-group-item-black{
