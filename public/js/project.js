@@ -8,8 +8,10 @@ function closeModal() {
   document.getElementById('myModal').style.display = "none";
 }
 
-var slideIndex = 1;
-showSlides(slideIndex);
+if($('.project-image').length){
+  var slideIndex = 1;
+  showSlides(slideIndex);
+}
 
 // Next/previous controls
 function plusSlides(n) {

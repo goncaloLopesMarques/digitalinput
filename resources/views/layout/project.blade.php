@@ -38,11 +38,12 @@
 		<h3 class="text-center margin-bb">Galeria de Imagens</h3>
 
 		<div class="row" id="gallery-project">
+
 @php
 			$imagens = json_decode($project->images);					
 		    $htmlpic = "";
 		    $htmlslides = "";
-			$htmlthumb = "";
+			  $htmlthumb = "";
 		    if ($imagens){
 		    	$total = count($imagens);
 		    	$it = 1;
@@ -100,6 +101,9 @@
 	</section>
 
 </div>
+
+<div class="unique-color py-2"></div>
+
 <style>
 
 .row:after {
