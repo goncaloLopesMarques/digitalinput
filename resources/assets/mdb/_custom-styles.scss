@@ -645,6 +645,8 @@ div.titulo-blog-container{
     background-color: $elegant-color-dark;
     color: white;
     font-weight:bold;
+    bottom: 10px;
+    position: absolute;
 }
 
 .list-group-item-black{
@@ -825,7 +827,8 @@ background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
 body.my-background{
 	/*background: linear-gradient(to top, #2d4e77, #fff) !important;*/
   background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
-}
+} 
+
 .copyright{
   text-transform: uppercase;
 }

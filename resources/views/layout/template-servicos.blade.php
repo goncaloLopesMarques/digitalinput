@@ -65,7 +65,7 @@
 			        <div class="card card-cascade">
 
 			          <!-- Card image -->
-			          <div class="view view-cascade gradient-card-header blue-gradient">
+			          <div class="view view-cascade gradient-card-header black-gradient">
 
 			            <!-- Title -->
 			            <h3 class="card-header-title mb-3">{{ $template_content->grid_coluna_1_h3 }}</h3>
@@ -99,7 +99,7 @@
 			        <div class="card card-cascade">
 
 			          <!-- Card image -->
-			          <div class="view view-cascade gradient-card-header blue-gradient">
+			          <div class="view view-cascade gradient-card-header black-gradient">
 
 			            <!-- Title -->
 			            <h3 class="card-header-title mb-3">{{ $template_content->grid_coluna_2_h3 }}</h3>
@@ -133,7 +133,7 @@
 			        <div class="card card-cascade">
 
 			          <!-- Card image -->
-			          <div class="view view-cascade gradient-card-header blue-gradient">
+			          <div class="view view-cascade gradient-card-header black-gradient">
 
 			            <!-- Title -->
 			            <h3 class="card-header-title mb-3">{{ $template_content->grid_coluna_3_h3 }}</h3>
@@ -168,7 +168,7 @@
 			        <div class="card card-cascade">
 
 			          <!-- Card image -->
-			          <div class="view view-cascade gradient-card-header blue-gradient">
+			          <div class="view view-cascade gradient-card-header black-gradient">
 
 			            <!-- Title -->
 			            <h3 class="card-header-title mb-3">{{ $template_content->grid_coluna_4_h3 }}</h3>

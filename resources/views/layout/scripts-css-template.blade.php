@@ -79,6 +79,11 @@
 
 /* T E M P L A T E  SERVIÇOS */
 
+body.my-background-services{
+  /*background: linear-gradient(to top, #2d4e77, #fff) !important;*/
+  background-color: linear-gradient(to top, ghostwhite 0%, whitesmoke 100%);
+}
+
 
 .card.card-cascade .view.view-cascade.gradient-card-header {
     padding: 1.6rem 1rem;
@@ -112,14 +117,59 @@ section.template-section{
     border-radius: 0.125rem;
     margin: 5vh 2vw;
     padding: 2vh 1vw;
+    /*color:white!important;*/
 
-    background-image: linear-gradient(-90deg, #fdfbfb 0%, #dddfe0 100%);
+    /*background-image: linear-gradient(-90deg, #fdfbfb 0%, #dddfe0 100%);*/
+    
+
 
     border: 1px solid #bbb;
-
-
+    
+    
 
 }
+
+
+section.template-section .section-1 p, section.template-section .section-2 p, div.template-grid h3, section.template-section td{
+
+  font-size: larger!important;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3), -1px -1px 2px rgba(0, 0, 0, 0.3), 1px -1px 2px rgba(0, 0, 0, 0.3), -1px 1px 2px rgba(0, 0, 0, 0.3)!important;
+  font-weight: bold!important;
+  color: white!important;
+  letter-spacing: 1px!important;
+}
+
+.consultoria section.template-section{
+      background-color: brown;
+} 
+.email-marketing section.template-section{
+      background-color:  #789fab;
+} 
+.gestao-redes-sociais section.template-section{
+      background-color: chocolate;
+} 
+.agencia-adwords section.template-section{
+      background-color: cornflowerblue;
+} 
+
+
+
+div.template-grid div.view-cascade{
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+
+
+section.template-section h2, section.template-section h3{
+
+  font-size: x-large;
+  color: white!important;
+}
+
+
+
+
+
 
   div.section-1 table, div.section-2 table{
 
@@ -142,6 +192,10 @@ section.template-section{
 
     
   }
+
+  .black-gradient {
+    background: linear-gradient(40deg, #212121, #343a40);
+}
 
   section td.template-section > img.template-img.jarallax-img{
 
@@ -184,7 +238,7 @@ section.template-section{
     position: relative;
     z-index: 0;
     height: 400px;
-    width: 400px;
+    width: -webkit-fill-available;;
     float: right;
     margin: 1vh 15px 1vh 1vh;
     clear: right;

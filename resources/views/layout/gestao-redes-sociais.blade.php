@@ -1,4 +1,4 @@
-<section class="mt-4 pages-header">
+{{-- <section class="mt-4 pages-header">
 
 	<h1>Gestão Redes Sociais Preços</h1>
 
@@ -17,4 +17,6 @@
 
 	</div>
 
-</section>
+</section> --}}
+
+@include('layout.template-servicos')

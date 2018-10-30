@@ -14,8 +14,8 @@
 
                 <a href="#" class="list-group-item list-group-item-black waves-effect">Agência de Marketing Digital</a>
                 <a href="#" class="list-group-item list-group-item-black waves-effect">Webdesign | Publicidade | Design</a>
-                <a href="#" class="list-group-item list-group-item-black waves-effect">Algum texto de apresentação</a>
-                <a href="#" class="list-group-item list-group-item-black waves-effect">...</a>
+                <a href="#" class="list-group-item list-group-item-black waves-effect">Melhore a sua presença e resultados online</a>
+                <a href="#" class="list-group-item list-group-item-black waves-effect">Contacte-nos para que possamos sugerir a melhor estratégia.</a>
                 <a href="/portfolio" class="color-block-dark list-group-item list-group-item-action transparent waves-effect z-depth-1-half hoverable">Ver Portfólio</a>
 
             </div>
