@@ -238,7 +238,7 @@ section.template-section h2, section.template-section h3{
     position: relative;
     z-index: 0;
     height: 400px;
-    width: -webkit-fill-available;;
+    width: 400px;
     float: right;
     margin: 1vh 15px 1vh 1vh;
     clear: right;

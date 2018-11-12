@@ -189,6 +189,12 @@ phone & tabklet queries */
       padding: 64px 0 0;
     }
 
+    .page-footer .list-group-flush .list-group-item:last-child {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
 } 
 
 
@@ -645,9 +651,7 @@ div.titulo-blog-container{
     background-color: $elegant-color-dark;
     color: white;
     font-weight:bold;
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    text-align: center;
 }
 
 .list-group-item-black{

@@ -119,7 +119,7 @@
 }
 
 /* The Modal (background) */
-.modal {
+#myModal.modal {
   display: none;
   position: fixed;
   z-index: 99999999999;

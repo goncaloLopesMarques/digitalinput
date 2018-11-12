@@ -44,3 +44,9 @@
     <script type="text/javascript" src="/js/project.js"></script>
     
 @endsection
+
+@section('modals')
+
+    @include('layout.modals')
+    
+@endsection

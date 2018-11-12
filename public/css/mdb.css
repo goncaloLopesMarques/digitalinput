@@ -23975,6 +23975,12 @@ phone & tabklet queries */
   main {
     padding: 64px 0 0;
   }
+
+  .page-footer .list-group-flush .list-group-item:last-child {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
 }
 
 section.intro {
@@ -24292,9 +24298,7 @@ div.blogGrid:hover div.titulo-blog-container {
   background-color: #212121;
   color: white;
   font-weight: bold;
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  text-align: center;
 }
 
 .list-group-item-black {
