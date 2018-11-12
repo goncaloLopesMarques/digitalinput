@@ -8,14 +8,14 @@
 
             <div class="list-group-flush py-3">
                 
-                <a href="#" class="list-group-item list-group-item-black">
+                <a href="/" class="list-group-item list-group-item-black">
                     <img src="/images/Digitalinput-LOGO.png" alt="Digitalinput Logo" style="height: 37px;">
                 </a>
 
-                <a href="#" class="list-group-item list-group-item-black waves-effect">Agência de Marketing Digital</a>
-                <a href="#" class="list-group-item list-group-item-black waves-effect">Webdesign | Publicidade | Design</a>
-                <a href="#" class="list-group-item list-group-item-black waves-effect">Melhore a sua presença e resultados online</a>
-                <a href="#" class="list-group-item list-group-item-black waves-effect">Contacte-nos para que possamos sugerir a melhor estratégia.</a>
+                <a class="list-group-item list-group-item-black waves-effect">Agência de Marketing Digital</a>
+                <a class="list-group-item list-group-item-black waves-effect">Webdesign | Publicidade | Design</a>
+                <a class="list-group-item list-group-item-black waves-effect">Melhore a sua presença e resultados online</a>
+                <a class="list-group-item list-group-item-black waves-effect">Contacte-nos para que possamos sugerir a melhor estratégia.</a>
                 <a href="/portfolio" class="color-block-dark list-group-item list-group-item-action transparent waves-effect z-depth-1-half hoverable">Ver Portfólio</a>
 
             </div>
@@ -26,16 +26,16 @@
 
             <div class="list-group-flush py-3">
 
-                <a href="#" class="list-group-item list-group-item-black"> 
+                <a class="list-group-item list-group-item-black"> 
                     <h3 class="h2-responsive font-weight-bold">Serviços</h3>
                 </a>
 
-                <a href="#" class="list-group-item list-group-item-black waves-effect">Consultoria Marketing Digital</a>
-                <a href="#" class="list-group-item list-group-item-black waves-effect">Criação de websites | Lojas Online</a>
-                <a href="#" class="list-group-item list-group-item-black waves-effect">Publicidade Online</a>
-                <a href="#" class="list-group-item list-group-item-black waves-effect">Design Gráfico</a>
+                <a class="list-group-item list-group-item-black waves-effect">Consultoria Marketing Digital</a>
+                <a class="list-group-item list-group-item-black waves-effect">Criação de websites | Lojas Online</a>
+                <a class="list-group-item list-group-item-black waves-effect">Publicidade Online</a>
+                <a class="list-group-item list-group-item-black waves-effect">Design Gráfico</a>
 
-                <a href="#" class="color-block-dark list-group-item list-group-item-action transparent waves-effect z-depth-1-half hoverable" data-toggle="modal" data-target="#ServicesModal">Ver Serviços</a>
+                <a class="color-block-dark list-group-item list-group-item-action transparent waves-effect z-depth-1-half hoverable" data-toggle="modal" data-target="#ServicesModal">Ver Serviços</a>
 
             </div>
 
@@ -45,7 +45,7 @@
 
               <div class="list-group-flush py-3">
 
-                <a href="#" class="list-group-item list-group-item-black"> 
+                <a class="list-group-item list-group-item-black"> 
                     <h3 class="h2-responsive font-weight-bold">Siga-nos no Facebook!</h3>
                 </a>
                 
@@ -59,7 +59,7 @@
 
             <div class="list-group-flush py-3">
 
-                <a href="#" class="list-group-item list-group-item-black"> 
+                <a class="list-group-item list-group-item-black"> 
                     <h3 class="h2-responsive font-weight-bold">Contactos</h3>
                 </a>
 
@@ -76,7 +76,7 @@
                                         Urbanização do Vale Verde, Marrazes<br/>
                                         2415-773 Leiria</a>
 
-                <a href="http://melhorsitedomundo/orcamento" class="list-group-item list-group-item-action waves-effect z-depth-1-half hoverable">Pedir Orçamento</a>
+                <a href="/orcamento" class="list-group-item list-group-item-action waves-effect z-depth-1-half hoverable">Pedir Orçamento</a>
 
             </div>
 
